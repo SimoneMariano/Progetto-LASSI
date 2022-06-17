@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ISBN: 1
+  title: MyString
+  quantity: 1
+
+two:
+  ISBN: 1
+  title: MyString
+  quantity: 1
