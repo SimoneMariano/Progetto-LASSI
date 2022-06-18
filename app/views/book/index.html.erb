@@ -1,13 +1,25 @@
-<h1>Book#index</h1>
-<p>Find me in app/views/book/index.html.erb</p>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
 
-<h1>Articles</h1>
+<body>
 
-<ul>
-  <% @books.each do |book| %>
-    <li>
-      <%= book.title %>
-    </li>
-  <% end %>
-</ul>
+  <div class="row">
+              <div class="col-3">
+                  <h3>Filter</h3>
+              </div>
 
+              <div class="col-9">
+                  <ul>
+                    <% @books.each do |book| %>
+                      <li>
+                        <%= book.title %>
+                      </li>
+                    <% end %>
+                  </ul>
+
+              </div>
+  </div>
+
+
+</body>
