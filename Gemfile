@@ -77,3 +77,5 @@ gem "bootstrap"
 gem 'webpacker'
 
 gem 'jquery-rails'
+
+gem 'composite_primary_keys'

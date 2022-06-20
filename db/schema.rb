@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_19_144106) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_20_133651) do
+  create_table "book_rentals", force: :cascade do |t|
+    t.integer "book_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "start"
+    t.datetime "end"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index "\"book\", \"user\"", name: "index_book_rentals_on_book_and_user", unique: true
+    t.index ["book_id"], name: "index_book_rentals_on_book_id"
+    t.index ["user_id"], name: "index_book_rentals_on_user_id"
+  end
+
   create_table "books", force: :cascade do |t|
     t.integer "ISBN"
     t.string "title"
@@ -19,4 +31,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_19_144106) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.integer "matricola"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "book_rentals", "books"
+  add_foreign_key "book_rentals", "users"
 end
