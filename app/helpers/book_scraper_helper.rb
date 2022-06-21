@@ -1,0 +1,2 @@
+module BookScraperHelper
+end

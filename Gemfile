@@ -78,3 +78,8 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+#gemme per web scraper
+gem 'httparty'
+gem "nokogiri"
+gem "byebug"

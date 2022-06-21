@@ -17,17 +17,23 @@
             <%end%>
 
             <div style="padding-left:20px">
-              <p>
+              <p class="title">
                 <strong>Title:  </strong> 
                 <%= link_to book.title, book %> 
               </p>
-              <p>
+              <p id="ISBN">
                 <strong>ISBN:  </strong>
                 <%= book.ISBN %> 
               </p>
               <button class="btn btn-primary">
-                <%= link_to "Acquista", #modificare%>
+                <%= link_to "Noleggia", "#"%>
               </button>
+              
+              <button class="btn btn-warning">
+                <%= link_to 'Acquista', {:controller => "book_scraper", :action => "index", :ISBN => book.ISBN} , :method=>:post %>
+              </button>
+
+
             </div>
           
           <% end %>
