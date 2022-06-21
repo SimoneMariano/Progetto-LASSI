@@ -1,0 +1,32 @@
+
+<head>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="flexbox d-flex section-box">
+        <div class="col-4"> 
+            <button id="btn_library" class="btn btn-outline-primary header">Lista Libri</button>
+        </div>
+
+        <div class="col-4">
+            <button id="btn_rental" class="btn btn-outline-primary header">Libri Prenotati</button>
+        </div>
+
+        <div class="col-4"> 
+            <button id="btn_advertisement" class="btn btn-outline-primary header">Annunci Usato</button>
+        </div>
+    </div>
+
+    <section class="section-box">
+        <div id="main-block"></div>
+    </section>
+
+
+    <%= stylesheet_link_tag "library" %>
+    <%= javascript_pack_tag 'library' %>
+
+
+</body>

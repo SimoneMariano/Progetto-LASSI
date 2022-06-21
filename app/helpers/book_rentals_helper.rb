@@ -1,0 +1,2 @@
+module BookRentalsHelper
+end
