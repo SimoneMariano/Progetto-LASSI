@@ -743,3 +743,588 @@ Processing by BookRentalsController#index as HTML
 Completed 200 OK in 22ms (Views: 17.4ms | ActiveRecord: 1.9ms | Allocations: 3196)
 
 
+Started GET "/library" for ::1 at 2022-06-21 14:57:04 +0200
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/oddiv/desktop/BiblioCommunity/public/packs
+[Webpacker] warning package.json: No license field
+
+[Webpacker] Hash: eb0d0de224759b63859d
+Version: webpack 4.46.0
+Time: 2960ms
+Built at: 06/21/2022 2:57:10 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d4595b35a11a8b9a939a.js    3.9 KiB  application  [emitted] [immutable]  application
+js/application-d4595b35a11a8b9a939a.js.map   3.53 KiB  application  [emitted] [dev]        application
+        js/library-56cf93ce9212199f6e0c.js    414 KiB      library  [emitted] [immutable]  library
+    js/library-56cf93ce9212199f6e0c.js.map    397 KiB      library  [emitted] [dev]        library
+                             manifest.json  675 bytes               [emitted]              
+Entrypoint application = js/application-d4595b35a11a8b9a939a.js js/application-d4595b35a11a8b9a939a.js.map
+Entrypoint library = js/library-56cf93ce9212199f6e0c.js js/library-56cf93ce9212199f6e0c.js.map
+[./app/javascript/packs/application.js] 0 bytes {application} [built]
+[./app/javascript/packs/library.js] 251 bytes {library} [built]
+    + 107 hidden modules
+
+  Rendered library/index.html.erb within layouts/application (Duration: 6328.4ms | Allocations: 3730)
+  Rendered layout layouts/application.html.erb (Duration: 6332.0ms | Allocations: 6125)
+Completed 200 OK in 6354ms (Views: 6340.8ms | ActiveRecord: 0.0ms | Allocations: 10730)
+
+
+Started GET "/books" for ::1 at 2022-06-21 14:57:11 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 244.8ms | Allocations: 31000)
+  Rendered layout layouts/application.html.erb (Duration: 245.8ms | Allocations: 31683)
+Completed 200 OK in 266ms (Views: 246.7ms | ActiveRecord: 1.7ms | Allocations: 36155)
+
+
+Started GET "/library" for ::1 at 2022-06-21 14:59:32 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/oddiv/desktop/BiblioCommunity/public/packs
+[Webpacker] warning package.json: No license field
+
+[Webpacker] Hash: eb0d0de224759b63859d
+Version: webpack 4.46.0
+Time: 1656ms
+Built at: 06/21/2022 2:59:36 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d4595b35a11a8b9a939a.js    3.9 KiB  application  [emitted] [immutable]  application
+js/application-d4595b35a11a8b9a939a.js.map   3.53 KiB  application  [emitted] [dev]        application
+        js/library-56cf93ce9212199f6e0c.js    414 KiB      library  [emitted] [immutable]  library
+    js/library-56cf93ce9212199f6e0c.js.map    397 KiB      library  [emitted] [dev]        library
+                             manifest.json  675 bytes               [emitted]              
+Entrypoint application = js/application-d4595b35a11a8b9a939a.js js/application-d4595b35a11a8b9a939a.js.map
+Entrypoint library = js/library-56cf93ce9212199f6e0c.js js/library-56cf93ce9212199f6e0c.js.map
+[./app/javascript/packs/application.js] 0 bytes {application} [built]
+[./app/javascript/packs/library.js] 251 bytes {library} [built]
+    + 107 hidden modules
+
+  Rendered library/index.html.erb within layouts/application (Duration: 4254.4ms | Allocations: 2869)
+  Rendered layout layouts/application.html.erb (Duration: 4257.6ms | Allocations: 4936)
+Completed 200 OK in 4261ms (Views: 4258.9ms | ActiveRecord: 0.0ms | Allocations: 5444)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:00:18 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1659)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 2283)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 2791)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:00:19 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1185)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 1818)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.6ms | Allocations: 2361)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:00:21 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1670)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 2294)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms | Allocations: 2791)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:00:22 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1175)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1808)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.3ms | Allocations: 2344)
+
+
+Started GET "/book_rentals" for ::1 at 2022-06-21 15:06:23 +0200
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBookRental Load (0.3ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 44.8ms | Allocations: 16146)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 60.6ms | Allocations: 21995)
+  Rendered layout layouts/application.html.erb (Duration: 62.9ms | Allocations: 24159)
+Completed 200 OK in 81ms (Views: 66.4ms | ActiveRecord: 4.0ms | Allocations: 28074)
+
+
+Started GET "/book_rentals" for ::1 at 2022-06-21 15:06:26 +0200
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.3ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 4.7ms | Allocations: 1346)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2053)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 2696)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 1.0ms | Allocations: 3231)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:06:26 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1209)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1842)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 2385)
+
+
+Started GET "/book_rentals" for ::1 at 2022-06-21 15:06:27 +0200
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.4ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 4.2ms | Allocations: 1345)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2057)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2701)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.9ms | Allocations: 3249)
+
+
+Started GET "/book_rentals" for ::1 at 2022-06-21 15:06:41 +0200
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.3ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 3.6ms | Allocations: 1342)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2048)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2691)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.9ms | Allocations: 3233)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:06:41 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1175)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1808)
+Completed 200 OK in 8ms (Views: 6.1ms | ActiveRecord: 0.4ms | Allocations: 2344)
+
+
+Started GET "/book_rentals" for ::1 at 2022-06-21 15:19:27 +0200
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBookRental Load (0.3ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 4.2ms | Allocations: 1399)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2707)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3350)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 1.8ms | Allocations: 3888)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:19:28 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1204)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1837)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.4ms | Allocations: 2383)
+
+
+Started GET "/book_rentals" for ::1 at 2022-06-21 15:19:29 +0200
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.4ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 4.9ms | Allocations: 1342)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2048)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2691)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.2ms | Allocations: 3221)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:19:30 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1175)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1808)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.3ms | Allocations: 2346)
+
+
+Started GET "/book_rentals" for ::1 at 2022-06-21 15:19:31 +0200
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.4ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 5.4ms | Allocations: 1342)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2048)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 2691)
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.6ms | Allocations: 3221)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:25:17 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1669)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 2293)
+Completed 200 OK in 14ms (Views: 12.4ms | Allocations: 2797)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:25:18 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/books/index.html.erb:18
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1773)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 2406)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.9ms | Allocations: 2942)
+
+
+Started GET "/book_rentals" for ::1 at 2022-06-21 15:25:28 +0200
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.5ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 5.1ms | Allocations: 1396)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 2135)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2778)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 1.5ms | Allocations: 3336)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:25:51 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1175)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 1808)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.4ms | Allocations: 2364)
+
+
+Started GET "/book_rentals" for ::1 at 2022-06-21 15:25:51 +0200
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.4ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 3.6ms | Allocations: 1344)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2050)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 2693)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.9ms | Allocations: 3233)
+
+
+Started GET "/book_rentals/new" for ::1 at 2022-06-21 15:26:31 +0200
+Processing by BookRentalsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/new.html.erb within layouts/application
+  Rendered book_rentals/_form.html.erb (Duration: 62.1ms | Allocations: 10415)
+  Rendered book_rentals/new.html.erb within layouts/application (Duration: 64.7ms | Allocations: 10737)
+  Rendered layout layouts/application.html.erb (Duration: 65.9ms | Allocations: 11368)
+Completed 200 OK in 69ms (Views: 66.6ms | ActiveRecord: 0.0ms | Allocations: 11971)
+
+
+Started POST "/book_rentals" for ::1 at 2022-06-21 15:27:02 +0200
+Processing by BookRentalsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book_rental"=>{"book"=>"12", "user"=>"1886952", "start"=>"2022-06-21T15:26", "end"=>"2022-06-24T15:26"}, "commit"=>"Create Book rental"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 950)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Book(#26940) expected, got "12" which is an instance of String(#2980)):
+  
+app/controllers/book_rentals_controller.rb:24:in `create'
+Started GET "/library" for ::1 at 2022-06-21 15:27:14 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1659)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2283)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.0ms | Allocations: 2791)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:27:14 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1658)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2282)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms | Allocations: 2786)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:33:10 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1659)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2283)
+Completed 200 OK in 9ms (Views: 7.6ms | Allocations: 2782)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:33:11 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/books/index.html.erb:18
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1778)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 2411)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 1.2ms | Allocations: 2949)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:39:07 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 21.4ms | Allocations: 1916)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 2780)
+Completed 200 OK in 37ms (Views: 34.1ms | Allocations: 3866)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:39:08 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/books/index.html.erb:18
+  [1m[36mBook Load (1.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 25.0ms | Allocations: 2214)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 2895)
+Completed 200 OK in 40ms (Views: 35.2ms | ActiveRecord: 3.4ms | Allocations: 3988)
+
+
+Started GET "/books/1" for ::1 at 2022-06-21 15:39:12 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.9ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:63:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  Rendered books/_book.html.erb (Duration: 2.2ms | Allocations: 223)
+  Rendered books/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 988)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 1611)
+Completed 200 OK in 25ms (Views: 12.7ms | ActiveRecord: 0.9ms | Allocations: 3246)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:40:19 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1659)
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 2283)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 2797)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:40:20 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1211)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 1844)
+Completed 200 OK in 16ms (Views: 11.7ms | ActiveRecord: 0.5ms | Allocations: 2392)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:43:29 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1659)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 2283)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 2787)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:43:42 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 1659)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 2283)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 2789)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:43:43 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1211)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 1844)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.6ms | Allocations: 2390)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:45:29 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 18.3ms | Allocations: 1663)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 2287)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 0.0ms | Allocations: 2793)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:45:30 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1211)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 1844)
+Completed 200 OK in 19ms (Views: 14.7ms | ActiveRecord: 0.5ms | Allocations: 2396)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:47:01 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 1911)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 2775)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 3870)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:47:02 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1613)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 2294)
+Completed 200 OK in 26ms (Views: 20.0ms | ActiveRecord: 0.7ms | Allocations: 3391)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:47:41 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:18
+  Rendered books/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1211)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 1844)
+Completed 200 OK in 13ms (Views: 10.1ms | ActiveRecord: 0.4ms | Allocations: 2354)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:50:38 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 25.5ms | Allocations: 1904)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 2774)
+Completed 200 OK in 45ms (Views: 39.8ms | ActiveRecord: 0.0ms | Allocations: 3854)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:50:39 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 138.4ms | Allocations: 20312)
+  Rendered layout layouts/application.html.erb (Duration: 141.4ms | Allocations: 20972)
+Completed 200 OK in 151ms (Views: 145.9ms | ActiveRecord: 0.6ms | Allocations: 22079)
+
+
+Started GET "/library" for ::1 at 2022-06-21 15:51:52 +0200
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 16.2ms | Allocations: 1671)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 2295)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.0ms | Allocations: 2803)
+
+
+Started GET "/books" for ::1 at 2022-06-21 15:51:54 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 2020)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 2644)
+Completed 200 OK in 23ms (Views: 18.3ms | ActiveRecord: 1.0ms | Allocations: 3197)
+
+
