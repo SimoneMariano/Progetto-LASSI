@@ -114,11 +114,11 @@ class BookScraperController < ApplicationController
             author_link = []
             author = []
 
-            for i  in 0..parsed_page.css("li > span + a").size()-1 do
+            for i  in 0..parsed_page.css("h2.droid > a").size()-2 do
                 #raccolgo gli author link
-                author_link[i] = parsed_page.css("li > span + a")[i].attribute("href").value
+                author_link[i] = parsed_page.css("h2.droid > a")[i].attribute("href").value
                 #raccolgo gli author
-                author[i] = parsed_page.css("li > span + a")[i].text
+                author[i] = parsed_page.css("h2.droid > a")[i].text
             end
 
             @book_info = {
@@ -134,10 +134,44 @@ class BookScraperController < ApplicationController
             @book_info_arr[3] = @book_info
         end
 
+        def scraperHoepli
+            #pagina target
+            url = 'https://www.hoepli.it/cerca/libri.aspx?query='+@isbn
+            #html raw
+            unparsed_page = HTTParty.get(url)
+            #html codificato
+            parsed_page = Nokogiri::HTML(unparsed_page)
+
+            author_link = []
+            author = []
+
+            for i  in 0..parsed_page.css("h2.prodotto > span > a").size()-1 do
+                #raccolgo gli author link
+                author_link[i] = "https://www.hoepli.it"+(parsed_page.css("h2.prodotto > span > a")[i].attribute("href").value)
+                #raccolgo gli author
+                author[i] = parsed_page.css("h2.prodotto > span > a")[i].text
+            end
+
+            @book_info = {
+                title: parsed_page.css("h1.fs25.cBlu").text,
+                img: parsed_page.css("div.slbox > div > div> img").attribute("src").value,
+                author: author,
+                author_link: author_link,
+                prize: parsed_page.css("div.prezzo > span").text,
+                url: url,
+                site: "Hoepli"
+            
+            }
+
+            @book_info_arr[4] = @book_info
+
+        end
+
         scraperLibraccio
         scraperLibreriaUniversitaria
         scraperMondadori
         scraperUnilibro
+        scraperHoepli
         
     end
 
