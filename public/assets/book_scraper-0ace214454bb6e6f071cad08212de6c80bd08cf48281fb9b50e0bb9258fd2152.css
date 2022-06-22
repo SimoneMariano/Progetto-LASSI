@@ -8,10 +8,6 @@ button > a {
     text-decoration: none;
 }
 
-p.p-prize {
-    color: red;
-}
-
 .col-flex {
     flex-direction: column;
     justify-content: space-evenly;

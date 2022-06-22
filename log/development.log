@@ -16047,3 +16047,184 @@ Processing by BookScraperController#index as HTML
 Completed 200 OK in 482ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 4665)
 
 
+Started GET "/library" for ::1 at 2022-06-22 10:42:22 +0200
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 29.6ms | Allocations: 2335)
+  Rendered layout layouts/application.html.erb (Duration: 38.1ms | Allocations: 4762)
+Completed 200 OK in 80ms (Views: 52.1ms | ActiveRecord: 0.0ms | Allocations: 9280)
+
+
+Started GET "/books" for ::1 at 2022-06-22 10:42:28 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 236.6ms | Allocations: 29583)
+  Rendered layout layouts/application.html.erb (Duration: 239.9ms | Allocations: 30244)
+Completed 200 OK in 277ms (Views: 239.9ms | ActiveRecord: 5.1ms | Allocations: 34681)
+
+
+Started GET "/book_rentals" for ::1 at 2022-06-22 10:42:32 +0200
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.7ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 101.1ms | Allocations: 16176)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 124.8ms | Allocations: 21373)
+  Rendered layout layouts/application.html.erb (Duration: 127.5ms | Allocations: 22093)
+Completed 200 OK in 154ms (Views: 124.0ms | ActiveRecord: 7.3ms | Allocations: 25967)
+
+
+Started GET "/books" for ::1 at 2022-06-22 10:42:34 +0200
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1407)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2032)
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 0.7ms | Allocations: 2581)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:42:39 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+Completed 500 Internal Server Error in 10027ms (ActiveRecord: 0.0ms | Allocations: 1170)
+
+
+  
+SocketError (Failed to open TCP connection to www.libraccio.it:443 (getaddrinfo: Temporary failure in name resolution)):
+  
+app/controllers/book_scraper_controller.rb:13:in `scraperLibraccio'
+app/controllers/book_scraper_controller.rb:41:in `index'
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:43:00 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 644)
+  Rendered layout layouts/application.html.erb (Duration: 6.1ms | Allocations: 1304)
+Completed 200 OK in 3104ms (Views: 9.9ms | ActiveRecord: 0.0ms | Allocations: 5776)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:44:02 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 636)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 1507)
+Completed 200 OK in 3145ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 5247)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:44:42 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 636)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 1507)
+Completed 200 OK in 3554ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 5261)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:48:14 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 640)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 1512)
+Completed 200 OK in 2816ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 5289)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:49:03 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 639)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 1510)
+Completed 200 OK in 5183ms (Views: 15.7ms | Allocations: 5284)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:51:15 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 686)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 1557)
+Completed 200 OK in 4900ms (Views: 16.8ms | Allocations: 5343)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:52:21 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 684)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 1555)
+Completed 200 OK in 4598ms (Views: 14.9ms | Allocations: 5343)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:53:17 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 687)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 1558)
+Completed 200 OK in 2471ms (Views: 17.5ms | Allocations: 5326)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:54:31 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 688)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 1559)
+Completed 200 OK in 2386ms (Views: 22.1ms | Allocations: 5334)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:54:36 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 859)
+Completed 200 OK in 4171ms (Views: 4.5ms | Allocations: 3907)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:56:05 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 686)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 1557)
+Completed 200 OK in 2593ms (Views: 12.9ms | Allocations: 5324)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 10:57:20 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 685)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 1556)
+Completed 200 OK in 4539ms (Views: 22.0ms | Allocations: 5338)
+
+
