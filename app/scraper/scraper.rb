@@ -1,28 +1,27 @@
 require 'nokogiri'
 require 'httparty'
-#require 'byebug'
+require 'byebug'
 
-def scraperLibraccio
+def scraper
     #pagina target
-    url = 'https://www.libraccio.it/libro/9788808420206/'
+    url = 'https://www.amazon.it/s?k=9788808420206&crid=3DEM48XS6UPSJ&sprefix=%2Caps%2C167&ref=nb_sb_ss_recent_1_0_recent'
     #html raw
     unparsed_page = HTTParty.get(url)
     #html codificato
     parsed_page = Nokogiri::HTML(unparsed_page)
 
-    book_info = {
-        title: parsed_page.css('.master-page .boxproddetail h1').text,
-        img: parsed_page.css('#ctl00_ctl00_C_C_ProductDetail_zoom1').attribute("href").value,
-        author: (parsed_page.css('.master-page .boxproddetail .author').text).gsub("Autori:", " "),
-        label_price: parsed_page.css('.master-page .boxproddetail .label-price').text,
-        prize: parsed_page.css('.master-page .boxproddetail .currentprice').text,
-        url: url
-    }
-    #byebug
+    author_link = []
+    author = []
+    
 
-    book_info
+
+    
+    byebug
+
+    
 end
 
+scraper
 
 
 

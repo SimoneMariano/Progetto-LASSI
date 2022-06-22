@@ -16228,3 +16228,263 @@ Processing by BookScraperController#index as HTML
 Completed 200 OK in 4539ms (Views: 22.0ms | Allocations: 5338)
 
 
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 12:27:58 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 18.0ms | Allocations: 1346)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 1426)
+Completed 500 Internal Server Error in 5920ms (Allocations: 6463)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<%= stylesheet_link_tag "book_scraper" %>
+
+<body  style="padding: 15px">
+
+    <% for book_info in @book_info_arr %>
+    <div class="row">
+        <h1>Libraccio</h1>
+        <div class="col-3 col-md-2">
+            <%= link_to book_info[:url] do %>
+                <img src=<%= book_info[:img] %> style="width: 100%;">
+            <%end%>
+        </div>
+
+        <div class="col-9 d-flex col-flex"> 
+            <h4> <%= book_info[:title] %> </h4>
+            <div class="d-flex">
+                <div class="col-3">
+                    <p>Author: </p>
+                </div>
+                <div class="col-6">
+                    <% for i in 0..book_info[:author].size()-1 do%>
+                        <%= link_to book_info[:author_link][i] do%>
+                            <p class="p-author"> <%= book_info[:author][i]%> </p>
+                        <%end%>
+                    <%end%>
+                </div>
+            </div>
+
+            <div class="d-flex">
+                <div class="col-3">
+                    <p>Prize:</p>
+                </div>
+                <div class="col-6">
+                    <p class="p-prize"><%= book_info[:prize]%></p>
+                </div>
+            </div>
+            <div>
+                <button class="btn btn-warning">
+                    <%= link_to "GO TO BUY", book_info[:url] %>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+):
+1:    
+2:    <%= stylesheet_link_tag "book_scraper" %>
+3:    
+4:    <body  style="padding: 15px">
+5:    
+6:        <% for book_info in @book_info_arr %>
+7:        <div class="row">
+8:            <h1>Libraccio</h1>
+9:            <div class="col-3 col-md-2">
+10:                <%= link_to book_info[:url] do %>
+11:                    <img src=<%= book_info[:img] %> style="width: 100%;">
+12:                <%end%>
+13:            </div>
+14:    
+15:            <div class="col-9 d-flex col-flex"> 
+16:                <h4> <%= book_info[:title] %> </h4>
+17:                <div class="d-flex">
+18:                    <div class="col-3">
+19:                        <p>Author: </p>
+20:                    </div>
+21:                    <div class="col-6">
+22:                        <% for i in 0..book_info[:author].size()-1 do%>
+23:                            <%= link_to book_info[:author_link][i] do%>
+24:                                <p class="p-author"> <%= book_info[:author][i]%> </p>
+25:                            <%end%>
+26:                        <%end%>
+27:                    </div>
+28:                </div>
+29:    
+30:                <div class="d-flex">
+31:                    <div class="col-3">
+32:                        <p>Prize:</p>
+33:                    </div>
+34:                    <div class="col-6">
+35:                        <p class="p-prize"><%= book_info[:prize]%></p>
+36:                    </div>
+37:                </div>
+38:                <div>
+39:                    <button class="btn btn-warning">
+40:                        <%= link_to "GO TO BUY", book_info[:url] %>
+41:                    </button>
+42:                </div>
+43:            </div>
+44:        </div>
+45:    
+46:    
+47:    
+48:    
+49:    
+50:    
+51:    </body>
+  
+app/views/book_scraper/index.html.erb:53: syntax error, unexpected end-of-input, expecting `end'
+app/views/book_scraper/index.html.erb:53: syntax error, unexpected end-of-input, expecting `end'
+app/views/book_scraper/index.html.erb:53: syntax error, unexpected end-of-input, expecting `end'
+app/views/book_scraper/index.html.erb:53: syntax error, unexpected end-of-input, expecting `end'
+app/views/book_scraper/index.html.erb:53: syntax error, unexpected end-of-input, expecting `end'
+app/views/book_scraper/index.html.erb:53: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 12:28:33 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 785)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 3099)
+Completed 200 OK in 5944ms (Views: 39.2ms | Allocations: 7937)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 13:49:19 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 791)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 1662)
+Completed 200 OK in 11878ms (Views: 29.5ms | Allocations: 6557)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 13:51:34 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 283)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 907)
+Completed 200 OK in 6108ms (Views: 5.1ms | Allocations: 5093)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 13:52:47 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 2445)
+Completed 200 OK in 4074ms (Views: 20.1ms | Allocations: 7014)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 14:01:04 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 267)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 2367)
+Completed 200 OK in 3991ms (Views: 27.5ms | Allocations: 6814)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 14:01:24 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 2520)
+Completed 200 OK in 5364ms (Views: 13.6ms | Allocations: 7360)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 14:04:07 +0200
+  
+SyntaxError (/home/oddiv/desktop/BiblioCommunity/app/controllers/book_scraper_controller.rb:35: syntax error, unexpected local variable or method, expecting '}'
+                site: "Libraccio"
+                ^~~~
+/home/oddiv/desktop/BiblioCommunity/app/controllers/book_scraper_controller.rb:36: syntax error, unexpected '}', expecting `end'
+            }
+            ^
+/home/oddiv/desktop/BiblioCommunity/app/controllers/book_scraper_controller.rb:68: syntax error, unexpected local variable or method, expecting '}'
+                site: "Biblioteca Universitaria"
+                ^~~~
+/home/oddiv/desktop/BiblioCommunity/app/controllers/book_scraper_controller.rb:70: syntax error, unexpected '}', expecting `end'
+            }
+            ^
+):
+  
+app/controllers/book_scraper_controller.rb:35: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/book_scraper_controller.rb:36: syntax error, unexpected '}', expecting `end'
+app/controllers/book_scraper_controller.rb:68: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/book_scraper_controller.rb:70: syntax error, unexpected '}', expecting `end'
+app/controllers/book_scraper_controller.rb:35: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/book_scraper_controller.rb:36: syntax error, unexpected '}', expecting `end'
+app/controllers/book_scraper_controller.rb:68: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/book_scraper_controller.rb:70: syntax error, unexpected '}', expecting `end'
+app/controllers/book_scraper_controller.rb:35: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/book_scraper_controller.rb:36: syntax error, unexpected '}', expecting `end'
+app/controllers/book_scraper_controller.rb:68: syntax error, unexpected local variable or method, expecting '}'
+app/controllers/book_scraper_controller.rb:70: syntax error, unexpected '}', expecting `end'
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 14:04:34 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 7.0ms | Allocations: 879)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 3192)
+Completed 200 OK in 8205ms (Views: 29.3ms | Allocations: 8213)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 15:17:07 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 877)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1748)
+Completed 200 OK in 1149ms (Views: 10.4ms | Allocations: 6788)
+
+
+Started GET "/book_scraper?ISBN=8842934291" for ::1 at 2022-06-22 15:19:47 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"8842934291"}
+Completed 500 Internal Server Error in 3136ms (Allocations: 2522)
+
+
+  
+NoMethodError (undefined method `value' for nil:NilClass):
+  
+app/controllers/book_scraper_controller.rb:30:in `scraperLibraccio'
+app/controllers/book_scraper_controller.rb:75:in `index'
+Started GET "/book_scraper?ISBN=9788842934295" for ::1 at 2022-06-22 15:20:35 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788842934295"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 777)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 1648)
+Completed 200 OK in 777ms (Views: 8.1ms | Allocations: 6445)
+
+
+Started GET "/book_scraper?ISBN=9788842934295" for ::1 at 2022-06-22 15:21:36 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788842934295"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 318)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 2420)
+Completed 200 OK in 753ms (Views: 7.1ms | Allocations: 6988)
+
+
