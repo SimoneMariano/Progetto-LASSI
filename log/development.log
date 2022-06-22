@@ -16488,3 +16488,64 @@ Processing by BookScraperController#index as HTML
 Completed 200 OK in 753ms (Views: 7.1ms | Allocations: 6988)
 
 
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 17:12:23 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 467)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2570)
+Completed 200 OK in 2036ms (Views: 17.5ms | Allocations: 9509)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 17:14:05 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 542)
+  Rendered layout layouts/application.html.erb (Duration: 58.8ms | Allocations: 2645)
+Completed 200 OK in 1482ms (Views: 70.3ms | Allocations: 9468)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 17:52:19 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 542)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 2643)
+Completed 200 OK in 1084ms (Views: 15.9ms | Allocations: 9501)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 18:17:52 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+Completed 500 Internal Server Error in 1133ms (Allocations: 9215)
+
+
+  
+NameError (undefined local variable or method `parsed_page' for #<BookScraperController:0x00000000061670>):
+  
+app/controllers/book_scraper_controller.rb:111:in `scraperUnilibro'
+app/controllers/book_scraper_controller.rb:134:in `index'
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 18:19:15 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 639)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 2741)
+Completed 200 OK in 1766ms (Views: 8.6ms | Allocations: 13743)
+
+
+Started GET "/book_scraper?ISBN=9788808420206" for ::1 at 2022-06-22 18:20:43 +0200
+Processing by BookScraperController#index as HTML
+  Parameters: {"ISBN"=>"9788808420206"}
+  Rendering layout layouts/application.html.erb
+  Rendering book_scraper/index.html.erb within layouts/application
+  Rendered book_scraper/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 640)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2742)
+Completed 200 OK in 2697ms (Views: 7.6ms | Allocations: 13608)
+
+
