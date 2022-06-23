@@ -1,0 +1,22 @@
+<div id="<%= dom_id secondhand %>">
+  <p>
+    <strong>Book:</strong>
+    <%= secondhand.book_id %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= secondhand.user_id %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= link_to secondhand.image.filename, secondhand.image if secondhand.image.attached? %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= secondhand.description %>
+  </p>
+
+</div>

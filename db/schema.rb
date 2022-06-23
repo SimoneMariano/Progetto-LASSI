@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_21_113521) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_23_132010) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -59,6 +59,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_113521) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "secondhands", force: :cascade do |t|
+    t.integer "book_id", null: false
+    t.integer "user_id", null: false
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_secondhands_on_book_id"
+    t.index ["user_id"], name: "index_secondhands_on_user_id"
+  end
+
+  create_table "secs", force: :cascade do |t|
+    t.integer "book_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_secs_on_book_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.integer "matricola"
     t.string "email"
@@ -70,4 +87,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_21_113521) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "book_rentals", "books"
   add_foreign_key "book_rentals", "users"
+  add_foreign_key "secondhands", "books"
+  add_foreign_key "secondhands", "users"
+  add_foreign_key "secs", "books"
 end
