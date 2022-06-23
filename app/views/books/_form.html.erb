@@ -1,3 +1,9 @@
+<%= javascript_pack_tag 'books' %>
+
+
+
+
+
 <%= form_with(model: book) do |form| %>
   <% if book.errors.any? %>
     <div style="color: red">
@@ -23,8 +29,20 @@
 
   <div>
     <%= form.label :placeholder, style: "display: block" %>
-    <%= form.text_field :placeholder %>
+    <%= form.file_field :placeholder %>
   </div>
+
+  <div>
+    <%= form.label :categories, style: "display: block" %>
+    <div class="d-flex">
+      <div class="d-flex" id="select-div" style="flex-direction:column">
+        <%= select_tag(:categories, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}), :include_blank => true)%> 
+      </div>
+      <div>
+        <button type="button" id="addCategory" >+</button>
+      </div>
+    </div>
+  <div>
 
   <div>
     <%= form.submit %>

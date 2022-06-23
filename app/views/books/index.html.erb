@@ -1,5 +1,11 @@
 
 <body>
+<% @books.each do |book| %>
+    <%= render book %>
+    <p>
+      <%= link_to "Show this secondhand", book %>
+    </p>
+  <% end %>
 
   <div class="row">
     <div class="col-3">
@@ -9,11 +15,9 @@
     <div class="col-9">
       <ul>
         <% @books.each do |book| %>
-        
+
           <li class="d-flex">
-            <%= link_to book do %>
-              <%= image_tag 'placeholder/'+book.placeholder %>
-            <%end%>
+            
 
             <div style="padding-left:20px">
               <p class="title">

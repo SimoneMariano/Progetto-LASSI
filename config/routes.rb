@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   resources :secondhands
   
   resources :book_rentals

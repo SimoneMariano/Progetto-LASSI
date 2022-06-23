@@ -1,17 +1,25 @@
 <div id="<%= dom_id book %>">
+
+  <div class="col-2">
+      <p>
+        <%= image_tag book.placeholder if book.placeholder.attached? %>
+      </p>
+    </div>
   <p>
     <strong>Isbn:</strong>
     <%= book.ISBN %>
   </p>
 
-  <p>
-    <strong>Title:</strong>
-    <%= book.title %>
-  </p>
+  <div class="col-6">
+    <p>
+      <strong>Title:</strong>
+      <%= book.title %>
+    </p>
 
-  <p>
-    <strong>Placeholder:</strong>
-    <%= book.placeholder %>
-  </p>
+    <p>
+      <strong>Placeholder:</strong>
+      <%= book.placeholder %>
+    </p>
+  </div>
 
 </div>
