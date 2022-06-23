@@ -22732,3 +22732,1934 @@ Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 399)
 
   [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   [1m[35m (3.9ms)[0m  [1m[35mDROP TABLE "secs"[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.3ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:77:in `set_secondhand'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  Rendered secondhands/_secondhand.html.erb (Duration: 2.6ms | Allocations: 1713)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2158)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2237)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.3ms | Allocations: 10002)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div id="<%= dom_id secondhand %>">
+    2:   <p>
+    3:     <strong>Book:</strong>
+    4:     <%= @book_info.title %>
+    5:   </p>
+    6: 
+    7:   <p>
+  
+app/views/secondhands/_secondhand.html.erb:4
+app/views/secondhands/show.html.erb:3
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 1.2ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 0.8ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.1ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 1.2ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.7ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 2.4ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 3.3ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 14.2ms | Allocations: 4838)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 16.1ms | Allocations: 5061)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 1.6ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.9ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 1.4ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.9ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 27.4ms | Allocations: 6872)
+Processing by SecondhandsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1038)
+
+
+  
+NoMethodError (undefined method `each' for nil:NilClass):
+  
+app/controllers/secondhands_controller.rb:7:in `index'
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 0.7ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 1.0ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.6ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 1.1ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.5ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 1.6ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.2ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 11.7ms | Allocations: 4622)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 13.3ms | Allocations: 4845)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 1.3ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 2.1ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 1.6ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 2.0ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 23.6ms | Allocations: 6446)
+Processing by SecondhandsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mSecondhand Load (0.9ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 51.8ms | Allocations: 18702)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 54.8ms | Allocations: 19172)
+  Rendered layout layouts/application.html.erb (Duration: 58.7ms | Allocations: 21550)
+Completed 200 OK in 105ms (Views: 57.6ms | ActiveRecord: 8.3ms | Allocations: 36629)
+
+
+Processing by SecondhandsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/new.html.erb within layouts/application
+  Rendered secondhands/_form.html.erb (Duration: 10.0ms | Allocations: 1925)
+  Rendered secondhands/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 2238)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 2922)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 3482)
+
+
+Processing by SecondhandsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "secondhand"=>{"ISBN"=>"9788808064851", "user_id"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fffd6eb20e8 @tempfile=#<Tempfile:/tmp/RackMultipart20220623-23022-dsdtjl.jpg>, @original_filename="analisi_1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"secondhand[image]\"; filename=\"analisi_1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Libro bello. libro fresco"}, "commit"=>"Create Secondhand"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE (ISBN) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:28:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:34:in `create'
+[31mUnpermitted parameters: :ISBN, :user_id. Context: { controller: SecondhandsController, action: create, request: #<ActionDispatch::Request:0x00007fffd6ed8928>, params: {"authenticity_token"=>"[FILTERED]", "secondhand"=>{"ISBN"=>"9788808064851", "user_id"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fffd6eb20e8 @tempfile=#<Tempfile:/tmp/RackMultipart20220623-23022-dsdtjl.jpg>, @original_filename="analisi_1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"secondhand[image]\"; filename=\"analisi_1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Libro bello. libro fresco"}, "commit"=>"Create Secondhand", "controller"=>"secondhands", "action"=>"create"} }[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mSecondhand Create (2.0ms)[0m  [1m[32mINSERT INTO "secondhands" ("book_id", "user_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["book_id", 1], ["user_id", 1], ["description", "Libro bello. libro fresco"], ["created_at", "2022-06-23 15:20:28.125881"], ["updated_at", "2022-06-23 15:20:28.125881"]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["key", "rab959verkcygv8ef0k268fa7v6f"], ["filename", "analisi_1.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 9290], ["checksum", "Da2EGw0jnUcg0DJ17rx/3A=="], ["created_at", "2022-06-23 15:20:28.137874"]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Secondhand"], ["record_id", 10], ["blob_id", 11], ["created_at", "2022-06-23 15:20:28.141462"]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mSecondhand Update (0.1ms)[0m  [1m[33mUPDATE "secondhands" SET "updated_at" = ? WHERE "secondhands"."id" = ?[0m  [["updated_at", "2022-06-23 15:20:28.144235"], ["id", 10]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+[36m  Disk Storage (2.4ms) [0m[32mUploaded file to key: rab959verkcygv8ef0k268fa7v6f (checksum: Da2EGw0jnUcg0DJ17rx/3A==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 18e7cb99-309f-4682-8158-a8e5a1c4b3f2) to Async(default) with arguments: #<GlobalID:0x00007fe6b0793bc0 @uri=#<URI::GID gid://biblio-community/ActiveStorage::Blob/11>>
+Redirected to http://localhost:3000/secondhands/10
+Completed 302 Found in 93ms (ActiveRecord: 7.4ms | Allocations: 21229)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [18e7cb99-309f-4682-8158-a8e5a1c4b3f2]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [18e7cb99-309f-4682-8158-a8e5a1c4b3f2] Performing ActiveStorage::AnalyzeJob (Job ID: 18e7cb99-309f-4682-8158-a8e5a1c4b3f2) from Async(default) enqueued at 2022-06-23T15:20:28Z with arguments: #<GlobalID:0x00007fe6b07b03b0 @uri=#<URI::GID gid://biblio-community/ActiveStorage::Blob/11>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [18e7cb99-309f-4682-8158-a8e5a1c4b3f2] [36m  Disk Storage (1.9ms) [0m[34mDownloaded file from key: rab959verkcygv8ef0k268fa7v6f[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [18e7cb99-309f-4682-8158-a8e5a1c4b3f2] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [18e7cb99-309f-4682-8158-a8e5a1c4b3f2]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [18e7cb99-309f-4682-8158-a8e5a1c4b3f2]   [1m[36mActiveStorage::Blob Update (1.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 11]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [18e7cb99-309f-4682-8158-a8e5a1c4b3f2]   [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [18e7cb99-309f-4682-8158-a8e5a1c4b3f2] Performed ActiveStorage::AnalyzeJob (Job ID: 18e7cb99-309f-4682-8158-a8e5a1c4b3f2) from Async(default) in 30.98ms
+Processing by SecondhandsController#show as TURBO_STREAM
+  Parameters: {"id"=>"10"}
+  [1m[36mSecondhand Load (0.5ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:77:in `set_secondhand'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  Rendered secondhands/_secondhand.html.erb (Duration: 3.2ms | Allocations: 1483)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1639)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1717)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms | Allocations: 3245)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div id="<%= dom_id secondhand %>">
+    2:   <p>
+    3:     <strong>Book:</strong>
+    4:     <%= @book_info.title %>
+    5:   </p>
+    6: 
+    7:   <p>
+  
+app/views/secondhands/_secondhand.html.erb:4
+app/views/secondhands/show.html.erb:3
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 1.4ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 0.9ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.0ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 0.8ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.1ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 1.2ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.9ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 12.0ms | Allocations: 4633)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 13.9ms | Allocations: 4856)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 1.0ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.4ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 1.2ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.6ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 24.6ms | Allocations: 6461)
+Processing by SecondhandsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/new.html.erb within layouts/application
+  Rendered secondhands/_form.html.erb (Duration: 3.4ms | Allocations: 1339)
+  Rendered secondhands/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1441)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2072)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 2579)
+
+
+Processing by SecondhandsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "secondhand"=>{"ISBN"=>"9788808064851", "user_id"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe6b0c83e50 @tempfile=#<Tempfile:/tmp/RackMultipart20220623-23022-20t4pu.jpg>, @original_filename="analisi_1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"secondhand[image]\"; filename=\"analisi_1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Libro bello. libro fresco"}, "commit"=>"Create Secondhand"}
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE (ISBN) LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:28:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:34:in `create'
+[31mUnpermitted parameters: :ISBN, :user_id. Context: { controller: SecondhandsController, action: create, request: #<ActionDispatch::Request:0x00007fe6b0c89300>, params: {"authenticity_token"=>"[FILTERED]", "secondhand"=>{"ISBN"=>"9788808064851", "user_id"=>"1", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe6b0c83e50 @tempfile=#<Tempfile:/tmp/RackMultipart20220623-23022-20t4pu.jpg>, @original_filename="analisi_1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"secondhand[image]\"; filename=\"analisi_1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "description"=>"Libro bello. libro fresco"}, "commit"=>"Create Secondhand", "controller"=>"secondhands", "action"=>"create"} }[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mSecondhand Create (2.0ms)[0m  [1m[32mINSERT INTO "secondhands" ("book_id", "user_id", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["book_id", 1], ["user_id", 1], ["description", "Libro bello. libro fresco"], ["created_at", "2022-06-23 15:20:59.319254"], ["updated_at", "2022-06-23 15:20:59.319254"]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "service_name", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["key", "hiiiog8pnnm6ul4kmuz8g6oobu1d"], ["filename", "analisi_1.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["service_name", "local"], ["byte_size", 9290], ["checksum", "Da2EGw0jnUcg0DJ17rx/3A=="], ["created_at", "2022-06-23 15:20:59.330312"]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Secondhand"], ["record_id", 11], ["blob_id", 12], ["created_at", "2022-06-23 15:20:59.332596"]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mSecondhand Update (0.1ms)[0m  [1m[33mUPDATE "secondhands" SET "updated_at" = ? WHERE "secondhands"."id" = ?[0m  [["updated_at", "2022-06-23 15:20:59.335398"], ["id", 11]]
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/secondhands_controller.rb:41:in `block in create'
+[36m  Disk Storage (1.5ms) [0m[32mUploaded file to key: hiiiog8pnnm6ul4kmuz8g6oobu1d (checksum: Da2EGw0jnUcg0DJ17rx/3A==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 0ad17a5d-e016-4fc0-a8ce-e944c27f0116) to Async(default) with arguments: #<GlobalID:0x00007fe69c5504d0 @uri=#<URI::GID gid://biblio-community/ActiveStorage::Blob/12>>
+Redirected to http://localhost:3000/secondhands/11
+Completed 302 Found in 37ms (ActiveRecord: 6.6ms | Allocations: 11122)
+
+
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0ad17a5d-e016-4fc0-a8ce-e944c27f0116]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0ad17a5d-e016-4fc0-a8ce-e944c27f0116] Performing ActiveStorage::AnalyzeJob (Job ID: 0ad17a5d-e016-4fc0-a8ce-e944c27f0116) from Async(default) enqueued at 2022-06-23T15:20:59Z with arguments: #<GlobalID:0x00007fe69c694fd0 @uri=#<URI::GID gid://biblio-community/ActiveStorage::Blob/12>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0ad17a5d-e016-4fc0-a8ce-e944c27f0116] [36m  Disk Storage (1.1ms) [0m[34mDownloaded file from key: hiiiog8pnnm6ul4kmuz8g6oobu1d[0m
+Processing by SecondhandsController#show as TURBO_STREAM
+  Parameters: {"id"=>"11"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/secondhands_controller.rb:77:in `set_secondhand'
+  [1m[36mSecondhand Load (0.5ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:77:in `set_secondhand'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  Rendered secondhands/_secondhand.html.erb (Duration: 1.0ms | Allocations: 1543)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1664)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 2195)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.0ms | Allocations: 3700)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div id="<%= dom_id secondhand %>">
+    2:   <p>
+    3:     <strong>Book:</strong>
+    4:     <%= @book_info.title %>
+    5:   </p>
+    6: 
+    7:   <p>
+  
+app/views/secondhands/_secondhand.html.erb:4
+app/views/secondhands/show.html.erb:3
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0ad17a5d-e016-4fc0-a8ce-e944c27f0116] Skipping image analysis because the ruby-vips gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0ad17a5d-e016-4fc0-a8ce-e944c27f0116]   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0ad17a5d-e016-4fc0-a8ce-e944c27f0116]   [1m[36mActiveStorage::Blob Update (1.2ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 12]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0ad17a5d-e016-4fc0-a8ce-e944c27f0116]   [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0ad17a5d-e016-4fc0-a8ce-e944c27f0116] Performed ActiveStorage::AnalyzeJob (Job ID: 0ad17a5d-e016-4fc0-a8ce-e944c27f0116) from Async(default) in 321.93ms
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 0.8ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 0.9ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.1ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 0.9ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.4ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 1.1ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.7ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 10.4ms | Allocations: 4632)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 11.8ms | Allocations: 4855)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 0.9ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.2ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 1.2ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.7ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 20.1ms | Allocations: 6460)
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.3ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:77:in `set_secondhand'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  Rendered secondhands/_secondhand.html.erb (Duration: 2.7ms | Allocations: 1545)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1651)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1729)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms | Allocations: 2657)
+
+
+  
+ActionView::Template::Error (undefined method `title' for nil:NilClass):
+    1: <div id="<%= dom_id secondhand %>">
+    2:   <p>
+    3:     <strong>Book:</strong>
+    4:     <%= @book_info.title %>
+    5:   </p>
+    6: 
+    7:   <p>
+  
+app/views/secondhands/_secondhand.html.erb:4
+app/views/secondhands/show.html.erb:3
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 0.5ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 1.1ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.7ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 0.9ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.4ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 0.9ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.5ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 11.6ms | Allocations: 4632)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 13.0ms | Allocations: 4855)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 1.0ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.4ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 2.7ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 3.1ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 22.0ms | Allocations: 6460)
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.4ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 10.0ms | Allocations: 1879)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 8.3ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.7ms | Allocations: 1790)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 29.4ms | Allocations: 5856)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 6555)
+Completed 200 OK in 48ms (Views: 29.8ms | ActiveRecord: 4.8ms | Allocations: 8843)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.2ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:11
+  Rendered secondhands/_secondhand.html.erb (Duration: 7.3ms | Allocations: 2020)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:11
+  Rendered secondhands/_secondhand.html.erb (Duration: 4.1ms | Allocations: 1796)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:11
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.0ms | Allocations: 1789)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 6314)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 7245)
+Completed 200 OK in 38ms (Views: 27.2ms | ActiveRecord: 2.7ms | Allocations: 10178)
+
+
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.4ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:77:in `set_secondhand'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:11
+  Rendered secondhands/_secondhand.html.erb (Duration: 7.5ms | Allocations: 1800)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2413)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 3092)
+Completed 200 OK in 18ms (Views: 12.2ms | ActiveRecord: 1.3ms | Allocations: 4103)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mSecondhand Load (0.2ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 51.1ms | Allocations: 18909)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.4ms | Allocations: 1802)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.6ms | Allocations: 1790)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 66.9ms | Allocations: 23265)
+  Rendered layout layouts/application.html.erb (Duration: 71.6ms | Allocations: 25639)
+Completed 200 OK in 120ms (Views: 70.4ms | ActiveRecord: 9.0ms | Allocations: 41731)
+
+
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.6ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms | Allocations: 4260)
+
+
+  
+NoMethodError (undefined method `book_id' for #<SecondhandsController:0x000000000f3598>
+Did you mean?  book_url):
+  
+app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 0.7ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 0.9ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.4ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 1.0ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.3ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 1.2ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.7ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 11.6ms | Allocations: 4838)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 13.0ms | Allocations: 5061)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 1.0ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.5ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 1.2ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.7ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 22.2ms | Allocations: 6873)
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mSecondhand Load (0.3ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.9ms | Allocations: 15261)
+
+
+  
+NameError (undefined local variable or method `book_id' for #<SecondhandsController:0x000000000f98f8>
+Did you mean?  book_url):
+  
+app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 1.0ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 0.8ms | Allocations: 138)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.0ms | Allocations: 395)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 1.7ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.3ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 1.7ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.5ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 13.6ms | Allocations: 4628)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 15.6ms | Allocations: 4851)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 1.1ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.5ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 1.3ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.7ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 25.8ms | Allocations: 6455)
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.6ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms | Allocations: 3885)
+
+
+  
+NameError (undefined local variable or method `book_id' for #<SecondhandsController:0x000000000f9c18>
+Did you mean?  book_url):
+  
+app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 0.5ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 0.7ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.1ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 1.0ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.3ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 1.0ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.7ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 10.3ms | Allocations: 4622)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 12.3ms | Allocations: 4845)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 1.3ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.6ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 1.5ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 2.2ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 22.4ms | Allocations: 6446)
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mSecondhand Load (0.3ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+Completed 404 Not Found in 40ms (ActiveRecord: 4.0ms | Allocations: 12761)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book without an ID):
+  
+app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 0.7ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 0.8ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.0ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 5.8ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 6.2ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 1.1ms | Allocations: 468)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.8ms | Allocations: 921)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 16.3ms | Allocations: 4633)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 18.0ms | Allocations: 4856)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 0.9ms | Allocations: 111)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.2ms | Allocations: 192)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 1.4ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.7ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 27.0ms | Allocations: 6463)
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.4ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 45.0ms | Allocations: 18695)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 4.4ms | Allocations: 1802)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.6ms | Allocations: 1790)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 58.3ms | Allocations: 22742)
+  Rendered layout layouts/application.html.erb (Duration: 62.0ms | Allocations: 24905)
+Completed 200 OK in 80ms (Views: 60.9ms | ActiveRecord: 5.6ms | Allocations: 29540)
+
+
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.4ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+Completed 404 Not Found in 4ms (ActiveRecord: 0.4ms | Allocations: 1112)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Book without an ID):
+  
+app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 12.0ms | Allocations: 168)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 0.9ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.7ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 1.0ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.6ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 1.6ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.2ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 12.5ms | Allocations: 4629)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 13.8ms | Allocations: 4852)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 0.8ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.1ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 1.1ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.5ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 37.5ms | Allocations: 6458)
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mSecondhand Load (0.4ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 36.8ms | Allocations: 18655)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 38.5ms | Allocations: 19337)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 21477)
+Completed 200 OK in 79ms (Views: 39.4ms | ActiveRecord: 6.6ms | Allocations: 36953)
+
+
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.6ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 13.8ms | Allocations: 3563)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 15.8ms | Allocations: 3953)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 4032)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 1.7ms | Allocations: 6103)
+
+
+  
+ActionView::Template::Error (undefined method `symbolize_keys' for #<ActiveStorage::Attached::One:0x00007fe69c81b9d0 @name="image", @record=#<Secondhand id: 9, book_id: 1, user_id: 1, description: "Libro bello. libro fresco", created_at: "2022-06-23 15:08:52.879122000 +0000", updated_at: "2022-06-23 15:08:52.895441000 +0000">>):
+    11: 
+    12:   <p>
+    13:     <strong>Image:</strong>
+    14:     <%= image_tag secondhand.image.filename, secondhand.image if secondhand.image.attached? %>
+    15:   </p>
+    16: 
+    17:   <p>
+  
+app/views/secondhands/_secondhand.html.erb:14
+app/views/secondhands/show.html.erb:3
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 0.6ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 0.8ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.9ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 1.2ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.6ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 1.0ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.8ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 11.2ms | Allocations: 4838)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 12.3ms | Allocations: 5061)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 0.8ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.2ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 1.1ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.5ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 19.9ms | Allocations: 6871)
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.7ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.4ms | Allocations: 1353)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1744)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1824)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.0ms | Allocations: 3887)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div id="<%= dom_id secondhand %>">
+  <p>
+    <strong>Book:</strong>
+    <%= @book_info.title %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= secondhand.user_id %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= image_tag, secondhand.image.filename, secondhand.image if secondhand.image.attached? %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= secondhand.description %>
+  </p>
+
+</div>
+
+):
+1:    <div id="<%= dom_id secondhand %>">
+2:      <p>
+3:        <strong>Book:</strong>
+4:        <%= @book_info.title %>
+5:      </p>
+6:    
+7:      <p>
+8:        <strong>User:</strong>
+9:        <%= secondhand.user_id %>
+10:      </p>
+11:    
+12:      <p>
+13:        <strong>Image:</strong>
+14:        <%= image_tag, secondhand.image.filename, secondhand.image if secondhand.image.attached? %>
+15:      </p>
+16:    
+17:      <p>
+18:        <strong>Description:</strong>
+19:        <%= secondhand.description %>
+20:      </p>
+21:    
+22:    </div>
+  
+app/views/secondhands/_secondhand.html.erb:14: syntax error, unexpected `if' modifier, expecting '.' or &. or :: or '['
+app/views/secondhands/_secondhand.html.erb:14: syntax error, unexpected `if' modifier, expecting '.' or &. or :: or '['
+app/views/secondhands/_secondhand.html.erb:14: syntax error, unexpected `if' modifier, expecting '.' or &. or :: or '['
+app/views/secondhands/_secondhand.html.erb:14: syntax error, unexpected `if' modifier, expecting '.' or &. or :: or '['
+app/views/secondhands/_secondhand.html.erb:14: syntax error, unexpected `if' modifier, expecting '.' or &. or :: or '['
+app/views/secondhands/_secondhand.html.erb:14: syntax error, unexpected `if' modifier, expecting '.' or &. or :: or '['
+app/views/secondhands/show.html.erb:3
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 0.9ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 0.9ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.3ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 0.8ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.1ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 1.4ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.8ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 13.1ms | Allocations: 4838)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 15.0ms | Allocations: 5061)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 1.1ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.6ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 1.2ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.6ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 24.6ms | Allocations: 6872)
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.5ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 7.8ms | Allocations: 2037)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 10.8ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3654)
+Completed 200 OK in 28ms (Views: 18.6ms | ActiveRecord: 1.9ms | Allocations: 5747)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6fea57463e4f44057c7a9c57166ba83a7ec20208", "filename"=>"fisica_1"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (1.1ms) [0m[34mGenerated URL for file at key: nm7pndbe0fqwtm9f2651663gbpmy (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibTAzY0c1a1ltVXdabkYzZEcwNVpqSTJOVEUyTmpOblluQnRlUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDYtMjNUMTU6MzY6MDMuMjExWiIsInB1ciI6ImJsb2Jfa2V5In19--80bababada1516a98bf1b7ecba3b66f7b902ddfd/fisica_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibTAzY0c1a1ltVXdabkYzZEcwNVpqSTJOVEUyTmpOblluQnRlUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDYtMjNUMTU6MzY6MDMuMjExWiIsInB1ciI6ImJsb2Jfa2V5In19--80bababada1516a98bf1b7ecba3b66f7b902ddfd/fisica_1.jpg
+Completed 302 Found in 10ms (ActiveRecord: 0.6ms | Allocations: 2170)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 402)
+
+
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.6ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  Rendered secondhands/_secondhand.html.erb (Duration: 3.6ms | Allocations: 1346)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 1737)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 1817)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.9ms | Allocations: 3887)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div id="<%= dom_id secondhand %>">
+  <p>
+    <strong>Book:</strong>
+    <%= @book_info.title %>
+  </p>
+
+  <p>
+    <strong>User:</strong>
+    <%= secondhand.user_id %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= link_to "aaa" secondhand.image if secondhand.image.attached? %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= secondhand.description %>
+  </p>
+
+</div>
+
+):
+1:    <div id="<%= dom_id secondhand %>">
+2:      <p>
+3:        <strong>Book:</strong>
+4:        <%= @book_info.title %>
+5:      </p>
+6:    
+7:      <p>
+8:        <strong>User:</strong>
+9:        <%= secondhand.user_id %>
+10:      </p>
+11:    
+12:      <p>
+13:        <strong>Image:</strong>
+14:        <%= link_to "aaa" secondhand.image if secondhand.image.attached? %>
+15:      </p>
+16:    
+17:      <p>
+18:        <strong>Description:</strong>
+19:        <%= secondhand.description %>
+20:      </p>
+21:    
+22:    </div>
+  
+app/views/secondhands/_secondhand.html.erb:14: syntax error, unexpected local variable or method, expecting ')'
+app/views/secondhands/_secondhand.html.erb:14: syntax error, unexpected local variable or method, expecting ')'
+app/views/secondhands/_secondhand.html.erb:14: syntax error, unexpected local variable or method, expecting ')'
+app/views/secondhands/_secondhand.html.erb:14: syntax error, unexpected local variable or method, expecting ')'
+app/views/secondhands/_secondhand.html.erb:14: syntax error, unexpected local variable or method, expecting ')'
+app/views/secondhands/_secondhand.html.erb:14: syntax error, unexpected local variable or method, expecting ')'
+app/views/secondhands/show.html.erb:3
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 0.6ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 1.0ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.8ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 0.7ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 0.9ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 0.9ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 1.3ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 10.8ms | Allocations: 4838)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 12.2ms | Allocations: 5061)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 0.9ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.3ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 3.6ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 4.2ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 24.8ms | Allocations: 6872)
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.3ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.2ms | Allocations: 1859)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2579)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3484)
+Completed 200 OK in 25ms (Views: 16.0ms | ActiveRecord: 1.5ms | Allocations: 5586)
+
+
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"aa"}
+  [1m[36mSecondhand Load (0.3ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms | Allocations: 1048)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Secondhand with 'id'=aa):
+  
+app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_markup.html.erb (Duration: 0.6ms | Allocations: 165)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (Duration: 1.1ms | Allocations: 137)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.1ms | Allocations: 394)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (Duration: 1.7ms | Allocations: 113)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.3ms | Allocations: 218)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (Duration: 1.6ms | Allocations: 467)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/inlined_string.erb (Duration: 2.2ms | Allocations: 920)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/console.js.erb within layouts/javascript (Duration: 13.1ms | Allocations: 4828)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 14.8ms | Allocations: 5051)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/main.js.erb within layouts/javascript (Duration: 1.2ms | Allocations: 109)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.5ms | Allocations: 190)
+  Rendering layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb
+  Rendering /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (Duration: 1.3ms | Allocations: 272)
+  Rendered layout /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/layouts/javascript.erb (Duration: 1.6ms | Allocations: 353)
+  Rendered /home/oddiv/.rvm/gems/ruby-3.0.0/gems/web-console-4.2.0/lib/web_console/templates/index.html.erb (Duration: 23.3ms | Allocations: 6858)
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.2ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.4ms | Allocations: 1629)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2037)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 2660)
+Completed 200 OK in 13ms (Views: 7.7ms | ActiveRecord: 1.5ms | Allocations: 4024)
+
+
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.5ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 7.3ms | Allocations: 2044)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2752)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3661)
+Completed 200 OK in 22ms (Views: 14.7ms | ActiveRecord: 1.4ms | Allocations: 5747)
+
+
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.3ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.8ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.0ms | Allocations: 2030)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 3653)
+Completed 200 OK in 24ms (Views: 16.1ms | ActiveRecord: 1.7ms | Allocations: 5745)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 342)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.5ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.5ms | Allocations: 1804)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 4.9ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:14
+  Rendered secondhands/_secondhand.html.erb (Duration: 7.7ms | Allocations: 1784)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 6004)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 6702)
+Completed 200 OK in 34ms (Views: 22.9ms | ActiveRecord: 3.3ms | Allocations: 9025)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--68e620a0408e18a3433f6b4b23120eab72b0530e", "filename"=>"analisi_1"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[36m  Disk Storage (1.3ms) [0m[34mGenerated URL for file at key: rab959verkcygv8ef0k268fa7v6f (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjbUZpT1RVNWRtVnlhMk41WjNZNFpXWXdhekkyT0daaE4zWTJaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA2LTIzVDE1OjM4OjExLjQ0M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a210bd90543b4fdf16690786d453f4effb96f53b/analisi_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjbUZpT1RVNWRtVnlhMk41WjNZNFpXWXdhekkyT0daaE4zWTJaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA2LTIzVDE1OjM4OjExLjQ0M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a210bd90543b4fdf16690786d453f4effb96f53b/analisi_1.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 1439)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--73a91122ddadc0f9fb1e8ae65ccbc9b6c062354a", "filename"=>"analisi_1"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (1.8ms) [0m[34mGenerated URL for file at key: hiiiog8pnnm6ul4kmuz8g6oobu1d (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR2xwYVc5bk9IQnVibTAyZFd3MGEyMTFlamhuTm05dlluVXhaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA2LTIzVDE1OjM4OjExLjQ2MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f633c1593ea603a7345f9d848d3be7051488f893/analisi_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR2xwYVc5bk9IQnVibTAyZFd3MGEyMTFlamhuTm05dlluVXhaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA2LTIzVDE1OjM4OjExLjQ2MFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f633c1593ea603a7345f9d848d3be7051488f893/analisi_1.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 1384)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 304 Not Modified in 32ms (ActiveRecord: 0.0ms | Allocations: 324)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 342)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 630)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.3ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:13
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:13
+  Rendered secondhands/_secondhand.html.erb (Duration: 8.7ms | Allocations: 2079)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:13
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:13
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.4ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:13
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:13
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.5ms | Allocations: 1784)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 22.4ms | Allocations: 6373)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 7303)
+Completed 200 OK in 36ms (Views: 25.9ms | ActiveRecord: 3.3ms | Allocations: 10226)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6fea57463e4f44057c7a9c57166ba83a7ec20208", "filename"=>"fisica_1"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: nm7pndbe0fqwtm9f2651663gbpmy (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibTAzY0c1a1ltVXdabkYzZEcwNVpqSTJOVEUyTmpOblluQnRlUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDYtMjNUMTU6NDM6MTkuMTI2WiIsInB1ciI6ImJsb2Jfa2V5In19--608d70367da8cbc821b17e414ff3abd1721fb2f8/fisica_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibTAzY0c1a1ltVXdabkYzZEcwNVpqSTJOVEUyTmpOblluQnRlUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDYtMjNUMTU6NDM6MTkuMTI2WiIsInB1ciI6ImJsb2Jfa2V5In19--608d70367da8cbc821b17e414ff3abd1721fb2f8/fisica_1.jpg
+Completed 302 Found in 13ms (ActiveRecord: 0.6ms | Allocations: 1787)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--73a91122ddadc0f9fb1e8ae65ccbc9b6c062354a", "filename"=>"analisi_1"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: hiiiog8pnnm6ul4kmuz8g6oobu1d (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR2xwYVc5bk9IQnVibTAyZFd3MGEyMTFlamhuTm05dlluVXhaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA2LTIzVDE1OjQzOjE5LjE0NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6eba37b6c3668d29b4445243f5128ccd1d9356a3/analisi_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR2xwYVc5bk9IQnVibTAyZFd3MGEyMTFlamhuTm05dlluVXhaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA2LTIzVDE1OjQzOjE5LjE0NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6eba37b6c3668d29b4445243f5128ccd1d9356a3/analisi_1.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms | Allocations: 1450)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--68e620a0408e18a3433f6b4b23120eab72b0530e", "filename"=>"analisi_1"}
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: rab959verkcygv8ef0k268fa7v6f (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjbUZpT1RVNWRtVnlhMk41WjNZNFpXWXdhekkyT0daaE4zWTJaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA2LTIzVDE1OjQzOjE5LjE2NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--592689497e414c46dc5ee7c58502b1a3fab687a4/analisi_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjbUZpT1RVNWRtVnlhMk41WjNZNFpXWXdhekkyT0daaE4zWTJaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA2LTIzVDE1OjQzOjE5LjE2NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--592689497e414c46dc5ee7c58502b1a3fab687a4/analisi_1.jpg
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms | Allocations: 1400)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 356)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 353)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 347)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.2ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 8.5ms | Allocations: 2074)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 4.7ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 4.8ms | Allocations: 1784)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 21.3ms | Allocations: 6368)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 7298)
+Completed 200 OK in 34ms (Views: 24.7ms | ActiveRecord: 3.1ms | Allocations: 10221)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 358)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 352)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.2ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.8ms | Allocations: 2073)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.0ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.2ms | Allocations: 1784)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 20.9ms | Allocations: 6367)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 7297)
+Completed 200 OK in 35ms (Views: 25.2ms | ActiveRecord: 2.8ms | Allocations: 10216)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms | Allocations: 355)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms | Allocations: 352)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 338)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.2ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 7.1ms | Allocations: 2073)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.6ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.3ms | Allocations: 1784)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 21.6ms | Allocations: 6367)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 7297)
+Completed 200 OK in 35ms (Views: 25.9ms | ActiveRecord: 2.8ms | Allocations: 10228)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 379)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 5ms (ActiveRecord: 0.0ms | Allocations: 350)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 342)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.6ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 8.0ms | Allocations: 2071)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.6ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 4.9ms | Allocations: 1784)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 6365)
+  Rendered layout layouts/application.html.erb (Duration: 30.0ms | Allocations: 7298)
+Completed 200 OK in 43ms (Views: 31.2ms | ActiveRecord: 3.7ms | Allocations: 10215)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 304 Not Modified in 5ms (ActiveRecord: 0.0ms | Allocations: 365)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms | Allocations: 334)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 326)
+
+
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mSecondhand Load (0.5ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 8.9ms | Allocations: 1798)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2413)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 3091)
+Completed 200 OK in 22ms (Views: 14.8ms | ActiveRecord: 2.3ms | Allocations: 4542)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.6ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 8.1ms | Allocations: 1804)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 10.8ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 12.2ms | Allocations: 1784)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 35.0ms | Allocations: 5775)
+  Rendered layout layouts/application.html.erb (Duration: 43.8ms | Allocations: 6473)
+Completed 200 OK in 58ms (Views: 44.4ms | ActiveRecord: 4.6ms | Allocations: 8676)
+
+
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mSecondhand Load (0.8ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 12.1ms | Allocations: 1798)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 13.5ms | Allocations: 2216)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 2894)
+Completed 200 OK in 23ms (Views: 16.0ms | ActiveRecord: 2.6ms | Allocations: 4271)
+
+
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mSecondhand Load (0.4ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.9ms | Allocations: 2066)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 11.0ms | Allocations: 2778)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3686)
+Completed 200 OK in 23ms (Views: 16.3ms | ActiveRecord: 1.5ms | Allocations: 5768)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 346)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.4ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.3ms | Allocations: 1804)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.6ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.9ms | Allocations: 1784)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 6002)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 6700)
+Completed 200 OK in 36ms (Views: 22.6ms | ActiveRecord: 3.9ms | Allocations: 8985)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 361)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms | Allocations: 352)
+
+
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.4ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 16.9ms | Allocations: 8951)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 13525)
+  Rendered layout layouts/application.html.erb (Duration: 30.1ms | Allocations: 14245)
+Completed 200 OK in 42ms (Views: 30.5ms | ActiveRecord: 3.1ms | Allocations: 17616)
+
+
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:13
+  Rendered books/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3432)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 4092)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.3ms | Allocations: 5266)
+
+
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 1832)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 2701)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 3789)
+
+
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2502)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3162)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.4ms | Allocations: 4242)
+
+
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1877)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 2746)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 3820)
+
+
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.3ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 6.2ms | Allocations: 1558)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2614)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 3333)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 1.2ms | Allocations: 4406)
+
+
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 6.9ms | Allocations: 2498)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3158)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.3ms | Allocations: 4231)
+
+
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 1892)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 4204)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.0ms | Allocations: 5269)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.2ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 7.4ms | Allocations: 2075)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.9ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 4.8ms | Allocations: 1784)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 22.6ms | Allocations: 6408)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 7126)
+Completed 200 OK in 41ms (Views: 24.7ms | ActiveRecord: 2.9ms | Allocations: 9920)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6fea57463e4f44057c7a9c57166ba83a7ec20208", "filename"=>"fisica_1"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: nm7pndbe0fqwtm9f2651663gbpmy (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibTAzY0c1a1ltVXdabkYzZEcwNVpqSTJOVEUyTmpOblluQnRlUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDYtMjNUMTU6NDk6MzkuNjcyWiIsInB1ciI6ImJsb2Jfa2V5In19--253668d9bea14b75b57bb029e07b44570c94d171/fisica_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhibTAzY0c1a1ltVXdabkYzZEcwNVpqSTJOVEUyTmpOblluQnRlUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDYtMjNUMTU6NDk6MzkuNjcyWiIsInB1ciI6ImJsb2Jfa2V5In19--253668d9bea14b75b57bb029e07b44570c94d171/fisica_1.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms | Allocations: 1736)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--68e620a0408e18a3433f6b4b23120eab72b0530e", "filename"=>"analisi_1"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: rab959verkcygv8ef0k268fa7v6f (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjbUZpT1RVNWRtVnlhMk41WjNZNFpXWXdhekkyT0daaE4zWTJaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA2LTIzVDE1OjQ5OjM5LjY4N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e39b2f560cfbb66e9cfccb697176688bcf53aab0/analisi_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhjbUZpT1RVNWRtVnlhMk41WjNZNFpXWXdhekkyT0daaE4zWTJaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA2LTIzVDE1OjQ5OjM5LjY4N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e39b2f560cfbb66e9cfccb697176688bcf53aab0/analisi_1.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms | Allocations: 1429)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--73a91122ddadc0f9fb1e8ae65ccbc9b6c062354a", "filename"=>"analisi_1"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: hiiiog8pnnm6ul4kmuz8g6oobu1d (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR2xwYVc5bk9IQnVibTAyZFd3MGEyMTFlamhuTm05dlluVXhaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA2LTIzVDE1OjQ5OjM5LjcyM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--622adef3061b8b4e09ec781fcc81624ca545e84a/analisi_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhhR2xwYVc5bk9IQnVibTAyZFd3MGEyMTFlamhuTm05dlluVXhaQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA2LTIzVDE1OjQ5OjM5LjcyM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--622adef3061b8b4e09ec781fcc81624ca545e84a/analisi_1.jpg
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms | Allocations: 1451)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 381)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 348)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 354)
+
+
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.5ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 4.8ms | Allocations: 1558)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2613)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 3332)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 1.0ms | Allocations: 4428)
+
+
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2505)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3165)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 4247)
+
+
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.6ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 3.3ms | Allocations: 1340)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 2042)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 2685)
+Completed 200 OK in 9ms (Views: 6.4ms | ActiveRecord: 1.1ms | Allocations: 3214)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.4ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.6ms | Allocations: 1804)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 4.8ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 4.9ms | Allocations: 1784)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 5796)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | Allocations: 6494)
+Completed 200 OK in 26ms (Views: 17.6ms | ActiveRecord: 2.9ms | Allocations: 8727)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 304 Not Modified in 5ms (ActiveRecord: 0.0ms | Allocations: 350)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 5ms (ActiveRecord: 0.0ms | Allocations: 356)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+
+Processing by BooksController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:11
+  Rendered books/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 2024)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 2648)
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 3162)
+
+
+Processing by BookRentalsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.3ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:6
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/book_rentals/_book_rental.html.erb:9
+  Rendered book_rentals/_book_rental.html.erb (Duration: 3.4ms | Allocations: 1340)
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2042)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2685)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.0ms | Allocations: 3204)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.5ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.2ms | Allocations: 1804)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 6.7ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 4.7ms | Allocations: 1784)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 18.1ms | Allocations: 5796)
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 6494)
+Completed 200 OK in 28ms (Views: 17.7ms | ActiveRecord: 2.8ms | Allocations: 8727)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 351)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 342)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 336)
+
+
+Processing by SecondhandsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mSecondhand Load (0.3ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:78:in `set_secondhand'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:14:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 3.9ms | Allocations: 1798)
+  Rendered secondhands/show.html.erb within layouts/application (Duration: 6.1ms | Allocations: 2412)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3090)
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 1.1ms | Allocations: 4532)
+
+
+Processing by SecondhandsController#index as HTML
+  [1m[36mSecondhand Load (0.2ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/controllers/secondhands_controller.rb:7:in `index'
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  [1m[36mCACHE Book Load (0.1ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/secondhands_controller.rb:8:in `block in index'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 9], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.9ms | Allocations: 1804)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 10], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.8ms | Allocations: 1797)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 11], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  Rendered secondhands/_secondhand.html.erb (Duration: 5.6ms | Allocations: 1784)
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 19.2ms | Allocations: 5775)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 6473)
+Completed 200 OK in 30ms (Views: 19.7ms | ActiveRecord: 2.9ms | Allocations: 8668)
+
+
+Processing by LibraryController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1645)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 2269)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 2756)
+
+

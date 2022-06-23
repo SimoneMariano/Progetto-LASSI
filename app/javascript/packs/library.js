@@ -7,3 +7,8 @@ $("#btn_library").click(function () {
 $("#btn_rental").click(function () { 
     $("#main-block").load("./book_rentals")
 });
+
+//Caricamento lista annunci usato 
+$("#btn_secondhand").click(function () { 
+    $("#main-block").load("./secondhands")
+});

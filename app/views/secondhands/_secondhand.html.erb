@@ -1,22 +1,39 @@
+<head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+</head>
+
 <div id="<%= dom_id secondhand %>">
-  <p>
-    <strong>Book:</strong>
-    <%= secondhand.book_id %>
-  </p>
 
-  <p>
-    <strong>User:</strong>
-    <%= secondhand.user_id %>
-  </p>
+  <div class="row">
 
-  <p>
-    <strong>Image:</strong>
-    <%= link_to secondhand.image.filename, secondhand.image if secondhand.image.attached? %>
-  </p>
+    <div class="col-2">
+      <p>
+        <%= image_tag secondhand.image if secondhand.image.attached? %>
+      </p>
+    </div>
 
-  <p>
-    <strong>Description:</strong>
-    <%= secondhand.description %>
-  </p>
+    <div class="col-6">
+      <p>
+        <strong>Book:</strong>
+        <%= @book_info.title %>
+      </p>
 
+      <p>
+        <strong>User:</strong>
+        <%= secondhand.user_id %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= secondhand.description %>
+      </p>
+    </div>
+
+    
+
+  </div>
+  
 </div>
+
+

@@ -8,10 +8,9 @@
 
     <div class="col-9">
       <ul>
-
-        <li class="d-flex">
-          <% @books.each do |book| %>
-
+        <% @books.each do |book| %>
+        
+          <li class="d-flex">
             <%= link_to book do %>
               <%= image_tag 'placeholder/'+book.placeholder %>
             <%end%>
@@ -35,10 +34,9 @@
 
 
             </div>
-          
-          <% end %>
-        </li>
-
+         
+          </li>
+        <% end %>
       </ul>
 
     </div>
