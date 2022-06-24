@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_23_173504) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_24_164319) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -56,21 +56,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_23_173504) do
     t.string "title", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "description", null: false
+  end
+
+  create_table "books_categories", id: false, force: :cascade do |t|
+    t.integer "book_id", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_books_categories_on_book_id"
+    t.index ["category_id"], name: "index_books_categories_on_category_id"
   end
 
   create_table "categories", force: :cascade do |t|
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "categories_books", id: false, force: :cascade do |t|
-    t.integer "book_id", null: false
-    t.integer "category_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_categories_books_on_book_id"
-    t.index ["category_id"], name: "index_categories_books_on_category_id"
   end
 
   create_table "secondhands", force: :cascade do |t|
@@ -94,8 +95,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_23_173504) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "book_rentals", "books"
   add_foreign_key "book_rentals", "users"
-  add_foreign_key "categories_books", "books"
-  add_foreign_key "categories_books", "categories"
+  add_foreign_key "books_categories", "books"
+  add_foreign_key "books_categories", "categories"
   add_foreign_key "secondhands", "books"
   add_foreign_key "secondhands", "users"
 end

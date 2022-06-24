@@ -3,4 +3,7 @@ $(document).ready(function(){
         console.log("ok")
         $("#select-div").append($("#categories").clone());
     });
+
+    $('#categories').selectpicker();
+
 })

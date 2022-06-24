@@ -3,48 +3,11 @@
 <% @books.each do |book| %>
     <%= render book %>
     <p>
-      <%= link_to "Show this secondhand", book %>
+      <%= link_to "Show this book", book %>
     </p>
   <% end %>
 
-  <div class="row">
-    <div class="col-3">
-        <h3>Filter</h3>
-    </div>
-
-    <div class="col-9">
-      <ul>
-        <% @books.each do |book| %>
-
-          <li class="d-flex">
-            
-
-            <div style="padding-left:20px">
-              <p class="title">
-                <strong>Title:  </strong> 
-                <%= link_to book.title, book %> 
-              </p>
-              <p id="ISBN">
-                <strong>ISBN:  </strong>
-                <%= book.ISBN %> 
-              </p>
-              <button class="btn btn-primary">
-                <%= link_to "Noleggia", "#"%>
-              </button>
-              
-              <button class="btn btn-warning">
-                <%= link_to 'Acquista', {:controller => "book_scraper", :action => "index", :ISBN => book.ISBN} , :method=>:post %>
-              </button>
-
-
-            </div>
-         
-          </li>
-        <% end %>
-      </ul>
-
-    </div>
-  </div>
+  
 
   <%= stylesheet_link_tag "books" %>
 
