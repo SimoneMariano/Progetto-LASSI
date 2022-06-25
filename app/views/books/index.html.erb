@@ -1,19 +1,32 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Books</h1>
+<div class="row">
+
+  <div class="col-3">
+    <h1>Filter</h1>
+    <ul>
+      <%= check_box_tag "corso", "corso", false %>
+      <%= label :corso, "Corso di studi" %>
+    </ul>
+
+  </div>
+
+  <div class="col-6">
+    <h1>Books</h1>
+
+    <% @books.each do |book| %>
+      <%= render book %>
+      <p>
+        <%= link_to "Show this book", book %>
+      </p>
+    <% end %>
 
 
-<% @books.each do |book| %>
-    <%= render book %>
-    <p>
-      <%= link_to "Show this book", book %>
-    </p>
-  <% end %>
+    <%= link_to "New book", new_book_path %>
 
-  
+  </div>
 
-<%= link_to "New book", new_book_path %>
-
+</div>
 
 <%= stylesheet_link_tag "books" %>
 
