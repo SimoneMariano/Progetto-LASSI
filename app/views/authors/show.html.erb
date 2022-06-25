@@ -2,6 +2,10 @@
 
 <%= render @author %>
 
+<% for book in @author.book do %>
+  <%= render book %>
+<% end %>
+
 <div>
   <%= link_to "Edit this author", edit_author_path(@author) %> |
   <%= link_to "Back to authors", authors_path %>

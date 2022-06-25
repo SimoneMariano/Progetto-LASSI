@@ -34713,3 +34713,128 @@ Processing by BookScraperController#index as HTML
 Completed 200 OK in 6282ms (Views: 30.8ms | ActiveRecord: 0.0ms | Allocations: 16734)
 
 
+Started GET "/authors" for ::1 at 2022-06-25 14:19:55 +0200
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/authors/index.html.erb:6
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 1.0ms | Allocations: 168)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 2116)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3046)
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 1.5ms | Allocations: 4343)
+
+
+Started GET "/authors/1" for ::1 at 2022-06-25 14:19:59 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 21)
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  ↳ app/views/authors/show.html.erb:5
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 10.7ms | Allocations: 2320)
+  Rendered authors/show.html.erb within layouts/application (Duration: 18.9ms | Allocations: 5173)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 5851)
+Completed 200 OK in 26ms (Views: 19.7ms | ActiveRecord: 2.0ms | Allocations: 6889)
+
+
+Started GET "/authors/1" for ::1 at 2022-06-25 14:20:02 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 21)
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  ↳ app/views/authors/show.html.erb:5
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 6.8ms | Allocations: 1960)
+  Rendered authors/show.html.erb within layouts/application (Duration: 11.5ms | Allocations: 3302)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3980)
+Completed 200 OK in 16ms (Views: 12.0ms | ActiveRecord: 1.5ms | Allocations: 4927)
+
+
+Started GET "/authors/1" for ::1 at 2022-06-25 14:21:18 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.8ms | Allocations: 164)
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 1]]
+  ↳ app/views/authors/show.html.erb:5
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 6.4ms | Allocations: 2254)
+  Rendered authors/show.html.erb within layouts/application (Duration: 12.7ms | Allocations: 4165)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5073)
+Completed 200 OK in 23ms (Views: 17.8ms | ActiveRecord: 1.0ms | Allocations: 6734)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2a08b886230d147eb401897121b23b6dc1229759/fisica_1.jpg" for ::1 at 2022-06-25 14:21:18 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2a08b886230d147eb401897121b23b6dc1229759", "filename"=>"fisica_1"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: db7s9auy671hrg2qqpzeqyug3e2q (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR0kzY3psaGRYazJOekZvY21jeWNYRndlbVZ4ZVhWbk0yVXljUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDYtMjVUMTI6MjY6MTguMTQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--9b41325dcbd52385e6e2d5693a52353a428b738a/fisica_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR0kzY3psaGRYazJOekZvY21jeWNYRndlbVZ4ZVhWbk0yVXljUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDYtMjVUMTI6MjY6MTguMTQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--9b41325dcbd52385e6e2d5693a52353a428b738a/fisica_1.jpg
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms | Allocations: 1422)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR0kzY3psaGRYazJOekZvY21jeWNYRndlbVZ4ZVhWbk0yVXljUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDYtMjVUMTI6MjY6MTguMTQ4WiIsInB1ciI6ImJsb2Jfa2V5In19--9b41325dcbd52385e6e2d5693a52353a428b738a/fisica_1.jpg" for ::1 at 2022-06-25 14:21:18 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 364)
+
+
+Started GET "/authors" for ::1 at 2022-06-25 14:21:40 +0200
+Processing by AuthorsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.6ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:6
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.5ms | Allocations: 20)
+  Rendered authors/index.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1228)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 1927)
+Completed 200 OK in 13ms (Views: 10.6ms | ActiveRecord: 0.6ms | Allocations: 2493)
+
+
+Started GET "/authors/2" for ::1 at 2022-06-25 14:21:43 +0200
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:63:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 21)
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 2]]
+  ↳ app/views/authors/show.html.erb:5
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 5.7ms | Allocations: 1960)
+  Rendered authors/show.html.erb within layouts/application (Duration: 8.7ms | Allocations: 3302)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3980)
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 1.3ms | Allocations: 4916)
+
+
