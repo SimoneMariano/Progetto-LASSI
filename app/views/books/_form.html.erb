@@ -42,15 +42,13 @@
   </div>
 
   <div>
+    <%= form.label :authors, style: "display: block" %>
+    <%= select_tag(:authors, options_for_select(Author.all.map {|aut| [aut.name, aut.id]}, :selected => @book.author_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
+  <div>
+
+  <div>
     <%= form.label :categories, style: "display: block" %>
-    <div class="d-flex">
-      <div class="d-flex" id="select-div" style="flex-direction:column">
-        <%= select_tag(:categories, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
-      </div>
-      <div>
-        <button type="button" id="addCategory" >+</button>
-      </div>
-    </div>
+    <%= select_tag(:categories, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}, :selected => @book.category_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
   <div>
 
   <div>

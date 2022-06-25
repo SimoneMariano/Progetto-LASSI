@@ -27,6 +27,11 @@ class BooksController < ApplicationController
       @cat = Category.find(category)
       @book.category << @cat
     end
+
+    for author in params[:authors] do
+      @aut = Author.find(author)
+      @book.author << @aut
+    end
     
     
 
@@ -43,6 +48,21 @@ class BooksController < ApplicationController
 
   # PATCH/PUT /books/1 or /books/1.json
   def update
+    
+    @book.author.clear
+    @book.category.clear
+
+    for category in params[:categories] do
+      @cat = Category.find(category)
+      @book.category << @cat
+    end
+
+    for author in params[:authors] do
+      @aut = Author.find(author)
+      @book.author << @aut
+    end
+
+
     respond_to do |format|
       if @book.update(book_params)
         format.html { redirect_to book_url(@book), notice: "Book was successfully updated." }

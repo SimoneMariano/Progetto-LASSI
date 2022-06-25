@@ -1,5 +1,8 @@
+<p style="color: green"><%= notice %></p>
 
-<body>
+<h1>Books</h1>
+
+
 <% @books.each do |book| %>
     <%= render book %>
     <p>
@@ -9,8 +12,11 @@
 
   
 
-  <%= stylesheet_link_tag "books" %>
+<%= link_to "New book", new_book_path %>
+
+
+<%= stylesheet_link_tag "books" %>
 
 
 
-</body>
+
