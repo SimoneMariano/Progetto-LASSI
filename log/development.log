@@ -38826,3 +38826,558 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 397)
 
 
+Started GET "/books/1" for ::1 at 2022-06-25 17:25:34 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:90:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 5.2ms | Allocations: 1958)
+  Rendered books/show.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2600)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3278)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 1.1ms | Allocations: 4899)
+
+
+Started GET "/books/1/edit" for ::1 at 2022-06-25 17:25:36 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:90:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:46:in `map'
+  [1m[36mAuthor Pluck (0.3ms)[0m  [1m[34mSELECT "authors"."id" FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_form.html.erb:46
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/books/_form.html.erb:51:in `map'
+  [1m[36mCategory Pluck (0.4ms)[0m  [1m[34mSELECT "categories"."id" FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_form.html.erb:51
+  Rendered books/_form.html.erb (Duration: 73.7ms | Allocations: 21945)
+  Rendered books/edit.html.erb within layouts/application (Duration: 75.7ms | Allocations: 22314)
+  Rendered layout layouts/application.html.erb (Duration: 76.7ms | Allocations: 22971)
+Completed 200 OK in 80ms (Views: 74.1ms | ActiveRecord: 3.7ms | Allocations: 23971)
+
+
+Started GET "/books/1/edit" for ::1 at 2022-06-25 17:25:39 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:90:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:46:in `map'
+  [1m[36mAuthor Pluck (0.3ms)[0m  [1m[34mSELECT "authors"."id" FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_form.html.erb:46
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/books/_form.html.erb:51:in `map'
+  [1m[36mCategory Pluck (0.3ms)[0m  [1m[34mSELECT "categories"."id" FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_form.html.erb:51
+  Rendered books/_form.html.erb (Duration: 18.4ms | Allocations: 6491)
+  Rendered books/edit.html.erb within layouts/application (Duration: 18.8ms | Allocations: 6629)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 7251)
+Completed 200 OK in 25ms (Views: 19.6ms | ActiveRecord: 1.9ms | Allocations: 8194)
+
+
+Started GET "/books/1/edit" for ::1 at 2022-06-25 17:27:28 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:90:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAuthor Load (1.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE (isCourse = false)[0m
+  ↳ app/views/books/_form.html.erb:46:in `map'
+  Rendered books/_form.html.erb (Duration: 12.2ms | Allocations: 5522)
+  Rendered books/edit.html.erb within layouts/application (Duration: 13.5ms | Allocations: 5826)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 5905)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 1.6ms | Allocations: 7534)
+
+
+  
+ActionView::Template::Error (SQLite3::SQLException: no such column: isCourse):
+    43: 
+    44:   <div>
+    45:     <%= form.label :authors, style: "display: block" %>
+    46:     <%= select_tag(:authors, options_for_select(Author.where("isCourse = false").map {|aut| [aut.name, aut.id]}, :selected => @book.author_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
+    47:   <div>
+    48: 
+    49:   <div>
+  
+app/views/books/_form.html.erb:46:in `map'
+app/views/books/_form.html.erb:46
+app/views/books/_form.html.erb:16
+app/views/books/edit.html.erb:3
+Started GET "/books/1/edit" for ::1 at 2022-06-25 17:28:01 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:90:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:46:in `map'
+  [1m[36mAuthor Pluck (0.7ms)[0m  [1m[34mSELECT "authors"."id" FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_form.html.erb:46
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE (isCourse = false)[0m
+  ↳ app/views/books/_form.html.erb:51:in `map'
+  [1m[36mCategory Pluck (0.5ms)[0m  [1m[34mSELECT "categories"."id" FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_form.html.erb:51
+  Rendered books/_form.html.erb (Duration: 24.8ms | Allocations: 7187)
+  Rendered books/edit.html.erb within layouts/application (Duration: 26.9ms | Allocations: 7564)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 8449)
+Completed 200 OK in 36ms (Views: 30.5ms | ActiveRecord: 2.3ms | Allocations: 10099)
+
+
+Started GET "/books/1/edit" for ::1 at 2022-06-25 17:29:27 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:90:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+  Rendered books/_form.html.erb (Duration: 2.4ms | Allocations: 1712)
+  Rendered books/edit.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2017)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2097)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms | Allocations: 3728)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+
+<head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" integrity="sha512-mR/b5Y7FRsKqrYZou7uysnOdCIJib/7r5QeJMFvLNHNhtye3xJp1TdJVPLtetkukFn227nKpXD9OjUc09lx97Q==" crossorigin="anonymous"
+  referrerpolicy="no-referrer" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js" integrity="sha512-FHZVRMUW9FsXobt+ONiix6Z0tIkxvQfxtCSirkKc5Sb4TKHmqq1dZa8DphF0XqKb3ldLu/wgMa8mT6uXiLlRlw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<% javascript_pack_tag "books" %>
+
+
+
+<%= form_with(model: book) do |form| %>
+  <% if book.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+        <% book.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :ISBN, style: "display: block" %>
+    <%= form.number_field :ISBN %>
+  </div>
+
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :placeholder, style: "display: block" %>
+    <%= form.file_field :placeholder %>
+  </div>
+
+  <div>
+    <%= form.label :authors, style: "display: block" %>
+    <%= select_tag(:authors, options_for_select(Author.all.map {|aut| [aut.name, aut.id]}, :selected => @book.author_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
+  <div>
+
+  <div>
+    <%= form.label :categories, "Course of studies" style: "display: block" %>
+    <%= select_tag(:categories, options_for_select(Category.where("isCourse = true").map {|cat| [cat.name, cat.id]}, :selected => @book.category_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
+  <div>
+
+  <div>
+    <%= form.label :categories, style: "display: block" %>
+    <%= select_tag(:categories, options_for_select(Category.where("isCourse = false").map {|cat| [cat.name, cat.id]}, :selected => @book.category_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
+  <div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+
+):
+1:    
+2:    
+3:    <head>
+4:    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+5:    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" integrity="sha512-mR/b5Y7FRsKqrYZou7uysnOdCIJib/7r5QeJMFvLNHNhtye3xJp1TdJVPLtetkukFn227nKpXD9OjUc09lx97Q==" crossorigin="anonymous"
+6:      referrerpolicy="no-referrer" />
+7:    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+8:    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+9:    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js" integrity="sha512-FHZVRMUW9FsXobt+ONiix6Z0tIkxvQfxtCSirkKc5Sb4TKHmqq1dZa8DphF0XqKb3ldLu/wgMa8mT6uXiLlRlw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+10:    </head>
+11:    
+12:    <% javascript_pack_tag "books" %>
+13:    
+14:    
+15:    
+16:    <%= form_with(model: book) do |form| %>
+17:      <% if book.errors.any? %>
+18:        <div style="color: red">
+19:          <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
+20:    
+21:          <ul>
+22:            <% book.errors.each do |error| %>
+23:              <li><%= error.full_message %></li>
+24:            <% end %>
+25:          </ul>
+26:        </div>
+27:      <% end %>
+28:    
+29:      <div>
+30:        <%= form.label :ISBN, style: "display: block" %>
+31:        <%= form.number_field :ISBN %>
+32:      </div>
+33:    
+34:      <div>
+35:        <%= form.label :title, style: "display: block" %>
+36:        <%= form.text_field :title %>
+37:      </div>
+38:    
+39:      <div>
+40:        <%= form.label :placeholder, style: "display: block" %>
+41:        <%= form.file_field :placeholder %>
+42:      </div>
+43:    
+44:      <div>
+45:        <%= form.label :authors, style: "display: block" %>
+46:        <%= select_tag(:authors, options_for_select(Author.all.map {|aut| [aut.name, aut.id]}, :selected => @book.author_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
+47:      <div>
+48:    
+49:      <div>
+50:        <%= form.label :categories, "Course of studies" style: "display: block" %>
+51:        <%= select_tag(:categories, options_for_select(Category.where("isCourse = true").map {|cat| [cat.name, cat.id]}, :selected => @book.category_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
+52:      <div>
+53:    
+54:      <div>
+55:        <%= form.label :categories, style: "display: block" %>
+56:        <%= select_tag(:categories, options_for_select(Category.where("isCourse = false").map {|cat| [cat.name, cat.id]}, :selected => @book.category_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
+57:      <div>
+58:    
+59:      <div>
+60:        <%= form.label :description, style: "display: block" %>
+61:        <%= form.text_area :description %>
+62:      </div>
+63:    
+64:      <div>
+65:        <%= form.submit %>
+66:      </div>
+67:    <% end %>
+  
+app/views/books/_form.html.erb:50: syntax error, unexpected local variable or method, expecting ')'
+app/views/books/_form.html.erb:50: syntax error, unexpected local variable or method, expecting ')'
+app/views/books/_form.html.erb:50: syntax error, unexpected local variable or method, expecting ')'
+app/views/books/_form.html.erb:50: syntax error, unexpected local variable or method, expecting ')'
+app/views/books/_form.html.erb:50: syntax error, unexpected local variable or method, expecting ')'
+app/views/books/_form.html.erb:50: syntax error, unexpected local variable or method, expecting ')'
+app/views/books/edit.html.erb:3
+Started GET "/books/1/edit" for ::1 at 2022-06-25 17:30:22 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:90:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:46:in `map'
+  [1m[36mAuthor Pluck (0.3ms)[0m  [1m[34mSELECT "authors"."id" FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_form.html.erb:46
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE (isCourse = true)[0m
+  ↳ app/views/books/_form.html.erb:51:in `map'
+  [1m[36mCategory Pluck (0.2ms)[0m  [1m[34mSELECT "categories"."id" FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_form.html.erb:51
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE (isCourse = false)[0m
+  ↳ app/views/books/_form.html.erb:56:in `map'
+  Rendered books/_form.html.erb (Duration: 22.5ms | Allocations: 8022)
+  Rendered books/edit.html.erb within layouts/application (Duration: 24.1ms | Allocations: 8399)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 9284)
+Completed 200 OK in 33ms (Views: 27.6ms | ActiveRecord: 1.9ms | Allocations: 10946)
+
+
+Started GET "/categories/new" for ::1 at 2022-06-25 17:30:30 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 2.7ms | Allocations: 1206)
+  Rendered categories/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1527)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 2230)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.0ms | Allocations: 3260)
+
+
+Started POST "/categories" for ::1 at 2022-06-25 17:30:35 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Ingegneria Informatica", "isCourse"=>"1"}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mCategory Create (1.7ms)[0m  [1m[32mINSERT INTO "categories" ("created_at", "updated_at", "isCourse", "name") VALUES (?, ?, ?, ?)[0m  [["created_at", "2022-06-25 15:30:35.350738"], ["updated_at", "2022-06-25 15:30:35.350738"], ["isCourse", 1], ["name", "Ingegneria Informatica"]]
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/categories/3
+Completed 302 Found in 9ms (ActiveRecord: 3.5ms | Allocations: 2245)
+
+
+Started GET "/categories/3" for ::1 at 2022-06-25 17:30:35 +0200
+Processing by CategoriesController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:63:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 1.0ms | Allocations: 185)
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 935)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1558)
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 2646)
+
+
+Started GET "/categories" for ::1 at 2022-06-25 17:30:37 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered categories/_category.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1219)
+  Rendered layout layouts/application.html.erb (Duration: 7.3ms | Allocations: 1862)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.6ms | Allocations: 2447)
+
+
+Started GET "/categories/new" for ::1 at 2022-06-25 17:30:39 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.7ms | Allocations: 803)
+  Rendered categories/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 905)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1536)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 2046)
+
+
+Started POST "/categories" for ::1 at 2022-06-25 17:30:42 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Matematica", "isCourse"=>"0"}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mCategory Create (1.4ms)[0m  [1m[32mINSERT INTO "categories" ("created_at", "updated_at", "isCourse", "name") VALUES (?, ?, ?, ?)[0m  [["created_at", "2022-06-25 15:30:42.419741"], ["updated_at", "2022-06-25 15:30:42.419741"], ["isCourse", 0], ["name", "Matematica"]]
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/categories/4
+Completed 302 Found in 9ms (ActiveRecord: 3.7ms | Allocations: 2201)
+
+
+Started GET "/categories/4" for ::1 at 2022-06-25 17:30:42 +0200
+Processing by CategoriesController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:63:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered categories/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 436)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1059)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.2ms | Allocations: 2008)
+
+
+Started GET "/categories" for ::1 at 2022-06-25 17:30:47 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:6
+  Rendered categories/_category.html.erb (Duration: 0.2ms | Allocations: 22)
+  Rendered categories/_category.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1127)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1770)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 2274)
+
+
+Started GET "/categories/new" for ::1 at 2022-06-25 17:30:49 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.2ms | Allocations: 803)
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 905)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1536)
+Completed 200 OK in 7ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 2034)
+
+
+Started POST "/categories" for ::1 at 2022-06-25 17:30:53 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Matematica", "isCourse"=>"1"}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mCategory Create (1.1ms)[0m  [1m[32mINSERT INTO "categories" ("created_at", "updated_at", "isCourse", "name") VALUES (?, ?, ?, ?)[0m  [["created_at", "2022-06-25 15:30:53.361782"], ["updated_at", "2022-06-25 15:30:53.361782"], ["isCourse", 1], ["name", "Matematica"]]
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/categories/5
+Completed 302 Found in 10ms (ActiveRecord: 3.0ms | Allocations: 2255)
+
+
+Started GET "/categories/5" for ::1 at 2022-06-25 17:30:53 +0200
+Processing by CategoriesController#show as TURBO_STREAM
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:63:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered categories/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 436)
+  Rendered layout layouts/application.html.erb (Duration: 1.8ms | Allocations: 1059)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 2024)
+
+
+Started GET "/books/1/edit" for ::1 at 2022-06-25 17:30:56 +0200
+Processing by BooksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:90:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/edit.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/books/_form.html.erb:46:in `map'
+  [1m[36mAuthor Pluck (0.6ms)[0m  [1m[34mSELECT "authors"."id" FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_form.html.erb:46
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE (isCourse = true)[0m
+  ↳ app/views/books/_form.html.erb:51:in `map'
+  [1m[36mCategory Pluck (0.3ms)[0m  [1m[34mSELECT "categories"."id" FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/views/books/_form.html.erb:51
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE (isCourse = false)[0m
+  ↳ app/views/books/_form.html.erb:56:in `map'
+  Rendered books/_form.html.erb (Duration: 19.2ms | Allocations: 7382)
+  Rendered books/edit.html.erb within layouts/application (Duration: 19.7ms | Allocations: 7520)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 8142)
+Completed 200 OK in 24ms (Views: 19.8ms | ActiveRecord: 2.3ms | Allocations: 9112)
+
+
+Started PATCH "/books/1" for ::1 at 2022-06-25 17:31:09 +0200
+Processing by BooksController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "book"=>{"ISBN"=>"9788808420206", "title"=>"Lezioni di fisica. Con e-book. Vol. 1: Meccanica, termodinamica.", "description"=>"Del corso di Fisica noto da decenni come Il Sette, Lezioni di Fisica 1 è la prima parte, dedicata alla Meccanica e alla Termodinamica, a essere rinnovata. La revisione dei programmi ha comportato la scelta di contenuti più essenziali rispetto all'edizione di partenza, ma è stata anche l'occasione per introdurre cambiamenti significativi su due fronti: gli esercizi e i temi di avanguardia. All'interno dei capitoli, in corrispondenza dei paragrafi di riferimento, sono stati proposti esercizi canonici, svolti passo passo nella loro formulazione analogica, cioè priva di dati numerici. In questo modo, chi studia può provare a vederne possibili variazioni, sostituendo i dati noti con quelli da trovare, variando il sistema fisico nelle sue forme o dimensioni, moltiplicando o riducendo il numero degli oggetti o dei parametri. Quasi ogni capitolo, inoltre, presenta una sezione finale di Esercizi di riepilogo, con problemi sugli argomenti di riferimento, le cui soluzioni sono raggruppate in fondo al libro. I temi di avanguardia sono distribuiti lungo i capitoli e si connettono agli argomenti esposti allargandone il contenuto nella direzione delle applicazioni innovative o dell'estensione dei fenomeni descritti. Sono pensati per collegare questa porzione di Fisica classica, la cui evoluzione è in un certo senso terminata quasi un secolo fa con l'introduzione dei quanti, a formulazioni e visioni nuove."}, "authors"=>["1", "2", "3"], "categories"=>["2", "3", "1"], "commit"=>"Update Book", "id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:90:in `set_book'
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/controllers/books_controller.rb:52:in `update'
+  [1m[36mBook::HABTM_Author Delete All (3.2ms)[0m  [1m[31mDELETE FROM "authors_books" WHERE "authors_books"."book_id" = ? AND "authors_books"."author_id" IN (?, ?, ?)[0m  [["book_id", 1], ["author_id", 1], ["author_id", 2], ["author_id", 3]]
+  ↳ app/controllers/books_controller.rb:52:in `update'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" INNER JOIN "books_categories" ON "categories"."id" = "books_categories"."category_id" WHERE "books_categories"."book_id" = ?[0m  [["book_id", 1]]
+  ↳ app/controllers/books_controller.rb:53:in `update'
+  [1m[36mBook::HABTM_Category Delete All (0.2ms)[0m  [1m[31mDELETE FROM "books_categories" WHERE "books_categories"."book_id" = ? AND 1=0[0m  [["book_id", 1]]
+  ↳ app/controllers/books_controller.rb:53:in `update'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:56:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:57:in `block in update'
+  [1m[36mBook::HABTM_Category Create (1.0ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 1], ["category_id", 2], ["created_at", "2022-06-25 15:31:09.511262"], ["updated_at", "2022-06-25 15:31:09.511262"]]
+  ↳ app/controllers/books_controller.rb:57:in `block in update'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:57:in `block in update'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:56:in `block in update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:57:in `block in update'
+  [1m[36mBook::HABTM_Category Create (1.2ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 1], ["category_id", 3], ["created_at", "2022-06-25 15:31:09.525686"], ["updated_at", "2022-06-25 15:31:09.525686"]]
+  ↳ app/controllers/books_controller.rb:57:in `block in update'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:57:in `block in update'
+  [1m[36mCategory Load (0.8ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:56:in `block in update'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:57:in `block in update'
+  [1m[36mBook::HABTM_Category Create (1.5ms)[0m  [1m[32mINSERT INTO "books_categories" ("book_id", "category_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 1], ["category_id", 1], ["created_at", "2022-06-25 15:31:09.534411"], ["updated_at", "2022-06-25 15:31:09.534411"]]
+  ↳ app/controllers/books_controller.rb:57:in `block in update'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:57:in `block in update'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:61:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:62:in `block in update'
+  [1m[36mBook::HABTM_Author Create (1.2ms)[0m  [1m[32mINSERT INTO "authors_books" ("book_id", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 1], ["author_id", 1], ["created_at", "2022-06-25 15:31:09.546735"], ["updated_at", "2022-06-25 15:31:09.546735"]]
+  ↳ app/controllers/books_controller.rb:62:in `block in update'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:62:in `block in update'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:61:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:62:in `block in update'
+  [1m[36mBook::HABTM_Author Create (1.5ms)[0m  [1m[32mINSERT INTO "authors_books" ("book_id", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 1], ["author_id", 2], ["created_at", "2022-06-25 15:31:09.555853"], ["updated_at", "2022-06-25 15:31:09.555853"]]
+  ↳ app/controllers/books_controller.rb:62:in `block in update'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:62:in `block in update'
+  [1m[36mAuthor Load (0.2ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:61:in `block in update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:62:in `block in update'
+  [1m[36mBook::HABTM_Author Create (1.5ms)[0m  [1m[32mINSERT INTO "authors_books" ("book_id", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 1], ["author_id", 3], ["created_at", "2022-06-25 15:31:09.566146"], ["updated_at", "2022-06-25 15:31:09.566146"]]
+  ↳ app/controllers/books_controller.rb:62:in `block in update'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:62:in `block in update'
+Redirected to http://localhost:3000/books/1
+Completed 302 Found in 88ms (ActiveRecord: 28.5ms | Allocations: 27471)
+
+
+Started GET "/books/1" for ::1 at 2022-06-25 17:31:09 +0200
+Processing by BooksController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:90:in `set_book'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 6.8ms | Allocations: 2249)
+  Rendered books/show.html.erb within layouts/application (Duration: 9.1ms | Allocations: 2975)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 3653)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.7ms | Allocations: 4718)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2a08b886230d147eb401897121b23b6dc1229759/fisica_1.jpg" for ::1 at 2022-06-25 17:31:09 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBGUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2a08b886230d147eb401897121b23b6dc1229759", "filename"=>"fisica_1"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: db7s9auy671hrg2qqpzeqyug3e2q (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR0kzY3psaGRYazJOekZvY21jeWNYRndlbVZ4ZVhWbk0yVXljUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDYtMjVUMTU6MzY6MDkuNjQ5WiIsInB1ciI6ImJsb2Jfa2V5In19--27b749ef032979477592e95b816b2f0e1c14494f/fisica_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR0kzY3psaGRYazJOekZvY21jeWNYRndlbVZ4ZVhWbk0yVXljUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDYtMjVUMTU6MzY6MDkuNjQ5WiIsInB1ciI6ImJsb2Jfa2V5In19--27b749ef032979477592e95b816b2f0e1c14494f/fisica_1.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 1429)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhaR0kzY3psaGRYazJOekZvY21jeWNYRndlbVZ4ZVhWbk0yVXljUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDYtMjVUMTU6MzY6MDkuNjQ5WiIsInB1ciI6ImJsb2Jfa2V5In19--27b749ef032979477592e95b816b2f0e1c14494f/fisica_1.jpg" for ::1 at 2022-06-25 17:31:09 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 362)
+
+
