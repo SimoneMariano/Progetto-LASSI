@@ -4,15 +4,46 @@
 
   <div class="col-3">
     <h1>Filter</h1>
+    <%= form_tag(filter_path, method: "get", remote: true ) do %>
     <ul>
-      <%= check_box_tag "corso", "corso", false %>
-      <%= label :corso, "Corso di studi" %>
-    </ul>
+      <li style="list-style-type: none;">
+        <%= radio_button_tag :checkCourse, "Corso di studi" %>
+        <%= label :checkCourse, "Corso di studi"%>
+      </li>
 
+      <li style="list-style-type: none;">
+        <%= radio_button_tag :checkCourse, "Categorie" %>
+        <%= label :checkCourse, "Categorie"%>
+        <ul id="ul-categories">
+          <%= collection_check_boxes(:categories, :category, Category.where("isCourse = false"), :id, :name) do |b|%>
+            <%= b.label class:"label-checkbox" do%>
+              <ul>
+                <%=b.check_box + b.text%>
+              </ul>
+            <%end%>
+          <%end%>
+        </ul>
+      </li>
+
+      <li style="list-style-type: none;">
+        <%= radio_button_tag :checkCourse, "Preferiti" %>
+        <%= label :checkCourse, "Preferiti"%>
+      </li>
+
+      <%= submit_tag "filter", class: "btn btn-primary", id: "filter_submit"%>
+
+    </ul>
+    <%end%>
+
+            
   </div>
+  
+
 
   <div class="col-6">
     <h1>Books</h1>
+
+    <div id="books-div">
 
     <% @books.each do |book| %>
       <%= render book %>
@@ -20,6 +51,8 @@
         <%= link_to "Show this book", book %>
       </p>
     <% end %>
+
+    </div>
 
 
     <%= link_to "New book", new_book_path %>
@@ -29,6 +62,7 @@
 </div>
 
 <%= stylesheet_link_tag "books" %>
+<%= javascript_pack_tag "books"%>
 
 
 
