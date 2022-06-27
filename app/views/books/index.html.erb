@@ -7,6 +7,9 @@
     <%= form_tag(filter_path, method: "get", remote: true ) do %>
     <ul>
       <li style="list-style-type: none;">
+        <%= text_field_tag :search, "", class: "form-control", placeholder: "Search ...", onkeydown: "clickSubmit()" %>
+      </li>
+      <li style="list-style-type: none;">
         <%= radio_button_tag :checkCourse, "Corso di studi" %>
         <%= label :checkCourse, "Corso di studi"%>
       </li>
@@ -60,6 +63,12 @@
   </div>
 
 </div>
+
+<script>
+  function clickSubmit() {
+    $("#filter_submit").trigger("click");
+  }
+</script>
 
 <%= stylesheet_link_tag "books" %>
 <%= javascript_pack_tag "books"%>
