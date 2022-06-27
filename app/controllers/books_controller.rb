@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: %i[ show edit update destroy ]
+  before_action :set_book, only: %i[ show edit update destroy]
   # GET /books or /books.json
   def index
     
@@ -9,11 +9,14 @@ class BooksController < ApplicationController
   end
 
   def filter
+    if(params[:checkCourse] == "Corso di studi" )
+      #Da implementare con autenticazione 
     
-    @books = Book.first
-      
-      
-
+    elsif (params[:checkCourse] == "Categorie")
+      @books = Book.joins(:category).where("categories.id in (?)", params[:categories][:category]).where("categories.isCourse = false")
+    else
+      #Da implementare con autenticazione
+    end
   end
 
   # GET /books/1 or /books/1.json

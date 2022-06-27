@@ -1,44 +1,44 @@
 {
-  "application.js": "/packs/js/application-d4595b35a11a8b9a939a.js",
-  "application.js.map": "/packs/js/application-d4595b35a11a8b9a939a.js.map",
-  "books.js": "/packs/js/books-d8c3b0d1deca2b47115d.js",
-  "books.js.map": "/packs/js/books-d8c3b0d1deca2b47115d.js.map",
+  "application.js": "/packs/js/application-6c436c5f735c863103c5.js",
+  "application.js.map": "/packs/js/application-6c436c5f735c863103c5.js.map",
+  "books.js": "/packs/js/books-925af58a522dc22d0ffa.js",
+  "books.js.map": "/packs/js/books-925af58a522dc22d0ffa.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-d4595b35a11a8b9a939a.js"
+        "/packs/js/application-6c436c5f735c863103c5.js"
       ],
       "js.map": [
-        "/packs/js/application-d4595b35a11a8b9a939a.js.map"
+        "/packs/js/application-6c436c5f735c863103c5.js.map"
       ]
     },
     "books": {
       "js": [
-        "/packs/js/books-d8c3b0d1deca2b47115d.js"
+        "/packs/js/books-925af58a522dc22d0ffa.js"
       ],
       "js.map": [
-        "/packs/js/books-d8c3b0d1deca2b47115d.js.map"
+        "/packs/js/books-925af58a522dc22d0ffa.js.map"
       ]
     },
     "library": {
       "js": [
-        "/packs/js/library-ef264a953e22cb75de04.js"
+        "/packs/js/library-82571522b2ab89f9e0f0.js"
       ],
       "js.map": [
-        "/packs/js/library-ef264a953e22cb75de04.js.map"
+        "/packs/js/library-82571522b2ab89f9e0f0.js.map"
       ]
     },
     "selectpicker": {
       "js": [
-        "/packs/js/selectpicker-91c167e522fc36de2765.js"
+        "/packs/js/selectpicker-e66c41968563349aeee2.js"
       ],
       "js.map": [
-        "/packs/js/selectpicker-91c167e522fc36de2765.js.map"
+        "/packs/js/selectpicker-e66c41968563349aeee2.js.map"
       ]
     }
   },
-  "library.js": "/packs/js/library-ef264a953e22cb75de04.js",
-  "library.js.map": "/packs/js/library-ef264a953e22cb75de04.js.map",
-  "selectpicker.js": "/packs/js/selectpicker-91c167e522fc36de2765.js",
-  "selectpicker.js.map": "/packs/js/selectpicker-91c167e522fc36de2765.js.map"
+  "library.js": "/packs/js/library-82571522b2ab89f9e0f0.js",
+  "library.js.map": "/packs/js/library-82571522b2ab89f9e0f0.js.map",
+  "selectpicker.js": "/packs/js/selectpicker-e66c41968563349aeee2.js",
+  "selectpicker.js.map": "/packs/js/selectpicker-e66c41968563349aeee2.js.map"
 }
