@@ -11,7 +11,7 @@ class BooksController < ApplicationController
   def filter
 
     query = params[:search]
-    @books = Book.where("title LIKE (?)", "%#{query}%")
+    @books = Book.where("title LIKE (?)", "%#{query}%").or(Book.where(ISBN: params[:search]))
 
     if(params[:checkCourse] == "Corso di studi" )
       #Da implementare con autenticazione 
