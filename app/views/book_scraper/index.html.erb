@@ -1,0 +1,54 @@
+
+<%= stylesheet_link_tag "book_scraper" %>
+<head>
+    <meta name="referrer" content = "no-referrer">
+</head>
+<body  style="padding: 15px">
+
+    <% for book_info in @book_info_arr %>
+        <div class="row">
+            <h1><%= book_info[:site]%></h1>
+            <div class="col-3 col-md-2">
+                <%= link_to book_info[:url] do %>
+                    <img src=<%= book_info[:img] %> style="width: 100%;">
+                <%end%>
+            </div>
+
+            <div class="col-9 d-flex col-flex"> 
+                <h4> <%= book_info[:title] %> </h4>
+                <div class="d-flex">
+                    <div class="col-3">
+                        <p>Author: </p>
+                    </div>
+                    <div class="col-6">
+                        <% for i in 0..book_info[:author].size()-1 do%>
+                            <%= link_to book_info[:author_link][i] do%>
+                                <p class="p-author"> <%= book_info[:author][i]%> </p>
+                            <%end%>
+                        <%end%>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="col-3">
+                        <p>Prize:</p>
+                    </div>
+                    <div class="col-6">
+                        <p class="p-prize"><%= book_info[:prize]%></p>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn btn-warning">
+                        <%= link_to "GO TO BUY", book_info[:url] %>
+                    </button>
+                </div>
+            </div>
+        </div>
+    <% end %>
+
+
+
+
+
+
+</body>

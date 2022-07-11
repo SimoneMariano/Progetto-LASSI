@@ -1,0 +1,27 @@
+p.p-author-link{
+    padding-right: 10%;
+}
+
+p.p-author{
+    margin-bottom: 0rem;
+}
+
+button > a {
+    color: white;
+    text-decoration: none;
+}
+
+.col-flex {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 1300px) {
+    body {
+        font-size: larger;
+    }
+
+    h4{
+        font-size: larger;
+    }
+}

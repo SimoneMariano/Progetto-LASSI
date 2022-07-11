@@ -1,0 +1,40 @@
+
+
+<div id="<%= dom_id book %>">
+
+  <div class="row">
+
+  <div class="col-3">
+    <p>
+      <%= image_tag book.placeholder if book.placeholder.attached? %>
+    </p>
+  </div>
+  
+
+  <div class="col-6">
+    <p>
+      <strong>Isbn:</strong>
+      <%= book.ISBN %>
+    </p>
+    <p>
+      <strong>Title:</strong>
+      <%= book.title %>
+    </p>
+
+    <button class="btn btn-primary">
+      <%= link_to "Noleggia", "#"%>
+    </button>         
+    
+    <button class="btn btn-warning">
+      <%= link_to 'Acquista', {:controller => "book_scraper", :action => "index", :ISBN => book.ISBN} , :method=>:post %>
+    </button>
+
+    
+
+
+    
+  </div>
+
+  </div>
+
+</div>

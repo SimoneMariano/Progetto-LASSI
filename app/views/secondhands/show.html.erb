@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @secondhand %>
+
+<div>
+  <%= link_to "Edit this secondhand", edit_secondhand_path(@secondhand) %> |
+  <%= link_to "Back to secondhands", secondhands_path %>
+
+  <%= button_to "Destroy this secondhand", @secondhand, method: :delete %>
+</div>

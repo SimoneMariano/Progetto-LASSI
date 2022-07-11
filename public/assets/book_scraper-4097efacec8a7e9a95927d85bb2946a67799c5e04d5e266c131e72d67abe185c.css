@@ -1,0 +1,13 @@
+p.p-author-link{
+    padding-right: 10%;
+}
+
+p.p-author{
+    margin-bottom: 0rem;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        font-size: xx-large;
+    }
+}
