@@ -51,6 +51,10 @@ gem "turbolinks"
 gem "popper_js"
 
 gem 'bootstrap'
+
+gem "google-api-client"
+
+gem "rspec"
 # Use Sass to process CSS
 #gem "sassc-rails"
 

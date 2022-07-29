@@ -21,11 +21,22 @@ class BookRentalsController < ApplicationController
 
   # POST /book_rentals or /book_rentals.json
   def create
-    @book_rental = BookRental.new(book_rental_params)
+    isbn_book = params[:ISBN]
+    @book = Book.find_by("ISBN", isbn_book)
 
+    #Da implementare con autenticazione
+    #@user = current_user
+    #id_user = params[:user_id]
+    id_user = 1
+    @user = User.find(id_user)
+
+    @book_rental = @book.book_rental.create(book_rental_params)
+    @book_rental.user_id = @user.id
+    @book_rental.book_id = @book.id
+#
     respond_to do |format|
       if @book_rental.save
-        format.html { redirect_to book_rental_url(@book_rental), notice: "Book rental was successfully created." }
+        format.html { redirect_to book_rental_url(@book_rental), notice: "book_rental was successfully created." }
         format.json { render :show, status: :created, location: @book_rental }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -65,6 +76,6 @@ class BookRentalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def book_rental_params
-      params.require(:book_rental).permit(:book, :user, :start, :end)
+      params.require(:book_rental).permit(:start, :end)
     end
 end

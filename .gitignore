@@ -1,0 +1,7 @@
+#ignore ctredential file
+credentials.json
+
+#ignore cpripted credential filre
+config/credentials.yml.enc
+
+
