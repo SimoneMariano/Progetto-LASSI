@@ -52,13 +52,13 @@
   <div>
 
   <div>
-    <%= form.label :categories, "Course of study", style: "display: block" %>
-    <%= select_tag(:categories, options_for_select(Category.where("isCourse = true").map {|cat| [cat.name, cat.id]}, :selected => @book.category_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
+    <%= form.label :courses, "Course of study", style: "display: block" %>
+    <%= select_tag(:courses, options_for_select(Course.all.map {|c| [c.name, c.id]}, :selected => @book.course_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
   <div>
 
   <div>
     <%= form.label :categories, style: "display: block" %>
-    <%= select_tag(:categories, options_for_select(Category.where("isCourse = false").map {|cat| [cat.name, cat.id]}, :selected => @book.category_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
+    <%= select_tag(:categories, options_for_select(Category.all.map {|cat| [cat.name, cat.id]}, :selected => @book.category_ids), {:class => "selectpicker", :include_blank => true,  :multiple => true, :size => 5 })%> 
   <div>
 
   <div>

@@ -1,6 +1,13 @@
-$(document).ready(function(){
+let selectpicker_render = {
+    render: function(){
+        $('.selectpicker').selectpicker();
+    
+    },
+    setup: function() {
+        this.render;
+    }
 
-    $('#categories').selectpicker();
+}  
 
+$(selectpicker_render.setup)
 
-})

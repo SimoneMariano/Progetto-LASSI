@@ -17,7 +17,7 @@ class BooksController < ApplicationController
       #Da implementare con autenticazione 
     
     elsif (params[:checkCourse] == "Categorie")
-      @books = @books.joins(:category).where("categories.id in (?)", params[:categories][:category]).where("categories.isCourse = false")
+      @books = @books.joins(:category).where("categories.id in (?)", params[:categories][:category])
     else
       #Da implementare con autenticazione
     end
@@ -39,15 +39,26 @@ class BooksController < ApplicationController
   # POST /books or /books.json
   def create
     @book = Book.new(book_params)
-    
-    for category in params[:categories] do
-      @cat = Category.find(category)
-      @book.category << @cat
+
+    if  params[:categories].present?
+      for category in params[:categories] do
+        @cat = Category.find(category)
+        @book.category << @cat
+      end
     end
 
-    for author in params[:authors] do
-      @aut = Author.find(author)
-      @book.author << @aut
+    if  params[:courses].present?
+      for course in params[:courses] do
+        @course = Course.find(course)
+        @book.course << @course
+      end
+    end
+
+    if params[:authors].present?
+      for author in params[:authors] do
+        @aut = Author.find(author)
+        @book.author << @aut
+      end
     end
     
     

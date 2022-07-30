@@ -18,7 +18,7 @@
         <%= radio_button_tag :checkCourse, "Categorie" %>
         <%= label :checkCourse, "Categorie"%>
         <ul id="ul-categories">
-          <%= collection_check_boxes(:categories, :category, Category.where("isCourse = false"), :id, :name) do |b|%>
+          <%= collection_check_boxes(:categories, :category, Category.all, :id, :name) do |b|%>
             <%= b.label class:"label-checkbox" do%>
               <ul>
                 <%=b.check_box + b.text%>

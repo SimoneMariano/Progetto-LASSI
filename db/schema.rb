@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_29_152119) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_30_123515) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -82,12 +82,26 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_29_152119) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "books_courses", id: false, force: :cascade do |t|
+    t.integer "book_id", null: false
+    t.integer "course_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_books_courses_on_book_id"
+    t.index ["course_id"], name: "index_books_courses_on_course_id"
+  end
+
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "isCourse", null: false
     t.string "name"
-    t.index ["name", "isCourse"], name: "index_categories_on_name_and_isCourse", unique: true
+    t.index ["name"], name: "index_categories_on_name_and_isCourse", unique: true
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "secondhands", force: :cascade do |t|
@@ -119,6 +133,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_29_152119) do
   add_foreign_key "book_rentals", "users"
   add_foreign_key "books_categories", "books"
   add_foreign_key "books_categories", "categories"
+  add_foreign_key "books_courses", "books"
+  add_foreign_key "books_courses", "courses"
   add_foreign_key "secondhands", "books"
   add_foreign_key "secondhands", "users"
 end
