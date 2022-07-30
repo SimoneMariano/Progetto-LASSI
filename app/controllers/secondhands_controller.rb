@@ -25,8 +25,9 @@ class SecondhandsController < ApplicationController
 
   # POST /secondhands or /secondhands.json
   def create    
-    isbn_book = params[:ISBN]
-    @book = Book.find_by("ISBN", isbn_book)
+    isbn_book = params[:secondhand][:ISBN]
+    #@book = Book.find_by("ISBN", isbn_book)
+    @book = Book.find_by(ISBN: isbn_book)
 
     #Da implementare con autenticazione
     #@user = current_user
@@ -37,7 +38,7 @@ class SecondhandsController < ApplicationController
     @secondhand = @book.secondhand.create(secondhand_params)
     @secondhand.user_id = @user.id
     @secondhand.book_id = @book.id
-#
+    
     respond_to do |format|
       if @secondhand.save
         format.html { redirect_to secondhand_url(@secondhand), notice: "Secondhand was successfully created." }
@@ -80,6 +81,6 @@ class SecondhandsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def secondhand_params
-      params.require(:secondhand).permit(:image, :description)
+      params.require(:secondhand).permit(:book_id, :user_id, :image, :description)
     end
 end

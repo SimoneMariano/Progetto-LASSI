@@ -21,8 +21,8 @@ class BookRentalsController < ApplicationController
 
   # POST /book_rentals or /book_rentals.json
   def create
-    isbn_book = params[:ISBN]
-    @book = Book.find_by("ISBN", isbn_book)
+    isbn_book = params[:book_rental][:ISBN]
+    @book = Book.find_by(ISBN: isbn_book)
 
     #Da implementare con autenticazione
     #@user = current_user

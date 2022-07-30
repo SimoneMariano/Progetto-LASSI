@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_30_125626) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_30_160040) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -61,7 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_30_125626) do
     t.datetime "end", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index "\"book\", \"user\"", name: "index_book_rentals_on_book_and_user", unique: true
+    t.index ["book_id", "user_id"], name: "index_book_rentals_on_book_id_and_user_id", unique: true
     t.index ["book_id"], name: "index_book_rentals_on_book_id"
     t.index ["user_id"], name: "index_book_rentals_on_user_id"
   end
@@ -111,7 +111,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_30_125626) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "approved", default: false
-    t.index "\"book\", \"user\"", name: "index_secondhands_on_book_and_user", unique: true
+    t.index ["book_id", "user_id"], name: "index_secondhands_on_book_id_and_user_id", unique: true
     t.index ["book_id"], name: "index_secondhands_on_book_id"
     t.index ["user_id"], name: "index_secondhands_on_user_id"
   end
