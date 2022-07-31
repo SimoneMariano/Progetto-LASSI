@@ -21,6 +21,8 @@ class BookRentalsController < ApplicationController
 
   # POST /book_rentals or /book_rentals.json
   def create
+    @book_rental = BookRental.new(book_rental_params) 
+
     isbn_book = params[:book_rental][:ISBN]
     @book = Book.find_by(ISBN: isbn_book)
 
@@ -30,9 +32,14 @@ class BookRentalsController < ApplicationController
     id_user = 1
     @user = User.find(id_user)
 
-    @book_rental = @book.book_rental.create(book_rental_params)
-    @book_rental.user_id = @user.id
-    @book_rental.book_id = @book.id
+    if @book.present?
+      @book_rental = @book.book_rental.create(book_rental_params)
+      @book_rental.book_id = @book.id
+      @book_rental.user_id = @user.id
+    end
+
+    @book_rental.startDate = Date.today
+   
 #
     respond_to do |format|
       if @book_rental.save
@@ -76,6 +83,6 @@ class BookRentalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def book_rental_params
-      params.require(:book_rental).permit(:start, :end)
+      params.require(:book_rental).permit(:book_id, :user_id, :startDate, :endDate)
     end
 end
