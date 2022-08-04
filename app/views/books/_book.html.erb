@@ -22,11 +22,11 @@
     </p>
 
     <button class="btn btn-primary">
-      <%= link_to "Noleggia", "#"%>
+      <%= link_to "Noleggia",  controller: "book_rentals", action: "new", ISBN: book.ISBN  %>
     </button>         
     
     <button class="btn btn-warning">
-      <%= link_to 'Acquista', {:controller => "book_scraper", :action => "index", :ISBN => book.ISBN} , :method=>:post %>
+      <%= link_to 'Acquista', controller: "book_scraper", action: "index", ISBN: book.ISBN, method: "post" %>
     </button>
 
     

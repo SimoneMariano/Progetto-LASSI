@@ -1,6 +1,41 @@
 <h1>New book rental</h1>
 
-<%= render "form", book_rental: @book_rental %>
+
+<% 
+  isbn_book = params[:ISBN]
+  @book = Book.find_by(ISBN: isbn_book)
+%>
+
+<div class="row">
+
+  <div class="col-3">
+    <p>
+      <%= image_tag @book.placeholder if @book.placeholder.attached? %>
+    </p>
+  </div>
+  
+
+  <div class="col-6">
+    <p>
+      <strong>Title:</strong>
+      <%= @book.title %>
+    </p>
+
+    <p>
+      <strong>Isbn:</strong>
+      <%= @book.ISBN %>
+    </p>
+    
+
+    <%= render "form", book_rental: @book_rental %>
+
+    
+
+
+    
+  </div>
+
+  </div>
 
 <br>
 

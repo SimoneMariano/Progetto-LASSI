@@ -1,0 +1,45 @@
+.btn-link {
+    text-decoration: none
+}
+
+
+.card-home {
+    width: 200px;
+    height: 200px;
+}
+.card-header-home{
+    font-size: 30px;
+}
+.card-body-home{
+    font-size: 70px;
+}
+
+
+.card-home.library{
+    border: 1px solid #5F9EA0;
+}
+.card-header-home.library{
+    background-color: #5F9EA0;
+    color: aliceblue;
+}
+.card-body-home.library{
+    color: #5F9EA0;
+}
+
+.card-home.seats{
+    border: 1px solid #6495ED;
+}
+.card-header-home.seats{
+    background-color: #6495ED;
+    color: aliceblue;
+}
+.card-body-home.seats{
+    color: #6495ED;
+}
+
+
+   
+
+a:hover {
+    background-color: red;
+  }

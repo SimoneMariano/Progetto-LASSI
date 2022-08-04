@@ -12,14 +12,11 @@
   <% end %>
 
   <div>
-    <%= form.label :ISBN, style: "display: block" %>
-    <%= form.number_field :ISBN %>
+    <%= form.label :ISBN, style: "display: none" %>
+    <%= form.number_field :ISBN, value: params[:ISBN], style: "display: none" %>
   </div>
 
-  <div>
-    <%= form.label :user, style: "display: block" %>
-    <%= form.number_field :user %>
-  </div>
+  
 
 
   <div>

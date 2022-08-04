@@ -20,7 +20,7 @@
     </p>
 
     <button class="btn btn-primary">
-      <%= link_to "Noleggia", "#"%>
+      <%= link_to "Noleggia", {:controller => "secondhands", :action => "index", :ISBN => book.ISBN} , :method=>:post %>
     </button>         
     
     <button class="btn btn-warning">

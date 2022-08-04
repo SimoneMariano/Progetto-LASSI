@@ -13,6 +13,9 @@ class BookRentalsController < ApplicationController
   # GET /book_rentals/new
   def new
     @book_rental = BookRental.new
+    if params[:ISBN].blank?
+      redirect_to(library_path)
+    end
   end
 
   # GET /book_rentals/1/edit
@@ -51,6 +54,8 @@ class BookRentalsController < ApplicationController
       end
     end
   end
+
+ 
 
   # PATCH/PUT /book_rentals/1 or /book_rentals/1.json
   def update
