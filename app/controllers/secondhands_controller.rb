@@ -73,6 +73,26 @@ class SecondhandsController < ApplicationController
     end
   end
 
+  def filter 
+    query = params[:search]
+    
+    @secondhands = Secondhand.joins(:book).where("books.title LIKE (?)", "%#{query}%").or(Secondhand.joins(:book).where("books.ISBN = (?)", params[:search] ))
+
+    if(params[:checkCourse] == "Corso di studi" )
+      #Da implementare con autenticazione 
+    
+    elsif (params[:checkCourse] == "Categorie")
+      @books = Book.joins(:category).where("categories.id in (?)", params[:categories][:category])
+      @secondhands = @secondhands.where("book_id in (?)", @books.map {|book| book.id})
+    else
+      #Da implementare con autenticazione
+    end
+
+    for secondhand in @secondhands do
+      @book_info = Book.find(secondhand.book_id)
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_secondhand

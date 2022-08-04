@@ -25,3 +25,42 @@
   background-attachment: fixed;
 
 ;}
+
+button.btn-primary{
+    background-color: #5F9EA0;
+    color: aliceblue;
+}
+
+button.btn-primary:hover{
+    background-color: #6495ED;
+    color: aliceblue;
+}
+
+
+button.btn.btn-outline-primary{
+    border: 1px solid #5F9EA0;
+    color: #5F9EA0;
+}
+
+button.btn.btn-outline-primary:hover{
+    background-color: #6495ED;
+    border: 1px solid #6495ED;
+    color: aliceblue;
+}
+
+button.btn.btn-outline-primary:focus{
+    background-color: #6495ED;
+    border: 1px solid #6495ED;
+    color: aliceblue;
+}
+
+
+input.btn.btn-primary{
+    background-color: #5F9EA0;
+    color: aliceblue;
+}
+
+input.btn.btn-primary:hover{
+    background-color: #6495ED;
+    color: aliceblue;
+}

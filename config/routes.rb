@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :book_scraper
 
   get "filter", to: "books#filter"
+  get "filter_secondhands", to: "secondhands#filter"
 
   get 'home' => 'home#index', :as => :home
   
