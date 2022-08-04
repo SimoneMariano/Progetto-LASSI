@@ -1,21 +1,24 @@
-<h1>New book rental</h1>
-
 
 <% 
   isbn_book = params[:ISBN]
   @book = Book.find_by(ISBN: isbn_book)
 %>
+<table style="width: 50%; margin-left: 20%;">
+<tr>
+  <th>
+    <h1 style="padding-bottom: 30px;">New book rental</h1>
+  </th>
+</tr>
+<tr>
 
-<div class="row">
-
-  <div class="col-3">
-    <p>
-      <%= image_tag @book.placeholder if @book.placeholder.attached? %>
-    </p>
-  </div>
+  <td>
+    
+    <%= image_tag @book.placeholder, style: "width: 165px" if @book.placeholder.attached? %>
+    
+  </td>
   
 
-  <div class="col-6">
+  <td>
     <p>
       <strong>Title:</strong>
       <%= @book.title %>
@@ -33,12 +36,17 @@
 
 
     
-  </div>
+  </td>
 
-  </div>
+  </tr>
+
+  <tr>
+    <td style="padding-top: 20px;">
+      <%= link_to "Back to library", library_path, class: "btn btn-primary" %>
+    </tr>
+  </tr>
+  </table>
 
 <br>
 
-<div>
-  <%= link_to "Back to book rentals", book_rentals_path %>
-</div>
+

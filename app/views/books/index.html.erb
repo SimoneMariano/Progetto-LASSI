@@ -1,68 +1,81 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="row">
+<table style="width:80%; vertical-align:start">
 
-  <div class="col-3">
-    <h1>Filter</h1>
-    <%= form_tag(filter_path, method: "get", remote: true ) do %>
-    <ul>
-      <li style="list-style-type: none;">
-        <%= text_field_tag :search, "", class: "form-control", placeholder: "Search ...", onkeydown: "clickSubmit()" %>
-      </li>
-      <li style="list-style-type: none;">
-        <%= radio_button_tag :checkCourse, "Corso di studi" %>
-        <%= label :checkCourse, "Corso di studi"%>
-      </li>
-
-      <li style="list-style-type: none;">
-        <%= radio_button_tag :checkCourse, "Categorie" %>
-        <%= label :checkCourse, "Categorie"%>
-        <ul id="ul-categories">
-          <%= collection_check_boxes(:categories, :category, Category.all, :id, :name) do |b|%>
-            <%= b.label class:"label-checkbox" do%>
-              <ul>
-                <%=b.check_box + b.text%>
-              </ul>
-            <%end%>
-          <%end%>
-        </ul>
-      </li>
-
-      <li style="list-style-type: none;">
-        <%= radio_button_tag :checkCourse, "Preferiti" %>
-        <%= label :checkCourse, "Preferiti"%>
-      </li>
-
-      <%= submit_tag "Filter", class: "btn btn-primary", id: "filter_submit"%>
-
-    </ul>
-    <%end%>
-
-            
-  </div>
+<tbody style="vertical-align: top">
+  <tr>
   
+    <td>
+      <h1>Filter</h1>
+      <%= form_tag(filter_path, method: "get", remote: true, style: "margin-left: -30px; margin-right: 30px;" ) do %>
+      <ul>
+        <li style="list-style-type: none;">
+          <%= text_field_tag :search, "", class: "form-control", placeholder: "Search ...", onkeydown: "clickSubmit()" %>
+        </li>
+        <li style="list-style-type: none;">
+          <%= radio_button_tag :checkCourse, "Corso di studi" %>
+          <%= label :checkCourse, "Corso di studi"%>
+        </li>
+  
+        <li style="list-style-type: none;">
+          <%= radio_button_tag :checkCourse, "Categorie" %>
+          <%= label :checkCourse, "Categorie"%>
+          <ul id="ul-categories">
+            <%= collection_check_boxes(:categories, :category, Category.all, :id, :name) do |b|%>
+              <%= b.label class:"label-checkbox" do%>
+                <ul>
+                  <%=b.check_box + b.text%>
+                </ul>
+              <%end%>
+            <%end%>
+          </ul>
+        </li>
+  
+        <li style="list-style-type: none;">
+          <%= radio_button_tag :checkCourse, "Preferiti" %>
+          <%= label :checkCourse, "Preferiti"%>
+        </li>
+  
+        <%= submit_tag "Filter", class: "btn btn-primary", id: "filter_submit"%>
+  
+      </ul>
+      <%end%>
+  
+              
+    </td>
+    
+  
+  
+    <td>
+    
+      <h1>Books</h1>
+  
+      <div id="books-div">
+      
+      <% @books.each do |book| %>
+        <%= render book %>
+        <p>
+          <%= link_to "Show this book", book %>
+        </p>
+      <% end %>
+  
+      </div>
+  
+  
+      
+  
+    </td>
+  
+  </tr>
 
+  <tr>
+    <td></td>
+    <td style="text-align: end">
+      <%= link_to "New book", new_book_path, class: "btn btn-primary", style: "margin-top: 35px" %>
+    </td>
+  </tr>
 
-  <div class="col-6">
-    <h1>Books</h1>
-
-    <div id="books-div">
-
-    <% @books.each do |book| %>
-      <%= render book %>
-      <p>
-        <%= link_to "Show this book", book %>
-      </p>
-    <% end %>
-
-    </div>
-
-
-    <%= link_to "New book", new_book_path %>
-
-  </div>
-
-</div>
+</tbody>
 
 <script>
   function clickSubmit() {

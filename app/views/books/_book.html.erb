@@ -2,32 +2,52 @@
 
 <div id="<%= dom_id book %>">
 
+<h2 style="padding-bottom:20px; width:1000px"> 
+    <%= book.title %>
+  </h2>
+
   <div class="row">
 
-  <div class="col-3">
-    <p>
-      <%= image_tag book.placeholder if book.placeholder.attached? %>
-    </p>
+  <div class="col-2">
+    
+    <%= image_tag book.placeholder, class: "book-img" if book.placeholder.attached? %>
+    
   </div>
   
 
   <div class="col-6">
-    <p>
-      <strong>Isbn:</strong>
-      <%= book.ISBN %>
-    </p>
-    <p>
-      <strong>Title:</strong>
-      <%= book.title %>
-    </p>
+    <table>
+      <tr>
+        <td>
+          <strong>Isbn:</strong>
+        </td>
 
-    <button class="btn btn-primary">
-      <%= link_to "Noleggia",  controller: "book_rentals", action: "new", ISBN: book.ISBN  %>
-    </button>         
+        <td>
+          <%= book.ISBN %>
+        </td>
+      </tr>
     
-    <button class="btn btn-warning">
-      <%= link_to 'Acquista', controller: "book_scraper", action: "index", ISBN: book.ISBN, method: "post" %>
-    </button>
+      
+      <tr>
+        <td style="vertical-align:top; padding-right:15px">
+          <strong>Author:</strong>
+        </td>
+
+        <td>
+          <% @authors.each do|author| %>
+            <%= author.name%>
+            <br>
+          <%end%>
+        </td>
+      </tr>
+    </table>
+    
+    <br>
+
+    <%= link_to "Noleggia",  {controller: "book_rentals", action: "new", ISBN: book.ISBN}, class: "btn btn-primary"  %>
+             
+    
+    <%= link_to 'Acquista', {controller: "book_scraper", action: "index", ISBN: book.ISBN}, class: "btn btn-warning" %>
 
     
 

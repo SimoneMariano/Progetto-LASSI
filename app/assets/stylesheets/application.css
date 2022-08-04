@@ -19,9 +19,9 @@
 
 
   /* Center and scale the image nicely */
-  background-position: center;
+  background-position: right;
   background-repeat: no-repeat;
-  background-size: 1280px 577px;
+  background-size: cover;
   background-attachment: fixed;
 
 ;}
@@ -34,6 +34,18 @@ button.btn-primary{
 button.btn-primary:hover{
     background-color: #6495ED;
     color: aliceblue;
+}
+
+a.btn-primary{
+    background-color: #5F9EA0;
+    color: aliceblue;
+    border: 1px solid #5F9EA0;
+}
+
+a.btn-primary:hover{
+    background-color: #6495ED;
+    color: aliceblue;
+    border: 1px solid #5F9EA0;
 }
 
 
@@ -56,11 +68,26 @@ button.btn.btn-outline-primary:focus{
 
 
 input.btn.btn-primary{
+    border: 1px solid #5F9EA0;
     background-color: #5F9EA0;
     color: aliceblue;
 }
 
 input.btn.btn-primary:hover{
     background-color: #6495ED;
+    border: 1px solid #6495ED;
     color: aliceblue;
+}
+
+button.btn.btn-outline-primary.header{
+    background-color: white;
+    
+}
+
+button.btn.btn-outline-primary.header:hover{
+    background-color: #6495ED;
+}
+
+button.btn.btn-outline-primary.header:focus{
+    background-color: #6495ED;
 }

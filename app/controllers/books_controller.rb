@@ -25,6 +25,7 @@ class BooksController < ApplicationController
 
   # GET /books/1 or /books/1.json
   def show
+    @authors = Author.joins(:book).where("books.id = (?)", params[:id])
   end
 
   # GET /books/new

@@ -2,14 +2,23 @@
 
 <%= render @book %>
 
-<p>
-      <strong>Description:</strong>
-      <%= @book.description %>
-    </p>
+<br>
+
+<div class="divider d-flex align-items-center my-4" style="width:1000px">
+  <p class="text-center fw-bold mx-3 mb-0">Description</p>
+</div>
+
+<p style="width:1000px">
+  <%= @book.description %>
+</p>
+
+
+
 
 <div>
-  <%= link_to "Edit this book", edit_book_path(@book) %> |
-  <%= link_to "Back to books", books_path %>
+  <%= link_to "Edit this book", edit_book_path(@book), class: "btn btn-outline-primary" %> |
+  <%= link_to "Back to books", books_path,  class: "btn btn-primary"  %>
+  
 
-  <%= button_to "Destroy this book", @book, method: :delete %>
+  <%= button_to "Destroy this book", @book, method: :delete , class: "btn btn-danger"  %>
 </div>
