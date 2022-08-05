@@ -4,68 +4,72 @@
 
  
 
-<div class="row">
+<table style="width:80%; vertical-align:start">
 
-  <div class="col-3">
-    <h1>Filter</h1>
-    <%= form_tag(filter_secondhands_path, method: "get", remote: true ) do %>
-    <ul>
-      <li style="list-style-type: none;">
-        <%= text_field_tag :search, "", class: "form-control", placeholder: "Search ...", onkeydown: "clickSubmit()" %>
-      </li>
-      <li style="list-style-type: none;">
-        <%= radio_button_tag :checkCourse, "Corso di studi" %>
-        <%= label :checkCourse, "Corso di studi"%>
-      </li>
+  <tbody style="vertical-align: top">
+    <tr>
+      <td style="width: 220px">
+        <h1>Filter</h1>
+        <%= form_tag(filter_secondhands_path, method: "get", remote: true, style: "margin-left: -30px; margin-right: 30px;" ) do %>
+        <ul>
+          <li style="list-style-type: none;">
+            <%= text_field_tag :search, "", class: "form-control", placeholder: "Search ...", onkeydown: "clickSubmit()" %>
+            <br>
+          </li>
+          <li style="list-style-type: none;">
+            <%= radio_button_tag :checkCourse, "Corso di studi" %>
+            <%= label :checkCourse, "Corso di studi"%>
+          </li>
 
-      <li style="list-style-type: none;">
-        <%= radio_button_tag :checkCourse, "Categorie" %>
-        <%= label :checkCourse, "Categorie"%>
-        <ul id="ul-categories">
-          <%= collection_check_boxes(:categories, :category, Category.all, :id, :name) do |b|%>
-            <%= b.label class:"label-checkbox" do%>
-              <ul>
-                <%=b.check_box + b.text%>
-              </ul>
-            <%end%>
-          <%end%>
+          <li style="list-style-type: none;">
+            <%= radio_button_tag :checkCourse, "Categorie" %>
+            <%= label :checkCourse, "Categorie"%>
+            <ul id="ul-categories">
+              <%= collection_check_boxes(:categories, :category, Category.all, :id, :name) do |b|%>
+                <%= b.label class:"label-checkbox" do%>
+                  <ul>
+                    <%=b.check_box + b.text%>
+                  </ul>
+                <%end%>
+              <%end%>
+            </ul>
+          </li>
+
+          <li style="list-style-type: none;">
+            <%= radio_button_tag :checkCourse, "Preferiti" %>
+            <%= label :checkCourse, "Preferiti"%>
+          </li>
+
+          <br>
+
+          <%= submit_tag "Filter", class: "btn btn-primary", id: "filter_submit"%>
+
         </ul>
-      </li>
-
-      <li style="list-style-type: none;">
-        <%= radio_button_tag :checkCourse, "Preferiti" %>
-        <%= label :checkCourse, "Preferiti"%>
-      </li>
-
-      <%= submit_tag "Filter", class: "btn btn-primary", id: "filter_submit"%>
-
-    </ul>
-    <%end%>
-
-            
-  </div>
-  
+        <%end%>
 
 
-  <div class="col-6">
-    
+      </td>
 
-    <h1>Secondhands</h1>
 
-    <div id="secondhands">
-      <% @secondhands.each do |secondhand| %>
-        <%= render secondhand %>
-        <p>
-          <%= link_to "Show this secondhand", secondhand %>
-        </p>
-      <% end %>
-    </div>
 
-    <%= link_to "New secondhand", new_secondhand_path %>
+      <td>
 
-  </div>
 
-</div>
+        <h1>Secondhands</h1>
+
+        <div id="secondhands">
+          <% @secondhands.each do |secondhand| %>
+            <%= render secondhand %>
+          <% end %>
+        </div>
+
+        <%= link_to "New secondhand", new_secondhand_path %>
+
+      </td>
+
+    </tr>
+  </tbody>
+</table>
 
 <script>
   function clickSubmit() {
@@ -75,3 +79,4 @@
 
 
 <%= javascript_pack_tag "secondhands"%>
+<%= stylesheet_link_tag "books" %>

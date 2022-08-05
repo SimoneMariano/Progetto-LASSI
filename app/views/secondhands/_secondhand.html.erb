@@ -7,10 +7,10 @@
 
   <div class="row">
 
-    <div class="col-2">
-      <p>
-        <%= image_tag secondhand.image if secondhand.image.attached? %>
-      </p>
+    <div class="col-3">
+      <%= link_to secondhand do %>
+        <%= image_tag secondhand.image, class: "book-img" if secondhand.image.attached? %>
+      <%end%>
     </div>
 
     <div class="col-6">
@@ -20,14 +20,16 @@
       </p>
 
       <p>
-        <strong>User:</strong>
-        <%= secondhand.user_id %>
+        <strong>Vendor email:</strong>
+        <%= @user_info.email %>
       </p>
 
       <p>
-        <strong>Description:</strong>
-        <%= secondhand.description %>
+        <strong>Vendor matricola:</strong>
+        <%= @user_info.matricola %>
       </p>
+
+      
     </div>
 
     

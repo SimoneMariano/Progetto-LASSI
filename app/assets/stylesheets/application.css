@@ -79,15 +79,39 @@ input.btn.btn-primary:hover{
     color: aliceblue;
 }
 
-button.btn.btn-outline-primary.header{
+button.btn.btn-outline-primary{
     background-color: white;
     
 }
 
-button.btn.btn-outline-primary.header:hover{
+button.btn.btn-outline-primary:hover{
     background-color: #6495ED;
 }
 
-button.btn.btn-outline-primary.header:focus{
+button.btn.btn-outline-primary:focus{
     background-color: #6495ED;
 }
+
+img.book-img{
+    width: 140px;
+}
+
+a.btn.btn-outline-primary{
+    background-color: white;
+    border: 1px solid #5F9EA0;
+    color: #5F9EA0;
+    
+}
+
+a.btn.btn-outline-primary:hover{
+    background-color: #6495ED;
+    border: 1px solid #6495ED;
+    color: #fff;
+}
+
+a.btn.btn-outline-primary:focus{
+    background-color: #6495ED;
+    border: 1px solid #6495ED;
+    color: #fff;
+}
+

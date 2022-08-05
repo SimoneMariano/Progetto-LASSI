@@ -4,13 +4,13 @@
 
 <tbody style="vertical-align: top">
   <tr>
-  
-    <td>
+    <td style="width: 220px">
       <h1>Filter</h1>
       <%= form_tag(filter_path, method: "get", remote: true, style: "margin-left: -30px; margin-right: 30px;" ) do %>
       <ul>
         <li style="list-style-type: none;">
           <%= text_field_tag :search, "", class: "form-control", placeholder: "Search ...", onkeydown: "clickSubmit()" %>
+          <br>
         </li>
         <li style="list-style-type: none;">
           <%= radio_button_tag :checkCourse, "Corso di studi" %>
@@ -35,6 +35,8 @@
           <%= radio_button_tag :checkCourse, "Preferiti" %>
           <%= label :checkCourse, "Preferiti"%>
         </li>
+
+        <br>
   
         <%= submit_tag "Filter", class: "btn btn-primary", id: "filter_submit"%>
   
@@ -54,9 +56,6 @@
       
       <% @books.each do |book| %>
         <%= render book %>
-        <p>
-          <%= link_to "Show this book", book %>
-        </p>
       <% end %>
   
       </div>
