@@ -22,10 +22,10 @@
     },
     "library": {
       "js": [
-        "/packs/js/library-ef264a953e22cb75de04.js"
+        "/packs/js/library-5a35962c19601bce366f.js"
       ],
       "js.map": [
-        "/packs/js/library-ef264a953e22cb75de04.js.map"
+        "/packs/js/library-5a35962c19601bce366f.js.map"
       ]
     },
     "secondhands": {
@@ -45,8 +45,8 @@
       ]
     }
   },
-  "library.js": "/packs/js/library-ef264a953e22cb75de04.js",
-  "library.js.map": "/packs/js/library-ef264a953e22cb75de04.js.map",
+  "library.js": "/packs/js/library-5a35962c19601bce366f.js",
+  "library.js.map": "/packs/js/library-5a35962c19601bce366f.js.map",
   "secondhands.js": "/packs/js/secondhands-bef53f8451bcf3555b98.js",
   "secondhands.js.map": "/packs/js/secondhands-bef53f8451bcf3555b98.js.map",
   "selectpicker.js": "/packs/js/selectpicker-e80de47bfce05096c8ba.js",

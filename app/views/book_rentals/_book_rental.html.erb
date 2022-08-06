@@ -2,10 +2,12 @@
 
   <div class="row">
 
-    <div class="col-2">
-      <p>
-        <%= image_tag book_rental.book.placeholder if book_rental.book.placeholder.attached? %>
-      </p>
+    <div class="col-3">
+      
+      <%= link_to  book_rental do %>    
+        <%= image_tag book_rental.book.placeholder, class: "book-img" if book_rental.book.placeholder.attached? %>
+      <%end%>
+      
     </div>
   
   

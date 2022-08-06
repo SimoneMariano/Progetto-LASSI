@@ -1,0 +1,292 @@
+#book_rentals {
+    overflow:auto; 
+    height:400px;
+    box-shadow: inset 0px 0px 10px 0px #000000;
+    border: 1px solid #000000;
+    padding: 20px;
+}
+
+p.p-author{
+    margin-bottom: 0rem;
+}
+
+button > a {
+    color: white;
+    text-decoration: none;
+}
+
+p.p-prize {
+    color: red;
+}
+
+.col-flex {
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+@media only screen and (min-width: 1300px) {
+    body {
+        font-size: larger;
+    }
+
+    h4{
+        font-size: larger;
+    }
+}
+button > a {
+    color: white;
+    text-decoration: none;
+}
+
+p.title {
+    font-size: larger;
+}
+
+#books-div {
+    overflow:auto; 
+    height:400px;
+    box-shadow: inset 0px 0px 10px 0px #000000;
+    border: 1px solid #000000;
+    padding: 20px;
+}
+
+img.book-img{
+    width: 140px;
+}
+
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: rgb(156, 156, 156);
+}
+.btn-link {
+    text-decoration: none
+}
+
+
+.card-home {
+    width: 200px;
+    height: 200px;
+}
+.card-header-home{
+    font-size: 30px;
+}
+.card-body-home{
+    font-size: 70px;
+}
+
+
+.card-home.library{
+    border: 1px solid #5F9EA0;
+}
+.card-header-home.library{
+    background-color: #5F9EA0;
+    color: aliceblue;
+}
+.card-body-home.library{
+    color: #5F9EA0;
+}
+
+.card-home.seats{
+    border: 1px solid #6495ED;
+}
+.card-header-home.seats{
+    background-color: #6495ED;
+    color: aliceblue;
+}
+.card-body-home.seats{
+    color: #6495ED;
+}
+
+
+.card{
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+      transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+  cursor: pointer;
+}
+
+.card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card img{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    max-height: 120px;
+  }
+
+  svg {
+    width: 40%;
+    height: 240px;
+}
+
+i{
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid #6495ed;
+    padding: 4px;
+
+}
+button.btn.btn-outline-primary.header {
+    width: 100%;
+    border-radius: 0px;
+}
+
+
+#secondhands {
+    overflow:auto; 
+    height:400px;
+    box-shadow: inset 0px 0px 10px 0px #000000;
+    border: 1px solid #000000;
+    padding: 20px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ body {
+    background: url(/assets/background/background-1f0cb0c493755d0f0fd832dd00c2c3ea261c6821748af41651110ecefd30ac3c.png);
+
+    padding: 15px;
+  /* Center and scale the image nicely */
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+;}
+
+div.box-main{
+    padding-left: 40%;
+}
+
+button.btn.btn-outline-primary{
+    border: 1px solid #5F9EA0;
+    color: #5F9EA0;
+}
+
+button.btn.btn-outline-primary:hover{
+    background-color: #6495ED;
+    border: 1px solid #6495ED;
+    color: aliceblue;
+}
+
+button.btn.btn-outline-primary:focus{
+    background-color: #6495ED;
+    border: 1px solid #6495ED;
+    color: aliceblue;
+}
+
+
+
+
+.btn-primary{
+    background-color: #5F9EA0;
+}
+.btn-primary:hover{
+    background-color: #6495ED;
+}
+.btn-primary:focus{
+    background-color: #6495ED;
+}
+.btn.btn-primary{
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);    
+    border-color: #5F9EA0;
+    background-color: #5F9EA0;
+    color:white;
+}
+.btn.btn-primary:hover{
+    background-color: #6495ED;
+}
+.btn.btn-primary:hover{
+    background-color: #6495ED;
+    border-color: #6495ED;
+}
+
+  .btn-outline-danger {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);    
+  }
+  .btn-outline-danger:hover{
+    background-color: red;
+    color: white;
+  }
+
+
+  .btn-outline-primary {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);    
+    border-color: #5F9EA0;
+    color: #5F9EA0;
+  }
+  .btn-outline-primary:hover {
+    border-color: #6495ED;
+    background-color: #6495ED;
+    color: white;
+  }
+   .btn-outline-primary:focus {
+    border-color: #6495ED;
+    background-color: #6495ED;
+    color: white;
+    --bs-btn-focus-shadow-rgb: 13,110,253;
+  }
+  .btn.btn-outline-primary {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);    
+    border-color: #5F9EA0;
+    color: #5F9EA0;
+    background-color: white;
+  }
+  .btn.btn-outline-primary:hover {
+    border-color: #6495ED;
+    background-color: #6495ED;
+    color: white;
+  }
+   .btn.btn-outline-primary:focus {
+    border-color: #6495ED;
+    background-color: #6495ED;
+    color: white;
+    --bs-btn-focus-shadow-rgb: 13,110,253;
+  }
+
+  .btn.btn-danger{
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);    
+
+  }
+
+  .btn{
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);    
+
+  }
+
+  input.form-control{
+    width: 900px;
+   }
+
+   textarea{
+    height: 200px;
+    width: 272px;
+   }
+
+   input#search{
+    width: 180px;
+   }
+
+
+  
+

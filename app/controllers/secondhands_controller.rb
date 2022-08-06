@@ -4,16 +4,11 @@ class SecondhandsController < ApplicationController
   # GET /secondhands or /secondhands.json
   def index
     @secondhands = Secondhand.all
-    for secondhand in @secondhands do
-      @book_info = Book.find(secondhand.book_id)
-      @user_info = User.find(secondhand.user_id)
-    end
   end
 
   # GET /secondhands/1 or /secondhands/1.json
   def show
-    @book_info = Book.find(@secondhand.book_id)
-    @user_info = User.find(@secondhand.user_id)
+    
   end
 
   # GET /secondhands/new

@@ -5,18 +5,26 @@
 
 <%= render @secondhand %>
 
-<div class="divider d-flex align-items-center my-4" style="width:1000px">
-  <p class="text-center fw-bold mx-3 mb-0">Description</p>
-</div>
+<%if @secondhand.description.present?%>
 
-<p style="width:1000px">
-  
-  <%= @secondhand.description %>
-</p>
+  <div class="divider d-flex align-items-center my-4" style="width:1000px">
+    <p class="text-center fw-bold mx-3 mb-0">Description</p>
+  </div>
+
+  <p style="width:1000px">
+
+    <%= @secondhand.description %>
+  </p>
+<%end%>
 
 <div>
-  <%= link_to "Edit this secondhand", edit_secondhand_path(@secondhand), class: "btn btn-outline-primary" %> |
-  <%= link_to "Back to library", library_path, class: "btn btn-primary" %>
-
-  <%= button_to "Destroy this secondhand", @secondhand, class: "btn btn-outline-danger", :data => {:confirm => 'Are you sure you want to delete this advertisement?'} , method: :delete %>
+ <%= button_to "Destroy this secondhand", @secondhand, class: "btn btn-outline-danger", :data => {:confirm => 'Are you sure you want to delete this advertisement?'} , method: :delete %>
 </div>
+<br>
+<div>
+  <%= link_to "Edit this secondhand", edit_secondhand_path(@secondhand), class: "btn btn-outline-primary" %> |
+  <%= link_to "Back to library", library_path %>
+  
+</div>
+
+

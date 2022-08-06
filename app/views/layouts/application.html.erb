@@ -11,9 +11,66 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
     <%= javascript_pack_tag "application"%>
+
+
   </head>
 
+  <style>
+
+   
+    
+  </style>
+
   <body>
-    <%= yield %>
+    <header style="padding-bottom: 30px">
+      <div class="d-flex" style="height: 32px;">
+        <%= link_to library_path, style: "padding-right: 6px;" do%>
+          <i id="profile" class="fa-regular fa-user"></i>
+        <%end%>
+
+        <%= link_to home_path, style: "padding-right: 150px;" do%>
+          <i id="home" class="fa-solid fa-house"></i>
+        <%end%>
+      
+
+        <% if request.url != "http://localhost:3000/home"  %>
+          <div id="svg-header" class="d-flex" style="justify-content: center">
+            <%= show_svg('logo/logo.svg')%>
+          </div>
+        <%end%>
+      </div>
+
+    </header>
+
+    <div id="page-div">
+      <%= yield %>
+    </div>
+
+    
   </body>
+
+
+<script>
+  $("input[type='submit']").addClass("btn btn-primary");
+
+  $("input[type='text']").addClass("form-control");
+  $("input[type='number']").addClass("form-control");
+  $("input[type='file']").addClass("form-control");
+  $("textarea").addClass("form-control");
+
+
+
+
+  /*
+  $("input[type='text']").prev().addClass("form-label");
+  $("input[type='text']").parent().addClass("form-outline");
+  */
+
+  
+
+
+</script>
+
+<script src="https://kit.fontawesome.com/9868c7e296.js" crossorigin="anonymous"></script>
+
 </html>

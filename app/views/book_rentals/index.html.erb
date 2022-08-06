@@ -1,21 +1,25 @@
-<div class="d-flex" style="justify-content: center;">
+<p style="color: green"><%= notice %></p>
 
-  <div>
 
-    <p style="color: green"><%= notice %></p>
+<table style="width:80%; vertical-align:start">
 
-    <h1>Book rentals</h1>
+  <tbody style="vertical-align: top">
+    <tr>
+      <td style="width: 220px">
+      </td>
 
-    <div id="book_rentals">
-      <% @book_rentals.each do |book_rental| %>
-        <%= render book_rental %>
-        <p>
-          <%= link_to "Show this book rental", book_rental %>
-        </p>
-      <% end %>
-    </div>
+      <td>
+        <h1>Book rental</h1>
+        <div id="book_rentals">
+          <% @book_rentals.each do |book_rental| %>
+            <%= render book_rental %>
+          <% end %>
+        </div>
 
+
+      </td>
+
+    </tr>
     
-  </div>
-
-</div>
+  </tbody>
+</table>
