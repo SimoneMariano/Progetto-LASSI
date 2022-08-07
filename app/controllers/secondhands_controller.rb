@@ -85,7 +85,7 @@ class SecondhandsController < ApplicationController
     @secondhand.save
 
     respond_to do |format|
-      format.html { redirect_to secondhands_url, notice: "Secondhand was successfully destroyed." }
+      format.html { redirect_to secondhands_url, notice: "Secondhand was successfully approved." }
       format.json { head :no_content }
     end
   end
