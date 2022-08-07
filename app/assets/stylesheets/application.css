@@ -169,7 +169,7 @@ i#home:hover{
     color: white;
 }
 
-a{
+a.btn.btn-primary{
     text-decoration: none;
 }
 
