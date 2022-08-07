@@ -70,6 +70,8 @@
     <tr>
     <td></td>
     <td style="text-align: end">
+      <%= link_to "Display secondhands to approve", display_to_approve_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
+      <%= link_to "Display secondhands approved", approved_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
       <%= link_to"New secondhand", new_secondhand_path, class: "btn btn-primary", style: "margin-top: 35px" %>
     </td>
   </tr>
@@ -84,4 +86,4 @@
 
 
 <%= javascript_pack_tag "secondhands"%>
-<%= stylesheet_link_tag "books" %>
+<%= stylesheet_link_tag "secondhands" %>

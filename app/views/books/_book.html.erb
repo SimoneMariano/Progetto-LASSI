@@ -24,7 +24,7 @@
     <%= link_to "Noleggia",  {controller: "book_rentals", action: "new", ISBN: book.ISBN}, class: "btn btn-primary"  %>
              
     
-    <%= link_to 'Acquista', {controller: "book_scraper", action: "index", ISBN: book.ISBN}, class: "btn btn-warning" %>
+    <%= link_to 'Acquista', scraper_path(book.ISBN), class: "btn btn-warning" %>
 
     
 

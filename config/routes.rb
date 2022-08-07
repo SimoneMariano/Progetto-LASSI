@@ -10,10 +10,16 @@ Rails.application.routes.draw do
   resources :book_rentals
   resources :books 
   get 'library' => 'library#index', :as => :library
-  resources :book_scraper
+  get "/book_scraper/:ISBN" => "book_scraper#index", :as => :scraper
 
   get "filter", to: "books#filter"
   get "filter_secondhands", to: "secondhands#filter"
+  get "display_to_approve", to: "secondhands#display_to_approve"
+  get "approved", to: "secondhands#approved"
+  get "/approve/:id", to: "secondhands#approve", :as => :approve
+
+
+
 
   get 'home' => 'home#index', :as => :home
   

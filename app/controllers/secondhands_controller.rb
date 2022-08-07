@@ -1,5 +1,5 @@
 class SecondhandsController < ApplicationController
-  before_action :set_secondhand, only: %i[ show edit update destroy ]
+  before_action :set_secondhand, only: %i[ show edit update destroy approve]
 
   # GET /secondhands or /secondhands.json
   def index
@@ -18,6 +18,8 @@ class SecondhandsController < ApplicationController
 
   # GET /secondhands/1/edit
   def edit
+    @secondhand.approved = false
+    @secondhand.save
   end
 
   # POST /secondhands or /secondhands.json
@@ -51,7 +53,7 @@ class SecondhandsController < ApplicationController
   def update
     respond_to do |format|
       if @secondhand.update(secondhand_params)
-        format.html { redirect_to secondhand_url(@secondhand), notice: "Secondhand was successfully updated." }
+        format.html { redirect_to secondhand_url(@secondhand), notice: "Secondhand was successfully updated, wait for new approvation." }
         format.json { render :show, status: :ok, location: @secondhand }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -63,6 +65,24 @@ class SecondhandsController < ApplicationController
   # DELETE /secondhands/1 or /secondhands/1.json
   def destroy
     @secondhand.destroy
+
+    respond_to do |format|
+      format.html { redirect_to secondhands_url, notice: "Secondhand was successfully destroyed." }
+      format.json { head :no_content }
+    end
+  end
+
+  def display_to_approve
+    @secondhands = Secondhand.where(approved: false)
+  end
+
+  def approved
+    @secondhands = Secondhand.where(approved: true)
+  end
+
+  def approve
+    @secondhand.approved = true
+    @secondhand.save
 
     respond_to do |format|
       format.html { redirect_to secondhands_url, notice: "Secondhand was successfully destroyed." }
