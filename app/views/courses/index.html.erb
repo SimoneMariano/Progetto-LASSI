@@ -1,6 +1,26 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Courses</h1>
+<br>
+
+<table style="vertical-align:start">
+<tbody>
+  <tr>
+    <td style="padding-right: 15px;">
+      <%= link_to new_course_path  do %>
+        <i class="fa-solid fa-circle-plus" id="plus-icon" style="font-size: 26px"></i>
+      <%end%>
+    </td>
+    <td>
+      <h2>Courses of study list</h2>
+    </td>
+
+    
+  </tr>
+</tbody>
+</table>
+
+<br>
+
 
 <div id="courses">
   <% @courses.each do |course| %>
@@ -11,4 +31,3 @@
   <% end %>
 </div>
 
-<%= link_to "New course", new_course_path %>

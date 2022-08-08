@@ -1,6 +1,26 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Categories</h1>
+
+<br>
+
+<table style="vertical-align:start">
+<tbody>
+  <tr>
+    <td style="padding-right: 15px;">
+      <%= link_to new_category_path  do %>
+        <i class="fa-solid fa-circle-plus" id="plus-icon" style="font-size: 26px"></i>
+      <%end%>
+    </td>
+    <td>
+      <h2>Categories list</h2>
+    </td>
+
+    
+  </tr>
+</tbody>
+</table>
+
+<br>
 
 <div id="categories">
   <% @categories.each do |category| %>
@@ -11,4 +31,3 @@
   <% end %>
 </div>
 
-<%= link_to "New category", new_category_path %>

@@ -180,5 +180,11 @@ div#svg-header > svg{
     height: 240px;
 }
 
+i#plus-icon{
+  color: #5F9EA0;
+}
+i#plus-icon:hover{
+  color: #6495ED;
+}
   
 

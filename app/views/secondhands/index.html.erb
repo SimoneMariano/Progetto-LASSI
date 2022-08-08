@@ -32,7 +32,7 @@
           <li style="list-style-type: none;">
             <%= radio_button_tag :checkCourse, "Categories" %>
             <%= label :checkCourse, "Categories"%>
-            <ul id="ul-categories">
+            <ul id="ul-categories" style="padding:0px;">
               <%= collection_check_boxes(:categories, :category, Category.all, :id, :name) do |b|%>
                 <%= b.label class:"label-checkbox" do%>
                   <ul>
