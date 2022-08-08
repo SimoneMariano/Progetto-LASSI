@@ -3,15 +3,15 @@
   isbn_book = params[:ISBN]
   @book = Book.find_by(ISBN: isbn_book)
 %>
-<table style="width: 50%; margin-left: 20%;">
+<table style="width: 50%; margin-left: 20%; padding-top: 20px">
 <tr>
-  <th>
-    <h1 style="padding-bottom: 30px;">New book rental</h1>
+  <th colspan=2>
+    <h2 style="padding-bottom: 30px;">Make your rental</h2>
   </th>
 </tr>
 <tr>
 
-  <td>
+  <td style="padding-right:50px">
     
     <%= image_tag @book.placeholder, style: "width: 165px" if @book.placeholder.attached? %>
     
@@ -48,5 +48,9 @@
   </table>
 
 <br>
+
+<script>
+  $("input[type='submit']").val("Rent book");
+</script>
 
 

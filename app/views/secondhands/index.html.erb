@@ -8,8 +8,16 @@
 
   <tbody style="vertical-align: top">
     <tr>
+      <th style="vertical-align: bottom;">
+        <h4>Filter</h4>
+      </th>
+      <th>
+        <h2>Secondhands book adv</h2>
+      </th>
+    </tr>
+    <tr>
       <td style="width: 220px">
-        <h1>Filter</h1>
+        
         <%= form_tag(filter_secondhands_path, method: "get", remote: true, style: "margin-left: -30px; margin-right: 30px;" ) do %>
         <ul>
           <li style="list-style-type: none;">
@@ -17,13 +25,13 @@
             <br>
           </li>
           <li style="list-style-type: none;">
-            <%= radio_button_tag :checkCourse, "Corso di studi" %>
-            <%= label :checkCourse, "Corso di studi"%>
+            <%= radio_button_tag :checkCourse, "Your Course of study" %>
+            <%= label :checkCourse, "Your Course of study"%>
           </li>
 
           <li style="list-style-type: none;">
-            <%= radio_button_tag :checkCourse, "Categorie" %>
-            <%= label :checkCourse, "Categorie"%>
+            <%= radio_button_tag :checkCourse, "Categories" %>
+            <%= label :checkCourse, "Categories"%>
             <ul id="ul-categories">
               <%= collection_check_boxes(:categories, :category, Category.all, :id, :name) do |b|%>
                 <%= b.label class:"label-checkbox" do%>
@@ -36,8 +44,8 @@
           </li>
 
           <li style="list-style-type: none;">
-            <%= radio_button_tag :checkCourse, "Preferiti" %>
-            <%= label :checkCourse, "Preferiti"%>
+            <%= radio_button_tag :checkCourse, "Favorites" %>
+            <%= label :checkCourse, "Favorites"%>
           </li>
 
           <br>
@@ -54,9 +62,6 @@
 
       <td>
 
-
-        <h1>Secondhands</h1>
-
         <div id="secondhands">
           <% @secondhands.each do |secondhand| %>
             <%= render secondhand %>
@@ -72,7 +77,7 @@
     <td style="text-align: end">
       <%= link_to "Display secondhands to approve", display_to_approve_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
       <%= link_to "Display secondhands approved", approved_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
-      <%= link_to"New secondhand", new_secondhand_path, class: "btn btn-primary", style: "margin-top: 35px" %>
+      <%= link_to"New secondhand adv", new_secondhand_path, class: "btn btn-primary", style: "margin-top: 35px" %>
     </td>
   </tr>
   </tbody>
