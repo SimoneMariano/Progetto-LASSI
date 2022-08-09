@@ -67,7 +67,7 @@ class SecondhandsController < ApplicationController
     @secondhand.destroy
 
     respond_to do |format|
-      format.html { redirect_to secondhands_url, notice: "Secondhand was successfully destroyed." }
+      format.html { redirect_to library_url, notice: "Secondhand was successfully destroyed." }
       format.json { head :no_content }
     end
   end

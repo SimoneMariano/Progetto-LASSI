@@ -75,7 +75,7 @@ class BookRentalsController < ApplicationController
     @book_rental.destroy
 
     respond_to do |format|
-      format.html { redirect_to book_rentals_url, notice: "Book rental was successfully destroyed." }
+      format.html { redirect_to library_url, notice: "Book rental was successfully destroyed." }
       format.json { head :no_content }
     end
   end

@@ -52,7 +52,7 @@ class AuthorsController < ApplicationController
     @author.destroy
 
     respond_to do |format|
-      format.html { redirect_to authors_url, notice: "Author was successfully destroyed." }
+      format.html { redirect_to library_url, notice: "Author was successfully destroyed." }
       format.json { head :no_content }
     end
   end
