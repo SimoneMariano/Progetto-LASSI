@@ -4,7 +4,7 @@
 
     <div class="col-3">
       
-      <%= link_to  book_rental do %>    
+      <%= link_to  book_rental.book do %>    
         <%= image_tag book_rental.book.placeholder, class: "book-img" if book_rental.book.placeholder.attached? %>
       <%end%>
       
