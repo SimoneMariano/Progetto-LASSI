@@ -24,6 +24,7 @@ class SecondhandsController < ApplicationController
 
   # POST /secondhands or /secondhands.json
   def create    
+    @secondhand = Secondhand.new
     isbn_book = params[:secondhand][:ISBN]
     #@book = Book.find_by("ISBN", isbn_book)
     @book = Book.find_by(ISBN: isbn_book)
@@ -34,9 +35,13 @@ class SecondhandsController < ApplicationController
     id_user = 1
     @user = User.find(id_user)
 
-    @secondhand = @book.secondhand.create(secondhand_params)
-    @secondhand.user_id = @user.id
-    @secondhand.book_id = @book.id
+    if @book.present?
+      @secondhand = @book.secondhand.create(secondhand_params)
+      @secondhand.book_id = @book.id
+    end
+      @secondhand.user_id = @user.id
+      
+    
     
     respond_to do |format|
       if @secondhand.save
@@ -95,10 +100,10 @@ class SecondhandsController < ApplicationController
     
     @secondhands = Secondhand.joins(:book).where("books.title LIKE (?)", "%#{query}%").or(Secondhand.joins(:book).where("books.ISBN = (?)", params[:search] ))
 
-    if(params[:checkCourse] == "Corso di studi" )
+    if(params[:checkCourse] == "Your Course of study" )
       #Da implementare con autenticazione 
     
-    elsif (params[:checkCourse] == "Categorie")
+    elsif (params[:checkCourse] == "Categories")
       @books = Book.joins(:category).where("categories.id in (?)", params[:categories][:category])
       @secondhands = @secondhands.where("book_id in (?)", @books.map {|book| book.id})
     else

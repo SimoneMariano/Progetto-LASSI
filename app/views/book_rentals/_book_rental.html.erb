@@ -1,13 +1,11 @@
 <div id="<%= dom_id book_rental %>">
-
   <div class="row">
 
     <div class="col-3">
-      
-      <%= link_to  book_rental.book do %>    
+      <%= link_to  book_rental do %>    
         <%= image_tag book_rental.book.placeholder, class: "book-img" if book_rental.book.placeholder.attached? %>
       <%end%>
-      
+
     </div>
   
   
@@ -35,6 +33,8 @@
       <strong>End Date:</strong>
       <%= book_rental.endDate %>
     </p>
+
+ 
   </div>
 
 </div>

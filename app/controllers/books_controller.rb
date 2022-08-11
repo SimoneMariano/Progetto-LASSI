@@ -13,10 +13,10 @@ class BooksController < ApplicationController
     query = params[:search]
     @books = Book.where("title LIKE (?)", "%#{query}%").or(Book.where(ISBN: params[:search]))
 
-    if(params[:checkCourse] == "Corso di studi" )
+    if(params[:checkCourse] == "Your Course of study" )
       #Da implementare con autenticazione 
     
-    elsif (params[:checkCourse] == "Categorie")
+    elsif (params[:checkCourse] == "Categories")
       @books = @books.joins(:category).where("categories.id in (?)", params[:categories][:category])
     else
       #Da implementare con autenticazione

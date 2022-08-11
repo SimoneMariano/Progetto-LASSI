@@ -16,17 +16,24 @@
       </th>
     </tr>
     <tr>
-      <td style="width: 220px">
+      <td rowspan="2" style="width: 220px">
         
         <%= form_tag(filter_secondhands_path, method: "get", remote: true, style: "margin-left: -30px; margin-right: 30px;" ) do %>
         <ul>
           <li style="list-style-type: none;">
             <%= text_field_tag :search, "", class: "form-control", placeholder: "Search ...", onkeydown: "clickSubmit()" %>
             <br>
+            <%= submit_tag "Filter", class: "btn btn-primary", id: "filter_submit"%>
           </li>
+          <br>
           <li style="list-style-type: none;">
             <%= radio_button_tag :checkCourse, "Your Course of study" %>
             <%= label :checkCourse, "Your Course of study"%>
+          </li>
+
+          <li style="list-style-type: none;">
+            <%= radio_button_tag :checkCourse, "Favorites" %>
+            <%= label :checkCourse, "Favorites"%>
           </li>
 
           <li style="list-style-type: none;">
@@ -43,14 +50,9 @@
             </ul>
           </li>
 
-          <li style="list-style-type: none;">
-            <%= radio_button_tag :checkCourse, "Favorites" %>
-            <%= label :checkCourse, "Favorites"%>
-          </li>
+          
 
-          <br>
-
-          <%= submit_tag "Filter", class: "btn btn-primary", id: "filter_submit"%>
+          
 
         </ul>
         <%end%>
@@ -73,7 +75,6 @@
 
     </tr>
     <tr>
-    <td></td>
     <td style="text-align: end">
       <%= link_to "Display secondhands to approve", display_to_approve_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
       <%= link_to "Display secondhands approved", approved_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>

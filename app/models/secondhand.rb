@@ -4,13 +4,14 @@ class Secondhand < ApplicationRecord
   belongs_to :book
 
   #validate request of secondhand
+  validate :book_exists
   validates :image, presence:  {message: "An image is necessary to verify the book's state of conservation "}
   
   
-  validates :book_id, presence: true
 
-  private def ISBN_presence 
-    errors.add(:book_id, "can't be blank") if self.book_id.blank?
   
-end
+
+  private def book_exists
+    errors.add(:book_id, "must be present on catalog, please ask the admin to add it") if self.book_id.blank?
+  end
 end

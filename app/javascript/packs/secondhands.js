@@ -4,7 +4,7 @@ $(document).ready(function(){
     //mostra le categorie al click
     $("input[type=radio][name=checkCourse]").on("change", function(){
         var valore = $(this).val()
-        if(valore != "Categorie"){
+        if(valore != "Categories"){
             $("#ul-categories").css("display","none");
         }else{
             $("#ul-categories").css("display","block");
