@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :seats
 
   root "home#index"
 
@@ -19,9 +20,9 @@ Rails.application.routes.draw do
   get "/approve/:id", to: "secondhands#approve", :as => :approve
 
   resources :reservations
-  resources :seats
   get 'athenaeum' => 'athenaeum#index', :as => :athenaeum
   get "reservation", to: "reservation#index"
+  get "seat", to: "seats#index"
 
 
 

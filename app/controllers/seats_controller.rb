@@ -65,6 +65,6 @@ class SeatsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def seat_params
-      params.fetch(:seat, {})
+      params.require(:seat).permit(:name, :description)
     end
 end

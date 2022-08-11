@@ -11,7 +11,22 @@
     </div>
   <% end %>
 
+
+<div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.number_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+
+
+
+
   <div>
     <%= form.submit %>
   </div>
 <% end %>
+

@@ -17,7 +17,7 @@ class SeatsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create seat" do
     assert_difference("Seat.count") do
-      post seats_url, params: { seat: {  } }
+      post seats_url, params: { seat: { description: @seat.description, name: @seat.name } }
     end
 
     assert_redirected_to seat_url(Seat.last)
@@ -34,7 +34,7 @@ class SeatsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update seat" do
-    patch seat_url(@seat), params: { seat: {  } }
+    patch seat_url(@seat), params: { seat: { description: @seat.description, name: @seat.name } }
     assert_redirected_to seat_url(@seat)
   end
 

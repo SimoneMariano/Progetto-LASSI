@@ -23,6 +23,20 @@ class ReservationsController < ApplicationController
   def create
     @reservation = Reservation.new(reservation_params)
 
+    seat_id = params[:seats]
+    @seat = Seat.find(seat_id)
+
+
+    #va sostituito con in current user
+    id_user = 1
+    @user = User.find(id_user)
+
+    if @seat.present?
+      @reservation.seat_id = @seat.id
+      @reservation.user_id = @user.id
+      #@reservation = @seat.reservation.create(reservation_params)
+    end
+
     respond_to do |format|
       if @reservation.save
         format.html { redirect_to reservation_url(@reservation), notice: "Reservation was successfully created." }

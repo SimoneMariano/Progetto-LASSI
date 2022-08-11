@@ -1,64 +1,64 @@
 {
-  "application.js": "/packs/js/application-6c436c5f735c863103c5.js",
-  "application.js.map": "/packs/js/application-6c436c5f735c863103c5.js.map",
-  "athenaeum.js": "/packs/js/athenaeum-3e013e185d77a1ac8043.js",
-  "athenaeum.js.map": "/packs/js/athenaeum-3e013e185d77a1ac8043.js.map",
-  "books.js": "/packs/js/books-5f6091d537e4f0e2eb57.js",
-  "books.js.map": "/packs/js/books-5f6091d537e4f0e2eb57.js.map",
+  "application.js": "/packs/js/application-63840ff7f8d2798c2c0d.js",
+  "application.js.map": "/packs/js/application-63840ff7f8d2798c2c0d.js.map",
+  "athenaeum.js": "/packs/js/athenaeum-af875b16cc97b96c3573.js",
+  "athenaeum.js.map": "/packs/js/athenaeum-af875b16cc97b96c3573.js.map",
+  "books.js": "/packs/js/books-fc01a3d1ea218e1056b4.js",
+  "books.js.map": "/packs/js/books-fc01a3d1ea218e1056b4.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-6c436c5f735c863103c5.js"
+        "/packs/js/application-63840ff7f8d2798c2c0d.js"
       ],
       "js.map": [
-        "/packs/js/application-6c436c5f735c863103c5.js.map"
+        "/packs/js/application-63840ff7f8d2798c2c0d.js.map"
       ]
     },
     "athenaeum": {
       "js": [
-        "/packs/js/athenaeum-3e013e185d77a1ac8043.js"
+        "/packs/js/athenaeum-af875b16cc97b96c3573.js"
       ],
       "js.map": [
-        "/packs/js/athenaeum-3e013e185d77a1ac8043.js.map"
+        "/packs/js/athenaeum-af875b16cc97b96c3573.js.map"
       ]
     },
     "books": {
       "js": [
-        "/packs/js/books-5f6091d537e4f0e2eb57.js"
+        "/packs/js/books-fc01a3d1ea218e1056b4.js"
       ],
       "js.map": [
-        "/packs/js/books-5f6091d537e4f0e2eb57.js.map"
+        "/packs/js/books-fc01a3d1ea218e1056b4.js.map"
       ]
     },
     "library": {
       "js": [
-        "/packs/js/library-3bfeb3867e0a5725a5fc.js"
+        "/packs/js/library-1541bef654687847e0fc.js"
       ],
       "js.map": [
-        "/packs/js/library-3bfeb3867e0a5725a5fc.js.map"
+        "/packs/js/library-1541bef654687847e0fc.js.map"
       ]
     },
     "secondhands": {
       "js": [
-        "/packs/js/secondhands-ee45f043978b1ae5799d.js"
+        "/packs/js/secondhands-bef53f8451bcf3555b98.js"
       ],
       "js.map": [
-        "/packs/js/secondhands-ee45f043978b1ae5799d.js.map"
+        "/packs/js/secondhands-bef53f8451bcf3555b98.js.map"
       ]
     },
     "selectpicker": {
       "js": [
-        "/packs/js/selectpicker-36b8ff0df0421e12734d.js"
+        "/packs/js/selectpicker-e80de47bfce05096c8ba.js"
       ],
       "js.map": [
-        "/packs/js/selectpicker-36b8ff0df0421e12734d.js.map"
+        "/packs/js/selectpicker-e80de47bfce05096c8ba.js.map"
       ]
     }
   },
-  "library.js": "/packs/js/library-3bfeb3867e0a5725a5fc.js",
-  "library.js.map": "/packs/js/library-3bfeb3867e0a5725a5fc.js.map",
-  "secondhands.js": "/packs/js/secondhands-ee45f043978b1ae5799d.js",
-  "secondhands.js.map": "/packs/js/secondhands-ee45f043978b1ae5799d.js.map",
-  "selectpicker.js": "/packs/js/selectpicker-36b8ff0df0421e12734d.js",
-  "selectpicker.js.map": "/packs/js/selectpicker-36b8ff0df0421e12734d.js.map"
+  "library.js": "/packs/js/library-1541bef654687847e0fc.js",
+  "library.js.map": "/packs/js/library-1541bef654687847e0fc.js.map",
+  "secondhands.js": "/packs/js/secondhands-bef53f8451bcf3555b98.js",
+  "secondhands.js.map": "/packs/js/secondhands-bef53f8451bcf3555b98.js.map",
+  "selectpicker.js": "/packs/js/selectpicker-e80de47bfce05096c8ba.js",
+  "selectpicker.js.map": "/packs/js/selectpicker-e80de47bfce05096c8ba.js.map"
 }

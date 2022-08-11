@@ -14,6 +14,8 @@ class SeatsTest < ApplicationSystemTestCase
     visit seats_url
     click_on "New seat"
 
+    fill_in "Description", with: @seat.description
+    fill_in "Name", with: @seat.name
     click_on "Create Seat"
 
     assert_text "Seat was successfully created"
@@ -24,6 +26,8 @@ class SeatsTest < ApplicationSystemTestCase
     visit seat_url(@seat)
     click_on "Edit this seat", match: :first
 
+    fill_in "Description", with: @seat.description
+    fill_in "Name", with: @seat.name
     click_on "Update Seat"
 
     assert_text "Seat was successfully updated"

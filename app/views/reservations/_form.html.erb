@@ -11,6 +11,9 @@
     </div>
   <% end %>
 
+    <%= form.label :seats, style: "display: block" %>
+    <%= select_tag(:seats, options_for_select(Seat.all.map {|seat| [seat.name, seat.id]}))%> 
+
   <div>
     <%= form.submit %>
   </div>
