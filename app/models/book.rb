@@ -10,7 +10,7 @@ class Book < ApplicationRecord
 
 
     #validation
-    validates :ISBN, presence: true
+    validates :ISBN, presence: true, length: {is: 13}
     validates :title, presence: true
     validates :placeholder, presence: true
     validates :stock, presence: true

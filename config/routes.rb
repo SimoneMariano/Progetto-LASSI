@@ -18,6 +18,8 @@ Rails.application.routes.draw do
   get "approved", to: "secondhands#approved"
   get "/approve/:id", to: "secondhands#approve", :as => :approve
 
+  get "display_my_adv", to: "secondhands#display_my_adv"
+
 
 
 

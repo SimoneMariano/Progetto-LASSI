@@ -85,6 +85,12 @@ class SecondhandsController < ApplicationController
     @secondhands = Secondhand.where(approved: true)
   end
 
+  def display_my_adv
+    #Da completare
+    user_id = 1
+    @secondhands = Secondhand.where(user_id: user_id)
+  end
+
   def approve
     @secondhand.approved = true
     @secondhand.save
