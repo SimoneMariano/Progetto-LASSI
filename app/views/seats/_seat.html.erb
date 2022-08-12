@@ -1,12 +1,18 @@
 <div id="<%= dom_id seat %>">
-  <p>
-    <strong>Name:</strong>
-    <%= seat.name %>
-  </p>
 
-  <p>
-    <strong>Description:</strong>
-    <%= seat.description %>
-  </p>
+  <div class="container">
+
+    <div class="row row-cols-2">
+
+      <div class="mx-auto d-block">
+        <strong>Name:</strong>
+        <%= seat.name%>
+      </div>
+      <div class="mx-auto d-block">
+        <strong>Description:</strong>
+        <%= seat.description %>
+      </div>
+    </div>
+  </div>
 
 </div>

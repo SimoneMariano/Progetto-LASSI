@@ -1,15 +1,36 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Seats</h1>
+<table style="width:80%; vertical-align:start">
 
-<div id="seats">
+  <tbody style="vertical-align: top">
+    <tr>
+      <td style="width: 220px">
+      </td>
 
-  <% @seats.each do |seat| %>
-    <%= render seat %>
-    <p>
-      <%= link_to "Show this seat", seat %>
-    </p>
-  <% end %>
-</div>
+      <td>
 
-<%= link_to "New seat", new_seat_path %>
+        <h1>Seats</h1>
+
+        <br>
+
+        <div class="row">
+
+          <img class="img-fluid" style="max-width: 100%" alt="Responsive image" src="https://www.cmete.com/skins/theme_cmete_2016/images/placeholders/image-placeholder.jpg">
+        </div>
+        <br>
+        <br>
+
+        <div class="row">
+          <div id="seats" class="row row-cols-2">
+            <% @seats.each do |seat| %>
+              <%= render seat %>
+              <%= link_to "Show this seat", seat, class: "btn btn-primary" %>
+            <% end %>
+          </div>
+          <br>
+        </div>
+        <br>
+        <%= link_to "New seat", new_seat_path, class: "btn btn-info" %>
+
+      </td>
+    </tbody>

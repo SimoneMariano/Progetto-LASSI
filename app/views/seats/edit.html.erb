@@ -4,7 +4,20 @@
 
 <br>
 
-<div>
-  <%= link_to "Show this seat", @seat %> |
-  <%= link_to "Back to athenaeum", athenaeum_path %>
-</div>
+<table style="width:80%; vertical-align:start">
+
+  <tbody style="vertical-align: top">
+    <tr>
+      <td style="width: 220px">
+      </td>
+
+      <td>
+
+        <div>
+          <%= link_to "Show this seat", @seat, class: "btn btn-primary" %> |
+          <%= link_to "Back to athenaeum", athenaeum_path, class: "btn btn-secondary" %>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
