@@ -29,6 +29,8 @@ gem "jbuilder"
 
 gem 'inline_svg'
 
+gem 'rails-erd', group: :development
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -57,6 +59,26 @@ gem 'bootstrap'
 gem "google-api-client"
 
 gem "rspec"
+
+
+gem 'canard', '~> 0.6.2.pre'
+
+gem 'cancan'
+
+gem 'dotenv-rails'
+
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
+
+gem 'rack-cors'
+
+group :test do
+  gem 'cucumber-rails', require: false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
 # Use Sass to process CSS
 #gem "sassc-rails"
 

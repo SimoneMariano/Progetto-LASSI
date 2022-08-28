@@ -8,6 +8,7 @@ class BookRentalsController < ApplicationController
 
   # GET /book_rentals/1 or /book_rentals/1.json
   def show
+    #authorize! :read, @book_rental, :message => "BEWARE: you are not authorized to read book rental."
   end
 
   # GET /book_rentals/new

@@ -3,6 +3,7 @@ require 'httparty'
 
 class BookScraperController < ApplicationController
     def index
+        #authorize! :buy, @book, :message => "BEWARE: you are not authorized to buy books."
 
         @isbn = params["ISBN"]
         @book_info_arr = []
