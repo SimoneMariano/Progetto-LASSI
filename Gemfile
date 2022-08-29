@@ -72,7 +72,6 @@ gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
 
-gem 'rack-cors'
 
 group :test do
   gem 'cucumber-rails', require: false

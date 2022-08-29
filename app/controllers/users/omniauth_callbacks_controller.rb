@@ -30,6 +30,15 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     end
   end
 
+  def failure
+    
+    redirect_to root_path
+  end
+
+  def auth
+    @auth ||= request.env["omniauth.auth"]
+  end
+
   # More info at:
   # https://github.com/heartcombo/devise#omniauth
 
@@ -45,16 +54,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   # protected
 
-  private
-
-  def failure
-    redirect_to root_path
-  end
-
-  def auth
-    @auth ||= request.env["omniauth.auth"]
-  end
-
+  
   # The path used when OmniAuth fails
   # def after_omniauth_failure_path_for(scope)
   #   super(scope)
