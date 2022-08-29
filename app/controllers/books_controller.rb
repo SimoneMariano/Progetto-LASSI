@@ -2,10 +2,7 @@ class BooksController < ApplicationController
   before_action :set_book, only: %i[ show edit update destroy]
   # GET /books or /books.json
   def index
-    
-      @books = Book.all
-    
-    
+    @books = Book.all
   end
 
   def filter
@@ -25,21 +22,28 @@ class BooksController < ApplicationController
 
   # GET /books/1 or /books/1.json
   def show
-    @authors = Author.joins(:book).where("books.id = (?)", params[:id])
+    #autorizzazione a creare
+    #authorize! :read, @book, :message => "BEWARE: you are not authorized to create new books."
   end
 
   # GET /books/new
   def new
     @book = Book.new
+    #authorize! :create, @book, :message => "BEWARE: you are not authorized to create new books."
+
   end
 
   # GET /books/1/edit
   def edit
+    #authorize! :edit, @book, :message => "BEWARE: you are not authorized to edit books."
+
   end
 
   # POST /books or /books.json
   def create
     @book = Book.new(book_params)
+    #autorizzazione a creare
+    #authorize! :create, @book, :message => "BEWARE: you are not authorized to create new books."
 
     if  params[:categories].present?
       for category in params[:categories] do
@@ -77,6 +81,8 @@ class BooksController < ApplicationController
 
   # PATCH/PUT /books/1 or /books/1.json
   def update
+
+    #authorize! :edit, @book, :message => "BEWARE: you are not authorized to edit books."
     
     @book.author.clear
     @book.category.clear
@@ -105,6 +111,8 @@ class BooksController < ApplicationController
 
   # DELETE /books/1 or /books/1.json
   def destroy
+    #authorize! :destroy, @book, :message => "BEWARE: you are not authorized to destroy books."
+
     @book.destroy
 
     respond_to do |format|
