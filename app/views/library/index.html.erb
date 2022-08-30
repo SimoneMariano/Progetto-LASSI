@@ -13,15 +13,17 @@
             <td style="padding: 0px;">
                 <button id="btn_secondhand" class="btn btn-outline-primary header">Secondhands books adv</button>
             </td>
-            <td style="padding: 0px;">
-                <button id="btn_aurhors" class="btn btn-outline-primary header">Authors</button>
-            </td>
-            <td style="padding: 0px;">
-                <button id="btn_categories" class="btn btn-outline-primary header">Categories</button>
-            </td>
-            <td style="padding: 0px;">
-                <button id="btn_courses" class="btn btn-outline-primary header">Courses</button>
-            </td>
+            <%if admin_signed_in? %>
+                <td style="padding: 0px;">
+                    <button id="btn_aurhors" class="btn btn-outline-primary header">Authors</button>
+                </td>
+                <td style="padding: 0px;">
+                    <button id="btn_categories" class="btn btn-outline-primary header">Categories</button>
+                </td>
+                <td style="padding: 0px;">
+                    <button id="btn_courses" class="btn btn-outline-primary header">Courses</button>
+                </td>
+            <%end%>
 
         </tr>
 

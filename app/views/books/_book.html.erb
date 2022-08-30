@@ -21,10 +21,10 @@
       <%= book.title %>
     </p>
 
-    <%= link_to "Rent book",  {controller: "book_rentals", action: "new", ISBN: book.ISBN}, class: "btn btn-primary"  %>
+    <%= if can? :create, BookRental.new then link_to "Rent book",  {controller: "book_rentals", action: "new", ISBN: book.ISBN}, class: "btn btn-primary"  end%>
              
     
-    <%= link_to 'Buy book', scraper_path(book.ISBN), class: "btn btn-warning" %>
+    <%=if can? :buy, book then link_to 'Buy book', scraper_path(book.ISBN), class: "btn btn-warning" end%>
 
     
 

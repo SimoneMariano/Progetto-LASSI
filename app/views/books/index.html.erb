@@ -75,7 +75,7 @@
   <tr>
     
     <td style="text-align: end">
-      <%= link_to "Add book to catalog", new_book_path, class: "btn btn-primary", style: "margin-top: 35px" %>
+      <%= if can? :create, Book.new then link_to "Add book to catalog", new_book_path, class: "btn btn-primary", style: "margin-top: 35px" end%>
     </td>
   </tr>
 
