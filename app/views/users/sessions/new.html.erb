@@ -1,32 +1,28 @@
 <div class="d-flex" style="justify-content: center; align-items: center; flex-direction: column">
   <h2>Log in with Google as:</h2>
   <div class="d-flex" style="justify-content: center; align-items: center;">
-    <%= link_to library_path, class: "btn-link", style: "padding:2%" do%> 
-        <div class="card card-home text-center library">
-            <div class="card-header card-header-home library">
-                Student
+    <div id="student-login" style="padding:2%">
+        <%= render "users/shared/links" %>
+    </div>
+    
+    <div id="student-login" style="padding:2%">
+        <%= link_to new_admin_session_path, class: "btn-link" do%> 
+            <div class="card card-home text-center seats">
+                <div class="card-header card-header-home seats">
+                    Admin
+                </div>
+                <div class="card-body card-body-home seats">  
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                </div>  
             </div>
-            <div class="card-body card-body-home library">  
-                <i class="fa-brands fa-google"></i>
-            </div>  
-        </div>
-    <%end%> 
-    <%= link_to library_path, class: "btn-link" do%> 
-        <div class="card card-home text-center seats">
-            <div class="card-header card-header-home seats">
-                Admin
-            </div>
-            <div class="card-body card-body-home seats">  
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-            </div>  
-        </div>
-    <%end%> 
+        <%end%> 
+    </div>
   </div>
 </div>
 
 
 <div id="student-link">
-  <%= render "users/shared/links" %>
+  
 </div>
 
 

@@ -19,7 +19,7 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   def after_sign_out_path_for(_resources_or_scope)
-    login_path
+    new_user_session_path
   end
 
   def after_sign_in_path_for(resources_or_scope)
