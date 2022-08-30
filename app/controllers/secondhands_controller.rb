@@ -8,23 +8,26 @@ class SecondhandsController < ApplicationController
 
   # GET /secondhands/1 or /secondhands/1.json
   def show
-    
+    authorize! :read, @secondhand, :message => "BEWARE: you are not authorized to read secondhands"
   end
 
   # GET /secondhands/new
   def new
     @secondhand = Secondhand.new
+    authorize! :create, @secondhand, :message => "BEWARE: you are not authorized to create secondhands"
   end
 
   # GET /secondhands/1/edit
   def edit
-    @secondhand.approved = false
-    @secondhand.save
+    authorize! :edit, @secondhand, :message => "BEWARE: you are not authorized to edit secondhands"
   end
 
   # POST /secondhands or /secondhands.json
   def create    
     @secondhand = Secondhand.new
+    
+    authorize! :create, @secondhand, :message => "BEWARE: you are not authorized to create secondhands"
+
     isbn_book = params[:secondhand][:ISBN]
     #@book = Book.find_by("ISBN", isbn_book)
     @book = Book.find_by(ISBN: isbn_book)
@@ -56,6 +59,10 @@ class SecondhandsController < ApplicationController
 
   # PATCH/PUT /secondhands/1 or /secondhands/1.json
   def update
+    authorize! :edit, @secondhand, :message => "BEWARE: you are not authorized to edit secondhands"
+
+    @secondhand.approved = false
+
     respond_to do |format|
       if @secondhand.update(secondhand_params)
         format.html { redirect_to secondhand_url(@secondhand), notice: "Secondhand was successfully updated, wait for new approvation." }
@@ -69,6 +76,9 @@ class SecondhandsController < ApplicationController
 
   # DELETE /secondhands/1 or /secondhands/1.json
   def destroy
+
+    authorize! :destroy, @secondhand, :message => "BEWARE: you are not authorized to destroy secondhands"
+
     @secondhand.destroy
 
     respond_to do |format|
@@ -87,11 +97,11 @@ class SecondhandsController < ApplicationController
 
   def display_my_adv
     #Da completare
-    user_id = 1
-    @secondhands = Secondhand.where(user_id: user_id)
+    @secondhands = Secondhand.where(user_id: current_user.id)
   end
 
   def approve
+    authorize! :approve, @secondhand, :message => "BEWARE: you are not authorized to approve secondhands"
     @secondhand.approved = true
     @secondhand.save
 

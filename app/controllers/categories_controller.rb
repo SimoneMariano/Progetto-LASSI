@@ -8,20 +8,24 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1 or /categories/1.json
   def show
+    authorize! :read, @category, :message => "BEWARE: you are not authorized to read categories"
   end
 
   # GET /categories/new
   def new
     @category = Category.new
+    authorize! :create, @category, :message => "BEWARE: you are not authorized to create categories"
   end
 
   # GET /categories/1/edit
   def edit
+    authorize! :edit, @category, :message => "BEWARE: you are not authorized to edit categories"
   end
 
   # POST /categories or /categories.json
   def create
     @category = Category.new(category_params)
+    authorize! :create, @category, :message => "BEWARE: you are not authorized to create categories"
 
     respond_to do |format|
       if @category.save
@@ -36,6 +40,7 @@ class CategoriesController < ApplicationController
 
   # PATCH/PUT /categories/1 or /categories/1.json
   def update
+    authorize! :edit, @category, :message => "BEWARE: you are not authorized to edit categories"
     respond_to do |format|
       if @category.update(category_params)
         format.html { redirect_to category_url(@category), notice: "Category was successfully updated." }
@@ -49,6 +54,7 @@ class CategoriesController < ApplicationController
 
   # DELETE /categories/1 or /categories/1.json
   def destroy
+    authorize! :destroy, @category, :message => "BEWARE: you are not authorized to destroy categories"
     @category.destroy
 
     respond_to do |format|

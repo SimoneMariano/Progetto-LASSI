@@ -68,7 +68,7 @@ class BookRentalsController < ApplicationController
 
   # PATCH/PUT /book_rentals/1 or /book_rentals/1.json
   def update
-    authorize! :edit, @book_rental, :message => "BEWARE: you are not authorized to edit books"
+    authorize! :edit, @book_rental, :message => "BEWARE: you are not authorized to edit books rental"
 
     respond_to do |format|
       if @book_rental.update(book_rental_params)
@@ -83,7 +83,7 @@ class BookRentalsController < ApplicationController
 
   # DELETE /book_rentals/1 or /book_rentals/1.json
   def destroy
-    authorize! :destroy, @book_rental, :message => "BEWARE: you are not authorized to edit books"
+    authorize! :destroy, @book_rental, :message => "BEWARE: you are not authorized to delete book rental"
 
     @book_rental.destroy
 

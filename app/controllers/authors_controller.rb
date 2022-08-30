@@ -8,20 +8,24 @@ class AuthorsController < ApplicationController
 
   # GET /authors/1 or /authors/1.json
   def show
+    authorize! :read, @author, :message => "BEWARE: you are not authorized to read authors"
   end
 
   # GET /authors/new
   def new
     @author = Author.new
+    authorize! :create, @author, :message => "BEWARE: you are not authorized to create authors"
   end
 
   # GET /authors/1/edit
   def edit
+    authorize! :edit, @author, :message => "BEWARE: you are not authorized to edit authors"
   end
 
   # POST /authors or /authors.json
   def create
     @author = Author.new(author_params)
+    authorize! :create, @author, :message => "BEWARE: you are not authorized to create authors"
 
     respond_to do |format|
       if @author.save
@@ -36,6 +40,8 @@ class AuthorsController < ApplicationController
 
   # PATCH/PUT /authors/1 or /authors/1.json
   def update
+    authorize! :edit, @author, :message => "BEWARE: you are not authorized to edit authors"
+
     respond_to do |format|
       if @author.update(author_params)
         format.html { redirect_to author_url(@author), notice: "Author was successfully updated." }
@@ -49,6 +55,7 @@ class AuthorsController < ApplicationController
 
   # DELETE /authors/1 or /authors/1.json
   def destroy
+    authorize! :destroy, @author, :message => "BEWARE: you are not authorized to destroy authors"
     @author.destroy
 
     respond_to do |format|
