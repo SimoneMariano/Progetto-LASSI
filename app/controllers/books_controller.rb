@@ -22,20 +22,25 @@ class BooksController < ApplicationController
 
   # GET /books/1 or /books/1.json
   def show
-    #autorizzazione a creare
-    #authorize! :read, @book, :message => "BEWARE: you are not authorized to create new books."
+    #autorizzazione a leggere
+    id = params[:id]
+		@book = Book.find(id)
+    authorize! :read, @book, :message => "BEWARE: you are not authorized to read books."
+    
   end
 
   # GET /books/new
   def new
     @book = Book.new
-    #authorize! :create, @book, :message => "BEWARE: you are not authorized to create new books."
+    if authorize! :create, @book, :message => "BEWARE: you are not authorized to create new books."
+      flash[:alert] = "ao"
+    end
 
   end
 
   # GET /books/1/edit
   def edit
-    #authorize! :edit, @book, :message => "BEWARE: you are not authorized to edit books."
+    authorize! :edit, @book, :message => "BEWARE: you are not authorized to edit books."
 
   end
 
@@ -43,7 +48,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new(book_params)
     #autorizzazione a creare
-    #authorize! :create, @book, :message => "BEWARE: you are not authorized to create new books."
+    authorize! :create, @book, :message => "BEWARE: you are not authorized to create new books."
 
     if  params[:categories].present?
       for category in params[:categories] do
@@ -82,7 +87,7 @@ class BooksController < ApplicationController
   # PATCH/PUT /books/1 or /books/1.json
   def update
 
-    #authorize! :edit, @book, :message => "BEWARE: you are not authorized to edit books."
+    authorize! :edit, @book, :message => "BEWARE: you are not authorized to edit books."
     
     @book.author.clear
     @book.category.clear
@@ -111,7 +116,7 @@ class BooksController < ApplicationController
 
   # DELETE /books/1 or /books/1.json
   def destroy
-    #authorize! :destroy, @book, :message => "BEWARE: you are not authorized to destroy books."
+    authorize! :destroy, @book, :message => "BEWARE: you are not authorized to destroy books."
 
     @book.destroy
 

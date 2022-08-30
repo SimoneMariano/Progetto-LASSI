@@ -8,24 +8,32 @@ class BookRentalsController < ApplicationController
 
   # GET /book_rentals/1 or /book_rentals/1.json
   def show
-    #authorize! :read, @book_rental, :message => "BEWARE: you are not authorized to read book rental."
+    authorize! :read, @book_rental, :message => "BEWARE: you are not authorized to read book rental."
   end
 
   # GET /book_rentals/new
   def new
+
     @book_rental = BookRental.new
     if params[:ISBN].blank?
       redirect_to(library_path)
     end
+
+    authorize! :create, @book_rental, :message => "BEWARE: you are not authorized to rent books"
+
   end
 
   # GET /book_rentals/1/edit
   def edit
+  authorize! :edit, @book_rental, :message => "BEWARE: you are not authorized to edit books"
+
   end
 
   # POST /book_rentals or /book_rentals.json
   def create
     @book_rental = BookRental.new(book_rental_params) 
+    authorize! :create, @book_rental, :message => "BEWARE: you are not authorized to rent books"
+
 
     isbn_book = params[:book_rental][:ISBN]
     @book = Book.find_by(ISBN: isbn_book)
@@ -60,6 +68,8 @@ class BookRentalsController < ApplicationController
 
   # PATCH/PUT /book_rentals/1 or /book_rentals/1.json
   def update
+    authorize! :edit, @book_rental, :message => "BEWARE: you are not authorized to edit books"
+
     respond_to do |format|
       if @book_rental.update(book_rental_params)
         format.html { redirect_to book_rental_url(@book_rental), notice: "Book rental was successfully updated." }
@@ -73,6 +83,8 @@ class BookRentalsController < ApplicationController
 
   # DELETE /book_rentals/1 or /book_rentals/1.json
   def destroy
+    authorize! :destroy, @book_rental, :message => "BEWARE: you are not authorized to edit books"
+
     @book_rental.destroy
 
     respond_to do |format|

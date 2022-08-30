@@ -7,6 +7,8 @@ class AdminsController < ApplicationController
     @admin = admin.new
   end
 
+  
+
 
 
   private

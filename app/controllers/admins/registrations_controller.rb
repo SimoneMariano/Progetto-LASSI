@@ -4,6 +4,15 @@ class Admins::RegistrationsController < Devise::RegistrationsController
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 
+  # GET /resource/sign_up
+  # def new
+  #   super
+  # end
+
+  # POST /resource
+  # def create
+  #   super
+  # end
   before_action :configure_sign_up_params, only: [:create]
   before_action :configure_account_update_params, only: [:update]
 
@@ -33,7 +42,7 @@ class Admins::RegistrationsController < Devise::RegistrationsController
 
   # PUT /resource
   def update
-    admin = Admin.find(params[:admin][:admin_id])
+    admin = admin.find(params[:admin][:admin_id])
     if admin.provider.in?(["google_oauth2", "facebook"])
       admin.update_without_password(city: params[:admin][:city], zip_code: params[:admin][:zip_code], address: params[:admin][:address])
     else
@@ -53,17 +62,6 @@ class Admins::RegistrationsController < Devise::RegistrationsController
   def configure_account_update_params
     devise_parameter_sanitizer.permit(:account_update, keys: %i[first_name last_name city zip_code address])
   end
-
-  # GET /resource/sign_up
-  # def new
-  #   super
-  # end
-
-  # POST /resource
-  # def create
-  #   super
-  # end
-
   # GET /resource/edit
   # def edit
   #   super
@@ -81,7 +79,7 @@ class Admins::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/cancel
   # Forces the session data which is usually expired after sign
-  # in to be expired now. This is useful if the user wants to
+  # in to be expired now. This is useful if the admin wants to
   # cancel oauth signing in/up in the middle of the process,
   # removing all OAuth session data.
   # def cancel
