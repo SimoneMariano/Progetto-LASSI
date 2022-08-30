@@ -3,12 +3,17 @@ class BookRentalsController < ApplicationController
 
   # GET /book_rentals or /book_rentals.json
   def index
-    @book_rentals = BookRental.all
+    if admin_signed_in?
+      @book_rentals = BookRental.all
+    elsif user_signed_in?
+      @book_rentals = BookRental.where(user_id: current_user.id)
+    end
   end
 
   # GET /book_rentals/1 or /book_rentals/1.json
   def show
     authorize! :read, @book_rental, :message => "BEWARE: you are not authorized to read book rental."
+    
   end
 
   # GET /book_rentals/new

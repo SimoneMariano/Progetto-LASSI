@@ -8,7 +8,7 @@
 <br>
 
 <div>
-  <%= button_to "Destroy this book rental", @book_rental, class: "btn btn-outline-danger", :data => {:confirm => 'Are you sure you want to delete this book rental?'},  method: :delete %>
+  <%= if can? :destroy, @book_rental then button_to "Destroy this book rental", @book_rental, class: "btn btn-outline-danger", :data => {:confirm => 'Are you sure you want to delete this book rental?'},  method: :delete end %>
 </div>
 
 <br>

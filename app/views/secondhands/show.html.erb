@@ -19,18 +19,19 @@
 
 <div class="d-flex">
   <div style = "padding-right: 5px;">
-    <%= button_to "Delete secondhand", @secondhand, class: "btn btn-outline-danger", :data => {:confirm => 'Are you sure you want to delete this advertisement?'} , method: :delete %> 
+     <%= if can? :destroy, @secondhand then button_to "Delete secondhand", @secondhand, class: "btn btn-outline-danger", :data => {:confirm => 'Are you sure you want to delete this advertisement?'} , method: :delete end%> 
   </div>
-  |
+  <%= if can? :approve, @secondhand then "|" end%>
   <div style= "padding-left: 5px;">
-    <%= link_to "Approve", approve_path, class: "btn btn-primary"%>
+    <%= if can? :approve, @secondhand then link_to "Approve", approve_path, class: "btn btn-primary" end%>
   </div>
 </div>
 
 <br>
 
 <div>
-  <%= link_to "Edit this secondhand", edit_secondhand_path, class: "btn btn-outline-primary" %> |
+  <%= if can? :edit, @secondhand then link_to "Edit this secondhand", edit_secondhand_path, class: "btn btn-outline-primary" end%> 
+  <%= if can? :edit, @secondhand then "|" end%>
   <%= link_to "Back to library", library_path %>
   
 </div>

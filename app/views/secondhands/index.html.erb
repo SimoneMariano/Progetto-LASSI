@@ -76,11 +76,14 @@
     </tr>
     <tr>
     <td style="text-align: end">
-      <%= link_to "Display secondhands to approve", display_to_approve_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
-      <%= link_to "Display secondhands approved", approved_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
-      <%= link_to "Display my adv", display_my_adv_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
-      <%= link_to "Display all", approved_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
-      <%= link_to"New secondhand adv", new_secondhand_path, class: "btn btn-primary", style: "margin-top: 35px" %>
+      <% if admin_signed_in? %>
+        <%= link_to "Display secondhands to approve", display_to_approve_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
+        <%= link_to "Display secondhands approved", approved_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
+      <%else%>
+        <%= link_to "Display my adv", display_my_adv_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
+        <%= link_to "Display all", approved_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
+      <%end%>
+      <%= if can? :create, BookRental.new then  link_to"New secondhand adv", new_secondhand_path, class: "btn btn-primary", style: "margin-top: 35px" end%>
     </td>
   </tr>
   </tbody>
