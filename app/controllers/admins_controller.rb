@@ -1,5 +1,6 @@
 class AdminsController < ApplicationController
     before_action :set_admin, only: %i[ show edit update destroy ]
+    skip_before_action :authenticate_user!
 
  
   # GET /admins/new

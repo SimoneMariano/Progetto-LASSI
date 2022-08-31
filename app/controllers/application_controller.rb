@@ -1,4 +1,11 @@
 class ApplicationController < ActionController::Base
+    before_action :authenticate_user!
+
+    def authenticate_user!
+        if !(admin_signed_in? || user_signed_in?)
+            redirect_to new_user_session_path
+        end 
+    end
     
     def current_user 
         if admin_signed_in?
