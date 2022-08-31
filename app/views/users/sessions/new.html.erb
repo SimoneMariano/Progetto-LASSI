@@ -6,7 +6,7 @@
   <p class="alert" style="color: red"><%= alert %></p>
   <br>
   <br>
-  <h2>Log in with Google as:</h2>
+  <h2>Log in with:</h2>
   <div class="d-flex" style="justify-content: center; align-items: center;">
     <div id="student-login" style="padding:2%">
         <%= form_for "Login",
@@ -16,7 +16,7 @@
           id: "login-form",
           data: {turbo: "false"} do |f| %>
           <div class="card-header card-header-home library">
-            Student
+            Google
           </div>
           <div class="card-body card-body-home library">  
             <i class="fa-brands fa-google"></i>
@@ -27,16 +27,9 @@
     
     <div id="admin-login" style="padding: 2%">
 
-      <%= link_to new_admin_session_path, class: "btn-link" do%> 
-        <div class="card card-home text-center seats">
-            <div class="card-header card-header-home seats">
-                Admin
-            </div>
-            <div class="card-body card-body-home seats">  
-                <i class="fa-solid fa-screwdriver-wrench"></i>
-            </div>  
-        </div>
-      <%end%> 
+      
+
+      
     
     </div>
   </div>

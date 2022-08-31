@@ -13,3 +13,4 @@ Canard::Abilities.for(:user) do
   cannot [:read, :create, :destroy, :edit], Course
 
 end
+

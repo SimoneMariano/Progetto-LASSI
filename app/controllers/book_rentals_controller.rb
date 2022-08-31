@@ -3,9 +3,9 @@ class BookRentalsController < ApplicationController
 
   # GET /book_rentals or /book_rentals.json
   def index
-    if admin_signed_in?
+    if current_user.admin?
       @book_rentals = BookRental.all
-    elsif user_signed_in?
+    else
       @book_rentals = BookRental.where(user_id: current_user.id)
     end
   end
@@ -43,16 +43,11 @@ class BookRentalsController < ApplicationController
     isbn_book = params[:book_rental][:ISBN]
     @book = Book.find_by(ISBN: isbn_book)
 
-    #Da implementare con autenticazione
-    #@user = current_user
-    #id_user = params[:user_id]
-    id_user = 1
-    @user = User.find(id_user)
 
     if @book.present?
       @book_rental = @book.book_rental.create(book_rental_params)
       @book_rental.book_id = @book.id
-      @book_rental.user_id = @user.id
+      @book_rental.user_id = current_user.id
     end
 
     @book_rental.startDate = Date.today

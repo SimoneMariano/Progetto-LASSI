@@ -26,16 +26,13 @@
         <div class="dropdown" style= "padding-right: 6px;">
           <i id="profile" class="fa-regular fa-user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <% if user_signed_in? || admin_signed_in? %>
-              <% if admin_signed_in? %>
-                <%= link_to 'Logout',  destroy_admin_session_path, :method => :delete , class: "dropdown-item" %>
-              <%else%> 
+            <% if user_signed_in? %>
                 <a class="dropdown-item" href="#">My Profile</a>
                 <%= link_to 'Logout',  destroy_user_session_path, :method => :delete, class: "dropdown-item"%>
+              <%else%> 
+                <%= link_to 'Login',  new_user_session_path, class: "dropdown-item" %>
               <%end%> 
-            <% else %>
-              <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
-            <%end%>   
+           
           </div>
       </div>
 
@@ -59,6 +56,14 @@
       <%= yield %>
     </div>
 
+  <% if user_signed_in? %>
+    You are signed as: <%= current_user.roles_mask%>
+    <br>
+    <%= current_user.admin? %>
+    <%=  current_user.roles %>
+  <%end%> 
+    
+    
     
 
     

@@ -1,32 +1,26 @@
 class User < ApplicationRecord
-    has_many :book_rental
-    has_many :book, :through => :book_rental
+    has_many :book_rental, :as => :student
+    has_many :book, :through => :book_rental, :as => :student
+    has_many :secondhand, :as => :student
+    has_many :book, :through => :secondhand, :as => :student
 
     devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :validatable,
     :omniauthable, omniauth_providers: [:google_oauth2]
 
+    
+    after_initialize :set_default_role, :if => :new_record?
+    acts_as_user :roles => [:student, :admin]
 
-
+    def set_default_role
+        self.roles_mask = 1 #student role
+        
+    end
     
 
     def self.from_omniauth(auth)
         where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
             user.email = auth.info.email
-
-            #regex
-            r = /
-                (?<=\.)
-                [^\]]* 
-                (?=\@) 
-
-                /x
-            email = user.email
-            #extract substring
-            matricola = email[r]
-
-            
-            user.matricola = matricola
             user.password = Devise.friendly_token[0,20]
         end
     end

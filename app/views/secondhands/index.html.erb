@@ -76,7 +76,7 @@
     </tr>
     <tr>
     <td style="text-align: end">
-      <% if admin_signed_in? %>
+      <% if current_user.admin? %>
         <%= link_to "Display secondhands to approve", display_to_approve_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
         <%= link_to "Display secondhands approved", approved_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
       <%else%>

@@ -29,20 +29,14 @@ class SecondhandsController < ApplicationController
     authorize! :create, @secondhand, :message => "BEWARE: you are not authorized to create secondhands"
 
     isbn_book = params[:secondhand][:ISBN]
-    #@book = Book.find_by("ISBN", isbn_book)
     @book = Book.find_by(ISBN: isbn_book)
 
-    #Da implementare con autenticazione
-    #@user = current_user
-    #id_user = params[:user_id]
-    id_user = 1
-    @user = User.find(id_user)
 
     if @book.present?
       @secondhand = @book.secondhand.create(secondhand_params)
       @secondhand.book_id = @book.id
     end
-      @secondhand.user_id = @user.id
+      @secondhand.user_id = current_user.id
       
     
     
