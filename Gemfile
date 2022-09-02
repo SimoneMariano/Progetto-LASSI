@@ -56,7 +56,7 @@ gem "popper_js"
 
 gem 'bootstrap'
 
-gem "google-api-client"
+
 
 gem "rspec"
 
@@ -71,6 +71,10 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-rails_csrf_protection'
+
+gem "google-apis-drive_v3"
+
+gem 'google-api-client', require: 'google/apis/calendar_v3'
 
 
 group :test do

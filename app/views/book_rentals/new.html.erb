@@ -1,6 +1,9 @@
 
 <% 
   isbn_book = params[:ISBN]
+  if isbn_book.blank?
+    isbn_book = params[:book_rental][:ISBN]
+  end
   @book = Book.find_by(ISBN: isbn_book)
 %>
 <table style="width: 50%; margin-left: 20%; padding-top: 20px">
@@ -10,10 +13,25 @@
   </th>
 </tr>
 <tr>
+  <td colspan=2>
+    <% if @book_rental.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(@book_rental.errors.count, "error") %> prohibited this book_rental from being saved:</h2>
+
+        <ul>
+          <% @book_rental.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </td>
+</tr>
+<tr>
 
   <td style="padding-right:50px">
     
-    <%= image_tag @book.placeholder, style: "width: 165px" if @book.placeholder.attached? %>
+    <%= if @book.present? then image_tag @book.placeholder, style: "width: 165px" if @book.placeholder.attached? end%>
     
   </td>
   
@@ -21,12 +39,12 @@
   <td>
     <p>
       <strong>Title:</strong>
-      <%= @book.title %>
+      <%=if @book.present? then @book.title end %>
     </p>
 
     <p>
       <strong>Isbn:</strong>
-      <%= @book.ISBN %>
+      <%= if @book.present? then @book.ISBN end%>
     </p>
     
 

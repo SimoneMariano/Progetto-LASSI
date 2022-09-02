@@ -1,19 +1,14 @@
 <%= form_with(model: book_rental) do |form| %>
-  <% if book_rental.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(book_rental.errors.count, "error") %> prohibited this book_rental from being saved:</h2>
-
-      <ul>
-        <% book_rental.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  
 
   <div>
     <%= form.label :ISBN, style: "display: none" %>
-    <%= form.number_field :ISBN, value: params[:ISBN], style: "display: none" %>
+    <%if params[:ISBN].present?%>
+      <%= form.number_field :ISBN, value: params[:ISBN], style: "display: none" %>
+    <%else%>
+      <%= form.number_field :ISBN, value: params[:book_rental][:ISBN], style: "display: none" %>
+    <%end%>
+    
   </div>
 
   

@@ -182,6 +182,8 @@ GEM
       webrick
     google-apis-discovery_v1 (0.11.0)
       google-apis-core (>= 0.7, < 2.a)
+    google-apis-drive_v3 (0.27.0)
+      google-apis-core (>= 0.7, < 2.a)
     google-apis-generator (0.9.0)
       activesupport (>= 5.0)
       gems (~> 1.2)
@@ -435,6 +437,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   google-api-client
+  google-apis-drive_v3
   httparty
   importmap-rails
   inline_svg

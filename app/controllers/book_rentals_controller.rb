@@ -1,3 +1,5 @@
+require "google/apis/calendar_v3"
+
 class BookRentalsController < ApplicationController
   before_action :set_book_rental, only: %i[ show edit update destroy ]
 
@@ -34,6 +36,50 @@ class BookRentalsController < ApplicationController
 
   end
 
+  def new_calendar_event(summary, description, startDate, endDate)
+    if current_user.provider == "google_oauth2"      
+      service = Google::Apis::CalendarV3::CalendarService.new
+      service.authorization = session[:access_token]
+      service.key = Rails.application.credentials.dig(:key)
+      event = Google::Apis::CalendarV3::Event.new(
+        summary: summary,
+        id: summary,
+        location: 'Sapienza Università di Roma, Piazzale Aldo Moro, 5, 00185 Roma RM, Italia',
+        description: description,
+        start: Google::Apis::CalendarV3::EventDateTime.new(
+          date_time: startDate
+        ),
+        end: Google::Apis::CalendarV3::EventDateTime.new(
+          date_time: endDate
+        ),
+        attendees: [
+          Google::Apis::CalendarV3::EventAttendee.new(
+            email: current_user.email
+          ),
+          Google::Apis::CalendarV3::EventAttendee.new(
+            email: "librarianassi@gmail.com"
+          )
+        ],
+        reminders: Google::Apis::CalendarV3::Event::Reminders.new(
+          use_default: false,
+          overrides: [
+            Google::Apis::CalendarV3::EventReminder.new(
+              reminder_method: 'email',
+              minutes: 24 * 60
+            ),
+            Google::Apis::CalendarV3::EventReminder.new(
+              reminder_method: 'popup',
+              minutes: 10
+            )
+          ]
+        )
+      )
+
+      result = service.insert_event("primary", event) 
+      puts "Event created: #{result.html_link}"
+    end
+  end
+
   # POST /book_rentals or /book_rentals.json
   def create
     @book_rental = BookRental.new(book_rental_params) 
@@ -51,13 +97,20 @@ class BookRentalsController < ApplicationController
     end
 
     @book_rental.startDate = Date.today
-   
+
+    
+    new_calendar_event(@book_rental.book.ISBN, @book_rental.book.title,
+      @book_rental.startDate.to_datetime, @book_rental.endDate.to_datetime)
 #
     respond_to do |format|
       if @book_rental.save
+        
+
+        
         format.html { redirect_to book_rental_url(@book_rental), notice: "book_rental was successfully created." }
         format.json { render :show, status: :created, location: @book_rental }
       else
+        service.delete_event('primary', @book_rental.book.ISBN)
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @book_rental.errors, status: :unprocessable_entity }
       end
@@ -85,6 +138,10 @@ class BookRentalsController < ApplicationController
   def destroy
     authorize! :destroy, @book_rental, :message => "BEWARE: you are not authorized to delete book rental"
 
+    service = Google::Apis::CalendarV3::CalendarService.new
+    service.authorization = session[:access_token]
+    service.key = Rails.application.credentials.dig(:key)
+    service.delete_event('primary', @book_rental.book.ISBN)
     @book_rental.destroy
 
     respond_to do |format|
@@ -94,6 +151,13 @@ class BookRentalsController < ApplicationController
   end
 
   private
+
+  rescue_from Google::Apis::ClientError do |exception|
+    respond_to do |format|
+      format.html { render :new, status: :unprocessable_entity }
+      format.json { render json: "Generic error", status: :unprocessable_entity }
+    end
+  end
     # Use callbacks to share common setup or constraints between actions.
     def set_book_rental
       @book_rental = BookRental.find(params[:id])

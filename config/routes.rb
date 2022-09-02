@@ -33,6 +33,13 @@ Rails.application.routes.draw do
   get 'login' => 'login#index', :as => :login
 
 
+  get '/redirect', to: 'example#redirect', as: 'redirect'
+  get '/callback', to: 'example#callback', as: 'callback'
+
+  #get "/calendar/new", to: 'example#new', :as => :new_calendar_event
+  #get "/calendar/create", to: 'example#create', :as => :create_calendar_event
+
+
 
  
   

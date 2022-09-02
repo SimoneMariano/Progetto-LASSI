@@ -1,5 +1,7 @@
 #ignore ctredential file
 credentials.json
+client_secret_918751473786-68f8f23coqgqtkfpsa35dsvbcmn512gv.apps.googleusercontent.com.json
+client_secrets.json
 
 #ignore cpripted credential filre
 config/credentials.yml.enc
