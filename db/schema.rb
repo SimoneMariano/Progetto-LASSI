@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_08_31_182650) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_02_185442) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -61,6 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_182650) do
     t.datetime "updated_at", null: false
     t.date "startDate", null: false
     t.date "endDate", null: false
+    t.string "calendar_id"
     t.index ["book_id", "user_id"], name: "index_book_rentals_on_book_id_and_user_id", unique: true
     t.index ["book_id"], name: "index_book_rentals_on_book_id"
     t.index ["user_id"], name: "index_book_rentals_on_user_id"
