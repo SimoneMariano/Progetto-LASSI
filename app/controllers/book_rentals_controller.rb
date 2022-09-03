@@ -140,20 +140,41 @@ class BookRentalsController < ApplicationController
         )
       end
   
-    
-    event_created = service.insert_event("primary", event)
-    @book_rental.calendar_id = event_created.id
+    check = false  
+
+    if checkStock(service, @book)
+      if event_created = service.insert_event("primary", event)
+        @book_rental.calendar_id = event_created.id
+        check = true
+      end
+    end
 #
     respond_to do |format|
-      if @book_rental.save
+      if check && @book_rental.save
         format.html { redirect_to book_rental_url(@book_rental), notice: "book_rental was successfully created." }
         format.json { render :show, status: :created, location: @book_rental }
       else
-        service.delete_event('primary', @book_rental.book.ISBN)
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @book_rental.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def checkStock(service, book)
+    count = 0
+    result = service.list_events('librarianassi@gmail.com')
+    result.items.each do |e|
+      if e.summary == book.ISBN.to_s
+        count += 1
+      end
+    end
+
+    if count < book.stock
+      true
+    else
+      false
+    end
+ 
   end
 
  
