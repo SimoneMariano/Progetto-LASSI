@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_02_185442) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_04_160943) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -129,6 +129,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_02_185442) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "name"
+    t.string "surname"
+    t.integer "course_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["matricola"], name: "index_users_on_matricola", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

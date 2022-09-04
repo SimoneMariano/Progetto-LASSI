@@ -36,6 +36,10 @@ Rails.application.routes.draw do
   get '/redirect', to: 'example#redirect', as: 'redirect'
   get '/callback', to: 'example#callback', as: 'callback'
 
+  get 'profile', to: 'users#index', :as => :profile
+  get 'profile/edit', to: 'users#edit', :as => :profile_edit
+  resources :users
+
   #get "/calendar/new", to: 'example#new', :as => :new_calendar_event
   #get "/calendar/create", to: 'example#create', :as => :create_calendar_event
 
