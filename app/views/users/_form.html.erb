@@ -22,10 +22,10 @@
                 <ul class="list-group list-group-flush">
                
                     <li class="list-group-item">
-                        <%= form.text_field :name, placeholder: "Name" %>
+                        <%= form.text_field :name, class: "profile", placeholder: "Name" %>
                     </li>
                     <li class="list-group-item">
-                        <%= form.text_field :surname, placeholder: "Surname" %>
+                        <%= form.text_field :surname, class: "profile", placeholder: "Surname" %>
                     </li>
                     
                 </ul>
@@ -40,7 +40,7 @@
             <div class="card-header"> Profile Image
             </div>
             <div class="card-body">
-            <%= form.file_field :image, style: "display: block, border: 1px solid" %>
+            <%= form.file_field :image, class: "profile", style: "display: block, border: 1px solid" %>
             </div>
 
             </div>
@@ -60,10 +60,10 @@
             <div class="card-body">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
-                        <%= form.number_field :matricola, placeholder: "Matricola" %>
+                        <%= form.number_field :matricola, class: "profile", placeholder: "Matricola" %>
                     </li>
                     <li class="list-group-item">
-                        <%= select_tag(:course_id, options_for_select(Course.all.map {|c| [c.name, c.id]}, :selected => @user.course_id), {:class => "form-select", :include_blank => "Course of study", :size => 1 })%> 
+                        <%= select_tag(:course_id, options_for_select(Course.all.map {|c| [c.name, c.id]}, :selected => @user.course_id), {:class => "form-select profile", :include_blank => "Course of study", :size => 1 })%> 
                     </li>
                 </ul>
             

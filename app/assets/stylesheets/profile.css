@@ -32,15 +32,15 @@
 
 
 
- input.form-control{
+ input.form-control.profile{
     width: auto;
     border: none;
 }
-.form-select{
+.form-select.profile{
     border: none;
         
 }
-.form-control[type=file]{
+.form-control[type=file].profile{
     border-color: rgb(0 0 0 / 8%);
     border: 0px solid rgb(0 0 0 / 8%);
 }

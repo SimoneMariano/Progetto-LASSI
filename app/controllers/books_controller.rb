@@ -33,7 +33,7 @@ class BooksController < ApplicationController
     @user = current_user
     @book  = Book.find(params[:id])
 
-    authorize! :addToFauvorites, @book, :message => "BEWARE: you are not authorized to addToFauvorites books."
+    authorize! :addToFauvorites, @book, :message => "BEWARE: you are not authorized to add to favorites books."
 
     if @user.book.where(id: @book.id).blank?
       @user.book << @book
@@ -59,7 +59,7 @@ class BooksController < ApplicationController
     @user = current_user
     @book  = Book.find(params[:id])
 
-    authorize! :addToFauvorites, @book, :message => "BEWARE: you are not authorized to addToFauvorites books."
+    authorize! :addToFauvorites, @book, :message => "BEWARE: you are not authorized to remove from favorites books."
     @user.book.delete(@book)
 
     respond_to do |format|
