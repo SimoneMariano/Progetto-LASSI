@@ -27,3 +27,13 @@ img.book-img{
     height: 1px;
     background: rgb(156, 156, 156);
 }
+
+a.favourites-link{
+    text-decoration: none;
+    color: black;
+
+  }
+
+  i.fa-solid.fa-heart {
+    color: red;
+  }

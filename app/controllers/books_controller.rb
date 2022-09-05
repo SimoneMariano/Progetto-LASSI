@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :set_book, only: %i[ show edit update destroy]
+  before_action :set_book, only: %i[ show edit update destroy addToFauvorites]
   # GET /books or /books.json
   def index
     @books = Book.all
@@ -29,11 +29,36 @@ class BooksController < ApplicationController
     
   end
 
+  def addToFavourites
+    @user = current_user
+    @book  = Book.find(params[:id])
+
+    authorize! :addToFauvorites, @book, :message => "BEWARE: you are not authorized to addToFauvorites books."
+
+    if @user.book.where(id: @book.id).blank?
+      @user.book << @book
+      added = true
+    else
+      @user.book.delete(@book)
+      added = false
+    end
+
+    respond_to do |format|
+      if added
+        format.html { redirect_to book_url(@book), notice: "Book was successfully added to favourites." }
+        format.json { render :show, status: :created, location: @book }
+      else
+        format.html { redirect_to book_url(@book), notice: "Book was successfully removed from favourites." }
+        format.json { render :show, status: :created, location: @book }
+      end
+    end
+
+  end
+
   # GET /books/new
   def new
     @book = Book.new
     if authorize! :create, @book, :message => "BEWARE: you are not authorized to create new books."
-      flash[:alert] = "ao"
     end
 
   end

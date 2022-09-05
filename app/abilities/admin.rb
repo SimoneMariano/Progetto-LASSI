@@ -1,6 +1,6 @@
 Canard::Abilities.for(:admin) do
   can [:read, :create, :edit, :destroy], Book
-  cannot [:buy], Book
+  cannot [:buy, :addToFavourites], Book
   
   can [:read, :destroy], BookRental
   cannot [:edit, :create], BookRental

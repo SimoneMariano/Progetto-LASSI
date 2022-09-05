@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_04_160943) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_05_141421) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -92,6 +92,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_04_160943) do
     t.index ["course_id"], name: "index_books_courses_on_course_id"
   end
 
+  create_table "books_users", id: false, force: :cascade do |t|
+    t.integer "book_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_books_users_on_book_id"
+    t.index ["user_id"], name: "index_books_users_on_user_id"
+  end
+
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -147,6 +156,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_04_160943) do
   add_foreign_key "books_categories", "categories"
   add_foreign_key "books_courses", "books"
   add_foreign_key "books_courses", "courses"
+  add_foreign_key "books_users", "books"
+  add_foreign_key "books_users", "users"
   add_foreign_key "secondhands", "books"
   add_foreign_key "secondhands", "users"
 end

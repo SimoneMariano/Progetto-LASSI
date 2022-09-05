@@ -40,6 +40,8 @@ Rails.application.routes.draw do
   get 'profile/edit', to: 'users#edit', :as => :profile_edit
   resources :users
 
+  get 'books/addToFavourites/:id', to: 'books#addToFavourites', :as => :addToFavourites
+
   #get "/calendar/new", to: 'example#new', :as => :new_calendar_event
   #get "/calendar/create", to: 'example#create', :as => :create_calendar_event
 

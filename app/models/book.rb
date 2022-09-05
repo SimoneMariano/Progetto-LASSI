@@ -7,6 +7,7 @@ class Book < ApplicationRecord
     has_many :user, :through => :book_rental
     has_many :user, :through => :secondhand
     has_one_attached :placeholder
+    has_and_belongs_to_many :user, dependent: :destroy
 
 
     #validation

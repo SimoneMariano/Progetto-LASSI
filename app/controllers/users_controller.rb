@@ -3,15 +3,7 @@ class UsersController < ApplicationController
     skip_before_action :authenticate_user!
 
     def index
-      if user_signed_in?
-        if current_user.admin?
-          redirect_to home_path
-        else
-          @user = current_user
-        end
-      else
-        redirect_to new_session_path
-      end
+      authenticated
     end
 
 
@@ -20,6 +12,7 @@ class UsersController < ApplicationController
     end
 
     def edit
+      authenticated
       @user = current_user
     end
 
@@ -48,5 +41,17 @@ class UsersController < ApplicationController
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(:name, :surname, :image, :course_id, :matricola, :email)
+    end
+
+    def authenticated
+      if user_signed_in?
+        if current_user.admin?
+          redirect_to home_path
+        else
+          @user = current_user
+        end
+      else
+        redirect_to new_user_session_path
+      end
     end
 end

@@ -36,50 +36,7 @@ class BookRentalsController < ApplicationController
 
   end
 
-  def new_calendar_event(summary, description, startDate, endDate)
-    if current_user.provider == "google_oauth2"      
-      service = Google::Apis::CalendarV3::CalendarService.new
-      service.authorization = session[:access_token]
-      service.key = Rails.application.credentials.dig(:key)
-      event = Google::Apis::CalendarV3::Event.new(
-        summary: summary,
-        location: 'Sapienza Università di Roma, Piazzale Aldo Moro, 5, 00185 Roma RM, Italia',
-        description: description,
-        start: Google::Apis::CalendarV3::EventDateTime.new(
-          date_time: startDate
-        ),
-        end: Google::Apis::CalendarV3::EventDateTime.new(
-          date_time: endDate
-        ),
-        attendees: [
-          Google::Apis::CalendarV3::EventAttendee.new(
-            email: current_user.email
-          ),
-          Google::Apis::CalendarV3::EventAttendee.new(
-            email: "librarianassi@gmail.com"
-          )
-        ],
-        reminders: Google::Apis::CalendarV3::Event::Reminders.new(
-          use_default: false,
-          overrides: [
-            Google::Apis::CalendarV3::EventReminder.new(
-              reminder_method: 'email',
-              minutes: 24 * 60
-            ),
-            Google::Apis::CalendarV3::EventReminder.new(
-              reminder_method: 'popup',
-              minutes: 10
-            )
-          ]
-        )
-      )
-
-        @book_rental.calendar_id = event.id
-        service.insert_event("primary", event) 
-      #puts "Event created: #{result.html_link}"
-      
-    end
-  end
+  
 
   # POST /book_rentals or /book_rentals.json
   def create
@@ -144,7 +101,9 @@ class BookRentalsController < ApplicationController
 
     if checkStock(service, @book)
       if event_created = service.insert_event("primary", event)
-        @book_rental.calendar_id = event_created.id
+        calendar_id = event_created.id
+        @book_rental.calendar_id = calendar_id
+
         check = true
       end
     end
@@ -154,6 +113,9 @@ class BookRentalsController < ApplicationController
         format.html { redirect_to book_rental_url(@book_rental), notice: "book_rental was successfully created." }
         format.json { render :show, status: :created, location: @book_rental }
       else
+        if calendar_id.present? 
+          service.delete_event("primary", calendar_id)
+        end
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @book_rental.errors, status: :unprocessable_entity }
       end

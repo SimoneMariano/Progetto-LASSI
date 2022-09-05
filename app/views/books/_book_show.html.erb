@@ -3,7 +3,13 @@
 
 
 <h2 style="padding-bottom:20px; width:1000px"> 
-<i class="fa-regular fa-heart" style="font-size:smaller"></i>
+    <%= link_to addToFavourites_path(@book.id), class: "favourites-link" do%>
+      <%if current_user.book.where(id: @book.id).blank?%>
+        <i class="fa-regular fa-heart" style="font-size:smaller"></i>
+      <%else%>
+        <i class="fa-solid fa-heart" style="font-size:smaller"></i>
+      <%end%>
+    <%end%>
     <%= @book.title %>
   </h2>
 
@@ -60,3 +66,6 @@
   </div>
 
 </div>
+
+
+

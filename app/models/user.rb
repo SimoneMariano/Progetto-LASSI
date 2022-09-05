@@ -5,6 +5,7 @@ class User < ApplicationRecord
     has_many :book, :through => :secondhand, :as => :student
     has_one_attached :image
     has_one :course, dependent: :destroy
+    has_and_belongs_to_many :book, dependent: :destroy
 
     devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :validatable,
