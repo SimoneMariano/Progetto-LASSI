@@ -29,7 +29,7 @@ class BooksController < ApplicationController
     
   end
 
-  def addToFavourites
+  def addToFavorites
     @user = current_user
     @book  = Book.find(params[:id])
 
@@ -51,6 +51,20 @@ class BooksController < ApplicationController
         format.html { redirect_to book_url(@book), notice: "Book was successfully removed from favourites." }
         format.json { render :show, status: :created, location: @book }
       end
+    end
+
+  end
+
+  def removeFromFavorites
+    @user = current_user
+    @book  = Book.find(params[:id])
+
+    authorize! :addToFauvorites, @book, :message => "BEWARE: you are not authorized to addToFauvorites books."
+    @user.book.delete(@book)
+
+    respond_to do |format|
+      format.html { redirect_to profile_path, notice: "Book was successfully removed from favourites." }
+      format.json {  head :no_content}
     end
 
   end
