@@ -11,12 +11,17 @@ class BooksController < ApplicationController
     @books = Book.where("title LIKE (?)", "%#{query}%").or(Book.where(ISBN: params[:search]))
 
     if(params[:checkCourse] == "Your Course of study" )
-      #Da implementare con autenticazione 
-    
+      @books =  @books.joins(:course).where("courses.id = (?)", current_user.course_id)
+      
+
+    elsif (params[:checkCourse] == "All" )
+      @books = @books
+
+    elsif (params[:checkCourse] == "Favorites" )
+      @books = current_user.book.where("title LIKE (?)", "%#{query}%").or(Book.where(ISBN: params[:search]))
     elsif (params[:checkCourse] == "Categories")
       @books = @books.joins(:category).where("categories.id in (?)", params[:categories][:category])
-    else
-      #Da implementare con autenticazione
+    
     end
   end
 
@@ -130,6 +135,7 @@ class BooksController < ApplicationController
     
     @book.author.clear
     @book.category.clear
+    @book.course.clear
 
     for category in params[:categories] do
       @cat = Category.find(category)
@@ -139,6 +145,11 @@ class BooksController < ApplicationController
     for author in params[:authors] do
       @aut = Author.find(author)
       @book.author << @aut
+    end
+
+    for course in params[:courses] do
+      @cou = Course.find(course)
+      @book.course << @cou
     end
 
 

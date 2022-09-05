@@ -3,7 +3,11 @@ class SecondhandsController < ApplicationController
 
   # GET /secondhands or /secondhands.json
   def index
-    @secondhands = Secondhand.all
+    if current_user.admin?
+      @secondhands = Secondhand.all
+    else
+      approved
+    end
   end
 
   # GET /secondhands/1 or /secondhands/1.json
@@ -111,14 +115,22 @@ class SecondhandsController < ApplicationController
     @secondhands = Secondhand.joins(:book).where("books.title LIKE (?)", "%#{query}%").or(Secondhand.joins(:book).where("books.ISBN = (?)", params[:search] ))
 
     if(params[:checkCourse] == "Your Course of study" )
-      #Da implementare con autenticazione 
-    
+      @books =  Book.joins(:course).where("courses.id = (?)", current_user.course_id)
+      
+
+    elsif (params[:checkCourse] == "All" )
+      @books = Book.all
+
+    elsif (params[:checkCourse] == "Favorites" )
+      @books = current_user.book.where("title LIKE (?)", "%#{query}%").or(Book.where(ISBN: params[:search]))
     elsif (params[:checkCourse] == "Categories")
       @books = Book.joins(:category).where("categories.id in (?)", params[:categories][:category])
-      @secondhands = @secondhands.where("book_id in (?)", @books.map {|book| book.id})
-    else
-      #Da implementare con autenticazione
+    
     end
+      
+    
+
+    @secondhands = @secondhands.where("book_id in (?)", @books.map {|book| book.id})
 
     for secondhand in @secondhands do
       @book_info = Book.find(secondhand.book_id)

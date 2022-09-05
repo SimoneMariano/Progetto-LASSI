@@ -13,7 +13,11 @@
 
   <div>
     <%= form.label :ISBN, style: "display: block" %>
-    <%= form.number_field :ISBN %>
+    <%if secondhand.book_id.present? %>
+      <%= form.text_field :ISBN,  value: Book.find(secondhand.book_id).ISBN %>
+    <%else%>
+      <%= form.text_field :ISBN %>
+    <%end%>
   </div>
 
 
