@@ -1,0 +1,2 @@
+module ViewReservationsHelper
+end

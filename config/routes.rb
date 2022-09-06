@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :seats
 
   root "home#index"
 
@@ -19,10 +18,16 @@ Rails.application.routes.draw do
   get "approved", to: "secondhands#approved"
   get "/approve/:id", to: "secondhands#approve", :as => :approve
 
-  resources :reservations
   get 'athenaeum' => 'athenaeum#index', :as => :athenaeum
+
+  resources :reservations
   get "reservation", to: "reservation#index"
+
+  resources :seats
   get "seat", to: "seats#index"
+
+  resources :view_reservations
+  get 'view_reservation', to: "view_reservations#index"
 
 
 

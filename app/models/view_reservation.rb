@@ -1,0 +1,2 @@
+class ViewReservation < ApplicationRecord
+end
