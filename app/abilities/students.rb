@@ -11,4 +11,7 @@ Canard::Abilities.for(:student) do
   cannot [:read, :create, :destroy, :edit], Author
   cannot [:read, :create, :destroy, :edit], Category
   cannot [:read, :create, :destroy, :edit], Course
+
+  cannot [ :create, :destroy, :edit], Bulletin
+  can [:read], Bulletin
 end

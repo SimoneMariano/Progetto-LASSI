@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema[7.0].define(version: 2022_09_05_153104) do
-=======
-ActiveRecord::Schema[7.0].define(version: 2022_09_06_162818) do
->>>>>>> origin/bookingSection
+ActiveRecord::Schema[7.0].define(version: 2022_09_07_100505) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -105,6 +101,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_06_162818) do
     t.index ["user_id"], name: "index_books_users_on_user_id"
   end
 
+  create_table "bulletins", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -182,13 +185,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_06_162818) do
   add_foreign_key "books_categories", "categories"
   add_foreign_key "books_courses", "books"
   add_foreign_key "books_courses", "courses"
-<<<<<<< HEAD
   add_foreign_key "books_users", "books"
   add_foreign_key "books_users", "users"
-=======
   add_foreign_key "reservations", "seats"
   add_foreign_key "reservations", "users"
->>>>>>> origin/bookingSection
   add_foreign_key "secondhands", "books"
   add_foreign_key "secondhands", "users"
 end

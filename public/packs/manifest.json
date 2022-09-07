@@ -1,100 +1,74 @@
 {
-  "application.js": "/packs/js/application-6c436c5f735c863103c5.js",
-  "application.js.map": "/packs/js/application-6c436c5f735c863103c5.js.map",
-<<<<<<< HEAD
-  "books.js": "/packs/js/books-7e0ac2d644c8893ef01b.js",
-  "books.js.map": "/packs/js/books-7e0ac2d644c8893ef01b.js.map",
-=======
-  "athenaeum.js": "/packs/js/athenaeum-6bdaac3d8053bff3bfc4.js",
-  "athenaeum.js.map": "/packs/js/athenaeum-6bdaac3d8053bff3bfc4.js.map",
-  "books.js": "/packs/js/books-5f6091d537e4f0e2eb57.js",
-  "books.js.map": "/packs/js/books-5f6091d537e4f0e2eb57.js.map",
->>>>>>> origin/bookingSection
+  "application.js": "/packs/js/application-63840ff7f8d2798c2c0d.js",
+  "application.js.map": "/packs/js/application-63840ff7f8d2798c2c0d.js.map",
+  "athenaeum.js": "/packs/js/athenaeum-eab98536e502c58aed25.js",
+  "athenaeum.js.map": "/packs/js/athenaeum-eab98536e502c58aed25.js.map",
+  "books.js": "/packs/js/books-c8491d5b6414b1ec7431.js",
+  "books.js.map": "/packs/js/books-c8491d5b6414b1ec7431.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-6c436c5f735c863103c5.js"
+        "/packs/js/application-63840ff7f8d2798c2c0d.js"
       ],
       "js.map": [
-        "/packs/js/application-6c436c5f735c863103c5.js.map"
+        "/packs/js/application-63840ff7f8d2798c2c0d.js.map"
       ]
     },
     "athenaeum": {
       "js": [
-<<<<<<< HEAD
-        "/packs/js/books-7e0ac2d644c8893ef01b.js"
+        "/packs/js/athenaeum-eab98536e502c58aed25.js"
       ],
       "js.map": [
-        "/packs/js/books-7e0ac2d644c8893ef01b.js.map"
-=======
-        "/packs/js/athenaeum-6bdaac3d8053bff3bfc4.js"
-      ],
-      "js.map": [
-        "/packs/js/athenaeum-6bdaac3d8053bff3bfc4.js.map"
+        "/packs/js/athenaeum-eab98536e502c58aed25.js.map"
       ]
     },
     "books": {
       "js": [
-        "/packs/js/books-5f6091d537e4f0e2eb57.js"
+        "/packs/js/books-c8491d5b6414b1ec7431.js"
       ],
       "js.map": [
-        "/packs/js/books-5f6091d537e4f0e2eb57.js.map"
->>>>>>> origin/bookingSection
+        "/packs/js/books-c8491d5b6414b1ec7431.js.map"
       ]
     },
     "library": {
       "js": [
-        "/packs/js/library-3bfeb3867e0a5725a5fc.js"
+        "/packs/js/library-1541bef654687847e0fc.js"
       ],
       "js.map": [
-        "/packs/js/library-3bfeb3867e0a5725a5fc.js.map"
+        "/packs/js/library-1541bef654687847e0fc.js.map"
       ]
     },
     "login": {
       "js": [
-<<<<<<< HEAD
-        "/packs/js/login-e71425eea1f79c09939a.js"
+        "/packs/js/login-b4cb00e75f62438b3ccd.js"
       ],
       "js.map": [
-        "/packs/js/login-e71425eea1f79c09939a.js.map"
+        "/packs/js/login-b4cb00e75f62438b3ccd.js.map"
       ]
     },
     "secondhands": {
       "js": [
-        "/packs/js/secondhands-56a1281feaacac0a3893.js"
+        "/packs/js/secondhands-9a8682d84a819df7829d.js"
       ],
       "js.map": [
-        "/packs/js/secondhands-56a1281feaacac0a3893.js.map"
-=======
-        "/packs/js/secondhands-ee45f043978b1ae5799d.js"
-      ],
-      "js.map": [
-        "/packs/js/secondhands-ee45f043978b1ae5799d.js.map"
->>>>>>> origin/bookingSection
+        "/packs/js/secondhands-9a8682d84a819df7829d.js.map"
       ]
     },
     "selectpicker": {
       "js": [
-        "/packs/js/selectpicker-36b8ff0df0421e12734d.js"
+        "/packs/js/selectpicker-e80de47bfce05096c8ba.js"
       ],
       "js.map": [
-        "/packs/js/selectpicker-36b8ff0df0421e12734d.js.map"
+        "/packs/js/selectpicker-e80de47bfce05096c8ba.js.map"
       ]
     }
   },
-<<<<<<< HEAD
-  "library.js": "/packs/js/library-fca336e462de952d144f.js",
-  "library.js.map": "/packs/js/library-fca336e462de952d144f.js.map",
-  "login.js": "/packs/js/login-e71425eea1f79c09939a.js",
-  "login.js.map": "/packs/js/login-e71425eea1f79c09939a.js.map",
-  "secondhands.js": "/packs/js/secondhands-56a1281feaacac0a3893.js",
-  "secondhands.js.map": "/packs/js/secondhands-56a1281feaacac0a3893.js.map",
-=======
-  "library.js": "/packs/js/library-3bfeb3867e0a5725a5fc.js",
-  "library.js.map": "/packs/js/library-3bfeb3867e0a5725a5fc.js.map",
-  "secondhands.js": "/packs/js/secondhands-ee45f043978b1ae5799d.js",
-  "secondhands.js.map": "/packs/js/secondhands-ee45f043978b1ae5799d.js.map",
->>>>>>> origin/bookingSection
-  "selectpicker.js": "/packs/js/selectpicker-36b8ff0df0421e12734d.js",
-  "selectpicker.js.map": "/packs/js/selectpicker-36b8ff0df0421e12734d.js.map"
+  "library.js": "/packs/js/library-1541bef654687847e0fc.js",
+  "library.js.map": "/packs/js/library-1541bef654687847e0fc.js.map",
+  "login.js": "/packs/js/login-b4cb00e75f62438b3ccd.js",
+  "login.js.map": "/packs/js/login-b4cb00e75f62438b3ccd.js.map",
+  "secondhands.js": "/packs/js/secondhands-9a8682d84a819df7829d.js",
+  "secondhands.js.map": "/packs/js/secondhands-9a8682d84a819df7829d.js.map",
+  "selectpicker.js": "/packs/js/selectpicker-e80de47bfce05096c8ba.js",
+  "selectpicker.js.map": "/packs/js/selectpicker-e80de47bfce05096c8ba.js.map"
 }

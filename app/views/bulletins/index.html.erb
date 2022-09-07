@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<h2 style="padding-left:40px">Bulletin Board</h2>
+
+<br>
+
+<div id="bulletins" class="bulletin-board">
+
+<table>
+  <%c=0%>
+  <% @bulletins.each do |bulletin| %>
+    <%if c>2 && c%3== 0%> <tr> <%end%> 
+      <td class="post-it-td"> 
+        <%= link_to  bulletin, class: "link-post-it" do%>
+          <%= render bulletin %>
+        <%end%>
+      </td>
+    <%if c>2 && c%3 == 0%></tr><%end%>
+    <%c =c+ 1%>
+    
+  <% end %>
+  </table>
+</div>
+
+<div style="padding: 40px">
+  <%= if current_user.admin? then link_to "New bulletin", new_bulletin_path, class: "btn btn-primary" end%>
+<div>
+
+<%= stylesheet_link_tag "bulletin"%>
+
+
+
+

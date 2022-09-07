@@ -11,5 +11,7 @@ Canard::Abilities.for(:admin) do
   can [:read, :create, :destroy, :edit], Author
   can [:read, :create, :destroy, :edit], Category
   can [:read, :create, :destroy, :edit], Course
+
+  can [:read, :create, :destroy, :edit], Bulletin
   
 end
