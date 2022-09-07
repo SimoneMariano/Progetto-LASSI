@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema[7.0].define(version: 2022_09_05_153104) do
+=======
+ActiveRecord::Schema[7.0].define(version: 2022_09_06_162818) do
+>>>>>>> origin/bookingSection
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -114,6 +118,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_153104) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "reservations", force: :cascade do |t|
+    t.integer "seat_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "datetime"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["seat_id"], name: "index_reservations_on_seat_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
+  create_table "seats", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "secondhands", force: :cascade do |t|
     t.integer "book_id", null: false
     t.integer "user_id", null: false
@@ -146,6 +167,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_153104) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "view_reservations", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "authors_books", "authors"
@@ -156,8 +182,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_05_153104) do
   add_foreign_key "books_categories", "categories"
   add_foreign_key "books_courses", "books"
   add_foreign_key "books_courses", "courses"
+<<<<<<< HEAD
   add_foreign_key "books_users", "books"
   add_foreign_key "books_users", "users"
+=======
+  add_foreign_key "reservations", "seats"
+  add_foreign_key "reservations", "users"
+>>>>>>> origin/bookingSection
   add_foreign_key "secondhands", "books"
   add_foreign_key "secondhands", "users"
 end

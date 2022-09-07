@@ -27,6 +27,20 @@ Rails.application.routes.draw do
   get "/approve/:id", to: "secondhands#approve", :as => :approve
 
   get "display_my_adv", to: "secondhands#display_my_adv"
+  
+  get 'athenaeum' => 'athenaeum#index', :as => :athenaeum
+
+  resources :reservations
+  get "reservation", to: "reservation#index"
+
+  resources :seats
+  get "seat", to: "seats#index"
+
+  resources :view_reservations
+  get 'view_reservation', to: "view_reservations#index"
+
+
+
 
   get 'home' => 'home#index', :as => :home
 
