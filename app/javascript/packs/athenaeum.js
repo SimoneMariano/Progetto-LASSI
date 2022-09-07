@@ -4,7 +4,7 @@ $("#btn_seat").click(function () {
     $('#notice').text("")
 });
 
-$("#btn_seat").click(function () { 
+$("#btn_view_reservation").click(function () { 
     $("#main-block").load("./view_reservations")
     $('#notice').text("")
 });
