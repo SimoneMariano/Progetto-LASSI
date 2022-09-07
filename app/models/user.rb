@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-<<<<<<< HEAD
     has_many :book_rental, :as => :student
     has_many :book, :through => :book_rental, :as => :student
     has_many :secondhand, :as => :student
@@ -7,6 +6,9 @@ class User < ApplicationRecord
     has_one_attached :image
     has_one :course, dependent: :destroy
     has_and_belongs_to_many :book, dependent: :destroy
+
+    has_one :seat, :through => :reservation
+    has_one :reservation, dependent: :destroy
 
     devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :validatable,
@@ -36,11 +38,7 @@ class User < ApplicationRecord
             end
         end
     end
-=======
-    has_many :book_rental
-    has_many :book, :through => :book_rental
+    
 
-    has_one :seat, :through => :reservation
-    has_one :reservation, dependent: :destroy
->>>>>>> origin/bookingSection
+   
 end
