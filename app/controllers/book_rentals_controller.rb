@@ -62,7 +62,7 @@ class BookRentalsController < ApplicationController
       if current_user.provider == "google_oauth2"      
         service = Google::Apis::CalendarV3::CalendarService.new
         service.authorization = session[:access_token]
-        service.key = Rails.application.credentials.dig(:key)
+        service.key = Rails.application.credentials.dig(:calendar_key)
         event = Google::Apis::CalendarV3::Event.new(
           summary: @book_rental.book.ISBN,
           location: 'Sapienza Università di Roma, Piazzale Aldo Moro, 5, 00185 Roma RM, Italia',

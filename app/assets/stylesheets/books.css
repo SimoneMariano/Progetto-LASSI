@@ -10,6 +10,7 @@ p.title {
 #books-div {
     overflow:auto; 
     height: 380px;
+    background-color: white;
     box-shadow: inset 0px 0px 10px 0px #000000;
     border: 1px solid #000000;
     padding: 20px;

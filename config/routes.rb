@@ -59,9 +59,8 @@ Rails.application.routes.draw do
   get 'books/removeFromFavorites/:id', to: 'books#removeFromFavorites', :as => :removeFromFavorites
 
 
-  #get "/calendar/new", to: 'example#new', :as => :new_calendar_event
-  #get "/calendar/create", to: 'example#create', :as => :create_calendar_event
-
+  get 'ticket/new', to: 'ticket_mailer#new', :as => :new_mail
+  post 'ticket/send', to: 'ticket_mailer#send_email', :as => :send_mail
 
 
  

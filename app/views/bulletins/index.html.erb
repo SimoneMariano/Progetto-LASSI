@@ -24,6 +24,7 @@
 
 <div style="padding: 40px">
   <%= if current_user.admin? then link_to "New bulletin", new_bulletin_path, class: "btn btn-primary" end%>
+  <%= link_to "Send mail", new_mail_path, class: "btn btn-outline-warning"%>
 <div>
 
 <%= stylesheet_link_tag "bulletin"%>

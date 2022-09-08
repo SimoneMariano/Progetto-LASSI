@@ -186,5 +186,9 @@ i#plus-icon{
 i#plus-icon:hover{
   color: #6495ED;
 }
+
+textarea.form-control{
+  width: 900px
+}
   
 

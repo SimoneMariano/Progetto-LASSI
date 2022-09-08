@@ -26,7 +26,10 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
   #config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET']
-  config.omniauth :google_oauth2, Rails.application.credentials.dig(:google_client_id), Rails.application.credentials.dig(:google_client_secret), scope: "email, profile, calendar, calendar.events"
+  config.omniauth :google_oauth2, Rails.application.credentials.dig(:google_client_id), Rails.application.credentials.dig(:google_client_secret), scope: "email, 
+  https://www.googleapis.com/auth/gmail.send, https://www.googleapis.com/auth/gmail.modify, https://www.googleapis.com/auth/gmail.compose,
+  https://mail.google.com/,
+  profile, calendar, calendar.events"
 
 
   # Configure the class responsible to send e-mails.
