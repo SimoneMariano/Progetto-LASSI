@@ -1,3 +1,25 @@
 <div id="<%= dom_id reservation %>">
-    PROVA PROVA PROVA
+    <div class="container">
+
+    <div class="row row-cols-2">
+
+      <div class="mx-auto d-block">
+        <strong>Email:</strong>
+        <%= reservation.user.email %>
+      </div>
+      <div class="mx-auto d-block">
+        <strong>Name:</strong>
+        <%= reservation.seat.name%>
+      </div>
+      <div class="mx-auto d-block">
+        <strong>Description:</strong>
+        <%= reservation.seat.description %>
+      </div>
+      <div class="mx-auto d-block">
+        <strong>endDate:</strong>
+        <%= reservation.endDate %>
+      </div>
+
+    </div>
+  </div>
 </div>

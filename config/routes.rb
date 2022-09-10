@@ -37,7 +37,6 @@ Rails.application.routes.draw do
   resources :seats
   get "seat", to: "seats#index"
 
-  resources :view_reservations
   get 'view_reservation', to: "view_reservations#index"
 
 

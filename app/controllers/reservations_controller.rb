@@ -22,18 +22,20 @@ class ReservationsController < ApplicationController
   # POST /reservations or /reservations.json
   def create
     @reservation = Reservation.new(reservation_params)
-
+    
     seat_id = params[:seats]
     @seat = Seat.find(seat_id)
 
+    @user = current_user
 
-    #va sostituito con in current user
-    id_user = 1
-    @user = User.find(id_user)
+    @reservation.startDate = Date.today
+    @reservation.endDate = params[:endDate]
 
     if @seat.present?
       @reservation.seat_id = @seat.id
       @reservation.user_id = @user.id
+      @reservation.startDate = Date.today
+      @reservation.endDate = params[:endDate]
       #@reservation = @seat.reservation.create(reservation_params)
     end
 
@@ -79,6 +81,6 @@ class ReservationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def reservation_params
-      params.fetch(:reservation, {})
+      params.require(:reservation).permit(:seat_id, :user_id, :endDate, :startDate)
     end
 end

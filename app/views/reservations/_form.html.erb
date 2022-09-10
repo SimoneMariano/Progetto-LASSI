@@ -12,9 +12,14 @@
   <% end %>
 
     <%= form.label :seats, style: "display: block" %>
-    <%= select_tag(:seats, options_for_select(Seat.all.map {|seat| [seat.name, seat.id]}))%> 
+    <%= select_tag(:seats, options_for_select(Seat.all.map {|seat| [seat.name, seat.id]}))%>
 
+  <div class="d-flex">
+    <%= form.label :endDate, value: "End date:", style: "display: block; font-weight: bold; width: 80px;" %>
+    <%= form.datetime_field :endDate %>
+  </div>
+  <br>
   <div>
-    <%= form.submit %>
+    <%= form.submit :class => "btn btn-primary" %>
   </div>
 <% end %>
