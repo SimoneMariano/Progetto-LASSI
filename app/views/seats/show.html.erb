@@ -1,32 +1,22 @@
 <p style="color: green"><%= notice %></p>
-
 <table style="width:80%; vertical-align:start">
-
   <tbody style="vertical-align: top">
-    <tr>
-      <td style="width: 220px">
-      </td>
-
-      <td>
-
-<div class="row">
-  <img class="rounded mx-auto d-block" style="max-width: 90%" alt="Responsive image" src="https://www.cmete.com/skins/theme_cmete_2016/images/placeholders/image-placeholder.jpg">
-</div>
-
-<div class="row">
-
-  <%= render @seat %>
-
-  <div class="row">
-    <%= link_to "Edit this seat", edit_seat_path(@seat), class: "btn btn-success me-1" %>
-    <br>
-    <%= link_to "Back to athenaeum", athenaeum_path, class: "btn btn-secondary" %>
-    <br>
-    <%= link_to "Destroy this seat", @seat, method: :delete,class: "btn btn-danger" %>
-  </div>
-
-</div>
-
-</tr>
-</tbody>
+    <td style="width: 220px">
+    </td>
+    <td>
+      <div class="row">
+        <img class="rounded mx-auto d-block" style="max-width: 90%" alt="Responsive image" src="https://www.cmete.com/skins/theme_cmete_2016/images/placeholders/image-placeholder.jpg">
+      </div>
+      <div class="row">
+        <%= render @seat %>
+        <div class="row">
+          <%= link_to "Edit this seat", edit_seat_path(@seat), class: "btn btn-success me-1" %>
+          <br>
+          <%= link_to "Back to athenaeum", athenaeum_path, class: "btn btn-secondary" %>
+          <br>
+          <%= link_to "Destroy this seat", @seat, method: :delete,class: "btn btn-danger" %>
+        </div>
+      </div>
+    </td>
+  </tbody>
 </table>
