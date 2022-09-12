@@ -8,3 +8,5 @@ config/credentials.yml.enc
 
 .env
 
+node_modules
+
