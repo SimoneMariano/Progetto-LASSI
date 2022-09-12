@@ -1,14 +1,19 @@
 class UsersController < ApplicationController
-    before_action :set_user, only: %i[ show destroy]
+    before_action :set_user, only: %i[ show destroy create]
     skip_before_action :authenticate_user!
 
     def index
       authenticated
     end
 
+   
+
+    
+
 
     def new 
         @user = User.new(params[:user])
+        
     end
 
     def edit
@@ -18,7 +23,10 @@ class UsersController < ApplicationController
 
     def update
       @user = current_user
-      @user.course_id = params[:course_id]
+
+      if params[:course_id].present?
+        @user.course_id = params[:course_id]
+      end
   
       respond_to do |format|
         if @user.update(user_params)
@@ -31,6 +39,11 @@ class UsersController < ApplicationController
       end
     end
 
+    
+    def setSession(id)
+      session[:user_id] = id
+      @current_user ||= User.find(session[:user_id])
+    end
 
     private
     # Use callbacks to share common setup or constraints between actions.
@@ -51,7 +64,7 @@ class UsersController < ApplicationController
           @user = current_user
         end
       else
-        redirect_to new_user_session_path
+        redirect_to login_path
       end
     end
 end

@@ -18,6 +18,7 @@ class User < ApplicationRecord
     after_initialize :set_default_role, :if => :new_record?
     acts_as_user :roles => [:student, :admin]
 
+
     def set_default_role
         self.roles_mask = 1 #student role
         
@@ -25,10 +26,19 @@ class User < ApplicationRecord
     
 
     def self.from_omniauth(auth)
-        where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
-            user.email = auth.info.email
-            user.password = Devise.friendly_token[0,20]
+        #where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+         #   user.email = auth.info.email
+          #  user.password = Devise.friendly_token[0,20]
+        #end
+        @user = User.find_by(email: auth.info.email)
+        if @user.present?
+            @user.provider = auth.provider
+            @user.uid = auth.uid
+            @user
+        else
+            @user = User.create(email: auth.info.email, password: Devise.friendly_token[0,20], provider: auth.provider, uid: auth.uid)
         end
+         
     end
 
     def self.new_with_session(params, session)

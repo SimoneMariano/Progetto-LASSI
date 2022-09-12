@@ -9,23 +9,13 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   # def twitter
   # end
 
-  #def google_oauth2
-   # user = User.from_omniauth(auth)
-
-    #if user.present? 
-     #   sign_out_all_scopes
-      #  flash[:success] = t 'device.omiauth_callback.success', kind: 'Google'
-       # sign_in_and_redirect user, event: :authentication
-    #else
-     #   flash[:alert] = t 'device.omiauth_callback.failure', kind: 'Google', reason: "#{auth.info.email} is not authorized"
-      #  redirect_to new_user_session_path
-        
-    #end
-  #end
+  
+ 
 
   def google_oauth2
     @user = User.from_omniauth(auth)
     if @user.present?
+      @user.save
       session[:access_token] = auth[:credentials][:token]
       sign_in_and_redirect @user, event: :authentication
     end

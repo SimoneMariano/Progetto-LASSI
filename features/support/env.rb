@@ -6,6 +6,26 @@
 
 require 'cucumber/rails'
 
+Capybara.default_host = 'http://localhost:3000'
+
+Before('@omniauth_test') do
+  OmniAuth.config.test_mode = true
+  Capybara.default_host = 'http://localhost:3000'
+
+  OmniAuth.config.add_mock(:google_oauth2, {
+    :uid => '12345',
+    :info => {
+      :name => 'googleuser',
+    }
+  })
+
+  
+end
+
+After('@omniauth_test') do
+  OmniAuth.config.test_mode = false
+end
+
 
 
 # frozen_string_literal: true

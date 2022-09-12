@@ -1,11 +1,13 @@
 <h2>Sign up</h2>
+<p class="notice" style="color: green"><%= notice %></p>
+<p class="alert" style="color: red"><%= alert %></p>
 
-<%= form_for(resource, as: resource_name,  local: true, data: { turbo: false }, url: registration_path(resource_name)) do |f| %>
+<%= form_for(resource, as: resource_name,  local: true, url: registration_path(resource_name)) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, class: "form-control", autocomplete: "email" %>
   </div>
 
   <div class="field">
@@ -13,17 +15,21 @@
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, class: "form-control", autocomplete: "new-password" %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "new-password" %>
   </div>
+
+  <br>
 
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+
+  <br>
+  <%= link_to "Sign in", login_path%>
 <% end %>
 
-<%= render "users/shared/links" %>

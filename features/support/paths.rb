@@ -14,14 +14,20 @@ module NavigationHelpers
       when /^the BiblioCommunity home page/
         '/'
       
-      when /^the BiblioCommunity library page/
+      when /^the library page/
         '/library'
 
-      when /^the BiblioCommunity books page/
+      when /^the books page/
         '/books'
   
-      when /^the Create New Book Page/
+      when /^the create new book page/
         '/books/new'
+      
+      when /^the log in page/
+        '/login'
+        
+      when /^the sign in page/
+        '/users/sign_in'
   
       # Add more mappings here.
       # Here is an example that pulls values out of the Regexp:

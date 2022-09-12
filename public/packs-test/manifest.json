@@ -1,6 +1,8 @@
 {
   "application.js": "/packs-test/js/application-8a9591abd06d4bbcacfa.js",
   "application.js.map": "/packs-test/js/application-8a9591abd06d4bbcacfa.js.map",
+  "athenaeum.js": "/packs-test/js/athenaeum-859db43c9498ae36e5b6.js",
+  "athenaeum.js.map": "/packs-test/js/athenaeum-859db43c9498ae36e5b6.js.map",
   "books.js": "/packs-test/js/books-d3549a7c539f2c844bd8.js",
   "books.js.map": "/packs-test/js/books-d3549a7c539f2c844bd8.js.map",
   "entrypoints": {
@@ -10,6 +12,14 @@
       ],
       "js.map": [
         "/packs-test/js/application-8a9591abd06d4bbcacfa.js.map"
+      ]
+    },
+    "athenaeum": {
+      "js": [
+        "/packs-test/js/athenaeum-859db43c9498ae36e5b6.js"
+      ],
+      "js.map": [
+        "/packs-test/js/athenaeum-859db43c9498ae36e5b6.js.map"
       ]
     },
     "books": {
@@ -26,6 +36,14 @@
       ],
       "js.map": [
         "/packs-test/js/library-b3a13722341cd8b62846.js.map"
+      ]
+    },
+    "login": {
+      "js": [
+        "/packs-test/js/login-f012469580ad4fe9d61c.js"
+      ],
+      "js.map": [
+        "/packs-test/js/login-f012469580ad4fe9d61c.js.map"
       ]
     },
     "secondhands": {
@@ -47,6 +65,8 @@
   },
   "library.js": "/packs-test/js/library-b3a13722341cd8b62846.js",
   "library.js.map": "/packs-test/js/library-b3a13722341cd8b62846.js.map",
+  "login.js": "/packs-test/js/login-f012469580ad4fe9d61c.js",
+  "login.js.map": "/packs-test/js/login-f012469580ad4fe9d61c.js.map",
   "secondhands.js": "/packs-test/js/secondhands-15ca916c2c634d0570b5.js",
   "secondhands.js.map": "/packs-test/js/secondhands-15ca916c2c634d0570b5.js.map",
   "selectpicker.js": "/packs-test/js/selectpicker-0f3469159645b27ceb4a.js",

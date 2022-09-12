@@ -10,17 +10,17 @@ class Users::SessionsController < Devise::SessionsController
   # end
 
   # POST /resource/sign_in
-  # def create
-  #   super
-  # end
+   def create
+     super
+   end
 
   # DELETE /resource/sign_out
-  # def destroy
-  #   super
-  # end
+   def destroy
+     super
+   end
 
   def after_sign_out_path_for(_resources_or_scope)
-    new_user_session_path
+    login_path
   end
 
   def after_sign_in_path_for(resources_or_scope)

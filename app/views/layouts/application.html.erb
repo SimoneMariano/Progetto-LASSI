@@ -30,7 +30,7 @@
                 <%= if !current_user.admin? then link_to 'My Profile',  profile_path, class: "dropdown-item" end%>
                 <%= link_to 'Logout',  destroy_user_session_path, :method => :delete, class: "dropdown-item"%>
               <%else%> 
-                <%= link_to 'Login',  new_user_session_path, class: "dropdown-item" %>
+                <%= link_to 'Login',  login_path, class: "dropdown-item" %>
               <%end%> 
            
           </div>

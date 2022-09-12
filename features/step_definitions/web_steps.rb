@@ -263,15 +263,35 @@ def wait_for_ajax
   end
 
   Given /^I (am logged in|login) as (.*)?$/ do |_,who|
-    @is_admin = false
-    @password = 'pass'
+    #@is_admin = false
+    #@password = 'pass'
     case who
-    when /administrator/i then @customer,@password = Customer.find_by_role!(100),'admin'
-    when /box ?office manager/i then @customer,@is_admin = create(:boxoffice_manager),true
-    when /box ?office/i then @customer,@is_admin = create(:boxoffice),true
-    when /staff/i         then @customer,@is_admin = create(:staff), true
-    when /customer "(.*) (.*)"/ then @customer = find_or_create_customer $1,$2
-    else raise "No such user '#{who}'"
+    when /administrator/i then @user,@password = User.find(2),'administrator'
+    when /student/i then @user,@password = User.find(1),"password"
+    #when /box ?office/i then @customer,@is_admin = create(:boxoffice),true
+    #when /staff/i         then @customer,@is_admin = create(:staff), true
+    #when /customer "(.*) (.*)"/ then @customer = find_or_create_customer $1,$2
+    #else raise "No such user '#{who}'"
+    #end
+    #verify_successful_login
     end
-    verify_successful_login
+  
+
+    visit('http://localhost:3000/users/sign_in')
+    fill_in 'Email', with: @user.email
+    fill_in 'Password', with: @password
+    click_on 'commit'
+    
   end
+
+  
+
+  Given('I am not logged in') do
+    user = User.create(
+      email: "utente@gmail.com",
+      password: "password"
+    )
+
+  end
+
+  

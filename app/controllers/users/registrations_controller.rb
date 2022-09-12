@@ -13,6 +13,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     build_resource(sign_up_params)
 
     resource.save
+    
     yield resource if block_given?
     if resource.persisted?
       if resource.active_for_authentication?
@@ -32,28 +33,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
-  # PUT /resource
-  def update
-    user = User.find(params[:user][:user_id])
-    if user.provider.in?(["google_oauth2", "facebook"])
-      user.update_without_password(city: params[:user][:city], zip_code: params[:user][:zip_code], address: params[:user][:address])
-    else
-      user.update(account_update_params)
-    end
-    sign_in_and_redirect user
-  end
-
-  protected
-
-  # If you have extra params to permit, append them to the sanitizer.
-  def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up,keys: %i[first_name last_name city zip_code address])
-  end
-
-  # If you have extra params to permit, append them to the sanitizer.
-  def configure_account_update_params
-    devise_parameter_sanitizer.permit(:account_update, keys: %i[first_name last_name city zip_code address])
-  end
+ 
 
   # GET /resource/sign_up
   # def new
@@ -89,12 +69,12 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+   protected
 
   # If you have extra params to permit, append them to the sanitizer.
-  # def configure_sign_up_params
+   def configure_sign_up_params
   #   devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute])
-  # end
+   end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_account_update_params
