@@ -10,6 +10,8 @@
       <div class="row">
         <%= render @seat %>
         <div class="row">
+          <%= link_to "New reservation", new_reservation_path, class: "btn btn-info" %>
+          <br>
           <%= link_to "Edit this seat", edit_seat_path(@seat), class: "btn btn-success me-1" %>
           <br>
           <%= link_to "Back to athenaeum", athenaeum_path, class: "btn btn-secondary" %>
