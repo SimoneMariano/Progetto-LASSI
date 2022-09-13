@@ -25940,3 +25940,2137 @@ Processing by BooksController#show as HTML
 Completed 200 OK in 51ms (Views: 41.8ms | ActiveRecord: 3.5ms | Allocations: 9671)
 
 
+Started GET "/authors" for ::1 at 2022-09-13 20:29:59 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+Processing by AuthorsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:25
+  Rendered authors/_author.html.erb (Duration: 1.2ms | Allocations: 176)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 2916)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 7582)
+Completed 200 OK in 55ms (Views: 26.6ms | ActiveRecord: 0.6ms | Allocations: 21404)
+
+
+Started GET "/authors" for ::1 at 2022-09-13 20:29:59 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:25
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1438)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 3900)
+Completed 200 OK in 24ms (Views: 18.9ms | ActiveRecord: 0.7ms | Allocations: 5152)
+
+
+Started GET "/authors/new" for ::1 at 2022-09-13 20:32:27 +0200
+Processing by AuthorsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 5.6ms | Allocations: 1046)
+  Rendered authors/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1377)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 4400)
+Completed 200 OK in 204ms (Views: 23.1ms | ActiveRecord: 0.3ms | Allocations: 55996)
+
+
+Started GET "/" for ::1 at 2022-09-13 20:33:18 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 655)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3785)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.2ms | Allocations: 4943)
+
+
+Started GET "/library" for ::1 at 2022-09-13 20:33:19 +0200
+Processing by LibraryController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2239)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 4666)
+Completed 200 OK in 33ms (Views: 28.0ms | ActiveRecord: 0.4ms | Allocations: 6535)
+
+
+Started GET "/books" for ::1 at 2022-09-13 20:33:21 +0200
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/books/index.html.erb:43
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:66
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 54.2ms | Allocations: 20726)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 5.9ms | Allocations: 2143)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 5.2ms | Allocations: 2111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered books/index.html.erb within layouts/application (Duration: 86.3ms | Allocations: 33008)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.1ms | Allocations: 35368)
+Completed 200 OK in 102ms (Views: 94.7ms | ActiveRecord: 3.3ms | Allocations: 37550)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a7bc2f40f6cc16fc1d04a9f1686573d5f3810996/analisi_2.jpg" for ::1 at 2022-09-13 20:33:21 +0200
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5544ccc2c247a858072c3ed66230eab4191413be/analisi_1.jpg" for ::1 at 2022-09-13 20:33:21 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a7bc2f40f6cc16fc1d04a9f1686573d5f3810996", "filename"=>"analisi_2"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: 5rzbe8w0ukg18gtotel59onocix8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE4OjM4OjIxLjg3M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8311462331b169d8fed3cdb2030db53452557daf/analisi_2.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE4OjM4OjIxLjg3M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8311462331b169d8fed3cdb2030db53452557daf/analisi_2.jpg
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms | Allocations: 2433)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0158e12421a4f766d171f985539d6613ed6c8ce3/fisica_1.jpg" for ::1 at 2022-09-13 20:33:21 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5544ccc2c247a858072c3ed66230eab4191413be", "filename"=>"analisi_1"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: xl41okncz5p0txuqtgcogwyh4ntf (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE4OjM4OjIxLjkwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e42869a132187611c6fac5fba1af47cc965ff68f/analisi_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE4OjM4OjIxLjkwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e42869a132187611c6fac5fba1af47cc965ff68f/analisi_1.jpg
+Completed 302 Found in 9ms (ActiveRecord: 0.6ms | Allocations: 1663)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE4OjM4OjIxLjg3M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8311462331b169d8fed3cdb2030db53452557daf/analisi_2.jpg" for ::1 at 2022-09-13 20:33:21 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0158e12421a4f766d171f985539d6613ed6c8ce3", "filename"=>"fisica_1"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: maqcmsykg6sqiop6mzzmz5uukywl (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTg6Mzg6MjEuOTQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--11cb5e04954b56eba4f631035e622a853c435b2a/fisica_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTg6Mzg6MjEuOTQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--11cb5e04954b56eba4f631035e622a853c435b2a/fisica_1.jpg
+Completed 302 Found in 11ms (ActiveRecord: 0.4ms | Allocations: 1634)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE4OjM4OjIxLjkwMloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e42869a132187611c6fac5fba1af47cc965ff68f/analisi_1.jpg" for ::1 at 2022-09-13 20:33:21 +0200
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTg6Mzg6MjEuOTQ2WiIsInB1ciI6ImJsb2Jfa2V5In19--11cb5e04954b56eba4f631035e622a853c435b2a/fisica_1.jpg" for ::1 at 2022-09-13 20:33:21 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_2"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 517)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 424)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 394)
+
+
+Started GET "/book_rentals" for ::1 at 2022-09-13 20:33:26 +0200
+Processing by BookRentalsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.3ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals"[0m
+  ↳ app/views/book_rentals/index.html.erb:14
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 827)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3404)
+Completed 200 OK in 21ms (Views: 15.3ms | ActiveRecord: 0.6ms | Allocations: 5399)
+
+
+Started GET "/secondhands" for ::1 at 2022-09-13 20:33:28 +0200
+Processing by SecondhandsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/secondhands/index.html.erb:47
+  [1m[36mSecondhand Load (0.4ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands"[0m
+  ↳ app/views/secondhands/index.html.erb:72
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 45], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:24
+  Rendered secondhands/_secondhand.html.erb (Duration: 13.6ms | Allocations: 7745)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 46], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:24
+  Rendered secondhands/_secondhand.html.erb (Duration: 9.7ms | Allocations: 3153)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 47], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:24
+  Rendered secondhands/_secondhand.html.erb (Duration: 7.9ms | Allocations: 3129)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 52.8ms | Allocations: 21374)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 74.8ms | Allocations: 23734)
+Completed 200 OK in 82ms (Views: 73.4ms | ActiveRecord: 4.0ms | Allocations: 25827)
+
+
+Started GET "/authors" for ::1 at 2022-09-13 20:33:32 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:25
+  Rendered authors/_author.html.erb (Duration: 0.7ms | Allocations: 164)
+  Rendered authors/_author.html.erb (Duration: 0.0ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.2ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1992)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 4452)
+Completed 200 OK in 26ms (Views: 20.8ms | ActiveRecord: 0.6ms | Allocations: 5799)
+
+
+Started GET "/authors/new" for ::1 at 2022-09-13 20:33:34 +0200
+Processing by AuthorsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/new.html.erb within layouts/application
+  Rendered authors/_form.html.erb (Duration: 1.8ms | Allocations: 627)
+  Rendered authors/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 729)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 3178)
+Completed 200 OK in 22ms (Views: 18.9ms | ActiveRecord: 0.3ms | Allocations: 4723)
+
+
+Started POST "/authors" for ::1 at 2022-09-13 20:33:38 +0200
+Processing by AuthorsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "author"=>{"name"=>"nano"}, "commit"=>"Create Author"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:31:in `block in create'
+  [1m[36mAuthor Create (1.9ms)[0m  [1m[32mINSERT INTO "authors" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "nano"], ["created_at", "2022-09-13 18:33:38.061051"], ["updated_at", "2022-09-13 18:33:38.061051"]]
+  ↳ app/controllers/authors_controller.rb:31:in `block in create'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:31:in `block in create'
+Redirected to http://localhost:3000/authors/7
+Completed 302 Found in 15ms (ActiveRecord: 5.0ms | Allocations: 3435)
+
+
+Started GET "/authors/7" for ::1 at 2022-09-13 20:33:38 +0200
+Processing by AuthorsController#show as TURBO_STREAM
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:70:in `set_author'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/show.html.erb within layouts/application
+  [1m[36mBook Load (1.0ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "authors_books" ON "books"."id" = "authors_books"."book_id" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 7]]
+  ↳ app/views/authors/show.html.erb:8
+  Rendered authors/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 3520)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5837)
+Completed 200 OK in 23ms (Views: 16.1ms | ActiveRecord: 1.7ms | Allocations: 8539)
+
+
+Started DELETE "/authors/7" for ::1 at 2022-09-13 21:00:17 +0200
+Processing by AuthorsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"7"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/authors_controller.rb:70:in `set_author'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/authors_controller.rb:59:in `destroy'
+  [1m[36mAuthor::HABTM_Book Delete All (0.2ms)[0m  [1m[31mDELETE FROM "authors_books" WHERE "authors_books"."author_id" = ?[0m  [["author_id", 7]]
+  ↳ app/controllers/authors_controller.rb:59:in `destroy'
+  [1m[36mAuthor Destroy (1.9ms)[0m  [1m[31mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 7]]
+  ↳ app/controllers/authors_controller.rb:59:in `destroy'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/authors_controller.rb:59:in `destroy'
+Redirected to http://localhost:3000/library
+Completed 302 Found in 26ms (ActiveRecord: 7.8ms | Allocations: 4926)
+
+
+Started GET "/library" for ::1 at 2022-09-13 21:00:17 +0200
+Processing by LibraryController#index as TURBO_STREAM
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1867)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 4344)
+Completed 200 OK in 42ms (Views: 37.3ms | ActiveRecord: 0.4ms | Allocations: 5595)
+
+
+Started GET "/categories" for ::1 at 2022-09-13 21:05:40 +0200
+Processing by CategoriesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:26
+  Rendered categories/_category.html.erb (Duration: 1.5ms | Allocations: 174)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered categories/_category.html.erb (Duration: 0.2ms | Allocations: 20)
+  Rendered categories/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1665)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 4151)
+Completed 200 OK in 32ms (Views: 23.7ms | ActiveRecord: 1.7ms | Allocations: 6733)
+
+
+Started GET "/categories/2" for ::1 at 2022-09-13 21:05:42 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:69:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered categories/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 3048)
+Completed 200 OK in 27ms (Views: 17.3ms | ActiveRecord: 0.6ms | Allocations: 5722)
+
+
+Started GET "/library" for ::1 at 2022-09-13 21:07:38 +0200
+Processing by LibraryController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 16.1ms | Allocations: 1870)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.1ms | Allocations: 4199)
+Completed 200 OK in 49ms (Views: 41.3ms | ActiveRecord: 0.6ms | Allocations: 5719)
+
+
+Started GET "/categories" for ::1 at 2022-09-13 21:07:39 +0200
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:26
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 21)
+  Rendered categories/_category.html.erb (Duration: 0.2ms | Allocations: 20)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1014)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 3468)
+Completed 200 OK in 20ms (Views: 15.2ms | ActiveRecord: 0.7ms | Allocations: 4736)
+
+
+Started GET "/categories/2" for ::1 at 2022-09-13 21:07:40 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:69:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/_category.html.erb (Duration: 0.2ms | Allocations: 21)
+  Rendered categories/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 465)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | Allocations: 2910)
+Completed 200 OK in 38ms (Views: 26.8ms | ActiveRecord: 1.6ms | Allocations: 4852)
+
+
+Started GET "/library" for ::1 at 2022-09-13 21:10:18 +0200
+Processing by LibraryController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 2255)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 5289)
+Completed 200 OK in 51ms (Views: 42.3ms | ActiveRecord: 0.3ms | Allocations: 7238)
+
+
+Started GET "/courses" for ::1 at 2022-09-13 21:10:19 +0200
+Processing by CoursesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:26
+  Rendered courses/_course.html.erb (Duration: 1.5ms | Allocations: 176)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 2547)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 5143)
+Completed 200 OK in 34ms (Views: 27.2ms | ActiveRecord: 1.2ms | Allocations: 7315)
+
+
+Started GET "/courses/2" for ::1 at 2022-09-13 21:10:20 +0200
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:69:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/_course.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered courses/show.html.erb within layouts/application (Duration: 23.2ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.1ms | Allocations: 3046)
+Completed 200 OK in 290ms (Views: 114.5ms | ActiveRecord: 0.7ms | Allocations: 5722)
+
+
+Started GET "/library" for ::1 at 2022-09-13 21:12:55 +0200
+Processing by LibraryController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2235)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 32.3ms | Allocations: 5247)
+Completed 200 OK in 47ms (Views: 41.2ms | ActiveRecord: 0.3ms | Allocations: 7201)
+
+
+Started GET "/categories" for ::1 at 2022-09-13 21:12:57 +0200
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:26
+  Rendered categories/_category.html.erb (Duration: 1.4ms | Allocations: 169)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered categories/_category.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered categories/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1598)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 4141)
+Completed 200 OK in 33ms (Views: 28.2ms | ActiveRecord: 0.9ms | Allocations: 6075)
+
+
+Started GET "/authors" for ::1 at 2022-09-13 21:12:57 +0200
+Processing by AuthorsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.7ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  ↳ app/views/authors/index.html.erb:25
+  Rendered authors/_author.html.erb (Duration: 1.7ms | Allocations: 167)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/_author.html.erb (Duration: 0.1ms | Allocations: 20)
+  Rendered authors/index.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2037)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 4578)
+Completed 200 OK in 42ms (Views: 30.9ms | ActiveRecord: 0.9ms | Allocations: 6444)
+
+
+Started GET "/books" for ::1 at 2022-09-13 21:12:59 +0200
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/books/index.html.erb:43
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:66
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 8.4ms | Allocations: 2696)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 7.2ms | Allocations: 2136)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 7.2ms | Allocations: 2111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered books/index.html.erb within layouts/application (Duration: 42.5ms | Allocations: 12648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.1ms | Allocations: 15008)
+Completed 200 OK in 60ms (Views: 51.5ms | ActiveRecord: 3.7ms | Allocations: 16864)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0158e12421a4f766d171f985539d6613ed6c8ce3/fisica_1.jpg" for ::1 at 2022-09-13 21:12:59 +0200
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5544ccc2c247a858072c3ed66230eab4191413be/analisi_1.jpg" for ::1 at 2022-09-13 21:12:59 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0158e12421a4f766d171f985539d6613ed6c8ce3", "filename"=>"fisica_1"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: maqcmsykg6sqiop6mzzmz5uukywl (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTk6MTc6NTkuODY2WiIsInB1ciI6ImJsb2Jfa2V5In19--b645cf9ac3ae13212d5c035c3403fe82692a32e1/fisica_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTk6MTc6NTkuODY2WiIsInB1ciI6ImJsb2Jfa2V5In19--b645cf9ac3ae13212d5c035c3403fe82692a32e1/fisica_1.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 1608)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a7bc2f40f6cc16fc1d04a9f1686573d5f3810996/analisi_2.jpg" for ::1 at 2022-09-13 21:12:59 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5544ccc2c247a858072c3ed66230eab4191413be", "filename"=>"analisi_1"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: xl41okncz5p0txuqtgcogwyh4ntf (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjE3OjU5Ljg4N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a0678b3d1a45493566173a722ae620f8a9468960/analisi_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjE3OjU5Ljg4N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a0678b3d1a45493566173a722ae620f8a9468960/analisi_1.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 1915)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a7bc2f40f6cc16fc1d04a9f1686573d5f3810996", "filename"=>"analisi_2"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTk6MTc6NTkuODY2WiIsInB1ciI6ImJsb2Jfa2V5In19--b645cf9ac3ae13212d5c035c3403fe82692a32e1/fisica_1.jpg" for ::1 at 2022-09-13 21:12:59 +0200
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: 5rzbe8w0ukg18gtotel59onocix8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjE3OjU5LjkzMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--147c0ee84289ba0e5ef9540bf50e774d8454901e/analisi_2.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjE3OjU5LjkzMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--147c0ee84289ba0e5ef9540bf50e774d8454901e/analisi_2.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms | Allocations: 1866)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjE3OjU5Ljg4N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a0678b3d1a45493566173a722ae620f8a9468960/analisi_1.jpg" for ::1 at 2022-09-13 21:12:59 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms | Allocations: 469)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjE3OjU5LjkzMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--147c0ee84289ba0e5ef9540bf50e774d8454901e/analisi_2.jpg" for ::1 at 2022-09-13 21:12:59 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms | Allocations: 411)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_2"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 420)
+
+
+Started GET "/" for ::1 at 2022-09-13 21:13:00 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 655)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 3841)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.3ms | Allocations: 4941)
+
+
+Started GET "/" for ::1 at 2022-09-13 21:13:02 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 275)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 3406)
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 0.3ms | Allocations: 3962)
+
+
+Started GET "/" for ::1 at 2022-09-13 21:13:07 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 272)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 3409)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.3ms | Allocations: 3957)
+
+
+Started GET "/" for ::1 at 2022-09-13 21:16:47 +0200
+Started GET "/" for ::1 at 2022-09-13 21:16:47 +0200
+Processing by HomeController#index as HTML
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 275)
+  Rendered home/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1040)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 6350)
+Completed 200 OK in 31ms (Views: 26.3ms | ActiveRecord: 0.3ms | Allocations: 7902)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/layouts/application.html.erb:29
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 8283)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 1.1ms | Allocations: 9315)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5544ccc2c247a858072c3ed66230eab4191413be/analisi_1.jpg" for ::1 at 2022-09-13 21:16:47 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5544ccc2c247a858072c3ed66230eab4191413be", "filename"=>"analisi_1"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: xl41okncz5p0txuqtgcogwyh4ntf (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjIxOjQ3LjQ2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--efbcbcaf2847fa20eb2f02e18b739451801a4676/analisi_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjIxOjQ3LjQ2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--efbcbcaf2847fa20eb2f02e18b739451801a4676/analisi_1.jpg
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms | Allocations: 1532)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjIxOjQ3LjQ2OVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--efbcbcaf2847fa20eb2f02e18b739451801a4676/analisi_1.jpg" for ::1 at 2022-09-13 21:16:47 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 408)
+
+
+Started GET "/" for ::1 at 2022-09-13 21:16:49 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 272)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 3444)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.3ms | Allocations: 3983)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-09-13 21:16:51 +0200
+Processing by Users::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 2213)
+
+
+Started GET "/login" for ::1 at 2022-09-13 21:16:51 +0200
+Processing by LoginController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering login/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered login/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 2746)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 5137)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 6348)
+
+
+Started GET "/login" for ::1 at 2022-09-13 21:16:54 +0200
+Processing by LoginController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered login/index.html.erb within layouts/application (Duration: 12.1ms | Allocations: 2236)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 4577)
+Completed 200 OK in 30ms (Views: 27.4ms | ActiveRecord: 0.0ms | Allocations: 5072)
+
+
+Started GET "/login" for ::1 at 2022-09-13 21:17:22 +0200
+Processing by LoginController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered login/index.html.erb within layouts/application (Duration: 12.2ms | Allocations: 2232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | Allocations: 4573)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.0ms | Allocations: 5082)
+
+
+Started GET "/login" for ::1 at 2022-09-13 21:18:03 +0200
+Processing by LoginController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered login/index.html.erb within layouts/application (Duration: 10.3ms | Allocations: 2232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 4575)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 5077)
+
+
+Started POST "/users/auth/google_oauth2" for ::1 at 2022-09-13 21:18:04 +0200
+Started GET "/users/auth/google_oauth2/callback?state=7ed534e478118e0651b97bd02787c029a58e363981ed876a&code=4%2F0AdQt8qjt3cmHkO5YezW89htccKgz7ivmby8eZQKXoP_SX5KeWCLrZcSjZ8La8A3MPHpOJg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.compose+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.events+https%3A%2F%2Fmail.google.com%2F+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.modify+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&hd=studenti.uniroma1.it&prompt=none" for ::1 at 2022-09-13 21:18:05 +0200
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"7ed534e478118e0651b97bd02787c029a58e363981ed876a", "code"=>"4/0AdQt8qjt3cmHkO5YezW89htccKgz7ivmby8eZQKXoP_SX5KeWCLrZcSjZ8La8A3MPHpOJg", "scope"=>"email profile https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.compose openid https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/calendar.events https://mail.google.com/ https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/userinfo.profile", "authuser"=>"0", "hd"=>"studenti.uniroma1.it", "prompt"=>"none"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "oddi.1886952@studenti.uniroma1.it"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35:in `from_omniauth'
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1559)
+
+
+Started GET "/" for ::1 at 2022-09-13 21:18:05 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 3496)
+Completed 200 OK in 29ms (Views: 25.4ms | ActiveRecord: 0.4ms | Allocations: 4020)
+
+
+Started GET "/profile" for ::1 at 2022-09-13 21:18:08 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `authenticated'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:9
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:58
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_user.html.erb:74
+  Rendered users/_user.html.erb (Duration: 29.2ms | Allocations: 7967)
+  Rendered users/index.html.erb within layouts/application (Duration: 33.6ms | Allocations: 8536)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.1ms | Allocations: 10947)
+Completed 200 OK in 69ms (Views: 62.2ms | ActiveRecord: 2.3ms | Allocations: 12815)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7714c7bbfa1acf0ba9e2cdef38fcdc3a448c4b5c/bulletin_board.png" for ::1 at 2022-09-13 21:18:08 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7714c7bbfa1acf0ba9e2cdef38fcdc3a448c4b5c", "filename"=>"bulletin_board"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 619lw5tgpjfccxpryhlk2jeiicgo (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOakU1YkhjMWRHZHdhbVpqWTNod2NubG9iR3N5YW1WcGFXTm5id1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KMWJHeGxkR2x1WDJKdllYSmtMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblluVnNiR1YwYVc1ZlltOWhjbVF1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjIzOjA4LjkwM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d5b5e48a40debc26a36512c9687752d77fbee0e1/bulletin_board.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOakU1YkhjMWRHZHdhbVpqWTNod2NubG9iR3N5YW1WcGFXTm5id1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KMWJHeGxkR2x1WDJKdllYSmtMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblluVnNiR1YwYVc1ZlltOWhjbVF1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjIzOjA4LjkwM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d5b5e48a40debc26a36512c9687752d77fbee0e1/bulletin_board.png
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 1497)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOakU1YkhjMWRHZHdhbVpqWTNod2NubG9iR3N5YW1WcGFXTm5id1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KMWJHeGxkR2x1WDJKdllYSmtMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblluVnNiR1YwYVc1ZlltOWhjbVF1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjIzOjA4LjkwM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--d5b5e48a40debc26a36512c9687752d77fbee0e1/bulletin_board.png" for ::1 at 2022-09-13 21:18:08 +0200
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"bulletin_board"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 404)
+
+
+Started GET "/profile/edit" for ::1 at 2022-09-13 21:38:19 +0200
+Processing by UsersController#edit as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:56:in `authenticated'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `authenticated'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/users/_form.html.erb:66:in `map'
+  Rendered users/_form.html.erb (Duration: 5.9ms | Allocations: 2359)
+  Rendered users/edit.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2797)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 5888)
+Completed 200 OK in 48ms (Views: 36.4ms | ActiveRecord: 2.1ms | Allocations: 8481)
+
+
+Started PATCH "/users/3" for ::1 at 2022-09-13 21:44:09 +0200
+Processing by UsersController#update as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Valerio", "surname"=>"Oddi", "matricola"=>"1886952"}, "course_id"=>"2", "commit"=>"Update User", "id"=>"3"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:25:in `update'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:25:in `update'
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 14ms (ActiveRecord: 1.6ms | Allocations: 2241)
+
+
+Started GET "/profile" for ::1 at 2022-09-13 21:44:09 +0200
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `authenticated'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:9
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:58
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_user.html.erb:75
+  Rendered users/_user.html.erb (Duration: 16.0ms | Allocations: 4077)
+  Rendered users/index.html.erb within layouts/application (Duration: 20.0ms | Allocations: 4635)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 7149)
+Completed 200 OK in 39ms (Views: 32.0ms | ActiveRecord: 2.6ms | Allocations: 8486)
+
+
+Started GET "/profile/edit" for ::1 at 2022-09-13 21:45:44 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+Processing by UsersController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `authenticated'
+  Rendering layout layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/users/_form.html.erb:66:in `map'
+  Rendered users/_form.html.erb (Duration: 20.6ms | Allocations: 9513)
+  Rendered users/edit.html.erb within layouts/application (Duration: 21.7ms | Allocations: 9732)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.4ms | Allocations: 13764)
+Completed 200 OK in 56ms (Views: 42.4ms | ActiveRecord: 2.5ms | Allocations: 18782)
+
+
+Started GET "/profile" for ::1 at 2022-09-13 21:51:12 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `authenticated'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:9
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:58
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_user.html.erb:75
+  Rendered users/_user.html.erb (Duration: 224.0ms | Allocations: 58533)
+  Rendered users/index.html.erb within layouts/application (Duration: 225.3ms | Allocations: 58819)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 252.4ms | Allocations: 61321)
+Completed 200 OK in 262ms (Views: 247.8ms | ActiveRecord: 6.4ms | Allocations: 62560)
+
+
+Started GET "/" for ::1 at 2022-09-13 21:53:19 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 657)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 4406)
+Completed 200 OK in 26ms (Views: 22.0ms | ActiveRecord: 0.3ms | Allocations: 5755)
+
+
+Started GET "/library" for ::1 at 2022-09-13 21:53:20 +0200
+Processing by LibraryController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 2232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 36.6ms | Allocations: 4680)
+Completed 200 OK in 58ms (Views: 41.6ms | ActiveRecord: 0.3ms | Allocations: 9478)
+
+
+Started GET "/books" for ::1 at 2022-09-13 21:53:21 +0200
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/books/index.html.erb:43
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:66
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 55.2ms | Allocations: 19084)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 6.2ms | Allocations: 2291)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 5.6ms | Allocations: 2269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered books/index.html.erb within layouts/application (Duration: 108.4ms | Allocations: 36166)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 118.2ms | Allocations: 38575)
+Completed 200 OK in 128ms (Views: 116.0ms | ActiveRecord: 6.2ms | Allocations: 40610)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5544ccc2c247a858072c3ed66230eab4191413be/analisi_1.jpg" for ::1 at 2022-09-13 21:53:21 +0200
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0158e12421a4f766d171f985539d6613ed6c8ce3/fisica_1.jpg" for ::1 at 2022-09-13 21:53:21 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5544ccc2c247a858072c3ed66230eab4191413be", "filename"=>"analisi_1"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: xl41okncz5p0txuqtgcogwyh4ntf (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU4OjIxLjYyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6c5377ba8cd11b10d874ab1988ced9694c7c40ba/analisi_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU4OjIxLjYyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6c5377ba8cd11b10d874ab1988ced9694c7c40ba/analisi_1.jpg
+Completed 302 Found in 12ms (ActiveRecord: 0.4ms | Allocations: 2401)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a7bc2f40f6cc16fc1d04a9f1686573d5f3810996/analisi_2.jpg" for ::1 at 2022-09-13 21:53:21 +0200
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU4OjIxLjYyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6c5377ba8cd11b10d874ab1988ced9694c7c40ba/analisi_1.jpg" for ::1 at 2022-09-13 21:53:21 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0158e12421a4f766d171f985539d6613ed6c8ce3", "filename"=>"fisica_1"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: maqcmsykg6sqiop6mzzmz5uukywl (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTk6NTg6MjEuNjcyWiIsInB1ciI6ImJsb2Jfa2V5In19--6fc9e395d087bbf1992ae249cbaf92da0d94463d/fisica_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTk6NTg6MjEuNjcyWiIsInB1ciI6ImJsb2Jfa2V5In19--6fc9e395d087bbf1992ae249cbaf92da0d94463d/fisica_1.jpg
+Completed 302 Found in 9ms (ActiveRecord: 0.3ms | Allocations: 1605)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a7bc2f40f6cc16fc1d04a9f1686573d5f3810996", "filename"=>"analisi_2"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 5rzbe8w0ukg18gtotel59onocix8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU4OjIxLjY5OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--20ea4745143f0dea76c120ad742437efbbf17b05/analisi_2.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU4OjIxLjY5OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--20ea4745143f0dea76c120ad742437efbbf17b05/analisi_2.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 1651)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTk6NTg6MjEuNjcyWiIsInB1ciI6ImJsb2Jfa2V5In19--6fc9e395d087bbf1992ae249cbaf92da0d94463d/fisica_1.jpg" for ::1 at 2022-09-13 21:53:21 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 472)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU4OjIxLjY5OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--20ea4745143f0dea76c120ad742437efbbf17b05/analisi_2.jpg" for ::1 at 2022-09-13 21:53:21 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 438)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_2"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 406)
+
+
+Started GET "/books/2" for ::1 at 2022-09-13 21:53:22 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:182:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = ? AND "books"."id" = ?[0m  [["user_id", 3], ["id", 2]]
+  ↳ app/views/books/_book_show.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book_show.html.erb:22
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/books/_book_show.html.erb:22
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_show.html.erb:46
+  Rendered books/_book_show.html.erb (Duration: 22.1ms | Allocations: 9395)
+  Rendered books/show.html.erb within layouts/application (Duration: 25.4ms | Allocations: 10212)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.5ms | Allocations: 12652)
+Completed 200 OK in 48ms (Views: 32.9ms | ActiveRecord: 4.5ms | Allocations: 15718)
+
+
+Started GET "/books/addToFavorites/2" for ::1 at 2022-09-13 21:53:24 +0200
+Processing by BooksController#addToFavorites as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:39:in `addToFavorites'
+  [1m[36mBook Load (1.1ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = ? AND "books"."id" = ?[0m  [["user_id", 3], ["id", 2]]
+  ↳ app/controllers/books_controller.rb:43:in `addToFavorites'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:44:in `addToFavorites'
+  [1m[36mUser::HABTM_Book Create (2.5ms)[0m  [1m[32mINSERT INTO "books_users" ("book_id", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["book_id", 2], ["user_id", 3], ["created_at", "2022-09-13 19:53:24.042422"], ["updated_at", "2022-09-13 19:53:24.042422"]]
+  ↳ app/controllers/books_controller.rb:44:in `addToFavorites'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:44:in `addToFavorites'
+Redirected to http://localhost:3000/books/2
+Completed 302 Found in 37ms (ActiveRecord: 12.6ms | Allocations: 5945)
+
+
+Started GET "/books/2" for ::1 at 2022-09-13 21:53:24 +0200
+Processing by BooksController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:182:in `set_book'
+  [1m[36mCACHE Book Load (0.0ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:32:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering books/show.html.erb within layouts/application
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = ? AND "books"."id" = ?[0m  [["user_id", 3], ["id", 2]]
+  ↳ app/views/books/_book_show.html.erb:8
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book_show.html.erb:22
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/books/_book_show.html.erb:22
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT "authors".* FROM "authors" INNER JOIN "authors_books" ON "authors"."id" = "authors_books"."author_id" WHERE "authors_books"."book_id" = ?[0m  [["book_id", 2]]
+  ↳ app/views/books/_book_show.html.erb:46
+  Rendered books/_book_show.html.erb (Duration: 9.3ms | Allocations: 4036)
+  Rendered books/show.html.erb within layouts/application (Duration: 9.9ms | Allocations: 4516)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 7080)
+Completed 200 OK in 30ms (Views: 19.3ms | ActiveRecord: 2.4ms | Allocations: 9458)
+
+
+Started GET "/" for ::1 at 2022-09-13 21:53:24 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 272)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | Allocations: 3455)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.5ms | Allocations: 3998)
+
+
+Started GET "/library" for ::1 at 2022-09-13 21:53:26 +0200
+Processing by LibraryController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1859)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 4234)
+Completed 200 OK in 32ms (Views: 25.0ms | ActiveRecord: 1.1ms | Allocations: 5458)
+
+
+Started GET "/profile" for ::1 at 2022-09-13 21:53:28 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `authenticated'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 1.7ms | Allocations: 1665)
+  Rendered users/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2044)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 2124)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.6ms | Allocations: 3873)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div id="<%= dom_id user %>">
+
+<div class="d-flex" style="justify-content: center; align-items: flex-start;">
+
+    <div>
+        <div class="card">
+            <div class="card-body">
+                <%if user.image.attached?%>
+                    <%= image_tag user.image %>
+                <%else%>
+                    <div style="text-align:center">
+                        <i class="fa-regular fa-user profile-image"></i>
+                    </div>
+                <%end%>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">
+                        <strong>Name:</strong>
+                        <%= user.name%>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Surname:</strong>
+                        <%= user.surname%>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Email:</strong>
+                        <%= user.email%>
+                    </li>
+                    
+                </ul>
+            
+            </div>
+
+            
+        </div>
+
+        <br>
+
+        <%= link_to "Edit profile", profile_edit_path %>
+
+    </div>
+
+    <div style="padding-inline:2%">
+
+        <div class="card">
+            <div class="card-header">
+                University Information
+            </div>
+
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>Matricola:</strong>
+                        <%= user.matricola%>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Your course:</strong>
+                        <%= Course.find(user.course_id).name if user.course_id.present?%>
+                        <%= label_tag "Not specified" if user.course_id.present?%>
+                    </li>
+                </ul>
+            
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card">
+            <div class="card-header">
+                Favorites
+            </div>
+
+            <div class="card-body favorites-body">
+                <ul class="list-group list-group-flush">
+                    <% user.book.each do |book|%>                   
+                        <li class="list-group-item">
+                            <%= link_to removeFromFavorites_path(book.id), id: "remove-favorite-#{book.id}" class: "favourites-link", style: "padding-right:10px" do%>
+                                <i class="fa-solid fa-trash-can"></i>
+                            <%end%>
+                            <%=link_to book.title, book_url(book), style: "text-decoration:none; color:black" %>
+                        </li>     
+                    <%end%>
+                </ul>
+            
+            </div>
+            
+        </div>
+
+    </div>
+    
+</div>
+
+
+</div>
+
+
+
+
+):
+1:    <div id="<%= dom_id user %>">
+2:    
+3:    <div class="d-flex" style="justify-content: center; align-items: flex-start;">
+4:    
+5:        <div>
+6:            <div class="card">
+7:                <div class="card-body">
+8:                    <%if user.image.attached?%>
+9:                        <%= image_tag user.image %>
+10:                    <%else%>
+11:                        <div style="text-align:center">
+12:                            <i class="fa-regular fa-user profile-image"></i>
+13:                        </div>
+14:                    <%end%>
+15:                    <ul class="list-group list-group-flush">
+16:                        <li class="list-group-item"></li>
+17:                        <li class="list-group-item">
+18:                            <strong>Name:</strong>
+19:                            <%= user.name%>
+20:                        </li>
+21:                        <li class="list-group-item">
+22:                            <strong>Surname:</strong>
+23:                            <%= user.surname%>
+24:                        </li>
+25:                        <li class="list-group-item">
+26:                            <strong>Email:</strong>
+27:                            <%= user.email%>
+28:                        </li>
+29:                        
+30:                    </ul>
+31:                
+32:                </div>
+33:    
+34:                
+35:            </div>
+36:    
+37:            <br>
+38:    
+39:            <%= link_to "Edit profile", profile_edit_path %>
+40:    
+41:        </div>
+42:    
+43:        <div style="padding-inline:2%">
+44:    
+45:            <div class="card">
+46:                <div class="card-header">
+47:                    University Information
+48:                </div>
+49:    
+50:                <div class="card-body">
+51:                    <ul class="list-group list-group-flush">
+52:                        <li class="list-group-item">
+53:                            <strong>Matricola:</strong>
+54:                            <%= user.matricola%>
+55:                        </li>
+56:                        <li class="list-group-item">
+57:                            <strong>Your course:</strong>
+58:                            <%= Course.find(user.course_id).name if user.course_id.present?%>
+59:                            <%= label_tag "Not specified" if user.course_id.present?%>
+60:                        </li>
+61:                    </ul>
+62:                
+63:                </div>
+64:            </div>
+65:    
+66:            <br>
+67:    
+68:            <div class="card">
+69:                <div class="card-header">
+70:                    Favorites
+71:                </div>
+72:    
+73:                <div class="card-body favorites-body">
+74:                    <ul class="list-group list-group-flush">
+75:                        <% user.book.each do |book|%>                   
+76:                            <li class="list-group-item">
+77:                                <%= link_to removeFromFavorites_path(book.id), id: "remove-favorite-#{book.id}" class: "favourites-link", style: "padding-right:10px" do%>
+78:                                    <i class="fa-solid fa-trash-can"></i>
+79:                                <%end%>
+80:                                <%=link_to book.title, book_url(book), style: "text-decoration:none; color:black" %>
+81:                            </li>     
+82:                        <%end%>
+83:                    </ul>
+84:                
+85:                </div>
+86:                
+87:            </div>
+88:    
+89:        </div>
+90:        
+91:    </div>
+92:    
+93:    
+94:    </div>
+  
+app/views/users/_user.html.erb:77: syntax error, unexpected `class', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected ',', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected `do', expecting `end'
+app/views/users/_user.html.erb:82: syntax error, unexpected `end', expecting end-of-input
+app/views/users/_user.html.erb:77: syntax error, unexpected `class', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected ',', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected `do', expecting `end'
+app/views/users/_user.html.erb:82: syntax error, unexpected `end', expecting end-of-input
+app/views/users/_user.html.erb:77: syntax error, unexpected `class', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected ',', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected `do', expecting `end'
+app/views/users/_user.html.erb:82: syntax error, unexpected `end', expecting end-of-input
+app/views/users/_user.html.erb:77: syntax error, unexpected `class', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected ',', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected `do', expecting `end'
+app/views/users/_user.html.erb:82: syntax error, unexpected `end', expecting end-of-input
+app/views/users/_user.html.erb:77: syntax error, unexpected `class', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected ',', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected `do', expecting `end'
+app/views/users/_user.html.erb:82: syntax error, unexpected `end', expecting end-of-input
+app/views/users/_user.html.erb:77: syntax error, unexpected `class', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected ',', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected `do', expecting `end'
+app/views/users/_user.html.erb:82: syntax error, unexpected `end', expecting end-of-input
+app/views/users/index.html.erb:6
+Started GET "/profile" for ::1 at 2022-09-13 21:53:31 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `authenticated'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/_user.html.erb (Duration: 1.1ms | Allocations: 1660)
+  Rendered users/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1765)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1844)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.0ms | Allocations: 3032)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div id="<%= dom_id user %>">
+
+<div class="d-flex" style="justify-content: center; align-items: flex-start;">
+
+    <div>
+        <div class="card">
+            <div class="card-body">
+                <%if user.image.attached?%>
+                    <%= image_tag user.image %>
+                <%else%>
+                    <div style="text-align:center">
+                        <i class="fa-regular fa-user profile-image"></i>
+                    </div>
+                <%end%>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item">
+                        <strong>Name:</strong>
+                        <%= user.name%>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Surname:</strong>
+                        <%= user.surname%>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Email:</strong>
+                        <%= user.email%>
+                    </li>
+                    
+                </ul>
+            
+            </div>
+
+            
+        </div>
+
+        <br>
+
+        <%= link_to "Edit profile", profile_edit_path %>
+
+    </div>
+
+    <div style="padding-inline:2%">
+
+        <div class="card">
+            <div class="card-header">
+                University Information
+            </div>
+
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <strong>Matricola:</strong>
+                        <%= user.matricola%>
+                    </li>
+                    <li class="list-group-item">
+                        <strong>Your course:</strong>
+                        <%= Course.find(user.course_id).name if user.course_id.present?%>
+                        <%= label_tag "Not specified" if user.course_id.present?%>
+                    </li>
+                </ul>
+            
+            </div>
+        </div>
+
+        <br>
+
+        <div class="card">
+            <div class="card-header">
+                Favorites
+            </div>
+
+            <div class="card-body favorites-body">
+                <ul class="list-group list-group-flush">
+                    <% user.book.each do |book|%>                   
+                        <li class="list-group-item">
+                            <%= link_to removeFromFavorites_path(book.id), id: "remove-favorite-#{book.id}" class: "favourites-link", style: "padding-right:10px" do%>
+                                <i class="fa-solid fa-trash-can"></i>
+                            <%end%>
+                            <%=link_to book.title, book_url(book), style: "text-decoration:none; color:black" %>
+                        </li>     
+                    <%end%>
+                </ul>
+            
+            </div>
+            
+        </div>
+
+    </div>
+    
+</div>
+
+
+</div>
+
+
+
+
+):
+1:    <div id="<%= dom_id user %>">
+2:    
+3:    <div class="d-flex" style="justify-content: center; align-items: flex-start;">
+4:    
+5:        <div>
+6:            <div class="card">
+7:                <div class="card-body">
+8:                    <%if user.image.attached?%>
+9:                        <%= image_tag user.image %>
+10:                    <%else%>
+11:                        <div style="text-align:center">
+12:                            <i class="fa-regular fa-user profile-image"></i>
+13:                        </div>
+14:                    <%end%>
+15:                    <ul class="list-group list-group-flush">
+16:                        <li class="list-group-item"></li>
+17:                        <li class="list-group-item">
+18:                            <strong>Name:</strong>
+19:                            <%= user.name%>
+20:                        </li>
+21:                        <li class="list-group-item">
+22:                            <strong>Surname:</strong>
+23:                            <%= user.surname%>
+24:                        </li>
+25:                        <li class="list-group-item">
+26:                            <strong>Email:</strong>
+27:                            <%= user.email%>
+28:                        </li>
+29:                        
+30:                    </ul>
+31:                
+32:                </div>
+33:    
+34:                
+35:            </div>
+36:    
+37:            <br>
+38:    
+39:            <%= link_to "Edit profile", profile_edit_path %>
+40:    
+41:        </div>
+42:    
+43:        <div style="padding-inline:2%">
+44:    
+45:            <div class="card">
+46:                <div class="card-header">
+47:                    University Information
+48:                </div>
+49:    
+50:                <div class="card-body">
+51:                    <ul class="list-group list-group-flush">
+52:                        <li class="list-group-item">
+53:                            <strong>Matricola:</strong>
+54:                            <%= user.matricola%>
+55:                        </li>
+56:                        <li class="list-group-item">
+57:                            <strong>Your course:</strong>
+58:                            <%= Course.find(user.course_id).name if user.course_id.present?%>
+59:                            <%= label_tag "Not specified" if user.course_id.present?%>
+60:                        </li>
+61:                    </ul>
+62:                
+63:                </div>
+64:            </div>
+65:    
+66:            <br>
+67:    
+68:            <div class="card">
+69:                <div class="card-header">
+70:                    Favorites
+71:                </div>
+72:    
+73:                <div class="card-body favorites-body">
+74:                    <ul class="list-group list-group-flush">
+75:                        <% user.book.each do |book|%>                   
+76:                            <li class="list-group-item">
+77:                                <%= link_to removeFromFavorites_path(book.id), id: "remove-favorite-#{book.id}" class: "favourites-link", style: "padding-right:10px" do%>
+78:                                    <i class="fa-solid fa-trash-can"></i>
+79:                                <%end%>
+80:                                <%=link_to book.title, book_url(book), style: "text-decoration:none; color:black" %>
+81:                            </li>     
+82:                        <%end%>
+83:                    </ul>
+84:                
+85:                </div>
+86:                
+87:            </div>
+88:    
+89:        </div>
+90:        
+91:    </div>
+92:    
+93:    
+94:    </div>
+  
+app/views/users/_user.html.erb:77: syntax error, unexpected `class', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected ',', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected `do', expecting `end'
+app/views/users/_user.html.erb:82: syntax error, unexpected `end', expecting end-of-input
+app/views/users/_user.html.erb:77: syntax error, unexpected `class', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected ',', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected `do', expecting `end'
+app/views/users/_user.html.erb:82: syntax error, unexpected `end', expecting end-of-input
+app/views/users/_user.html.erb:77: syntax error, unexpected `class', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected ',', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected `do', expecting `end'
+app/views/users/_user.html.erb:82: syntax error, unexpected `end', expecting end-of-input
+app/views/users/_user.html.erb:77: syntax error, unexpected `class', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected ',', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected `do', expecting `end'
+app/views/users/_user.html.erb:82: syntax error, unexpected `end', expecting end-of-input
+app/views/users/_user.html.erb:77: syntax error, unexpected `class', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected ',', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected `do', expecting `end'
+app/views/users/_user.html.erb:82: syntax error, unexpected `end', expecting end-of-input
+app/views/users/_user.html.erb:77: syntax error, unexpected `class', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected ',', expecting `end'
+app/views/users/_user.html.erb:77: syntax error, unexpected `do', expecting `end'
+app/views/users/_user.html.erb:82: syntax error, unexpected `end', expecting end-of-input
+app/views/users/index.html.erb:6
+Started GET "/profile" for ::1 at 2022-09-13 21:53:43 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `authenticated'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:9
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:58
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_user.html.erb:75
+  Rendered users/_user.html.erb (Duration: 12.9ms | Allocations: 4109)
+  Rendered users/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 4627)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 7729)
+Completed 200 OK in 39ms (Views: 31.7ms | ActiveRecord: 2.0ms | Allocations: 9680)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7714c7bbfa1acf0ba9e2cdef38fcdc3a448c4b5c/bulletin_board.png" for ::1 at 2022-09-13 21:53:43 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7714c7bbfa1acf0ba9e2cdef38fcdc3a448c4b5c", "filename"=>"bulletin_board"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+[36m  Disk Storage (1.6ms) [0m[34mGenerated URL for file at key: 619lw5tgpjfccxpryhlk2jeiicgo (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOakU1YkhjMWRHZHdhbVpqWTNod2NubG9iR3N5YW1WcGFXTm5id1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KMWJHeGxkR2x1WDJKdllYSmtMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblluVnNiR1YwYVc1ZlltOWhjbVF1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU4OjQzLjUzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f4a893aece6dc3ef2783555e89f1772a9c0f030c/bulletin_board.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOakU1YkhjMWRHZHdhbVpqWTNod2NubG9iR3N5YW1WcGFXTm5id1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KMWJHeGxkR2x1WDJKdllYSmtMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblluVnNiR1YwYVc1ZlltOWhjbVF1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU4OjQzLjUzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f4a893aece6dc3ef2783555e89f1772a9c0f030c/bulletin_board.png
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms | Allocations: 1487)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOakU1YkhjMWRHZHdhbVpqWTNod2NubG9iR3N5YW1WcGFXTm5id1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpVDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1KMWJHeGxkR2x1WDJKdllYSmtMbkJ1WnlJN0lHWnBiR1Z1WVcxbEtqMVZWRVl0T0NjblluVnNiR1YwYVc1ZlltOWhjbVF1Y0c1bkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSU9hVzFoWjJVdmNHNW5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU4OjQzLjUzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--f4a893aece6dc3ef2783555e89f1772a9c0f030c/bulletin_board.png" for ::1 at 2022-09-13 21:53:43 +0200
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"bulletin_board"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 404)
+
+
+Started GET "/books/removeFromFavorites/2" for ::1 at 2022-09-13 21:53:46 +0200
+Processing by BooksController#removeFromFavorites as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/books_controller.rb:65:in `removeFromFavorites'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/books_controller.rb:68:in `removeFromFavorites'
+  [1m[36mUser::HABTM_Book Delete All (1.9ms)[0m  [1m[31mDELETE FROM "books_users" WHERE "books_users"."user_id" = ? AND "books_users"."book_id" = ?[0m  [["user_id", 3], ["book_id", 2]]
+  ↳ app/controllers/books_controller.rb:68:in `removeFromFavorites'
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/books_controller.rb:68:in `removeFromFavorites'
+Redirected to http://localhost:3000/profile
+Completed 302 Found in 29ms (ActiveRecord: 5.8ms | Allocations: 3824)
+
+
+Started GET "/profile" for ::1 at 2022-09-13 21:53:46 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:56:in `authenticated'
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "User"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:8
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:9
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/users/_user.html.erb:58
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE "books_users"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/users/_user.html.erb:75
+  Rendered users/_user.html.erb (Duration: 12.3ms | Allocations: 3370)
+  Rendered users/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 3607)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 6115)
+Completed 200 OK in 31ms (Views: 24.3ms | ActiveRecord: 2.3ms | Allocations: 7359)
+
+
+Started GET "/library" for ::1 at 2022-09-13 21:54:29 +0200
+Processing by LibraryController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 2231)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 4673)
+Completed 200 OK in 34ms (Views: 28.5ms | ActiveRecord: 0.4ms | Allocations: 6464)
+
+
+Started GET "/books" for ::1 at 2022-09-13 21:54:31 +0200
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/books/index.html.erb:43
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:66
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 13.6ms | Allocations: 2626)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 5.3ms | Allocations: 2136)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 7.1ms | Allocations: 2111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered books/index.html.erb within layouts/application (Duration: 43.2ms | Allocations: 12548)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 14908)
+Completed 200 OK in 61ms (Views: 53.3ms | ActiveRecord: 3.3ms | Allocations: 16839)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0158e12421a4f766d171f985539d6613ed6c8ce3/fisica_1.jpg" for ::1 at 2022-09-13 21:54:31 +0200
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5544ccc2c247a858072c3ed66230eab4191413be/analisi_1.jpg" for ::1 at 2022-09-13 21:54:31 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0158e12421a4f766d171f985539d6613ed6c8ce3", "filename"=>"fisica_1"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: maqcmsykg6sqiop6mzzmz5uukywl (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTk6NTk6MzEuMjc3WiIsInB1ciI6ImJsb2Jfa2V5In19--3a89330654be637f7bd7e59b65ccad09d5e549d9/fisica_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTk6NTk6MzEuMjc3WiIsInB1ciI6ImJsb2Jfa2V5In19--3a89330654be637f7bd7e59b65ccad09d5e549d9/fisica_1.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms | Allocations: 1603)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a7bc2f40f6cc16fc1d04a9f1686573d5f3810996/analisi_2.jpg" for ::1 at 2022-09-13 21:54:31 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBHdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5544ccc2c247a858072c3ed66230eab4191413be", "filename"=>"analisi_1"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: xl41okncz5p0txuqtgcogwyh4ntf (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU5OjMxLjMxMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b77286c01dcfd3cce236acd9edd0a4fb82f25797/analisi_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU5OjMxLjMxMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b77286c01dcfd3cce236acd9edd0a4fb82f25797/analisi_1.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 1629)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTk6NTk6MzEuMjc3WiIsInB1ciI6ImJsb2Jfa2V5In19--3a89330654be637f7bd7e59b65ccad09d5e549d9/fisica_1.jpg" for ::1 at 2022-09-13 21:54:31 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBPZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a7bc2f40f6cc16fc1d04a9f1686573d5f3810996", "filename"=>"analisi_2"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+[36m  Disk Storage (1.2ms) [0m[34mGenerated URL for file at key: 5rzbe8w0ukg18gtotel59onocix8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU5OjMxLjMzNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ee6b6e8884fc95a7d7769912581a3316f0621940/analisi_2.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU5OjMxLjMzNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ee6b6e8884fc95a7d7769912581a3316f0621940/analisi_2.jpg
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 1646)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU5OjMxLjMxMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b77286c01dcfd3cce236acd9edd0a4fb82f25797/analisi_1.jpg" for ::1 at 2022-09-13 21:54:31 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 440)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU5OjMxLjMzNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ee6b6e8884fc95a7d7769912581a3316f0621940/analisi_2.jpg" for ::1 at 2022-09-13 21:54:31 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 415)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_2"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 398)
+
+
+Started GET "/filter?search=&checkCourse=Favorites&categories%5Bcategory%5D%5B%5D=&commit=Filter" for ::1 at 2022-09-13 21:54:33 +0200
+Processing by BooksController#filter as JS
+  Parameters: {"search"=>"", "checkCourse"=>"Favorites", "categories"=>{"category"=>[""]}, "commit"=>"Filter"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering books/filter.js.erb
+  [1m[36mBook Load (0.4ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE ("books_users"."user_id" = ? AND (title LIKE ('%%')) OR "books"."ISBN" = ?)[0m  [["user_id", 6], ["ISBN", nil]]
+  ↳ app/views/books/_books.html.erb:1
+  Rendered books/_books.html.erb (Duration: 2.8ms | Allocations: 758)
+  Rendered books/filter.js.erb (Duration: 4.8ms | Allocations: 1026)
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 0.7ms | Allocations: 3115)
+
+
+Started GET "/books" for ::1 at 2022-09-13 21:54:35 +0200
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/books/index.html.erb:43
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:66
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 7.4ms | Allocations: 2280)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 6.0ms | Allocations: 2136)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 6.5ms | Allocations: 2111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered books/index.html.erb within layouts/application (Duration: 32.4ms | Allocations: 11261)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.8ms | Allocations: 13605)
+Completed 200 OK in 46ms (Views: 39.6ms | ActiveRecord: 3.1ms | Allocations: 14851)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTk6NTk6MzEuMjc3WiIsInB1ciI6ImJsb2Jfa2V5In19--3a89330654be637f7bd7e59b65ccad09d5e549d9/fisica_1.jpg" for ::1 at 2022-09-13 21:54:35 +0200
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU5OjMxLjMzNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ee6b6e8884fc95a7d7769912581a3316f0621940/analisi_2.jpg" for ::1 at 2022-09-13 21:54:35 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 467)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU5OjMxLjMxMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--b77286c01dcfd3cce236acd9edd0a4fb82f25797/analisi_1.jpg" for ::1 at 2022-09-13 21:54:35 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_2"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 388)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 385)
+
+
+Started GET "/filter?search=&checkCourse=Favorites&categories%5Bcategory%5D%5B%5D=&commit=Filter" for ::1 at 2022-09-13 21:54:37 +0200
+Processing by BooksController#filter as JS
+  Parameters: {"search"=>"", "checkCourse"=>"Favorites", "categories"=>{"category"=>[""]}, "commit"=>"Filter"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering books/filter.js.erb
+  [1m[36mBook Load (0.7ms)[0m  [1m[34mSELECT "books".* FROM "books" INNER JOIN "books_users" ON "books"."id" = "books_users"."book_id" WHERE ("books_users"."user_id" = ? AND (title LIKE ('%%')) OR "books"."ISBN" = ?)[0m  [["user_id", 6], ["ISBN", nil]]
+  ↳ app/views/books/_books.html.erb:1
+  Rendered books/_books.html.erb (Duration: 2.5ms | Allocations: 598)
+  Rendered books/filter.js.erb (Duration: 2.8ms | Allocations: 685)
+Completed 200 OK in 11ms (Views: 3.0ms | ActiveRecord: 1.3ms | Allocations: 2460)
+
+
+Started GET "/" for ::1 at 2022-09-13 21:55:01 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 3926)
+Completed 200 OK in 28ms (Views: 25.9ms | ActiveRecord: 0.4ms | Allocations: 5030)
+
+
+Started GET "/library" for ::1 at 2022-09-13 21:57:51 +0200
+Processing by LibraryController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering library/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered library/index.html.erb within layouts/application (Duration: 18.9ms | Allocations: 1941)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 4385)
+Completed 200 OK in 47ms (Views: 42.2ms | ActiveRecord: 0.3ms | Allocations: 5636)
+
+
+Started GET "/books" for ::1 at 2022-09-13 21:57:52 +0200
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/books/index.html.erb:43
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:66
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 10.8ms | Allocations: 2468)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 6.3ms | Allocations: 2285)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 9.0ms | Allocations: 2269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered books/index.html.erb within layouts/application (Duration: 46.1ms | Allocations: 11710)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 14095)
+Completed 200 OK in 61ms (Views: 54.0ms | ActiveRecord: 3.7ms | Allocations: 15374)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhiV0Z4WTIxemVXdG5Obk54YVc5d05tMTZlbTE2TlhWMWEzbDNiQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1acGMybGpZVjh4TG1wd1p5STdJR1pwYkdWdVlXMWxLajFWVkVZdE9DY25abWx6YVdOaFh6RXVhbkJuQmpzR1ZEb1JZMjl1ZEdWdWRGOTBlWEJsU1NJUGFXMWhaMlV2YW5CbFp3WTdCbFE2RVhObGNuWnBZMlZmYm1GdFpUb0tiRzlqWVd3PSIsImV4cCI6IjIwMjItMDktMTNUMTk6NTg6MjEuNjcyWiIsInB1ciI6ImJsb2Jfa2V5In19--6fc9e395d087bbf1992ae249cbaf92da0d94463d/fisica_1.jpg" for ::1 at 2022-09-13 21:57:52 +0200
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhlR3cwTVc5cmJtTjZOWEF3ZEhoMWNYUm5ZMjluZDNsb05HNTBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU4OjIxLjYyNloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6c5377ba8cd11b10d874ab1988ced9694c7c40ba/analisi_1.jpg" for ::1 at 2022-09-13 21:57:52 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"fisica_1"}
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms | Allocations: 458)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhOWEo2WW1VNGR6QjFhMmN4T0dkMGIzUmxiRFU1YjI1dlkybDRPQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDE5OjU4OjIxLjY5OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--20ea4745143f0dea76c120ad742437efbbf17b05/analisi_2.jpg" for ::1 at 2022-09-13 21:57:53 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms | Allocations: 415)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_2"}
+Completed 304 Not Modified in 3ms (ActiveRecord: 0.0ms | Allocations: 401)
+
+
+Started GET "/books" for ::1 at 2022-09-13 22:02:42 +0200
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/books/index.html.erb:43
+  [1m[36mBook Load (0.2ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:66
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 9.9ms | Allocations: 2464)
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 9.6ms | Allocations: 2285)
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 7.7ms | Allocations: 2269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered books/index.html.erb within layouts/application (Duration: 46.3ms | Allocations: 11707)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 60.0ms | Allocations: 14097)
+Completed 200 OK in 67ms (Views: 57.5ms | ActiveRecord: 4.3ms | Allocations: 15361)
+
+
+Started GET "/book_rentals" for ::1 at 2022-09-13 22:02:44 +0200
+Processing by BookRentalsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.8ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals" WHERE "book_rentals"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/book_rentals/index.html.erb:14
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 840)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 3403)
+Completed 200 OK in 22ms (Views: 17.3ms | ActiveRecord: 1.0ms | Allocations: 5463)
+
+
+Started GET "/secondhands" for ::1 at 2022-09-13 22:02:45 +0200
+Processing by SecondhandsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering secondhands/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/secondhands/index.html.erb:47
+  [1m[36mSecondhand Load (0.5ms)[0m  [1m[34mSELECT "secondhands".* FROM "secondhands" WHERE "secondhands"."approved" = ?[0m  [["approved", 1]]
+  ↳ app/views/secondhands/index.html.erb:72
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 45], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mBook Load (0.6ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:19
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:24
+  Rendered secondhands/_secondhand.html.erb (Duration: 16.9ms | Allocations: 7621)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 46], ["record_type", "Secondhand"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:12
+  [1m[36mBook Load (0.5ms)[0m  [1m[34mSELECT "books".* FROM "books" WHERE "books"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:19
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/secondhands/_secondhand.html.erb:24
+  Rendered secondhands/_secondhand.html.erb (Duration: 11.5ms | Allocations: 3153)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered secondhands/index.html.erb within layouts/application (Duration: 51.3ms | Allocations: 18227)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 61.5ms | Allocations: 20626)
+Completed 200 OK in 71ms (Views: 58.5ms | ActiveRecord: 6.4ms | Allocations: 23099)
+
+
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBQdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a32c4d6d95eaecc55440d4683da0473c9d5cd943/analisi_1.jpg" for ::1 at 2022-09-13 22:02:45 +0200
+Started GET "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a1216343d6a74456743fe7e82e53692e0911be60/analisi_2.jpg" for ::1 at 2022-09-13 22:02:45 +0200
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBQdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a32c4d6d95eaecc55440d4683da0473c9d5cd943", "filename"=>"analisi_1"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: uwupugscdbd01egn3junpgcryi09 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkWGQxY0hWbmMyTmtZbVF3TVdWbmJqTnFkVzV3WjJOeWVXa3dPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDIwOjA3OjQ1LjI5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--88f97b6452899887d63ad723c93886a1988795c5/analisi_1.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkWGQxY0hWbmMyTmtZbVF3TVdWbmJqTnFkVzV3WjJOeWVXa3dPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDIwOjA3OjQ1LjI5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--88f97b6452899887d63ad723c93886a1988795c5/analisi_1.jpg
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1534)
+
+
+Processing by ActiveStorage::Blobs::RedirectController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBRQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a1216343d6a74456743fe7e82e53692e0911be60", "filename"=>"analisi_2"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 59], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 01i26t05qr1t5yqptmrjtyhjh7gm (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNREZwTWpaME1EVnhjakYwTlhseGNIUnRjbXAwZVdocWFEZG5iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDIwOjA3OjQ1LjMyMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cb462f39ad6bf2c375c989cc391aabbcbaef507d/analisi_2.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNREZwTWpaME1EVnhjakYwTlhseGNIUnRjbXAwZVdocWFEZG5iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDIwOjA3OjQ1LjMyMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cb462f39ad6bf2c375c989cc391aabbcbaef507d/analisi_2.jpg
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1531)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhkWGQxY0hWbmMyTmtZbVF3TVdWbmJqTnFkVzV3WjJOeWVXa3dPUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTVM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNUzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDIwOjA3OjQ1LjI5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--88f97b6452899887d63ad723c93886a1988795c5/analisi_1.jpg" for ::1 at 2022-09-13 22:02:45 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_1"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms | Allocations: 414)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDVG9JYTJWNVNTSWhNREZwTWpaME1EVnhjakYwTlhseGNIUnRjbXAwZVdocWFEZG5iUVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpUldsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1GdVlXeHBjMmxmTWk1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMkZ1WVd4cGMybGZNaTVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkRvUmMyVnlkbWxqWlY5dVlXMWxPZ3BzYjJOaGJBPT0iLCJleHAiOiIyMDIyLTA5LTEzVDIwOjA3OjQ1LjMyMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cb462f39ad6bf2c375c989cc391aabbcbaef507d/analisi_2.jpg" for ::1 at 2022-09-13 22:02:45 +0200
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"encoded_key"=>"[FILTERED]", "filename"=>"analisi_2"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms | Allocations: 402)
+
+
+Started GET "/book_rentals" for ::1 at 2022-09-13 22:02:46 +0200
+Processing by BookRentalsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering book_rentals/index.html.erb within layouts/application
+  [1m[36mBookRental Load (0.8ms)[0m  [1m[34mSELECT "book_rentals".* FROM "book_rentals" WHERE "book_rentals"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/book_rentals/index.html.erb:14
+  Rendered book_rentals/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 537)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 3039)
+Completed 200 OK in 43ms (Views: 37.6ms | ActiveRecord: 1.2ms | Allocations: 4342)
+
+
+Started GET "/books" for ::1 at 2022-09-13 22:02:48 +0200
+Processing by BooksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering books/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/books/index.html.erb:43
+  [1m[36mBook Load (0.3ms)[0m  [1m[34mSELECT "books".* FROM "books"[0m
+  ↳ app/views/books/index.html.erb:66
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 7.0ms | Allocations: 2464)
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 6.1ms | Allocations: 2285)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Book"], ["name", "placeholder"], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 53], ["LIMIT", 1]]
+  ↳ app/views/books/_book.html.erb:9
+  Rendered books/_book.html.erb (Duration: 7.0ms | Allocations: 2269)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered books/index.html.erb within layouts/application (Duration: 66.8ms | Allocations: 11704)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 75.6ms | Allocations: 14090)
+Completed 200 OK in 80ms (Views: 73.1ms | ActiveRecord: 3.5ms | Allocations: 15371)
+
+
+Started GET "/" for ::1 at 2022-09-13 22:02:56 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 272)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 3445)
+Completed 200 OK in 22ms (Views: 19.7ms | ActiveRecord: 0.6ms | Allocations: 4001)
+
+
+Started GET "/athenaeum" for ::1 at 2022-09-13 22:02:57 +0200
+Processing by AthenaeumController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering athenaeum/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered athenaeum/index.html.erb within layouts/application (Duration: 10.9ms | Allocations: 2080)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.8ms | Allocations: 4514)
+Completed 200 OK in 31ms (Views: 26.0ms | ActiveRecord: 0.5ms | Allocations: 6331)
+
+
+Started GET "/bulletins" for ::1 at 2022-09-13 22:02:58 +0200
+Processing by BulletinsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering bulletins/index.html.erb within layouts/application
+  [1m[36mBulletin Load (0.9ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY bulletins.created_at DESC[0m
+  ↳ app/views/bulletins/index.html.erb:11
+  Rendered bulletins/_bulletin.html.erb (Duration: 3.7ms | Allocations: 264)
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.2ms | Allocations: 46)
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.2ms | Allocations: 46)
+  Rendered bulletins/index.html.erb within layouts/application (Duration: 16.6ms | Allocations: 3728)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 6262)
+Completed 200 OK in 39ms (Views: 32.5ms | ActiveRecord: 2.2ms | Allocations: 8406)
+
+
+Started GET "/" for ::1 at 2022-09-13 22:03:09 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 272)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 3403)
+Completed 200 OK in 24ms (Views: 20.9ms | ActiveRecord: 0.4ms | Allocations: 3946)
+
+
+Started GET "/athenaeum" for ::1 at 2022-09-13 22:03:10 +0200
+Processing by AthenaeumController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering athenaeum/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered athenaeum/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1855)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 4184)
+Completed 200 OK in 24ms (Views: 20.3ms | ActiveRecord: 0.4ms | Allocations: 5428)
+
+
+Started GET "/bulletins" for ::1 at 2022-09-13 22:03:11 +0200
+Processing by BulletinsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering bulletins/index.html.erb within layouts/application
+  [1m[36mBulletin Load (0.4ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY bulletins.created_at DESC[0m
+  ↳ app/views/bulletins/index.html.erb:11
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.2ms | Allocations: 47)
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered bulletins/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1524)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3952)
+Completed 200 OK in 18ms (Views: 14.2ms | ActiveRecord: 0.7ms | Allocations: 5260)
+
+
+Started GET "/bulletins/new" for ::1 at 2022-09-13 22:06:35 +0200
+Processing by BulletinsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering bulletins/new.html.erb within layouts/application
+  Rendered bulletins/_form.html.erb (Duration: 4.9ms | Allocations: 1313)
+  Rendered bulletins/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 1629)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 4092)
+Completed 200 OK in 33ms (Views: 24.2ms | ActiveRecord: 0.3ms | Allocations: 5688)
+
+
+Started GET "/athenaeum" for ::1 at 2022-09-13 22:11:12 +0200
+Processing by AthenaeumController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering athenaeum/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered athenaeum/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1845)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 4178)
+Completed 200 OK in 30ms (Views: 23.8ms | ActiveRecord: 0.4ms | Allocations: 5409)
+
+
+Started GET "/bulletins" for ::1 at 2022-09-13 22:11:13 +0200
+Processing by BulletinsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering bulletins/index.html.erb within layouts/application
+  [1m[36mBulletin Load (0.4ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY bulletins.created_at DESC[0m
+  ↳ app/views/bulletins/index.html.erb:11
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.3ms | Allocations: 47)
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.4ms | Allocations: 46)
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.2ms | Allocations: 46)
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.3ms | Allocations: 46)
+  Rendered bulletins/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1520)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 3950)
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 0.7ms | Allocations: 5252)
+
+
+Started GET "/bulletins/4" for ::1 at 2022-09-13 22:12:02 +0200
+Processing by BulletinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mBulletin Load (0.8ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" WHERE "bulletins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/bulletins_controller.rb:71:in `set_bulletin'
+  Rendering layout layouts/application.html.erb
+  Rendering bulletins/show.html.erb within layouts/application
+  Rendered bulletins/_bulletin_show.html.erb (Duration: 3.5ms | Allocations: 1057)
+  Rendered bulletins/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1347)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 3702)
+Completed 200 OK in 28ms (Views: 19.0ms | ActiveRecord: 1.2ms | Allocations: 6372)
+
+

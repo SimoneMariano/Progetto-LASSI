@@ -262,7 +262,23 @@ def wait_for_ajax
     end
   end
 
+  Given /^the existing student (.*)?$/ do |email|
+    if User.find_by(email: email).blank?
+      user = User.create!(
+        email: "user@gmail.com",
+        id: 1,
+        created_at: DateTime.now,
+        updated_at: DateTime.now,
+        password: "password"
+  
+      )
+
+      user.save
+    end
+  end
+
   Given /^I (am logged in|login) as (.*)?$/ do |_,who|
+    
     @user = User.create!({
       email: "user@gmail.com",
       id: 1,
@@ -270,8 +286,11 @@ def wait_for_ajax
       updated_at: DateTime.now,
       password: "password"
   
-    })
-    @user.save
+    }) if User.find_by(email: "user@gmail.com").blank?
+    
+    if User.find_by(email: "user@gmail.com").blank?
+      @user.save
+    end
 
     @user = User.create!({
       email: "admin@gmail.com",
@@ -280,8 +299,12 @@ def wait_for_ajax
       updated_at: DateTime.now,
       password: "administrator",
       roles_mask: 2
-    })
-    @user.save
+    }) if User.find_by(email: "admin@gmail.com").blank?
+
+    if User.find_by(email: "admin@gmail.com").blank?
+      @user.save
+    end
+    
 
     case who
       when /administrator/i then @user,@password = User.find(2),'administrator'
@@ -389,6 +412,45 @@ def wait_for_ajax
       user.save
   end
 
+  Given /^an author with id 1/ do 
+    author = Author.create(
+      name: "Daniele Sette",
+      id: 1
+    )
+
+    author.save
+  end
+
+  Given /^a category with id 1/ do 
+    category = Category.create(
+      name: "Fisica",
+      id: 1
+    )
+
+    category.save
+  end
+
+  Given /^a course with id 1/ do 
+    course = Course.create(
+      name: "Fisica",
+      id: 1
+    )
+
+    course.save
+  end
+
+  Given /^a bulletin with id 1/ do 
+    buletin = Bulletin.create(
+      title: "Title 1",
+      id: 1,
+      description: "Some description"
+    )
+
+    buletin.save
+  end
+
+  
+
   Given /the presence of existing "([^"]*)"$/ do |object|
     case object
     when /Authors/i then elements = Author.create([{
@@ -447,6 +509,10 @@ def wait_for_ajax
       element.save    
   end
 
-  end
+  
+  
+
+
+end
 
   

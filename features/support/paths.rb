@@ -50,7 +50,56 @@ module NavigationHelpers
       when /^the edit secondhand with id: 1 page/
         '/secondhands/1/edit'
 
+      when /^the authors page/
+        '/authors'
+
+      when /^the new author page/
+        '/authors/new'
+
+      when /^the edit author with id: 1 page/
+        '/authors/1/edit'
+
+      when /^the show author with id: 1 page/
+        '/authors/1'
+
+      when /^the new category page/
+        '/categories/new'
+
+      when /^the edit category with id: 1 page/
+        '/categories/1/edit'
+
+      when /^the show category with id: 1 page/
+        '/categories/1'
+
+      when /^the courses page/
+        '/courses'
+
+      when /^the new course page/
+        '/courses/new'
+
+      when /^the edit course with id: 1 page/
+        '/courses/1/edit'
+
+      when /^the show course with id: 1 page/
+        '/courses/1'
+
+      when /^my profile page/
+        '/profile'
     
+      when /^the edit profile page/
+        '/profile/edit'
+
+      when /^the bulletin board page/
+        '/bulletins'
+
+      when /^the new bulletin page/
+        '/bulletins/new'
+
+      when /^the edit bulletin with id: 1 page/
+        '/bulletins/1/edit'
+
+      when /^the show bulletin with id: 1 page/
+          '/bulletins/1'
   
       # Add more mappings here.
       # Here is an example that pulls values out of the Regexp:
