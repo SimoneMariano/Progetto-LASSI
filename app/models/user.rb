@@ -20,7 +20,9 @@ class User < ApplicationRecord
 
 
     def set_default_role
-        self.roles_mask = 1 #student role
+        if self.roles_mask.blank?
+            self.roles_mask = 1 #student role
+        end
         
     end
     

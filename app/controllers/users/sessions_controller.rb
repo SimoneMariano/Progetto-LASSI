@@ -20,11 +20,17 @@ class Users::SessionsController < Devise::SessionsController
    end
 
   def after_sign_out_path_for(_resources_or_scope)
+    flash[:notice] = "You are succesfully logged out"
     login_path
+    
   end
 
   def after_sign_in_path_for(resources_or_scope)
+    flash[:notice] = "You are succesfully logged in"
     stored_location_for(resources_or_scope) || root_path
+    
+
+    
   end
 
   # protected

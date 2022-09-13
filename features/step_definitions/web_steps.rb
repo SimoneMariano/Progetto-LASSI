@@ -263,34 +263,189 @@ def wait_for_ajax
   end
 
   Given /^I (am logged in|login) as (.*)?$/ do |_,who|
-    #@is_admin = false
-    #@password = 'pass'
-    case who
-    when /administrator/i then @user,@password = User.find(2),'administrator'
-    when /student/i then @user,@password = User.find(1),"password"
-    #when /box ?office/i then @customer,@is_admin = create(:boxoffice),true
-    #when /staff/i         then @customer,@is_admin = create(:staff), true
-    #when /customer "(.*) (.*)"/ then @customer = find_or_create_customer $1,$2
-    #else raise "No such user '#{who}'"
-    #end
-    #verify_successful_login
-    end
+    @user = User.create!({
+      email: "user@gmail.com",
+      id: 1,
+      created_at: DateTime.now,
+      updated_at: DateTime.now,
+      password: "password"
   
+    })
+    @user.save
+
+    @user = User.create!({
+      email: "admin@gmail.com",
+      id: 2,
+      created_at: DateTime.now,
+      updated_at: DateTime.now,
+      password: "administrator",
+      roles_mask: 2
+    })
+    @user.save
+
+    case who
+      when /administrator/i then @user,@password = User.find(2),'administrator'
+      when /student/i then @user,@password = User.find(1),"password" 
+    end
 
     visit('http://localhost:3000/users/sign_in')
     fill_in 'Email', with: @user.email
     fill_in 'Password', with: @password
     click_on 'commit'
+
+    page.should have_content("You are succesfully logged in")
     
   end
 
   
 
   Given('I am not logged in') do
-    user = User.create(
-      email: "utente@gmail.com",
-      password: "password"
+    delete "/users/sign_out"
+  end
+
+  Given /^an existing secondhand with ISBN 9788808420206/ do
+    visit("/secondhands/new")
+    fill_in("Isbn", :with => "9788808420206")
+    attach_file("Image", File.expand_path("db/seeds/fisica_1.jpg"))
+    fill_in("Description", :with => "Some description")
+
+    click_on "commit"
+
+    
+  end
+
+  Given /^an existing and approved secondhand with title: Lezioni di fisica. Con e-book. Vol. 1: Meccanica, termodinamica./ do
+    user = User.find(1)
+    book = Book.find(1)
+
+    secondhand = Secondhand.create(
+      description: "Some description",
+      id: 1,
+      approved: true
     )
+
+    secondhand.user_id = 1
+    secondhand.book_id = 1
+    secondhand.image.attach(io: File.open("db/seeds/fisica_1.jpg"), filename: "fisica_1.jpg")
+
+    secondhand.save
+  end
+
+  Given /^an existing and not approved secondhand with title: Lezioni di fisica. Con e-book. Vol. 1: Meccanica, termodinamica./ do
+    user = User.find(1)
+    book = Book.find(1)
+
+    secondhand = Secondhand.create(
+      description: "Some description",
+      id: 1,
+      approved: false
+    )
+
+    secondhand.user_id = 1
+    secondhand.book_id = 1
+    secondhand.image.attach(io: File.open("db/seeds/fisica_1.jpg"), filename: "fisica_1.jpg")
+
+    secondhand.save
+  end
+
+  Given /^an existing secondhand with id: 1 on book with id:1/ do
+    user = User.find(1)
+    book = Book.find(1)
+
+    secondhand = Secondhand.create(
+      description: "Some description",
+      id: 1
+    )
+
+    secondhand.user_id = 1
+    secondhand.book_id = 1
+    secondhand.image.attach(io: File.open("db/seeds/fisica_1.jpg"), filename: "fisica_1.jpg")
+
+    secondhand.save
+    
+  end
+
+  Given /^existing book with id: 1 and on the favorite list of user/ do
+
+  element = Book.create(
+    id: 1,
+    ISBN: 9788808420206,
+    title: "Lezioni di fisica. Con e-book. Vol. 1: Meccanica, termodinamica.",
+    stock: 3,
+    description: "Libro di Fisica 1"
+  )
+
+  element.placeholder.attach(io: File.open("db/seeds/fisica_1.jpg"), filename: "fisica_1.jpg")
+      element.author << Author.find_by(name: "Daniele Sette")
+      element.author << Author.find_by(name: "Mario Bertolotti")
+      element.author << Author.find_by(name: "Adriano Alippi")
+      element.course << Course.find_by(name: "Ingegneria Informatica e Automatica")
+      element.course << Course.find_by(name: "Fisica")
+      element.category << Category.find_by(name: "Fisica")
+      element.save 
+
+      user = User.find(1)
+      user.book << element
+      user.save
+  end
+
+  Given /the presence of existing "([^"]*)"$/ do |object|
+    case object
+    when /Authors/i then elements = Author.create([{
+        name: "Daniele Sette"
+    },
+    {
+      name: "Mario Bertolotti"
+    },
+    {
+      name: "Adriano Alippi"
+    }])
+
+    when /Courses of study/i then elements = Course.create([{
+      name: "Ingegneria Informatica e Automatica"
+    },
+    {
+      name: "Matematica"
+    },
+    {
+      name: "Fisica"
+    }])
+
+    when /Categories/i then elements = Category.create([{
+        name: "Matematica"
+    },
+    {
+      name: "Fisica"
+    },
+    {
+      name: "Chimica"
+    }])
+
+    when /Books/i then element = Book.create(
+      id: 1,
+      ISBN: 9788808420206,
+      title: "Lezioni di fisica. Con e-book. Vol. 1: Meccanica, termodinamica.",
+      stock: 3,
+      description: "Libro di Fisica 1"
+    )
+    
+  end
+
+  if elements.present?
+    elements.each do |element|
+      element.save
+    end
+  else
+    
+      element.placeholder.attach(io: File.open("db/seeds/fisica_1.jpg"), filename: "fisica_1.jpg")
+      element.author << Author.find_by(name: "Daniele Sette")
+      element.author << Author.find_by(name: "Mario Bertolotti")
+      element.author << Author.find_by(name: "Adriano Alippi")
+      element.course << Course.find_by(name: "Ingegneria Informatica e Automatica")
+      element.course << Course.find_by(name: "Fisica")
+      element.category << Category.find_by(name: "Fisica")
+      element.save    
+  end
 
   end
 

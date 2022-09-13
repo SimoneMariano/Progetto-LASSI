@@ -1,8 +1,8 @@
 {
   "application.js": "/packs-test/js/application-8a9591abd06d4bbcacfa.js",
   "application.js.map": "/packs-test/js/application-8a9591abd06d4bbcacfa.js.map",
-  "athenaeum.js": "/packs-test/js/athenaeum-859db43c9498ae36e5b6.js",
-  "athenaeum.js.map": "/packs-test/js/athenaeum-859db43c9498ae36e5b6.js.map",
+  "athenaeum.js": "/packs-test/js/athenaeum-34ffb458bf6793e51951.js",
+  "athenaeum.js.map": "/packs-test/js/athenaeum-34ffb458bf6793e51951.js.map",
   "books.js": "/packs-test/js/books-d3549a7c539f2c844bd8.js",
   "books.js.map": "/packs-test/js/books-d3549a7c539f2c844bd8.js.map",
   "entrypoints": {
@@ -16,10 +16,10 @@
     },
     "athenaeum": {
       "js": [
-        "/packs-test/js/athenaeum-859db43c9498ae36e5b6.js"
+        "/packs-test/js/athenaeum-34ffb458bf6793e51951.js"
       ],
       "js.map": [
-        "/packs-test/js/athenaeum-859db43c9498ae36e5b6.js.map"
+        "/packs-test/js/athenaeum-34ffb458bf6793e51951.js.map"
       ]
     },
     "books": {

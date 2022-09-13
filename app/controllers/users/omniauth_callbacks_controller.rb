@@ -17,6 +17,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     if @user.present?
       @user.save
       session[:access_token] = auth[:credentials][:token]
+      flash[:notice] = "You are succesfully logged in"
       sign_in_and_redirect @user, event: :authentication
     end
   end

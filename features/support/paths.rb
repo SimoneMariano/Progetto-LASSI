@@ -20,7 +20,7 @@ module NavigationHelpers
       when /^the books page/
         '/books'
   
-      when /^the create new book page/
+      when /^the new book page/
         '/books/new'
       
       when /^the log in page/
@@ -28,6 +28,29 @@ module NavigationHelpers
         
       when /^the sign in page/
         '/users/sign_in'
+
+      when /^the show book with id: 1 page/
+        '/books/1'
+
+      when /^the edit book with id: 1 page/
+        '/books/1/edit'
+
+      when /^the buy book with isbn: 9788808420206 page/
+        '/book_scraper/9788808420206'
+
+      when /^the secondhands page/
+        '/secondhands'
+
+      when /^the new secondhand page/
+        '/secondhands/new'
+
+      when /^the show secondhand with id: 1 page/
+        'secondhands/1'
+
+      when /^the edit secondhand with id: 1 page/
+        '/secondhands/1/edit'
+
+    
   
       # Add more mappings here.
       # Here is an example that pulls values out of the Regexp:

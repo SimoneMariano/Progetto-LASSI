@@ -62,6 +62,7 @@ Rails.application.routes.draw do
   post 'ticket/send', to: 'ticket_mailer#send_email', :as => :send_mail
 
   get 'login', to: 'login#index'
+  
 
 
  

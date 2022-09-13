@@ -2,16 +2,18 @@
 
 
 
-<h2 style="padding-bottom:20px; width:1000px"> 
-    <%= link_to addToFavorites_path(@book.id), class: "favourites-link" do%>
+<h2 style="padding-bottom:20px; width:1000px">
+  <% if !current_user.admin? %>
+    <%= link_to addToFavorites_path(@book.id), id: "favorite-link", class: "favourites-link" do%>
       <%if current_user.book.where(id: @book.id).blank?%>
         <i class="fa-regular fa-heart" style="font-size:smaller"></i>
       <%else%>
         <i class="fa-solid fa-heart" style="font-size:smaller"></i>
       <%end%>
     <%end%>
-    <%= @book.title %>
-  </h2>
+  <%end%>  
+  <%= @book.title %>
+</h2>
 
   <div class="row">
 

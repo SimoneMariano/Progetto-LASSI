@@ -39,11 +39,7 @@ class UsersController < ApplicationController
       end
     end
 
-    
-    def setSession(id)
-      session[:user_id] = id
-      @current_user ||= User.find(session[:user_id])
-    end
+  
 
     private
     # Use callbacks to share common setup or constraints between actions.

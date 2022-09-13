@@ -6,6 +6,8 @@ class Secondhand < ApplicationRecord
   #validate request of secondhand
   validate :book_exists
   validates :image, presence:  {message: "An image is necessary to verify the book's state of conservation "}
+  validates :user_id, uniqueness: { scope: :book_id,
+    message: "can't add secondhand for the same book several times at the same time" }
   
   
 
