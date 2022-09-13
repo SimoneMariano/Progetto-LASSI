@@ -1,3 +1,5 @@
+require "google/apis/calendar_v3"
+
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: %i[ show edit update destroy ]
 
@@ -28,16 +30,13 @@ class ReservationsController < ApplicationController
 
     @user = current_user
 
-    @reservation.startDate = Date.today
-    @reservation.endDate = params[:endDate]
-
-    if @seat.present?
+    if @reservation.present?
+      #@reservation = @seat.reservation.create(reservation_params)
       @reservation.seat_id = @seat.id
       @reservation.user_id = @user.id
-      @reservation.startDate = Date.today
-      @reservation.endDate = params[:endDate]
-      #@reservation = @seat.reservation.create(reservation_params)
     end
+
+    @reservation.startDate = Date.today
 
     respond_to do |format|
       if @reservation.save
@@ -81,6 +80,6 @@ class ReservationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def reservation_params
-      params.require(:reservation).permit(:seat_id, :user_id, :endDate, :startDate)
+      params.require(:reservation).permit(:seat_id, :user_id, :startDate, :endDate)
     end
 end
