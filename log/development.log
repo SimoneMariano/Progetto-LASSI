@@ -28074,3 +28074,1224 @@ Processing by BulletinsController#show as HTML
 Completed 200 OK in 28ms (Views: 19.0ms | ActiveRecord: 1.2ms | Allocations: 6372)
 
 
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+Started GET "/seats" for 127.0.0.1 at 2022-09-14 19:37:30 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/index.html.erb within layouts/application
+  [1m[36mSeat Load (0.4ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/seats/index.html.erb:24
+  Rendered seats/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1306)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 5976)
+Completed 200 OK in 52ms (Views: 21.7ms | ActiveRecord: 1.4ms | Allocations: 27424)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 19:37:31 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 661)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3823)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.2ms | Allocations: 5002)
+
+
+Started GET "/athenaeum" for 127.0.0.1 at 2022-09-14 19:37:32 +0200
+Processing by AthenaeumController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering athenaeum/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered athenaeum/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2042)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 4400)
+Completed 200 OK in 17ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 6294)
+
+
+Started GET "/seats" for 127.0.0.1 at 2022-09-14 19:37:33 +0200
+Processing by SeatsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/index.html.erb within layouts/application
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/seats/index.html.erb:24
+  Rendered seats/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 578)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 2995)
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 0.4ms | Allocations: 4263)
+
+
+Started GET "/seats/new" for 127.0.0.1 at 2022-09-14 19:37:34 +0200
+Processing by SeatsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/new.html.erb within layouts/application
+  Rendered seats/_form.html.erb (Duration: 7.8ms | Allocations: 4084)
+  Rendered seats/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 6835)
+Completed 200 OK in 27ms (Views: 14.1ms | ActiveRecord: 0.9ms | Allocations: 10828)
+
+
+Started POST "/seats" for 127.0.0.1 at 2022-09-14 19:37:38 +0200
+Processing by SeatsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "seat"=>{"name"=>"1", "description"=>"free"}, "commit"=>"Create Seat"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/seats_controller.rb:27:in `block in create'
+  [1m[36mSeat Create (0.4ms)[0m  [1m[32mINSERT INTO "seats" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "1"], ["description", "free"], ["created_at", "2022-09-14 17:37:38.919962"], ["updated_at", "2022-09-14 17:37:38.919962"]]
+  ↳ app/controllers/seats_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (9.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/seats_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/seats/1
+Completed 302 Found in 19ms (ActiveRecord: 10.1ms | Allocations: 4095)
+
+
+Started GET "/seats/1" for 127.0.0.1 at 2022-09-14 19:37:38 +0200
+Processing by SeatsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.5ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/seats_controller.rb:63:in `set_seat'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/show.html.erb within layouts/application
+  Rendered seats/_seat.html.erb (Duration: 1.0ms | Allocations: 213)
+  Rendered seats/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3482)
+Completed 200 OK in 20ms (Views: 10.5ms | ActiveRecord: 0.7ms | Allocations: 5979)
+
+
+Started GET "/reservations/new" for 127.0.0.1 at 2022-09-14 19:38:20 +0200
+Processing by ReservationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/new.html.erb within layouts/application
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/reservations/_form.html.erb:15:in `map'
+  Rendered reservations/_form.html.erb (Duration: 7.5ms | Allocations: 2619)
+  Rendered reservations/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2968)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 5405)
+Completed 200 OK in 59ms (Views: 18.9ms | ActiveRecord: 1.0ms | Allocations: 13782)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2022-09-14 19:38:33 +0200
+Processing by ReservationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "seats"=>"1", "reservation"=>{"startDate"=>"2022-09-15T08:00", "endDate"=>"2022-09-15T09:00"}, "commit"=>"Create Reservation"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:33:in `create'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms | Allocations: 2523)
+
+
+  
+NoMethodError (undefined method `book' for nil:NilClass):
+  
+app/controllers/reservations_controller.rb:48:in `create'
+Started GET "/seats/1" for 127.0.0.1 at 2022-09-14 19:39:08 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+Processing by SeatsController#show as HTML
+Started GET "/seats/1" for 127.0.0.1 at 2022-09-14 19:39:18 +0200
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/seats_controller.rb:63:in `set_seat'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/show.html.erb within layouts/application
+  Rendered seats/_seat.html.erb (Duration: 0.3ms | Allocations: 46)
+  Rendered seats/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 461)
+Started GET "/seats/new" for 127.0.0.1 at 2022-09-14 19:39:18 +0200
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4777)
+Completed 200 OK in 60ms (Views: 32.7ms | ActiveRecord: 1.7ms | Allocations: 17455)
+
+
+Started GET "/seats/new" for 127.0.0.1 at 2022-09-14 19:39:18 +0200
+Processing by SeatsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/new.html.erb within layouts/application
+  Rendered seats/_form.html.erb (Duration: 2.7ms | Allocations: 980)
+  Rendered seats/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1132)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3578)
+Completed 200 OK in 19ms (Views: 14.5ms | ActiveRecord: 0.3ms | Allocations: 4884)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+Processing by SeatsController#new as HTML
+Processing by SeatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/seats_controller.rb:63:in `set_seat'
+  Rendering layout layouts/application.html.erb
+  Rendering layout layouts/application.html.erb
+  Rendering seats/new.html.erb within layouts/application
+  Rendering seats/show.html.erb within layouts/application
+  Rendered seats/_seat.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered seats/_form.html.erb (Duration: 2.4ms | Allocations: 1007)
+  Rendered seats/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 433)
+  Rendered seats/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1617)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 9177)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 9171)
+Completed 200 OK in 45ms (Views: 20.6ms | ActiveRecord: 1.2ms | Allocations: 23646)
+
+
+Completed 200 OK in 45ms (Views: 18.2ms | ActiveRecord: 0.8ms | Allocations: 23575)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+Started GET "/athenaeum" for 127.0.0.1 at 2022-09-14 19:39:45 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AthenaeumController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering athenaeum/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered athenaeum/index.html.erb within layouts/application (Duration: 5.9ms | Allocations: 2467)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 6943)
+Completed 200 OK in 41ms (Views: 14.2ms | ActiveRecord: 0.7ms | Allocations: 26392)
+
+
+Started GET "/seats" for 127.0.0.1 at 2022-09-14 19:39:46 +0200
+Processing by SeatsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/index.html.erb within layouts/application
+  [1m[36mSeat Load (0.5ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/seats/index.html.erb:24
+  Rendered seats/_seat.html.erb (Duration: 0.8ms | Allocations: 229)
+  Rendered seats/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 4383)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 6898)
+Completed 200 OK in 26ms (Views: 16.7ms | ActiveRecord: 1.2ms | Allocations: 10768)
+
+
+Started GET "/seats/1" for 127.0.0.1 at 2022-09-14 19:39:49 +0200
+Processing by SeatsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.5ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/seats_controller.rb:63:in `set_seat'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/show.html.erb within layouts/application
+  Rendered seats/_seat.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered seats/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 601)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 2934)
+Completed 200 OK in 17ms (Views: 7.2ms | ActiveRecord: 0.9ms | Allocations: 5381)
+
+
+Started GET "/reservations/new" for 127.0.0.1 at 2022-09-14 19:39:53 +0200
+Processing by ReservationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/new.html.erb within layouts/application
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/reservations/_form.html.erb:15:in `map'
+  Rendered reservations/_form.html.erb (Duration: 10.2ms | Allocations: 4930)
+  Rendered reservations/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 5283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 7777)
+Completed 200 OK in 34ms (Views: 18.2ms | ActiveRecord: 1.2ms | Allocations: 16163)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2022-09-14 19:40:03 +0200
+Processing by ReservationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "seats"=>"1", "reservation"=>{"startDate"=>"2022-09-15T08:00", "endDate"=>"2022-09-15T09:00"}, "commit"=>"Create Reservation"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:33:in `create'
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:48:in `create'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.4ms | Allocations: 9526)
+
+
+  
+NoMethodError (undefined method `seat_id' for #<Seat id: 1, name: "1", description: "free", created_at: "2022-09-14 17:37:38.919962000 +0000", updated_at: "2022-09-14 17:37:38.919962000 +0000">):
+  
+app/controllers/reservations_controller.rb:50:in `create'
+Started GET "/reservations/new" for 127.0.0.1 at 2022-09-14 19:40:25 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+Processing by ReservationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/new.html.erb within layouts/application
+  [1m[36mSeat Load (0.3ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/reservations/_form.html.erb:15:in `map'
+  Rendered reservations/_form.html.erb (Duration: 16.7ms | Allocations: 4944)
+  Rendered reservations/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 5070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 8887)
+Completed 200 OK in 45ms (Views: 22.3ms | ActiveRecord: 2.6ms | Allocations: 20958)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2022-09-14 19:40:48 +0200
+Processing by ReservationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "seats"=>"1", "reservation"=>{"startDate"=>"2022-09-15T08:00", "endDate"=>"2022-09-15T09:00"}, "commit"=>"Create Reservation"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:33:in `create'
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:48:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+  [1m[36mReservation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."seat_id" = ? LIMIT ?[0m  [["user_id", 6], ["seat_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+  [1m[36mReservation Create (0.4ms)[0m  [1m[32mINSERT INTO "reservations" ("seat_id", "user_id", "datetime", "created_at", "updated_at", "startDate", "endDate") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["seat_id", 1], ["user_id", 6], ["datetime", nil], ["created_at", "2022-09-14 17:40:48.649890"], ["updated_at", "2022-09-14 17:40:48.649890"], ["startDate", "2022-09-15 08:00:00"], ["endDate", "2022-09-15 09:00:00"]]
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+Redirected to http://localhost:3000/reservations/1
+Completed 302 Found in 25ms (ActiveRecord: 3.1ms | Allocations: 11491)
+
+
+Started GET "/reservations/1" for 127.0.0.1 at 2022-09-14 19:40:48 +0200
+Processing by ReservationsController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:119:in `set_reservation'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 4.2ms | Allocations: 1553)
+  Rendered reservations/show.html.erb within layouts/application (Duration: 7.4ms | Allocations: 2267)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4599)
+Completed 200 OK in 19ms (Views: 11.6ms | ActiveRecord: 0.8ms | Allocations: 7054)
+
+
+Started GET "/athenaeum" for 127.0.0.1 at 2022-09-14 19:41:30 +0200
+Processing by AthenaeumController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering athenaeum/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered athenaeum/index.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1809)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 4166)
+Completed 200 OK in 30ms (Views: 25.8ms | ActiveRecord: 0.2ms | Allocations: 5904)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2022-09-14 19:41:33 +0200
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/views/reservations/index.html.erb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 5.1ms | Allocations: 1335)
+  Rendered reservations/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 2401)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 4816)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.7ms | Allocations: 6201)
+
+
+Started GET "/seats" for 127.0.0.1 at 2022-09-14 19:41:36 +0200
+Processing by SeatsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/index.html.erb within layouts/application
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/seats/index.html.erb:24
+  Rendered seats/_seat.html.erb (Duration: 0.2ms | Allocations: 33)
+  Rendered seats/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 845)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 3357)
+Completed 200 OK in 15ms (Views: 10.3ms | ActiveRecord: 0.3ms | Allocations: 5151)
+
+
+Started GET "/seats/new" for 127.0.0.1 at 2022-09-14 19:41:37 +0200
+Processing by SeatsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/new.html.erb within layouts/application
+  Rendered seats/_form.html.erb (Duration: 3.4ms | Allocations: 1746)
+  Rendered seats/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 2078)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 4481)
+Completed 200 OK in 15ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 5793)
+
+
+Started POST "/seats" for 127.0.0.1 at 2022-09-14 19:41:39 +0200
+Processing by SeatsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "seat"=>{"name"=>"2", "description"=>"free"}, "commit"=>"Create Seat"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/seats_controller.rb:27:in `block in create'
+  [1m[36mSeat Create (0.4ms)[0m  [1m[32mINSERT INTO "seats" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "2"], ["description", "free"], ["created_at", "2022-09-14 17:41:39.690885"], ["updated_at", "2022-09-14 17:41:39.690885"]]
+  ↳ app/controllers/seats_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/seats_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/seats/2
+Completed 302 Found in 19ms (ActiveRecord: 8.6ms | Allocations: 3083)
+
+
+Started GET "/seats/2" for 127.0.0.1 at 2022-09-14 19:41:39 +0200
+Processing by SeatsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/seats_controller.rb:63:in `set_seat'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/show.html.erb within layouts/application
+  Rendered seats/_seat.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered seats/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 335)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 2742)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 0.3ms | Allocations: 4449)
+
+
+Started GET "/reservations/new" for 127.0.0.1 at 2022-09-14 19:41:41 +0200
+Processing by ReservationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/new.html.erb within layouts/application
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/reservations/_form.html.erb:15:in `map'
+  Rendered reservations/_form.html.erb (Duration: 4.7ms | Allocations: 1749)
+  Rendered reservations/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1862)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 4265)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.4ms | Allocations: 5501)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2022-09-14 19:41:58 +0200
+Processing by ReservationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "seats"=>"2", "reservation"=>{"startDate"=>"2022-09-16T12:00", "endDate"=>"2022-09-16T14:00"}, "commit"=>"Create Reservation"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:33:in `create'
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:48:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+  [1m[36mReservation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."seat_id" = ? LIMIT ?[0m  [["user_id", 6], ["seat_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+  [1m[36mReservation Create (0.2ms)[0m  [1m[32mINSERT INTO "reservations" ("seat_id", "user_id", "datetime", "created_at", "updated_at", "startDate", "endDate") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["seat_id", 2], ["user_id", 6], ["datetime", nil], ["created_at", "2022-09-14 17:41:58.955206"], ["updated_at", "2022-09-14 17:41:58.955206"], ["startDate", "2022-09-16 12:00:00"], ["endDate", "2022-09-16 14:00:00"]]
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+  [1m[36mTRANSACTION (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+Redirected to http://localhost:3000/reservations/2
+Completed 302 Found in 25ms (ActiveRecord: 9.9ms | Allocations: 5795)
+
+
+Started GET "/reservations/2" for 127.0.0.1 at 2022-09-14 19:41:58 +0200
+Processing by ReservationsController#show as TURBO_STREAM
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:119:in `set_reservation'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.4ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 3.9ms | Allocations: 1328)
+  Rendered reservations/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1592)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3999)
+Completed 200 OK in 15ms (Views: 8.7ms | ActiveRecord: 1.0ms | Allocations: 5699)
+
+
+Started GET "/athenaeum" for 127.0.0.1 at 2022-09-14 19:42:01 +0200
+Processing by AthenaeumController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering athenaeum/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered athenaeum/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1809)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4102)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 5346)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2022-09-14 19:42:02 +0200
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/views/reservations/index.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 4.1ms | Allocations: 1334)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 3.6ms | Allocations: 1303)
+  Rendered reservations/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 3491)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.4ms | Allocations: 5906)
+Completed 200 OK in 20ms (Views: 15.7ms | ActiveRecord: 0.7ms | Allocations: 7179)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+Started GET "/" for 127.0.0.1 at 2022-09-14 19:43:22 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1081)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 5795)
+Completed 200 OK in 22ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 11560)
+
+
+Started GET "/athenaeum" for 127.0.0.1 at 2022-09-14 19:43:23 +0200
+Processing by AthenaeumController#index as HTML
+Redirected to http://127.0.0.1:3000/login
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms | Allocations: 617)
+
+
+Started GET "/login" for 127.0.0.1 at 2022-09-14 19:43:23 +0200
+Processing by LoginController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered login/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 3540)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 5887)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 7038)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2022-09-14 19:43:24 +0200
+Started GET "/login" for 127.0.0.1 at 2022-09-14 19:43:38 +0200
+Processing by LoginController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering login/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered login/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2198)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 15120)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 1.2ms | Allocations: 15658)
+
+
+Started POST "/users/auth/google_oauth2" for 127.0.0.1 at 2022-09-14 19:43:39 +0200
+Started GET "/users/auth/google_oauth2/callback?state=4fada6e7687cb34ac1d65df705e3f58bf541fb80155e54e0&code=4%2F0ARtbsJrCML79HmEmXdT0nuWCXFY8hEYY2xqFWzDZlvUshXuz-v7fPN-U1oFANyEib41jfA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.send+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.modify+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fgmail.compose+https%3A%2F%2Fmail.google.com%2F+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar.events+openid&authuser=0&prompt=consent" for 127.0.0.1 at 2022-09-14 19:43:44 +0200
+Processing by Users::OmniauthCallbacksController#google_oauth2 as HTML
+  Parameters: {"state"=>"4fada6e7687cb34ac1d65df705e3f58bf541fb80155e54e0", "code"=>"4/0ARtbsJrCML79HmEmXdT0nuWCXFY8hEYY2xqFWzDZlvUshXuz-v7fPN-U1oFANyEib41jfA", "scope"=>"email profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/gmail.modify https://www.googleapis.com/auth/gmail.compose https://mail.google.com/ https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/calendar.events openid", "authuser"=>"0", "prompt"=>"consent"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "simone.mariano1301@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:35:in `from_omniauth'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:41:in `from_omniauth'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "simone.mariano1301@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:41:in `from_omniauth'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("matricola", "created_at", "updated_at", "roles_mask", "uid", "provider", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "name", "surname", "course_id", "email") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["matricola", nil], ["created_at", "2022-09-14 17:43:45.023060"], ["updated_at", "2022-09-14 17:43:45.023060"], ["roles_mask", 1], ["uid", "112166134868786849684"], ["provider", "google_oauth2"], ["encrypted_password", "$2a$12$385HycSiig6Gke8EihiEP.mTS0JbprXBdloInT6ix.DwIjRNxkK4."], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["name", nil], ["surname", nil], ["course_id", nil], ["email", "simone.mariano1301@gmail.com"]]
+  ↳ app/models/user.rb:41:in `from_omniauth'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:41:in `from_omniauth'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users/omniauth_callbacks_controller.rb:21:in `google_oauth2'
+Redirected to http://localhost:3000/
+Completed 302 Found in 259ms (ActiveRecord: 2.9ms | Allocations: 7985)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 19:43:45 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3423)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms | Allocations: 3985)
+
+
+Started GET "/athenaeum" for 127.0.0.1 at 2022-09-14 19:43:46 +0200
+Processing by AthenaeumController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering athenaeum/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered athenaeum/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4499)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 6303)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2022-09-14 19:43:47 +0200
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/reservations/index.html.erb:12
+  Rendered reservations/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 971)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3528)
+Completed 200 OK in 20ms (Views: 10.5ms | ActiveRecord: 0.7ms | Allocations: 8287)
+
+
+Started GET "/reservations/new" for 127.0.0.1 at 2022-09-14 19:43:48 +0200
+Processing by ReservationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/new.html.erb within layouts/application
+  [1m[36mSeat Load (0.3ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/reservations/_form.html.erb:15:in `map'
+  Rendered reservations/_form.html.erb (Duration: 20.0ms | Allocations: 9409)
+  Rendered reservations/new.html.erb within layouts/application (Duration: 23.3ms | Allocations: 9762)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 12204)
+Completed 200 OK in 39ms (Views: 27.9ms | ActiveRecord: 1.4ms | Allocations: 17409)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2022-09-14 19:44:03 +0200
+Processing by ReservationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "seats"=>"1", "reservation"=>{"startDate"=>"2022-09-19T14:00", "endDate"=>"2022-09-19T18:00"}, "commit"=>"Create Reservation"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:33:in `create'
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:48:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+  [1m[36mReservation Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."seat_id" = ? LIMIT ?[0m  [["user_id", 8], ["seat_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+  [1m[36mReservation Create (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("seat_id", "user_id", "datetime", "created_at", "updated_at", "startDate", "endDate") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["seat_id", 1], ["user_id", 8], ["datetime", nil], ["created_at", "2022-09-14 17:44:03.292616"], ["updated_at", "2022-09-14 17:44:03.292616"], ["startDate", "2022-09-19 14:00:00"], ["endDate", "2022-09-19 18:00:00"]]
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+  [1m[36mTRANSACTION (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservations_controller.rb:83:in `block in create'
+Redirected to http://localhost:3000/reservations/3
+Completed 302 Found in 49ms (ActiveRecord: 8.3ms | Allocations: 16998)
+
+
+Started GET "/reservations/3" for 127.0.0.1 at 2022-09-14 19:44:03 +0200
+Processing by ReservationsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:119:in `set_reservation'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 4.4ms | Allocations: 1566)
+  Rendered reservations/show.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2436)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4806)
+Completed 200 OK in 20ms (Views: 11.7ms | ActiveRecord: 0.7ms | Allocations: 7247)
+
+
+Started GET "/athenaeum" for 127.0.0.1 at 2022-09-14 19:44:05 +0200
+Processing by AthenaeumController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering athenaeum/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered athenaeum/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1809)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4140)
+Completed 200 OK in 13ms (Views: 9.5ms | ActiveRecord: 0.2ms | Allocations: 5362)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2022-09-14 19:44:06 +0200
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/reservations/index.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 3.3ms | Allocations: 1336)
+  Rendered reservations/index.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2088)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 4541)
+Completed 200 OK in 17ms (Views: 12.6ms | ActiveRecord: 0.5ms | Allocations: 5846)
+
+
+Started GET "/reservations/3" for 127.0.0.1 at 2022-09-14 19:45:20 +0200
+Processing by ReservationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:119:in `set_reservation'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 5.3ms | Allocations: 1330)
+  Rendered reservations/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1589)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4034)
+Completed 200 OK in 18ms (Views: 12.7ms | ActiveRecord: 0.6ms | Allocations: 5728)
+
+
+Started GET "/athenaeum" for 127.0.0.1 at 2022-09-14 19:45:22 +0200
+Processing by AthenaeumController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering athenaeum/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered athenaeum/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1809)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4140)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 0.3ms | Allocations: 5377)
+
+
+Started GET "/seats" for 127.0.0.1 at 2022-09-14 19:45:24 +0200
+Processing by SeatsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/index.html.erb within layouts/application
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/seats/index.html.erb:24
+  Rendered seats/_seat.html.erb (Duration: 15.5ms | Allocations: 210)
+  Rendered seats/_seat.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered seats/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 1558)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 4056)
+Completed 200 OK in 31ms (Views: 26.2ms | ActiveRecord: 0.3ms | Allocations: 5993)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2022-09-14 19:45:24 +0200
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/reservations/index.html.erb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 5.9ms | Allocations: 1335)
+  Rendered reservations/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 2071)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 4524)
+Completed 200 OK in 22ms (Views: 15.5ms | ActiveRecord: 0.8ms | Allocations: 5844)
+
+
+Started GET "/seats" for 127.0.0.1 at 2022-09-14 19:45:25 +0200
+Processing by SeatsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/index.html.erb within layouts/application
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/seats/index.html.erb:24
+  Rendered seats/_seat.html.erb (Duration: 0.2ms | Allocations: 23)
+  Rendered seats/_seat.html.erb (Duration: 0.1ms | Allocations: 22)
+  Rendered seats/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3356)
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.4ms | Allocations: 4621)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCalendarIdToReservations (20220914175317)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "reservations" ADD "calendar_id" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220914175317"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+Started GET "/seats" for 127.0.0.1 at 2022-09-14 19:54:18 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+Started GET "/athenaeum" for 127.0.0.1 at 2022-09-14 19:54:28 +0200
+Started GET "/reservations" for 127.0.0.1 at 2022-09-14 19:54:28 +0200
+Started GET "/reservations" for 127.0.0.1 at 2022-09-14 19:54:28 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/reservations" for 127.0.0.1 at 2022-09-14 19:54:28 +0200
+Processing by SeatsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/index.html.erb within layouts/application
+  [1m[36mSeat Load (0.4ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/seats/index.html.erb:24
+  Rendered seats/_seat.html.erb (Duration: 0.7ms | Allocations: 291)
+  Rendered seats/_seat.html.erb (Duration: 0.1ms | Allocations: 50)
+  Rendered seats/index.html.erb within layouts/application (Duration: 13.2ms | Allocations: 5209)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 9993)
+Completed 200 OK in 77ms (Views: 22.4ms | ActiveRecord: 1.8ms | Allocations: 31548)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+  
+SyntaxError (/home/simone/Progetto-LASSI/app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'
+  
+SyntaxError (/home/simone/Progetto-LASSI/app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'
+  
+SyntaxError (/home/simone/Progetto-LASSI/app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/seats" for 127.0.0.1 at 2022-09-14 19:54:59 +0200
+Processing by AthenaeumController#index as HTML
+Processing by SeatsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+Started GET "/seats/new" for 127.0.0.1 at 2022-09-14 19:54:59 +0200
+  Rendering layout layouts/application.html.erb
+  Rendering athenaeum/index.html.erb within layouts/application
+  Rendering layout layouts/application.html.erb
+  Rendering seats/index.html.erb within layouts/application
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/seats/index.html.erb:24
+  Rendered seats/_seat.html.erb (Duration: 0.3ms | Allocations: 53)
+  Rendered seats/_seat.html.erb (Duration: 0.1ms | Allocations: 36)
+  Rendered seats/index.html.erb within layouts/application (Duration: 7.8ms | Allocations: 2625)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered athenaeum/index.html.erb within layouts/application (Duration: 23.0ms | Allocations: 9509)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 9105)
+Completed 200 OK in 57ms (Views: 22.6ms | ActiveRecord: 1.4ms | Allocations: 24457)
+
+
+Processing by SeatsController#new as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 14931)
+Completed 200 OK in 69ms (Views: 41.5ms | ActiveRecord: 1.2ms | Allocations: 28505)
+
+
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/new.html.erb within layouts/application
+  Rendered seats/_form.html.erb (Duration: 11.7ms | Allocations: 4052)
+  Rendered seats/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 4392)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 6833)
+Completed 200 OK in 28ms (Views: 19.6ms | ActiveRecord: 0.2ms | Allocations: 9595)
+
+
+Started POST "/seats" for 127.0.0.1 at 2022-09-14 19:55:03 +0200
+Processing by SeatsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "seat"=>{"name"=>"3", "description"=>"free"}, "commit"=>"Create Seat"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/seats_controller.rb:27:in `block in create'
+  [1m[36mSeat Create (0.4ms)[0m  [1m[32mINSERT INTO "seats" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "3"], ["description", "free"], ["created_at", "2022-09-14 17:55:03.699572"], ["updated_at", "2022-09-14 17:55:03.699572"]]
+  ↳ app/controllers/seats_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (9.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/seats_controller.rb:27:in `block in create'
+Redirected to http://localhost:3000/seats/3
+Completed 302 Found in 22ms (ActiveRecord: 10.1ms | Allocations: 4096)
+
+
+Started GET "/seats/3" for 127.0.0.1 at 2022-09-14 19:55:03 +0200
+Processing by SeatsController#show as TURBO_STREAM
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.3ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/seats_controller.rb:63:in `set_seat'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/show.html.erb within layouts/application
+  Rendered seats/_seat.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered seats/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 651)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 3021)
+Completed 200 OK in 19ms (Views: 11.4ms | ActiveRecord: 0.5ms | Allocations: 5527)
+
+
+Started GET "/reservations/new" for 127.0.0.1 at 2022-09-14 19:55:08 +0200
+  
+SyntaxError (/home/simone/Progetto-LASSI/app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/reservations_controller.rb:140: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/seats/3" for 127.0.0.1 at 2022-09-14 19:55:36 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/models/user.rb:19:in `<class:User>'
+Processing by SeatsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/seats_controller.rb:63:in `set_seat'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/show.html.erb within layouts/application
+  Rendered seats/_seat.html.erb (Duration: 0.3ms | Allocations: 39)
+  Rendered seats/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 434)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 4261)
+Completed 200 OK in 35ms (Views: 11.5ms | ActiveRecord: 2.0ms | Allocations: 16339)
+
+
+Started GET "/reservations/new" for 127.0.0.1 at 2022-09-14 19:55:37 +0200
+Processing by ReservationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/new.html.erb within layouts/application
+  [1m[36mSeat Load (0.3ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/reservations/_form.html.erb:15:in `map'
+  Rendered reservations/_form.html.erb (Duration: 6.9ms | Allocations: 2744)
+  Rendered reservations/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 3091)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 5624)
+Completed 200 OK in 56ms (Views: 37.7ms | ActiveRecord: 1.1ms | Allocations: 14446)
+
+
+Started POST "/reservations" for 127.0.0.1 at 2022-09-14 19:55:58 +0200
+Processing by ReservationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "seats"=>"3", "reservation"=>{"startDate"=>"2022-09-15T17:00", "endDate"=>"2022-09-15T19:00"}, "commit"=>"Create Reservation"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:33:in `create'
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:48:in `create'
+Sending HTTP post https://www.googleapis.com/calendar/v3/calendars/primary/events?key=AIzaSyCg_RWln2DPSCr-m9apsmdl47w1bMEjUwI
+200
+#<HTTP::Message:0x00007f6a48351880 @http_header=#<HTTP::Message::Headers:0x00007f6a48351858 @http_version="1.1", @body_size=0, @chunked=false, @request_method="POST", @request_uri=#<Addressable::URI:0x20670 URI:https://www.googleapis.com/calendar/v3/calendars/primary/events?key=AIzaSyCg_RWln2DPSCr-m9apsmdl47w1bMEjUwI>, @request_query=nil, @request_absolute_uri=nil, @status_code=200, @reason_phrase="OK", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Pragma", "no-cache"], ["Date", "Wed, 14 Sep 2022 17:56:00 GMT"], ["Content-Type", "application/json; charset=UTF-8"], ["Cache-Control", "no-cache, no-store, max-age=0, must-revalidate"], ["Expires", "Mon, 01 Jan 1990 00:00:00 GMT"], ["ETag", "\"3326356321647000\""], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Encoding", "gzip"], ["Server", "ESF"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""], ["Transfer-Encoding", "chunked"]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1C3,O=Google Trust Services LLC,C=US>, serial=#<OpenSSL::BN:0x00007f6a480a1f40>, not_before=2022-08-22 08:24:39 UTC, not_after=2022-11-14 08:24:38 UTC>, @http_body=#<HTTP::Message::Body:0x00007f6a48351718 @body="{\n \"kind\": \"calendar#event\",\n \"etag\": \"\\\"3326356321647000\\\"\",\n \"id\": \"vdak8s2g8f7ibd4ta34b032l4k\",\n \"status\": \"confirmed\",\n \"htmlLink\": \"https://www.google.com/calendar/event?eid=dmRhazhzMmc4ZjdpYmQ0dGEzNGIwMzJsNGsgc2ltb25lLm1hcmlhbm8xMzAxQG0\",\n \"created\": \"2022-09-14T17:56:00.000Z\",\n \"updated\": \"2022-09-14T17:56:00.847Z\",\n \"summary\": \"free\",\n \"description\": \"3\",\n \"location\": \"Sapienza Università di Roma, Piazzale Aldo Moro, 5, 00185 Roma RM, Italia\",\n \"creator\": {\n  \"email\": \"simone.mariano1301@gmail.com\",\n  \"self\": true\n },\n \"organizer\": {\n  \"email\": \"simone.mariano1301@gmail.com\",\n  \"self\": true\n },\n \"start\": {\n  \"dateTime\": \"2022-09-15T19:00:00+02:00\",\n  \"timeZone\": \"Europe/Rome\"\n },\n \"end\": {\n  \"dateTime\": \"2022-09-15T21:00:00+02:00\",\n  \"timeZone\": \"Europe/Rome\"\n },\n \"iCalUID\": \"vdak8s2g8f7ibd4ta34b032l4k@google.com\",\n \"sequence\": 0,\n \"attendees\": [\n  {\n   \"email\": \"simone.mariano1301@gmail.com\",\n   \"organizer\": true,\n   \"self\": true,\n   \"responseStatus\": \"needsAction\"\n  },\n  {\n   \"email\": \"librarianassi@gmail.com\",\n   \"responseStatus\": \"needsAction\"\n  }\n ],\n \"reminders\": {\n  \"useDefault\": false,\n  \"overrides\": [\n   {\n    \"method\": \"email\",\n    \"minutes\": 1440\n   },\n   {\n    \"method\": \"popup\",\n    \"minutes\": 10\n   }\n  ]\n },\n \"eventType\": \"default\"\n}\n", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - #<Google::Apis::CalendarV3::Event:0x00007f6a480a1310
+ @attendees=
+  [#<Google::Apis::CalendarV3::EventAttendee:0x00007f6a482c53a8
+    @email="simone.mariano1301@gmail.com",
+    @organizer=true,
+    @response_status="needsAction",
+    @self=true>,
+   #<Google::Apis::CalendarV3::EventAttendee:0x000055ea8bd7f6d8
+    @email="librarianassi@gmail.com",
+    @response_status="needsAction">],
+ @created=Wed, 14 Sep 2022 17:56:00 +0000,
+ @creator=
+  #<Google::Apis::CalendarV3::Event::Creator:0x000055ea8c50b668
+   @email="simone.mariano1301@gmail.com",
+   @self=true>,
+ @description="3",
+ @end=
+  #<Google::Apis::CalendarV3::EventDateTime:0x00007f6a48316708
+   @date_time=Thu, 15 Sep 2022 21:00:00 +0200,
+   @time_zone="Europe/Rome">,
+ @etag="\"3326356321647000\"",
+ @html_link=
+  "https://www.google.com/calendar/event?eid=dmRhazhzMmc4ZjdpYmQ0dGEzNGIwMzJsNGsgc2ltb25lLm1hcmlhbm8xMzAxQG0",
+ @i_cal_uid="vdak8s2g8f7ibd4ta34b032l4k@google.com",
+ @id="vdak8s2g8f7ibd4ta34b032l4k",
+ @kind="calendar#event",
+ @location=
+  "Sapienza Università di Roma, Piazzale Aldo Moro, 5, 00185 Roma RM, Italia",
+ @organizer=
+  #<Google::Apis::CalendarV3::Event::Organizer:0x000055ea8c502040
+   @email="simone.mariano1301@gmail.com",
+   @self=true>,
+ @reminders=
+  #<Google::Apis::CalendarV3::Event::Reminders:0x000055ea8c55ba50
+   @overrides=
+    [#<Google::Apis::CalendarV3::EventReminder:0x000055ea8c55ac68
+      @minutes=1440,
+      @reminder_method="email">,
+     #<Google::Apis::CalendarV3::EventReminder:0x000055ea8c558800
+      @minutes=10,
+      @reminder_method="popup">],
+   @use_default=false>,
+ @sequence=0,
+ @start=
+  #<Google::Apis::CalendarV3::EventDateTime:0x000055ea8c550e98
+   @date_time=Thu, 15 Sep 2022 19:00:00 +0200,
+   @time_zone="Europe/Rome">,
+ @status="confirmed",
+ @summary="free",
+ @updated=Wed, 14 Sep 2022 17:56:00 +0000>
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservations_controller.rb:88:in `block in create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:88:in `block in create'
+  [1m[36mReservation Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "reservations" WHERE "reservations"."user_id" = ? AND "reservations"."seat_id" = ? LIMIT ?[0m  [["user_id", 8], ["seat_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:88:in `block in create'
+  [1m[36mReservation Create (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("seat_id", "user_id", "datetime", "created_at", "updated_at", "startDate", "endDate", "calendar_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["seat_id", 3], ["user_id", 8], ["datetime", nil], ["created_at", "2022-09-14 17:55:58.429272"], ["updated_at", "2022-09-14 17:55:58.429272"], ["startDate", "2022-09-15 17:00:00"], ["endDate", "2022-09-15 19:00:00"], ["calendar_id", "vdak8s2g8f7ibd4ta34b032l4k"]]
+  ↳ app/controllers/reservations_controller.rb:88:in `block in create'
+  [1m[36mTRANSACTION (7.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservations_controller.rb:88:in `block in create'
+Redirected to http://localhost:3000/reservations/4
+Completed 302 Found in 412ms (ActiveRecord: 8.5ms | Allocations: 27849)
+
+
+Started GET "/reservations/4" for 127.0.0.1 at 2022-09-14 19:55:58 +0200
+Processing by ReservationsController#show as TURBO_STREAM
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:134:in `set_reservation'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 4.3ms | Allocations: 1561)
+  Rendered reservations/show.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2226)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4596)
+Completed 200 OK in 18ms (Views: 11.4ms | ActiveRecord: 0.6ms | Allocations: 7018)
+
+
+Started DELETE "/reservations/4" for 127.0.0.1 at 2022-09-14 19:59:42 +0200
+Processing by ReservationsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/reservations_controller.rb:134:in `set_reservation'
+Sending HTTP delete https://www.googleapis.com/calendar/v3/calendars/primary/events/vdak8s2g8f7ibd4ta34b032l4k?
+204
+#<HTTP::Message:0x00007f6a487e5798 @http_header=#<HTTP::Message::Headers:0x00007f6a487e5748 @http_version="1.1", @body_size=0, @chunked=false, @request_method="DELETE", @request_uri=#<Addressable::URI:0x20774 URI:https://www.googleapis.com/calendar/v3/calendars/primary/events/vdak8s2g8f7ibd4ta34b032l4k?>, @request_query=nil, @request_absolute_uri=nil, @status_code=204, @reason_phrase="No Content", @body_type=nil, @body_charset=nil, @body_date=nil, @body_encoding=#<Encoding:UTF-8>, @is_request=false, @header_item=[["Cache-Control", "no-cache, no-store, max-age=0, must-revalidate"], ["Content-Length", "0"], ["Date", "Wed, 14 Sep 2022 17:59:45 GMT"], ["Expires", "Mon, 01 Jan 1990 00:00:00 GMT"], ["Pragma", "no-cache"], ["Vary", "Origin"], ["Vary", "X-Origin"], ["Vary", "Referer"], ["Content-Type", "text/html"], ["Server", "ESF"], ["X-XSS-Protection", "0"], ["X-Frame-Options", "SAMEORIGIN"], ["X-Content-Type-Options", "nosniff"], ["Alt-Svc", "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\""]], @dumped=false>, @peer_cert=#<OpenSSL::X509::Certificate: subject=#<OpenSSL::X509::Name CN=upload.video.google.com>, issuer=#<OpenSSL::X509::Name CN=GTS CA 1C3,O=Google Trust Services LLC,C=US>, serial=#<OpenSSL::BN:0x00007f6a487cf290>, not_before=2022-08-22 08:24:39 UTC, not_after=2022-11-14 08:24:38 UTC>, @http_body=#<HTTP::Message::Body:0x00007f6a487e56d0 @body="", @size=0, @positions=nil, @chunk_size=nil>, @previous=nil>
+Success - ""
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reservations_controller.rb:123:in `destroy'
+  [1m[36mReservation Destroy (0.4ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/reservations_controller.rb:123:in `destroy'
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reservations_controller.rb:123:in `destroy'
+Redirected to http://localhost:3000/reservations
+Completed 302 Found in 357ms (ActiveRecord: 7.5ms | Allocations: 4570)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2022-09-14 19:59:43 +0200
+Processing by ReservationsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/reservations/index.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 5.1ms | Allocations: 1336)
+  Rendered reservations/index.html.erb within layouts/application (Duration: 8.8ms | Allocations: 2400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4853)
+Completed 200 OK in 20ms (Views: 15.4ms | ActiveRecord: 0.7ms | Allocations: 6235)
+
+
+Started GET "/" for 127.0.0.1 at 2022-09-14 20:00:14 +0200
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 661)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3794)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.2ms | Allocations: 4978)
+
+
+Started GET "/athenaeum" for 127.0.0.1 at 2022-09-14 20:00:15 +0200
+Processing by AthenaeumController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering athenaeum/index.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered athenaeum/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1809)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4207)
+Completed 200 OK in 17ms (Views: 13.0ms | ActiveRecord: 0.2ms | Allocations: 5946)
+
+
+Started GET "/seats" for 127.0.0.1 at 2022-09-14 20:00:17 +0200
+Processing by SeatsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering seats/index.html.erb within layouts/application
+  [1m[36mSeat Load (0.1ms)[0m  [1m[34mSELECT "seats".* FROM "seats"[0m
+  ↳ app/views/seats/index.html.erb:24
+  Rendered seats/_seat.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered seats/_seat.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered seats/_seat.html.erb (Duration: 0.0ms | Allocations: 22)
+  Rendered seats/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1064)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3517)
+Completed 200 OK in 14ms (Views: 8.5ms | ActiveRecord: 0.4ms | Allocations: 4786)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2022-09-14 20:00:18 +0200
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/reservations/index.html.erb:12
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.2ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 24.7ms | Allocations: 1335)
+  Rendered reservations/index.html.erb within layouts/application (Duration: 27.5ms | Allocations: 2085)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 69.0ms | Allocations: 4538)
+Completed 200 OK in 74ms (Views: 69.4ms | ActiveRecord: 0.7ms | Allocations: 5843)
+
+
+Started GET "/bulletins" for 127.0.0.1 at 2022-09-14 20:00:20 +0200
+Processing by BulletinsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering bulletins/index.html.erb within layouts/application
+  [1m[36mBulletin Load (0.3ms)[0m  [1m[34mSELECT "bulletins".* FROM "bulletins" ORDER BY bulletins.created_at DESC[0m
+  ↳ app/views/bulletins/index.html.erb:11
+  Rendered bulletins/_bulletin.html.erb (Duration: 1.0ms | Allocations: 264)
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered bulletins/_bulletin.html.erb (Duration: 0.1ms | Allocations: 46)
+  Rendered bulletins/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 5154)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 7640)
+Completed 200 OK in 99ms (Views: 85.6ms | ActiveRecord: 0.9ms | Allocations: 9955)
+
+
+Started GET "/reservations" for 127.0.0.1 at 2022-09-14 20:00:22 +0200
+Processing by ReservationsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5:in `authenticate_user!'
+  Rendering layout layouts/application.html.erb
+  Rendering reservations/index.html.erb within layouts/application
+  [1m[36mReservation Load (0.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/views/reservations/index.html.erb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:6
+  [1m[36mSeat Load (0.3ms)[0m  [1m[34mSELECT "seats".* FROM "seats" WHERE "seats"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/reservations/_reservation.html.erb:10
+  Rendered reservations/_reservation.html.erb (Duration: 5.6ms | Allocations: 1338)
+  Rendered reservations/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 2075)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4528)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.7ms | Allocations: 5835)
+
+
