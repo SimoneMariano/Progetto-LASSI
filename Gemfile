@@ -111,6 +111,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem 'factory_bot_rails'
+  gem 'rspec-rails', ">= 3.9.0"
+  gem 'shoulda-matchers'
+
 end
 
 
