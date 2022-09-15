@@ -1,4 +1,4 @@
-<h2>Send a mail to student</h2>
+<h2>Send an email to a student</h2>
 <br>
 <%= form_tag(send_mail_path, id: "mail", name: "mail",  :method => "post", remote: true ) do %>
     <%= text_field_tag :from, current_user.email, style: "display: none" %>

@@ -100,12 +100,22 @@ class SecondhandsController < ApplicationController
 
   def approve
     authorize! :approve, @secondhand, :message => "BEWARE: you are not authorized to approve secondhands"
+
+    already_approved = false
+    if @secondhand.approved == true
+      already_approved = true
+    end
     @secondhand.approved = true
-    @secondhand.save
+    
 
     respond_to do |format|
-      format.html { redirect_to library_url, notice: "Secondhand was successfully approved." }
-      format.json { head :no_content }
+      if already_approved == false && @secondhand.save
+        format.html { redirect_to secondhand_url(@secondhand), notice: "Secondhand was successfully approved." }
+        format.json { render :show, status: :ok, location: @secondhand }
+      else
+        format.html { redirect_to secondhand_url(@secondhand), alert: "Secondhand was already approved." }
+        format.json { render :show, status: :ok, location: @secondhand }
+      end
     end
   end
 
