@@ -19,6 +19,7 @@ class UsersController < ApplicationController
     def edit
       authenticated
       @user = current_user
+
     end
 
     def update
