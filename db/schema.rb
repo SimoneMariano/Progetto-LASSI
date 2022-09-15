@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_09_15_104035) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_15_164325) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -124,21 +124,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_15_104035) do
   create_table "reservations", force: :cascade do |t|
     t.integer "seat_id", null: false
     t.integer "user_id", null: false
-    t.datetime "datetime"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.datetime "startDate"
     t.datetime "endDate"
     t.string "calendar_id"
+    t.string "email"
+    t.date "date"
     t.index ["seat_id"], name: "index_reservations_on_seat_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
   create_table "seats", force: :cascade do |t|
     t.string "name"
-    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "available"
   end
 
   create_table "secondhands", force: :cascade do |t|
