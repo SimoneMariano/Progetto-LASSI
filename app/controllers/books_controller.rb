@@ -31,6 +31,27 @@ class BooksController < ApplicationController
     id = params[:id]
 		@book = Book.find(id)
     authorize! :read, @book, :message => "BEWARE: you are not authorized to read books."
+
+    
+    @num = nil
+
+    if session[:access_token].present?
+      service = Google::Apis::CalendarV3::CalendarService.new
+      service.authorization = session[:access_token]
+      service.key = Rails.application.credentials.dig(:calendar_key)
+
+      count = 0
+      
+      result = service.list_events('librarianassi@gmail.com')
+      result.items.each do |e|
+        if e.summary == @book.ISBN.to_s
+          count += 1
+        end
+      end
+
+      @num = @book.stock - count
+
+    end
     
   end
 

@@ -26,7 +26,7 @@
 
   <div class="col-6">
     <table>
-      <tr>
+      <tr style = "border-bottom: 15px solid transparent;">
         <td>
           <strong>ISBN:</strong>
         </td>
@@ -35,6 +35,19 @@
           <%= @book.ISBN %>
         </td>
       </tr>
+
+      <% if @num.present? %>
+        <tr style = "border-bottom: 15px solid transparent;">
+          <td>
+            <strong>Available for rent:</strong>
+          </td>
+
+          <td>
+            <%= @num %>
+          </td>
+        </tr>
+
+      <%end%>
     
       
       <tr>
@@ -69,5 +82,10 @@
 
 </div>
 
-
+<style>
+  tbody, td, tfoot, th, thead, tr{
+    border-right-width: 40px; 
+    border-color: transparent
+  }
+</style>
 

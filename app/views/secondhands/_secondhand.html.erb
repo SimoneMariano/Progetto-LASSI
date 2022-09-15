@@ -24,10 +24,12 @@
         <%= secondhand.user.email %>
       </p>
 
-      <p>
-        <strong>Vendor matricola:</strong>
-        <%= secondhand.user.matricola %>
-      </p>
+      <% if secondhand.user.matricola.present?%>
+        <p>
+          <strong>Vendor matricola:</strong>
+          <%= secondhand.user.matricola %>
+        </p>
+      <%end%>
 
       
 
