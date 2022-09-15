@@ -27,8 +27,8 @@ module BiblioCommunity
       g.test_framework = false
     end
 
-   
-    
+    config.time_zone = "Rome"
+    config.active_record.default_timezone = :local    
 
 
   end

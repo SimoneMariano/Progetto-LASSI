@@ -13,5 +13,10 @@ Canard::Abilities.for(:admin) do
   can [:read, :create, :destroy, :edit], Course
 
   can [:read, :create, :destroy, :edit], Bulletin
-  
+
+  can [:disable, :edit, :destroy, :create, :read], Seat
+
+  can [:destroy, :read], Reservation
+  cannot [:create, :edit], Reservation
+
 end

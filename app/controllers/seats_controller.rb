@@ -8,20 +8,25 @@ class SeatsController < ApplicationController
 
   # GET /seats/1 or /seats/1.json
   def show
+    authorize! :read, @seat, :message => "BEWARE: you are not authorized to see seats."
   end
 
   # GET /seats/new
   def new
     @seat = Seat.new
+    authorize! :create, @seat, :message => "BEWARE: you are not authorized to create seats."
   end
 
   # GET /seats/1/edit
   def edit
+    authorize! :edit, @seat, :message => "BEWARE: you are not authorized to edit seats."
   end
 
   # POST /seats or /seats.json
   def create
     @seat = Seat.new(seat_params)
+
+    authorize! :create, @seat, :message => "BEWARE: you are not authorized to create seats."
 
     respond_to do |format|
       if @seat.save
@@ -36,6 +41,8 @@ class SeatsController < ApplicationController
 
   # PATCH/PUT /seats/1 or /seats/1.json
   def update
+    authorize! :edit, @seat, :message => "BEWARE: you are not authorized to edit seats."
+
     respond_to do |format|
       if @seat.update(seat_params)
         format.html { redirect_to seat_url(@seat), notice: "Seat was successfully updated." }
@@ -49,6 +56,9 @@ class SeatsController < ApplicationController
 
   # DELETE /seats/1 or /seats/1.json
   def destroy
+
+    authorize! :destroy, @seat, :message => "BEWARE: you are not authorized to destroy seats."
+
     @seat.destroy
 
     respond_to do |format|
@@ -65,6 +75,6 @@ class SeatsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def seat_params
-      params.require(:seat).permit(:name, :description)
+      params.require(:seat).permit(:name, :available)
     end
 end

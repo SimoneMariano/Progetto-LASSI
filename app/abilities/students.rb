@@ -14,4 +14,12 @@ Canard::Abilities.for(:student) do
 
   cannot [ :create, :destroy, :edit], Bulletin
   can [:read], Bulletin
+
+  can [:read], Seat
+  cannot [:disable, :edit, :destroy, :create], Seat
+
+  can [:destroy, :read, :create], Reservation
+  cannot [:edit], Reservation
+
+
 end
