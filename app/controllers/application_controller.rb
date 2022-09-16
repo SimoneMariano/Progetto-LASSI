@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
     rescue_from Google::Apis::AuthorizationError do |exception|
         reset_session
         flash[:alert] = "Session expired, you have to log in again"
-        redirect_to new_user_session_path
+        redirect_to login_path
 
     end
 
