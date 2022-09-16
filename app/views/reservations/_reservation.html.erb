@@ -1,18 +1,21 @@
 <div id="<%= dom_id reservation %>">
-  <div class="container border">
-    <div class="row row-cols-2">
+  <div class="container border" style="text-align:center">
+    <div class="row row-cols-12">
       <div class="mx-auto d-block">
         <strong>Email:</strong>
         <%= reservation.user.email %>
       </div>
+      <br>
       <div class="mx-auto d-block">
         <strong>Name:</strong>
         <%= reservation.seat.name%>
       </div>
+      <br>
       <div class="mx-auto d-block">
         <strong>startDate:</strong>
         <%= reservation.startDate %>
       </div>
+      <br>
       <div class="mx-auto d-block">
         <strong>endDate:</strong>
         <%= reservation.endDate %>

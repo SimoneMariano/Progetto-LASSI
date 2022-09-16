@@ -16,9 +16,12 @@
     <%= form.number_field :name %>
   </div>
 
+  <br>
+  
   <%if current_user.admin?%>
     <%= form.label :available, style: "display: block" %>
     <%= form.select :available, options_for_select([true, false]) %>
+    <br>
   <%end%>
 
   <br>

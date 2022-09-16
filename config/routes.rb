@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   resources :bulletins
   
   devise_for :users, :controllers => {
@@ -31,16 +32,13 @@ Rails.application.routes.draw do
   
   get 'athenaeum' => 'athenaeum#index', :as => :athenaeum
 
+  get 'map' => 'map#index', :as => :map
+
   resources :reservations
   get "reservation", to: "reservation#index"
 
   resources :seats
   get "seat", to: "seats#index"
-
-  get 'view_reservation', to: "view_reservations#index"
-
-
-
 
   get 'home' => 'home#index', :as => :home
 
