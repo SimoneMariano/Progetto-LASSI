@@ -37,7 +37,7 @@ class ReservationsController < ApplicationController
     seat_id = params[:seats]
     @seat = Seat.find(seat_id)
 
-    if @seat.avaiable
+    if @seat.available
 
       @user = User.find_by(email: params[:reservation][:email])
 
@@ -105,6 +105,9 @@ class ReservationsController < ApplicationController
             end
           end
         end
+        if @reservation.startDate.to_datetime < Date.today
+          check = false
+        end  
       end
     
 
@@ -130,7 +133,7 @@ class ReservationsController < ApplicationController
         end
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @reservation.errors, status: :unprocessable_entity }
-        if seat.avaiable
+        if @seat.available
           flash[:alert] = "Prenotazione non valida."
         else
           flash[:alert] = "Posto non disponibile."

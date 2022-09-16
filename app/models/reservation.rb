@@ -11,7 +11,9 @@ class Reservation < ApplicationRecord
  
     private def compare_date
         errors.add(:endDate, "must be greater then start date") if 
-            self.endDate.present? && self.endDate <= self.startDate
+            self.endDate.present? && self.endDate <= self.startDate 
+        errors.add(:startDate, "must be greater then today") if 
+            self.startDate.present? && Date.today > self.startDate
         errors.add(:endDate, "cannot exceed the limit of a day") if
             self.endDate.present? && (self.endDate.to_date - self.startDate.to_date).to_i  > 0
     end
