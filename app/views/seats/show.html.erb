@@ -12,13 +12,13 @@
       <br>
       <div class="row">
         <div class="row">
-          <%= link_to "New reservation", new_reservation_path, class: "btn btn-info" %>
-          <br>
-          <%= link_to "Edit this seat", edit_seat_path(@seat), class: "btn btn-success me-1" %>
-          <br>
+          <%= if can? :create, Reservation.new then  link_to "New reservation", new_reservation_path, class: "btn btn-info" end %>
+          <%if current_user.student?%><br><%end%>
+          <%= if can? :edit, @seat then  link_to "Edit this seat", edit_seat_path(@seat), class: "btn btn-success me-1" end%>
+          <% if current_user.admin?%><br><%end%>
           <%= link_to "Back to athenaeum", athenaeum_path, class: "btn btn-secondary" %>
           <br>
-          <%= link_to "Destroy this seat", @seat, method: :delete, class: "btn btn-danger" %>
+          <%= if can? :destroy, @seat then link_to "Destroy this seat", @seat, method: :delete, class: "btn btn-danger" end %>
         </div>
       </div>
     </td>

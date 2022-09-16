@@ -21,7 +21,7 @@
         <br>
       </div>
       <br>
-      <%= link_to "New seat", new_seat_path, class: "btn btn-info" %>
+      <%= if can? :create, Seat.new then  link_to "New seat", new_seat_path, class: "btn btn-info" end%>
     </td>
   </tbody>
 </table>

@@ -22,7 +22,8 @@
         <br>
         <br>
         <div>
-          <%= link_to "New reservation", new_reservation_path, class: "btn btn-info" %> |
+          <%= if can? :create, Reservation.new then link_to "New reservation", new_reservation_path, class: "btn btn-info" end %> 
+          <% if current_user.student?%> | <%end%>
           <%= link_to "See map", map_path, class: "btn btn-light" %>
         </div>
       </td>
