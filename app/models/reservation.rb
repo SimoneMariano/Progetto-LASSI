@@ -5,6 +5,7 @@ class Reservation < ApplicationRecord
 
     validates :startDate, presence: true
     validates :endDate, presence: true
+    validates :date, presence: true
     validates :user_id, uniqueness: { scope: :date,
      message: "User can't rent the same seat several times at the same time" }
     validate :compare_date
@@ -15,7 +16,7 @@ class Reservation < ApplicationRecord
         errors.add(:startDate, "must be greater then today") if 
             self.startDate.present? && Date.today > self.startDate
         errors.add(:endDate, "cannot exceed the limit of a day") if
-            self.endDate.present? && (self.endDate.to_date - self.startDate.to_date).to_i  > 0
+            self.endDate.present? && (self.endDate.to_date != self.startDate.to_date)
     end
 
 end
