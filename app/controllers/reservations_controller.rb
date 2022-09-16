@@ -38,7 +38,7 @@ class ReservationsController < ApplicationController
     seat_id = params[:seats]
     @seat = Seat.find(seat_id)
 
-    if @seat.available
+    if @seat.available?
 
       @user = User.find_by(email: params[:reservation][:email])
 
@@ -145,7 +145,7 @@ class ReservationsController < ApplicationController
         end
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @reservation.errors, status: :unprocessable_entity }
-        if @seat.available
+        if @seat.available?
           flash[:alert] = "Prenotazione non valida."
         else
           flash[:alert] = "Posto non disponibile."
@@ -185,7 +185,7 @@ class ReservationsController < ApplicationController
     @reservation.destroy
 
     respond_to do |format|
-      format.html { redirect_to reservations_url, notice: "Reservation was successfully destroyed." }
+      format.html { redirect_to athenaeum_url, notice: "Reservation was successfully destroyed." }
       format.json { head :no_content }
     end
   end

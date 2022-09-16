@@ -10,24 +10,26 @@
     </div>
   <% end %>
   <p class="alert" style="color: red"><%= alert %></p>
-  <div>
-    <%= form.label :seats, value: "Seat:", style: "display: block" %>
-    <%= select_tag(:seats, options_for_select(Seat.all.map {|seat| [seat.name, seat.id]}))%>
-  </div>
-  <br>
-  <div>
-    <%= form.label :email, value: "Email:", style: "display: block" %>
-    <%= form.text_field :email %>
-  </div>
-  <br>
-  <div class="d-flex">
-    <%= form.label :startDate, value: "StartDate:", style: "display: block; font-weight: bold; width: 80px;" %>
-    <%= form.datetime_field :startDate %>
-  </div>
-  <br>
-  <div class="d-flex">
-    <%= form.label :endDate, value: "EndDate:", style: "display: block; font-weight: bold; width: 80px;" %>
-    <%= form.datetime_field :endDate %>
+  <div class="container border", style="padding: 10px; width: 65%; text-align: centre;">
+    <div class="d-flex">
+      <%= form.label :seats, value: "Seat:", style: "display: block; font-weight: bold; width: 100px;" %>
+      <%= select_tag(:seats, options_for_select(Seat.all.map {|seat| [seat.name, seat.id]}))%>
+    </div>
+    <br>
+    <div class="d-flex">
+      <%= form.label :email, value: "Email:", style: "display: block; font-weight: bold; width: 100px;" %>
+      <%= form.text_field :email %>
+    </div>
+    <br>
+    <div class="d-flex">
+      <%= form.label :startDate, value: "StartDate: ", style: "display: block; font-weight: bold; width: 100px;" %>
+      <%= form.datetime_field :startDate %>
+    </div>
+    <br>
+    <div class="d-flex">
+      <%= form.label :endDate, value: "EndDate: ", style: "display: block; font-weight: bold; width: 100px;" %>
+      <%= form.datetime_field :endDate %>
+    </div>
   </div>
   <br>
   <div>
