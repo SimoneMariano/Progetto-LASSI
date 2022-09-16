@@ -33,6 +33,7 @@ class ReservationsController < ApplicationController
     @reservation = Reservation.new(reservation_params)
 
     authorize! :create, @reservation, :message => "BEWARE: you are not authorized to create reservations."
+    @check = true
 
     seat_id = params[:seats]
     @seat = Seat.find(seat_id)
@@ -44,11 +45,19 @@ class ReservationsController < ApplicationController
       if @reservation.present?
         #@reservation = @seat.reservation.create(reservation_params)
         @reservation.seat_id = @seat.id
-        @reservation.user_id = @user.id
-        @reservation.date = @reservation.startDate.to_date
+        if @user.present?
+          @reservation.user_id = @user.id
+        else
+          @check = false
+        end
+        if @reservation.startDate.present?
+          @reservation.date = @reservation.startDate.to_date
+        else
+          @check = false
+        end
       end
 
-      if current_user.provider == "google_oauth2"      
+      if current_user.provider == "google_oauth2" && @check    
         service = Google::Apis::CalendarV3::CalendarService.new
         service.authorization = session[:access_token]
         service.key = Rails.application.credentials.dig(:calendar_key)
@@ -88,7 +97,7 @@ class ReservationsController < ApplicationController
         )
       end
 
-      @check = true
+      
 
       def checkFree(service, reservation)
         result = service.list_events('librarianassi@gmail.com')
@@ -111,7 +120,10 @@ class ReservationsController < ApplicationController
       end
     
 
-      checkFree(service, @reservation)
+      if @check
+        checkFree(service, @reservation)
+      end
+
       if @check
         if event_created = service.insert_event("primary", event)
           calendar_id = event_created.id

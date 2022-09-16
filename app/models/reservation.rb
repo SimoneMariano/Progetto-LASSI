@@ -6,6 +6,7 @@ class Reservation < ApplicationRecord
     validates :startDate, presence: true
     validates :endDate, presence: true
     validates :date, presence: true
+    validates :user_id, presence: true
     validates :user_id, uniqueness: { scope: :date,
      message: "User can't rent the same seat several times at the same time" }
     validate :compare_date
