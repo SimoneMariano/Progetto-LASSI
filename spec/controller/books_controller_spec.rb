@@ -10,7 +10,14 @@ describe BooksController, type: :controller do
 
 
     describe ".create" do
-        context "given a book and a user logged in" do
+        
+        before(:each) do
+            sign_out @user
+            @admin = create(:user, email: "admin@gmail.com", roles_mask: 2)
+            sign_in @admin
+        end
+
+        context "user logged in" do
             it "returns create successfully" do
                 book = Book.create(
                     id: 1,

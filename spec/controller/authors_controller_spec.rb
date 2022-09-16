@@ -1,8 +1,13 @@
 require 'rails_helper'
 
-describe AuthorsController do
+describe AuthorsController, type: :controller do
+    
 
     describe ".create" do
+        before(:each) do
+            @admin = create(:user, email: "admin@gmail.com", roles_mask: 2)
+            sign_in @admin
+        end
         context "logged admin create new author" do
             it "return new author" do
                 author = Author.create(name: "Daniele Sette")
