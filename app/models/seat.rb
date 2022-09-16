@@ -1,7 +1,7 @@
 class Seat < ApplicationRecord
 
-    has_one :user, :through => :reservation
-    has_one :reservation, dependent: :destroy
+    has_many :user, :through => :reservation
+    has_many :reservation, dependent: :destroy
 
     validates :name, presence: true, uniqueness: true
 

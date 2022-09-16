@@ -7,8 +7,8 @@ class User < ApplicationRecord
     has_one :course, dependent: :destroy
     has_and_belongs_to_many :book, dependent: :destroy
 
-    has_one :seat, :through => :reservation
-    has_one :reservation, dependent: :destroy
+    has_many :seat, :through => :reservation
+    has_many :reservation, dependent: :destroy
 
     devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :validatable,
