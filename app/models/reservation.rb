@@ -8,7 +8,7 @@ class Reservation < ApplicationRecord
     validates :date, presence: true
     validates :user_id, presence: true
     validates :user_id, uniqueness: { scope: :date,
-     message: "User can't rent the same seat several times at the same time" }
+     message: "User can't book seats several times for the same date" }
     validate :compare_date
  
     private def compare_date
