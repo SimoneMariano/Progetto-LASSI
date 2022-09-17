@@ -42,6 +42,8 @@ class TicketMailerController < ApplicationController
       
     end
 
+    private
+
     def redirect_by_request_type(url)
         if request.xhr?
           render js: "window.location='#{url}'"
