@@ -8,6 +8,8 @@ config/credentials.yml.enc
 
 log/development.log
 
+temp
+
 .env
 
 node_modules
