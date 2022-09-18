@@ -6,5 +6,21 @@
 
 <div>
   <%= link_to "Show this book", @book %> |
-  <%= link_to "Back to books", books_path %>
+  <%= link_to "Back to library", library_path %>
 </div>
+
+<script type='text/javascript'>
+
+  (function() {
+    if( window.localStorage ){
+      if( !localStorage.getItem('firstLoad') ){
+        localStorage['firstLoad'] = true;
+        window.location.reload();
+      }  
+      else
+        localStorage.removeItem('firstLoad');
+    }
+  })();
+
+</script>
+

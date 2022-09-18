@@ -1,0 +1,51 @@
+.table-profile{
+    background-color: #5F9EA0;
+    border-color: #5F9EA0;
+    color: white;
+ }
+
+ div.table-div{
+    border: 1px solid #5F9EA0;
+    border-radius: 12px;
+    padding: 10px;
+
+ }
+
+ .card{
+    transition: none;
+    border-radius: 12px;
+ }
+
+ .card:hover{
+    transform: none;
+    box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
+ }
+
+ i.profile-image{
+    font-size: 100px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    padding: 30px;
+    background-color: var(--bs-card-cap-bg);;
+ }
+
+
+
+
+ input.form-control{
+    width: auto;
+    border: none;
+}
+.form-select{
+    border: none;
+        
+}
+.form-control[type=file]{
+    border-color: rgb(0 0 0 / 8%);
+    border: 0px solid rgb(0 0 0 / 8%);
+}
+
+div.card-body.favorites-body{
+   overflow: auto;
+   max-height: 120px;
+}

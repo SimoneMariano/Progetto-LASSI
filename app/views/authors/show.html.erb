@@ -1,14 +1,25 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @author %>
-
+<h2><%= @author.name %></h2>
+<br>
+<p>
+  <strong>Book written by  <%= @author.name %> :</strong>
+<p>
 <% for book in @author.book do %>
   <%= render book %>
 <% end %>
 
-<div>
-  <%= link_to "Edit this author", edit_author_path(@author) %> |
-  <%= link_to "Back to authors", authors_path %>
 
-  <%= button_to "Destroy this author", @author, method: :delete %>
+
+<div>
+  <%= button_to "Delete author", @author, class: "btn btn-outline-danger", method: :delete, :data => {:confirm => 'Are you sure you want to delete this author?'} %>
 </div>
+
+<br>
+
+<div>
+  <%= link_to "Edit author", edit_author_path(@author), class: "btn btn-outline-primary" %> |
+  <%= link_to "Back to library", library_path %>
+
+</div>
+  

@@ -1,0 +1,11 @@
+<p id="notice" style="color: green"><%= notice %></p>
+<p class="alert" style="color: red"><%= alert %></p>
+
+<% if current_user.admin?%>
+    <%= render 'ticket_mailer/admin_ticket' %>
+<%else%>
+    <%= render 'ticket_mailer/user_ticket' %>
+<%end%>
+
+<br>
+<%= link_to "Back to athenaeum", athenaeum_path%>

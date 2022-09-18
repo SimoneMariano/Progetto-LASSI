@@ -1,0 +1,96 @@
+<%= form_with(model: user) do |form| %>
+  <% if user.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="d-flex" style="justify-content: center; align-items: flex-start;">
+
+    <div>
+        <div class="card">
+            <div class="card-header">
+                General Information
+            </div>
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+               
+                    <li class="list-group-item">
+                        <%= form.text_field :name, class: "profile", placeholder: "Name" %>
+                    </li>
+                    <li class="list-group-item">
+                        <%= form.text_field :surname, class: "profile", placeholder: "Surname" %>
+                    </li>
+                    
+                </ul>
+            
+            </div>
+        </div>
+
+        <br>
+
+        <div>
+            <div class="card">
+            <div class="card-header"> Profile Image
+            </div>
+            <div class="card-body">
+            <%= form.file_field :image, class: "profile", style: "display: block, border: 1px solid" %>
+            </div>
+
+            </div>
+
+            
+        </div>
+    </div>
+    
+
+    <div style="padding-inline:2%">
+
+        <div class="card">
+            <div class="card-header">
+                University Information
+            </div>
+
+            <div class="card-body">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <%= form.number_field :matricola, class: "profile", placeholder: "Matricola" %>
+                    </li>
+                    <li class="list-group-item">
+                        <%= select_tag(:course_id, options_for_select(Course.all.map {|c| [c.name, c.id]}, :selected => @user.course_id), {:class => "form-select profile", :include_blank => "Course of study", :size => 1 })%> 
+                    </li>
+                </ul>
+            
+            </div>
+        </div>
+
+        <br>
+        <br>
+
+         <div style="text-align: end">
+            <%= form.submit %>
+         </div>
+
+        
+        <br>
+
+         <div style="text-align: end">
+            <%= link_to "Show your profile", profile_path %> |
+            <%= link_to "Back to home", home_path %>
+        </div>
+
+        
+
+    </div>
+</div>
+
+  
+
+ 
+<% end %>

@@ -1,0 +1,9 @@
+div.bulletin-board{
+    overflow:auto; 
+    height: 500px;
+    background-image: url(/assets/background/bulletin_board-lg-c7a31e1baaabe222318609d9867bd3730927a66c7a54b3d533e340da65dbfdb9.png);
+    background-repeat: no-repeat, repeat;
+    border: 1px solid rgb(60, 60, 60);
+    padding: 40px;
+    margin-inline: 40px;
+  }

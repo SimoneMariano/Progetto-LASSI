@@ -1,0 +1,36 @@
+<%- if controller_name != 'sessions' %>
+  <%= link_to "Log in", new_session_path(resource_name) %><br />
+<% end %>
+
+
+
+<%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
+  <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
+<% end %>
+
+<%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
+  <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
+<% end %>
+
+
+<%- if devise_mapping.omniauthable? %>
+  <%- resource_class.omniauth_providers.each do |provider| %>
+    <%= form_for "Login",
+      url: omniauth_authorize_path(resource_name, provider), 
+      method: :post,
+      class: "card card-home text-center library",
+      id: "login-form",
+      data: {turbo: "false"} do |f| %>
+      <div class="card-header card-header-home library">
+        Student
+      </div>
+      <div class="card-body card-body-home library">  
+        <i class="fa-brands fa-google"></i>
+      </div>  
+      <%= f.submit "Login with #{OmniAuth::Utils.camelize(provider)}", style: "display:none"%>
+    <% end %>
+  <% end %>
+<% end %>
+
+<%= javascript_pack_tag "login" %>
+

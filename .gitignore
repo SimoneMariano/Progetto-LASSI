@@ -1,0 +1,16 @@
+#ignore ctredential file
+credentials.json
+client_secret_918751473786-68f8f23coqgqtkfpsa35dsvbcmn512gv.apps.googleusercontent.com.json
+client_secrets.json
+
+#ignore cpripted credential file
+config/credentials.yml.enc
+
+log/development.log
+
+temp
+
+.env
+
+node_modules
+

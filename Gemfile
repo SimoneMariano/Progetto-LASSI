@@ -27,6 +27,10 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+gem 'inline_svg'
+
+gem 'rails-erd', group: :development
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
@@ -51,6 +55,33 @@ gem "turbolinks"
 gem "popper_js"
 
 gem 'bootstrap'
+
+
+
+gem "rspec"
+
+
+gem 'canard', '~> 0.6.2.pre'
+
+gem 'cancan'
+
+gem 'dotenv-rails'
+
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
+gem 'omniauth-rails_csrf_protection'
+
+gem "google-apis-drive_v3"
+
+gem 'google-api-client', require: 'google/apis/calendar_v3'
+
+
+group :test do
+  gem 'cucumber-rails', require: false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
+end
 # Use Sass to process CSS
 #gem "sassc-rails"
 
@@ -71,6 +102,7 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
+  
 end
 
 group :test do
@@ -78,7 +110,12 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', ">= 3.9.0"
+  gem 'shoulda-matchers'
+
 end
+
 
 #gemme per web scraper
 gem 'httparty'

@@ -1,0 +1,54 @@
+<%= form_with(model: reservation) do |form| %>
+  <% if reservation.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(reservation.errors.count, "error") %> prohibited this reservation from being saved:</h2>
+      <ul>
+        <% reservation.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p class="alert" style="color: red"><%= alert %></p>
+  <div class="container border", style="padding: 10px; width: 65%; text-align: centre;">
+    <div class="d-flex">
+      <%= form.label :seats, value: "Seat:", style: "display: block; font-weight: bold; width: 100px;" %>
+      <%= select_tag(:seats, options_for_select(Seat.all.map {|seat| [seat.name, seat.id]}))%>
+    </div>
+    <br>
+    <div class="d-flex">
+      <%= form.label :email, value: "Email:", style: "display: block; font-weight: bold; width: 100px;" %>
+      <%= form.text_field :email %>
+    </div>
+    <br>
+    <div class="d-flex">
+      <%= form.label :startDate, value: "StartDate: ", style: "display: block; font-weight: bold; width: 100px;" %>
+      <%= form.datetime_field :startDate %>
+    </div>
+    <br>
+    <div class="d-flex">
+      <%= form.label :endDate, value: "EndDate: ", style: "display: block; font-weight: bold; width: 100px;" %>
+      <%= form.datetime_field :endDate %>
+    </div>
+
+  </div>
+
+  <div class="container ", style="padding: 10px; width: 65%; text-align: centre;">
+    <br>
+    <div>
+      <%= form.submit%>
+    </div>
+
+    <br>
+    <div>
+      <%= link_to "Back to athenaeum", athenaeum_path, class:"btn btn-secondary" %>
+    </div>
+  </div>
+
+</div>
+  
+<% end %>
+
+
+
+  

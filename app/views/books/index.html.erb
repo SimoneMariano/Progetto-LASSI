@@ -1,73 +1,98 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="row">
+<table style="width:80%; vertical-align:start">
 
-  <div class="col-3">
-    <h1>Filter</h1>
-    <%= form_tag(filter_path, method: "get", remote: true ) do %>
-    <ul>
-      <li style="list-style-type: none;">
-        <%= text_field_tag :search, "", class: "form-control", placeholder: "Search ...", onkeydown: "clickSubmit()" %>
-      </li>
-      <li style="list-style-type: none;">
-        <%= radio_button_tag :checkCourse, "Corso di studi" %>
-        <%= label :checkCourse, "Corso di studi"%>
-      </li>
-
-      <li style="list-style-type: none;">
-        <%= radio_button_tag :checkCourse, "Categorie" %>
-        <%= label :checkCourse, "Categorie"%>
-        <ul id="ul-categories">
-          <%= collection_check_boxes(:categories, :category, Category.where("isCourse = false"), :id, :name) do |b|%>
-            <%= b.label class:"label-checkbox" do%>
-              <ul>
-                <%=b.check_box + b.text%>
-              </ul>
-            <%end%>
-          <%end%>
-        </ul>
-      </li>
-
-      <li style="list-style-type: none;">
-        <%= radio_button_tag :checkCourse, "Preferiti" %>
-        <%= label :checkCourse, "Preferiti"%>
-      </li>
-
-      <%= submit_tag "Filter", class: "btn btn-primary", id: "filter_submit"%>
-
-    </ul>
-    <%end%>
-
-            
-  </div>
+<tbody style="vertical-align: top">
+  <tr>
+    <th style="vertical-align: bottom;">
+      <h4>Filter</h4>
+    </th>
+    <th>
+      <h2>Books catalog</h2>
+    </th>
+  </tr>
+  <tr>
+    <td rowspan="2" style="width: 220px">
+      <%= form_tag(filter_path, method: "get", remote: true, style: "margin-left: -30px; margin-right: 30px;" ) do %>
+      <ul>
+        <li style="list-style-type: none;">
+          <%= text_field_tag :search, "", class: "form-control", placeholder: "Search ...", onkeydown: "clickSubmit()" %>
+          <br>
+          <%= submit_tag "Filter", class: "btn btn-primary", id: "filter_submit"%>
+          
+        </li>
+        <br>
+        <li style="list-style-type: none;">
+          <%= radio_button_tag :checkCourse, "All" %>
+          <%= label :checkCourse, "All"%>
+        </li>
+        <li style="list-style-type: none;">
+          <%= radio_button_tag :checkCourse, "Your Course of study" %>
+          <%= label :checkCourse, "Your Course of study"%>
+        </li>
   
+        <li style="list-style-type: none;">
+          <%= radio_button_tag :checkCourse, "Favorites" %>
+          <%= label :checkCourse, "Favorites"%>
+        </li>
 
+        <li style="list-style-type: none;">
+          <%= radio_button_tag :checkCourse, "Categories" %>
+          <%= label :checkCourse, "Categories"%>
+          <ul id="ul-categories" style="padding:0px;">
+            <%= collection_check_boxes(:categories, :category, Category.all, :id, :name) do |b|%>
+              <%= b.label class:"label-checkbox" do%>
+                <ul>
+                  <%=b.check_box + b.text%>
+                </ul>
+              <%end%>
+            <%end%>
+          </ul>
+        </li>
 
-  <div class="col-6">
-    <h1>Books</h1>
+        
+  
+      </ul>
+      <%end%>
+  
+              
+    </td>
+    
+  
+  
+    <td>  
+      <div id="books-div">
+      
+      <% @books.each do |book| %>
+        <%= render book %>
+      <% end %>
+  
+      </div>
+  
+  
+      
+  
+    </td>
+  
+  </tr>
 
-    <div id="books-div">
+  <tr>
+    
+    <td style="text-align: end">
+      <%= if can? :create, Book.new then link_to "Add book to catalog", new_book_path, class: "btn btn-primary", style: "margin-top: 35px" end%>
+    </td>
+  </tr>
 
-    <% @books.each do |book| %>
-      <%= render book %>
-      <p>
-        <%= link_to "Show this book", book %>
-      </p>
-    <% end %>
-
-    </div>
-
-
-    <%= link_to "New book", new_book_path %>
-
-  </div>
-
-</div>
+</tbody>
 
 <script>
   function clickSubmit() {
     $("#filter_submit").trigger("click");
-  }
+  }  
+  
+  
+
+ 
 </script>
 
 <%= stylesheet_link_tag "books" %>

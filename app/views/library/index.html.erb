@@ -1,18 +1,36 @@
 
-<body>
-    <div class="flexbox d-flex section-box">
-        <div class="col-4"> 
-            <button id="btn_library" class="btn btn-outline-primary header">Lista Libri</button>
-        </div>
 
-        <div class="col-4">
-            <button id="btn_rental" class="btn btn-outline-primary header">Libri Prenotati</button>
-        </div>
+    
 
-        <div class="col-4"> 
-            <button id="btn_secondhand" class="btn btn-outline-primary header">Annunci Usato</button>
-        </div>
-    </div>
+    <table style="width:100%; table-layout: fixed">
+        <tr>
+            <td style="padding: 0px;">
+                <button id="btn_library" class="btn btn-outline-primary header">Books Catalog</button>
+            </td>
+            <td style="padding: 0px;">
+                <button id="btn_rental" class="btn btn-outline-primary header">Books Hired</button>
+            </td>
+            <td style="padding: 0px;">
+                <button id="btn_secondhand" class="btn btn-outline-primary header">Secondhands books adv</button>
+            </td>
+            <%if current_user.admin? %>
+                <td style="padding: 0px;">
+                    <button id="btn_aurhors" class="btn btn-outline-primary header">Authors</button>
+                </td>
+                <td style="padding: 0px;">
+                    <button id="btn_categories" class="btn btn-outline-primary header">Categories</button>
+                </td>
+                <td style="padding: 0px;">
+                    <button id="btn_courses" class="btn btn-outline-primary header">Courses</button>
+                </td>
+            <%end%>
+
+        </tr>
+
+    </table>
+
+    <p class="notice" style="color: green"><%= notice %></p>
+    <p class="alert" style="color: red"><%= alert %></p>
 
     <section class="section-box">
         <div  style="">
@@ -20,9 +38,23 @@
         </div>
     </section>
 
+    <script>
+        function clickSubmit() {
+            $("#filter_submit").trigger("click");
+        };
+
+
+        
+
+       
+
+    </script>
+    
+
 
     <%= stylesheet_link_tag "library" %>
     <%= javascript_pack_tag 'library' %>
 
 
-</body>
+
+

@@ -1,0 +1,41 @@
+
+
+    
+
+    <table style="width:100%; table-layout: fixed">
+        <tr>
+            <td style="padding: 0px;">
+                <button id="btn_seat" class="btn btn-outline-primary header">Book a place</button>
+            </td>
+            <td style="padding: 0px;">
+                <button id="btn_reservation" class="btn btn-outline-primary header">View reservations</button>
+            </td>
+            <td>
+                <button id="bulletin-board" class="btn btn-outline-primary header">Bulletin Board</button>
+            </td>
+
+        </tr>
+
+    </table>
+
+    <br>
+    <p id="notice" style="color: green"><%= notice %></p>
+
+    <section class="section-box">
+        <div  style="">
+            <div id="main-block"></div>
+        </div>
+    </section>
+
+    <script>
+        function clickSubmit() {
+            $("#filter_submit").trigger("click");
+        }
+    </script>
+
+
+    <%= stylesheet_link_tag "athenaeum" %>
+    <%= javascript_pack_tag 'athenaeum' %>
+
+
+

@@ -7,32 +7,44 @@
 
   <div class="row">
 
-    <div class="col-2">
-      <p>
-        <%= image_tag secondhand.image if secondhand.image.attached? %>
-      </p>
+    <div class="col-3">
+      <%= link_to secondhand, id: "secondhand-#{secondhand.id}" do %>
+        <%= image_tag secondhand.image, class: "book-img" if secondhand.image.attached? %>
+      <%end%>
     </div>
 
     <div class="col-6">
       <p>
         <strong>Book:</strong>
-        <%= @book_info.title %>
+        <%= secondhand.book.title %>
       </p>
 
       <p>
-        <strong>User:</strong>
-        <%= secondhand.user_id %>
+        <strong>Vendor email:</strong>
+        <%= secondhand.user.email %>
       </p>
 
+      <% if secondhand.user.matricola.present?%>
+        <p>
+          <strong>Vendor matricola:</strong>
+          <%= secondhand.user.matricola %>
+        </p>
+      <%end%>
+
       <p>
-        <strong>Description:</strong>
-        <%= secondhand.description %>
+        <strong>Approved:</strong>
+        <%= secondhand.approved %>
       </p>
+
+      
+
+      
     </div>
 
     
 
   </div>
+  <br>
   
 </div>
 

@@ -1,0 +1,20 @@
+<h2>Send a help ticket</h2>
+<br>
+<%= form_tag(send_mail_path, id: "mail", name: "mail",  :method => "post", remote: true ) do %>
+    <%= text_field_tag :from, current_user.email, style: "display: none" %>
+    <%= text_field_tag :to, "librarianassi@gmail.com", style: "display: none" %>
+    <div>
+        <%= label_tag :subject%>
+        <%= text_field_tag :subject, "", :required => true%>
+    </div>
+    <br>
+    <div>
+        <%= label_tag :mail_body %>
+        <%= text_area_tag :mail_body, "", :required => true %>
+    </div>
+    <br>
+    <%= submit_tag "Send Mail", class: "btn btn-primary", id: "mail_submit"%>
+<% end %>
+
+
+

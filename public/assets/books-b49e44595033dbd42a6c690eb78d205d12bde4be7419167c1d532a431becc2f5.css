@@ -1,0 +1,17 @@
+button > a {
+    color: white;
+    text-decoration: none;
+}
+
+p.title {
+    font-size: larger;
+}
+
+#books-div {
+    overflow:auto; 
+    height:400px
+}
+
+img.book-img{
+    size: 130px, 180px;
+}

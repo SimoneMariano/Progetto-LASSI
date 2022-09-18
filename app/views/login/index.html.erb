@@ -1,0 +1,61 @@
+<div class="d-flex" style="justify-content: center; align-items: center; flex-direction: column">
+  <br>
+  <br>
+  <br>
+  <p class="notice" style="color: green"><%= notice %></p>
+  <p class="alert" style="color: red"><%= alert %></p>
+  
+  <h2>Sign in or sign up with:</h2>
+  <div class="d-flex" style="justify-content: center; align-items: center;">
+    <div id="student-login" style="padding:2%">
+        <%= form_for "Login",
+          url: omniauth_authorize_path(:user, :google_oauth2), 
+          method: :post,
+          class: "card card-home text-center library",
+          id: "login-form",
+          data: {turbo: "false"} do |f| %>
+          <div class="card-header card-header-home library">
+            Google
+          </div>
+          <div class="card-body card-body-home library">  
+            <i class="fa-brands fa-google"></i>
+          </div>  
+          <%= f.submit "Login with #{OmniAuth::Utils.camelize(:google_oauth2)}", id: "commit"%>
+        <% end %>
+    </div>
+    
+    <div id="admin-login" style="padding: 2%">
+        <%= link_to new_user_session_path, id: "new-user-session", class: "btn-link" do%> 
+        <div class="card card-home text-center seats">
+            <div class="card-header card-header-home seats">
+                Password
+            </div>
+            <div class="card-body card-body-home seats">  
+                <i class="fa-solid fa-key"></i>
+            </div>  
+        </div>
+    <%end%> 
+      
+
+      
+    
+    </div>
+  </div>
+</div>
+
+
+<%= javascript_pack_tag "login" %>
+<%= stylesheet_link_tag 'home' %>
+
+<style>
+  input[type=submit]{
+    opacity: 0;
+    font-size: 0px;
+    width: 0px;
+    height: 0px;
+  }
+</style>
+
+
+
+

@@ -1,9 +1,74 @@
-<h1>New book rental</h1>
 
-<%= render "form", book_rental: @book_rental %>
+<% 
+  isbn_book = params[:ISBN]
+  if isbn_book.blank?
+    isbn_book = params[:book_rental][:ISBN]
+  end
+  @book = Book.find_by(ISBN: isbn_book)
+%>
+<table style="width: 50%; margin-left: 20%; padding-top: 20px">
+<tr>
+  <th colspan=2>
+    <h2 style="padding-bottom: 30px;">Make your rental</h2>
+  </th>
+</tr>
+<tr>
+  <td colspan=2>
+    <% if @book_rental.errors.any? %>
+      <div style="color: red">
+        <h2><%= pluralize(@book_rental.errors.count, "error") %> prohibited this book_rental from being saved:</h2>
+
+        <ul>
+          <% @book_rental.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </td>
+</tr>
+<tr>
+
+  <td style="padding-right:50px">
+    
+    <%= if @book.present? then image_tag @book.placeholder, style: "width: 165px" if @book.placeholder.attached? end%>
+    
+  </td>
+  
+
+  <td>
+    <p>
+      <strong>Title:</strong>
+      <%=if @book.present? then @book.title end %>
+    </p>
+
+    <p>
+      <strong>Isbn:</strong>
+      <%= if @book.present? then @book.ISBN end%>
+    </p>
+    
+
+    <%= render "form", book_rental: @book_rental %>
+
+    
+
+
+    
+  </td>
+
+  </tr>
+
+  <tr>
+    <td style="padding-top: 20px;">
+      <%= link_to "Back to library", library_path %>
+    </tr>
+  </tr>
+  </table>
 
 <br>
 
-<div>
-  <%= link_to "Back to book rentals", book_rentals_path %>
-</div>
+<script>
+  $("input[type='submit']").val("Rent book");
+</script>
+
+

@@ -1,37 +1,25 @@
 <%= form_with(model: book_rental) do |form| %>
-  <% if book_rental.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(book_rental.errors.count, "error") %> prohibited this book_rental from being saved:</h2>
-
-      <ul>
-        <% book_rental.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  
 
   <div>
-    <%= form.label :book, style: "display: block" %>
-    <%= form.number_field :book %>
+    <%= form.label :ISBN, style: "display: none" %>
+    <%if params[:ISBN].present?%>
+      <%= form.number_field :ISBN, value: params[:ISBN], style: "display: none" %>
+    <%else%>
+      <%= form.number_field :ISBN, value: params[:book_rental][:ISBN], style: "display: none" %>
+    <%end%>
+    
   </div>
 
-  <div>
-    <%= form.label :user, style: "display: block" %>
-    <%= form.number_field :user %>
-  </div>
+  
 
-  <div>
-    <%= form.label :start, style: "display: block" %>
-    <%= form.datetime_field :start %>
-  </div>
 
-  <div>
-    <%= form.label :end, style: "display: block" %>
-    <%= form.datetime_field :end %>
+  <div class="d-flex">
+    <%= form.label :endDate, value: "End date:", style: "display: block; font-weight: bold; width: 80px;" %>
+    <%= form.date_field :endDate %>
   </div>
-
+  <br>
   <div>
-    <%= form.submit %>
+    <%= form.submit :class => "btn btn-primary" %>
   </div>
 <% end %>

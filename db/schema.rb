@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_25_152045) do
+ActiveRecord::Schema[7.0].define(version: 2022_09_16_113151) do
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -43,6 +43,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_25_152045) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_authors_on_name", unique: true
   end
 
   create_table "authors_books", id: false, force: :cascade do |t|
@@ -57,11 +58,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_25_152045) do
   create_table "book_rentals", force: :cascade do |t|
     t.integer "book_id", null: false
     t.integer "user_id", null: false
-    t.datetime "start", null: false
-    t.datetime "end", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index "\"book\", \"user\"", name: "index_book_rentals_on_book_and_user", unique: true
+    t.date "startDate", null: false
+    t.date "endDate", null: false
+    t.string "calendar_id"
+    t.index ["book_id", "user_id"], name: "index_book_rentals_on_book_id_and_user_id", unique: true
     t.index ["book_id"], name: "index_book_rentals_on_book_id"
     t.index ["user_id"], name: "index_book_rentals_on_user_id"
   end
@@ -72,6 +74,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_25_152045) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "description", null: false
+    t.integer "stock", null: false
   end
 
   create_table "books_categories", id: false, force: :cascade do |t|
@@ -81,12 +84,65 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_25_152045) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "books_courses", id: false, force: :cascade do |t|
+    t.integer "book_id", null: false
+    t.integer "course_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_books_courses_on_book_id"
+    t.index ["course_id"], name: "index_books_courses_on_course_id"
+  end
+
+  create_table "books_users", id: false, force: :cascade do |t|
+    t.integer "book_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_books_users_on_book_id"
+    t.index ["user_id"], name: "index_books_users_on_user_id"
+  end
+
+  create_table "bulletins", force: :cascade do |t|
+    t.string "title", null: false
+    t.string "description", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "isCourse", null: false
     t.string "name"
-    t.index ["name", "isCourse"], name: "index_categories_on_name_and_isCourse", unique: true
+    t.index ["name"], name: "index_categories_on_name_and_isCourse", unique: true
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_courses_on_name", unique: true
+  end
+
+  create_table "reservations", force: :cascade do |t|
+    t.integer "seat_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.datetime "startDate", null: false
+    t.datetime "endDate", null: false
+    t.string "calendar_id"
+    t.string "email"
+    t.date "date", null: false
+    t.index ["seat_id"], name: "index_reservations_on_seat_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"
+  end
+
+  create_table "seats", force: :cascade do |t|
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "available", default: true, null: false
+    t.index ["name"], name: "index_seats_on_name", unique: true
   end
 
   create_table "secondhands", force: :cascade do |t|
@@ -95,15 +151,30 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_25_152045) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "approved", default: false
+    t.index ["book_id", "user_id"], name: "index_secondhands_on_book_id_and_user_id", unique: true
     t.index ["book_id"], name: "index_secondhands_on_book_id"
     t.index ["user_id"], name: "index_secondhands_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
     t.integer "matricola"
-    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "roles_mask"
+    t.string "uid"
+    t.string "provider"
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.string "name"
+    t.string "surname"
+    t.integer "course_id"
+    t.string "email"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["matricola"], name: "index_users_on_matricola", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
@@ -114,6 +185,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_25_152045) do
   add_foreign_key "book_rentals", "users"
   add_foreign_key "books_categories", "books"
   add_foreign_key "books_categories", "categories"
+  add_foreign_key "books_courses", "books"
+  add_foreign_key "books_courses", "courses"
+  add_foreign_key "books_users", "books"
+  add_foreign_key "books_users", "users"
+  add_foreign_key "reservations", "seats"
+  add_foreign_key "reservations", "users"
   add_foreign_key "secondhands", "books"
   add_foreign_key "secondhands", "users"
 end

@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+<table style="width:80%; vertical-align:start">
+  <tbody style="vertical-align: top">
+    <td style="width: 220px">
+    </td>
+    <td>
+      <h1>Seats</h1>
+      <br>
+      <div class="row">
+        <%= image_tag("piantine/Piantina2D.png", class:'img-fluid', style:"max-width: 80%; margin-left:auto; margin-right:auto;")  %>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div id="seats" class="row row-cols-2">
+          <% @seats.each do |seat| %>
+            <%= render seat %>
+            <%= link_to "Show this seat", seat, class: "btn btn-primary" %>
+          <% end %>
+        </div>
+        <br>
+      </div>
+      <br>
+      <%= if can? :create, Seat.new then  link_to "New seat", new_seat_path, class: "btn btn-info" end%>
+    </td>
+  </tbody>
+</table>

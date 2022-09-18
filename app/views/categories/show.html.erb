@@ -3,8 +3,12 @@
 <%= render @category %>
 
 <div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
+  <%= button_to "Delete category", @category, class: "btn btn-outline-danger", method: :delete,:data => {:confirm => 'Are you sure you want to delete this category?'} %>
+</div>
 
-  <%= button_to "Destroy this category", @category, method: :delete %>
+<br>
+
+<div>
+  <%= link_to "Edit this category", edit_category_path(@category), class: "btn btn-outline-primary" %> |
+  <%= link_to "Back to library", library_path %>
 </div>

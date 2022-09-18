@@ -1,0 +1,91 @@
+
+
+
+
+<h2 style="padding-bottom:20px; width:1000px">
+  <% if !current_user.admin? %>
+    <%= link_to addToFavorites_path(@book.id), id: "favorite-link", class: "favourites-link" do%>
+      <%if current_user.book.where(id: @book.id).blank?%>
+        <i class="fa-regular fa-heart" style="font-size:smaller"></i>
+      <%else%>
+        <i class="fa-solid fa-heart" style="font-size:smaller"></i>
+      <%end%>
+    <%end%>
+  <%end%>  
+  <%= @book.title %>
+</h2>
+
+  <div class="row">
+
+  <div class="col-2">
+    
+    <%= image_tag @book.placeholder, class: "book-img" if @book.placeholder.attached? %>
+    
+  </div>
+  
+
+  <div class="col-6">
+    <table>
+      <tr style = "border-bottom: 15px solid transparent;">
+        <td>
+          <strong>ISBN:</strong>
+        </td>
+
+        <td>
+          <%= @book.ISBN %>
+        </td>
+      </tr>
+
+      <% if @num.present? %>
+        <tr style = "border-bottom: 15px solid transparent;">
+          <td>
+            <strong>Available for rent:</strong>
+          </td>
+
+          <td>
+            <%= @num %>
+          </td>
+        </tr>
+
+      <%end%>
+    
+      
+      <tr>
+        <td style="vertical-align:top; padding-right:15px">
+          <strong>Authors:</strong>
+        </td>
+
+        <td>
+          <% @book.author.each do|author| %>
+            <%= author.name%>
+            <br>
+          <%end%>
+        </td>
+      </tr>
+    </table>
+    
+    <br>
+
+    
+
+    <%= if can? :create, BookRental.new then link_to "Rent book",  {controller: "book_rentals", action: "new", ISBN: @book.ISBN}, class: "btn btn-primary"  end%>
+             
+    
+    <%=if can? :buy, @book then link_to 'Buy book', scraper_path(@book.ISBN), class: "btn btn-warning" end%>
+    
+
+
+    
+  </div>
+
+  </div>
+
+</div>
+
+<style>
+  tbody, td, tfoot, th, thead, tr{
+    border-right-width: 40px; 
+    border-color: transparent
+  }
+</style>
+

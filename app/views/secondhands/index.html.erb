@@ -1,21 +1,104 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="d-flex" style="justify-content: center;">
 
-  <div>
 
-    <h1>Secondhands</h1>
+ 
 
-    <div id="secondhands">
-      <% @secondhands.each do |secondhand| %>
-        <%= render secondhand %>
-        <p>
-          <%= link_to "Show this secondhand", secondhand %>
-        </p>
-      <% end %>
-    </div>
+<table style="width:80%; vertical-align:start">
 
-    <%= link_to "New secondhand", new_secondhand_path %>
+  <tbody style="vertical-align: top">
+    <tr>
+      <th style="vertical-align: bottom;">
+        <h4>Filter</h4>
+      </th>
+      <th>
+        <h2>Secondhands book adv</h2>
+      </th>
+    </tr>
+    <tr>
+      <td rowspan="2" style="width: 220px">
+        
+        <%= form_tag(filter_secondhands_path, method: "get", remote: true, style: "margin-left: -30px; margin-right: 30px;" ) do %>
+        <ul>
+          <li style="list-style-type: none;">
+            <%= text_field_tag :search, "", class: "form-control", placeholder: "Search ...", onkeydown: "clickSubmit()" %>
+            <br>
+            <%= submit_tag "Filter", class: "btn btn-primary", id: "filter_submit"%>
+          </li>
+          <br>
+          <li style="list-style-type: none;">
+            <%= radio_button_tag :checkCourse, "All" %>
+            <%= label :checkCourse, "All"%>
+          </li>
+          <li style="list-style-type: none;">
+            <%= radio_button_tag :checkCourse, "Your Course of study" %>
+            <%= label :checkCourse, "Your Course of study"%>
+          </li>
 
-    </div>
-</div>
+          <li style="list-style-type: none;">
+            <%= radio_button_tag :checkCourse, "Favorites" %>
+            <%= label :checkCourse, "Favorites"%>
+          </li>
+
+          <li style="list-style-type: none;">
+            <%= radio_button_tag :checkCourse, "Categories" %>
+            <%= label :checkCourse, "Categories"%>
+            <ul id="ul-categories" style="padding:0px;">
+              <%= collection_check_boxes(:categories, :category, Category.all, :id, :name) do |b|%>
+                <%= b.label class:"label-checkbox" do%>
+                  <ul>
+                    <%=b.check_box + b.text%>
+                  </ul>
+                <%end%>
+              <%end%>
+            </ul>
+          </li>
+
+          
+
+          
+
+        </ul>
+        <%end%>
+
+
+      </td>
+
+
+
+      <td>
+
+        <div id="secondhands">
+          <% @secondhands.each do |secondhand| %>
+            <%= render secondhand %>
+          <% end %>
+        </div>
+
+
+      </td>
+
+    </tr>
+    <tr>
+    <td style="text-align: end">
+      <% if current_user.admin? %>
+        <%= link_to "Display secondhands to approve", display_to_approve_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
+        <%= link_to "Display secondhands approved", approved_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
+      <%else%>
+        <%= link_to "Display my adv", display_my_adv_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
+        <%= link_to "Display all", approved_path,  class: "btn btn-primary", method: "get", remote: true, style: "margin-top: 35px"  %>
+      <%end%>
+      <%= if can? :create, BookRental.new then  link_to"New secondhand adv", new_secondhand_path, class: "btn btn-primary", style: "margin-top: 35px" end%>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<script>
+  function clickSubmit() {
+    $("#filter_submit").trigger("click");
+  }
+</script>
+
+
+<%= javascript_pack_tag "secondhands"%>
+<%= stylesheet_link_tag "secondhands" %>

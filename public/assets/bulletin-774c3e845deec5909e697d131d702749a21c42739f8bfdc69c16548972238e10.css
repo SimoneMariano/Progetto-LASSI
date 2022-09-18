@@ -1,0 +1,34 @@
+div.bulletin-board{
+    overflow:auto; 
+    height: 500px;
+    width: 1300px;
+    background-image: url(/assets/background/bulletin_board-lg-c7a31e1baaabe222318609d9867bd3730927a66c7a54b3d533e340da65dbfdb9.png);
+    background-repeat: no-repeat, repeat;
+    border: 1px solid rgb(60, 60, 60);
+    padding: 40px;
+    margin-inline: 40px;
+  }
+
+  div.bulletin-board::-webkit-scrollbar {
+    display: none;
+  }
+
+  td.post-it-td{
+    width: 400px;
+    padding:10px
+    
+  }
+  div.post-it{
+    overflow: auto;
+    height:200px;
+    padding: 15px;
+    background: #ffc;
+    box-shadow: 5px 5px 10px 0px #000000;
+  }
+  div.post-it::-webkit-scrollbar {
+    display: none;
+  }
+  a.link-post-it{
+    text-decoration: none;
+    color: black;
+  }

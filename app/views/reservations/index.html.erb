@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+<table style="width:80%; vertical-align:start">
+  <tbody style="vertical-align: top">
+    <tr>
+      <td style="width: 220px">
+      </td>
+      <td>
+        <h1>Reservations</h1>
+        <br>
+        <div class="row col-8">
+          <div id="reservations">
+            <% @reservations.each do |reservation| %>
+              <%= render reservation %>
+              <br>
+              <p>
+                <%= link_to "Show this reservation", reservation, class: "btn btn-primary" %>
+              </p>
+            <% end %>
+          </div>
+          <br>
+        </div>
+        <br>
+        <br>
+        <div>
+          <%= if can? :create, Reservation.new then link_to "New reservation", new_reservation_path, class: "btn btn-info" end %> 
+          <% if current_user.student?%> | <%end%>
+          <%= link_to "See map", map_path, class: "btn btn-light" %>
+        </div>
+      </td>
+    </tbody>
+  </table>

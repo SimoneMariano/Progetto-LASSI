@@ -1,10 +1,18 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @book_rental %>
+<h2>Book rental</h2>
+<br>
+
+<%= render 'book_rentals/book_rental_show' %>
+
+<br>
 
 <div>
-  <%= link_to "Edit this book rental", edit_book_rental_path(@book_rental) %> |
-  <%= link_to "Back to book rentals", book_rentals_path %>
+  <%= if can? :destroy, @book_rental then button_to "Destroy this book rental", @book_rental, class: "btn btn-outline-danger", :data => {:confirm => 'Are you sure you want to delete this book rental?'},  method: :delete end %>
+</div>
 
-  <%= button_to "Destroy this book rental", @book_rental, method: :delete %>
+<br>
+
+<div>
+  <%= link_to "Back to library", library_path %>
 </div>

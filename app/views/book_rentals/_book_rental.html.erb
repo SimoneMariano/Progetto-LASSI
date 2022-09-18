@@ -1,22 +1,40 @@
 <div id="<%= dom_id book_rental %>">
-  <p>
-    <strong>Book:</strong>
-    <%= book_rental.book.ISBN %>
-  </p>
+  <div class="row">
 
-  <p>
-    <strong>User:</strong>
-    <%= book_rental.user.matricola %>
-  </p>
+    <div class="col-3">
+      <%= link_to  book_rental do %>    
+        <%= image_tag book_rental.book.placeholder, class: "book-img" if book_rental.book.placeholder.attached? %>
+      <%end%>
 
-  <p>
-    <strong>Start:</strong>
-    <%= book_rental.start %>
-  </p>
+    </div>
+  
+  
+  <div class="col-6">
+    <p>
+      <strong>Book Title:</strong>
+      <%= book_rental.book.title %>
+    </p>
+    <p>
+      <strong>Book ISBN:</strong>
+      <%= book_rental.book.ISBN %>
+    </p>
 
-  <p>
-    <strong>End:</strong>
-    <%= book_rental.end %>
-  </p>
+    <p>
+      <strong>User Matricola:</strong>
+      <%= book_rental.user.matricola %>
+    </p>
+
+    <p>
+      <strong>Start Date:</strong>
+      <%= book_rental.startDate %>
+    </p>
+
+    <p>
+      <strong>End Date:</strong>
+      <%= book_rental.endDate %>
+    </p>
+
+ 
+  </div>
 
 </div>

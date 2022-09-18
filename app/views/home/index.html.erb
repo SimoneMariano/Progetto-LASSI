@@ -1,0 +1,32 @@
+<section>
+    <div class="d-flex" style="justify-content: center">
+            <%= show_svg('logo/logo.svg') %>
+    </div>
+</section>
+
+<p class="notice" style="color: green; text-align:center"><%= notice %></p>
+<div class="d-flex" style="justify-content: center; align-items: center;">
+    <%= link_to library_path, id: "library", class: "btn-link", style: "padding:2%" do%> 
+        <div class="card card-home text-center library">
+            <div class="card-header card-header-home library">
+                Library
+            </div>
+            <div class="card-body card-body-home library">  
+                <i class="fa-solid fa-book"></i> 
+            </div>  
+        </div>
+    <%end%> 
+    <%= link_to athenaeum_path, id: "athenaeum", class: "btn-link" do%> 
+        <div class="card card-home text-center seats">
+            <div class="card-header card-header-home seats">
+                Seats
+            </div>
+            <div class="card-body card-body-home seats">  
+                <i class="fa-solid fa-chair"></i>
+            </div>  
+        </div>
+    <%end%> 
+</div>
+
+
+<%= stylesheet_link_tag "home" %>

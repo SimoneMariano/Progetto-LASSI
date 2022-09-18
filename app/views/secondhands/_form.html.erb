@@ -13,13 +13,13 @@
 
   <div>
     <%= form.label :ISBN, style: "display: block" %>
-    <%= form.text_field :ISBN %>
+    <%if secondhand.book_id.present? %>
+      <%= form.text_field :ISBN,  value: Book.find(secondhand.book_id).ISBN %>
+    <%else%>
+      <%= form.text_field :ISBN %>
+    <%end%>
   </div>
 
-  <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
-  </div>
 
   <div>
     <%= form.label :image, style: "display: block" %>
@@ -30,6 +30,8 @@
     <%= form.label :description, style: "display: block" %>
     <%= form.text_field :description %>
   </div>
+
+  <br>
 
   <div>
     <%= form.submit %>

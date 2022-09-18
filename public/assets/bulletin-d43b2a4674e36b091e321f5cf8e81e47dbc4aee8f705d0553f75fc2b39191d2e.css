@@ -1,0 +1,8 @@
+div.bulletin-board{
+    overflow:auto; 
+    height: 380px;
+    background-image: url(/assets/background/bulletin_board-1ca2eddd8184ff7e2736a6c010d709473e0282bc67a5b362a90ba027a6998952.png);
+    border: 1px solid #000000;
+    padding: 20px;
+    margin-inline: 40px;
+  }
