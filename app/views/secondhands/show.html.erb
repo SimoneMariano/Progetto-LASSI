@@ -31,8 +31,10 @@
 <br>
 
 <div>
-  <%= if can? :edit, @secondhand then link_to "Edit this secondhand", edit_secondhand_path, class: "btn btn-outline-primary" end%> 
-  <%= if can? :edit, @secondhand then "|" end%>
+  <% if current_user.id == @secondhand.user_id %>
+    <%= if can? :edit, @secondhand then link_to "Edit this secondhand", edit_secondhand_path, class: "btn btn-outline-primary" end%> 
+    <%= if can? :edit, @secondhand then "|" end%>
+  <% end %>  
   <%= link_to "Back to library", library_path %>
   
 </div>

@@ -17,7 +17,7 @@ describe BooksController, type: :controller do
             sign_in @admin
         end
 
-        context "user logged in" do
+        context "admin logged in" do
             it "returns create successfully" do
                 book = Book.create(
                     id: 1,

@@ -24,6 +24,9 @@ class SecondhandsController < ApplicationController
   # GET /secondhands/1/edit
   def edit
     authorize! :edit, @secondhand, :message => "BEWARE: you are not authorized to edit secondhands"
+    if current_user.id != @secondhand.user_id
+      redirect_to library_path, alert: "BEWARE: you are not authorized to edit secondhands"
+    end
   end
 
   # POST /secondhands or /secondhands.json
@@ -31,6 +34,7 @@ class SecondhandsController < ApplicationController
     @secondhand = Secondhand.new
     
     authorize! :create, @secondhand, :message => "BEWARE: you are not authorized to create secondhands"
+    
 
     isbn_book = params[:secondhand][:ISBN]
     @book = Book.find_by(ISBN: isbn_book)
@@ -58,6 +62,9 @@ class SecondhandsController < ApplicationController
   # PATCH/PUT /secondhands/1 or /secondhands/1.json
   def update
     authorize! :edit, @secondhand, :message => "BEWARE: you are not authorized to edit secondhands"
+    if current_user.id != @secondhand.user_id
+      redirect_to library_path, alert: "BEWARE: you are not authorized to edit secondhands"
+    end
 
     @secondhand.approved = false
 
